@@ -23,8 +23,7 @@ def get_repositories(org):
     while True:
         url = f'{base_url}/orgs/{org}/repos?page={page}&per_page=100'
         response = requests.get(url, headers=headers)
-        print(f"Requesting repositories: {org}, Page: {
-              page}, Status Code: {response.status_code}")
+        print(f"Requesting repositories: {org}, Page: {page}, Status Code: {response.status_code}")
         if response.status_code == 403:
             print("Rate limit exceeded.")
             break
@@ -46,11 +45,9 @@ def get_repositories(org):
 
 
 def get_repo_files(repo):
-    url = f'{base_url}/repos/{repo["full_name"]
-                              }/git/trees/{repo["default_branch"]}?recursive=1'
+    url = f'{base_url}/repos/{repo["full_name"]}/git/trees/{repo["default_branch"]}?recursive=1'
     response = requests.get(url, headers=headers)
-    print(f"Requesting files for repo: {
-          repo['full_name']}, Status Code: {response.status_code}")
+    print(f"Requesting files for repo: {repo['full_name']}, Status Code: {response.status_code}")
     if response.status_code == 403:
         print('Rate limit exceeded or insufficient permissions.')
         return []
@@ -69,8 +66,7 @@ def get_repo_files(repo):
 def get_commit_messages(repo):
     url = f'{base_url}/repos/{repo["full_name"]}/commits'
     response = requests.get(url, headers=headers)
-    print(f"Requesting commits for repo: {
-          repo['full_name']}, Status Code: {response.status_code}")
+    print(f"Requesting commits for repo: {repo['full_name']}, Status Code: {response.status_code}")
     if response.status_code == 403:
         print("Rate limit exceeded or insufficient permissions.")
         return []
@@ -94,8 +90,7 @@ def get_commit_messages(repo):
 def get_commit_files(repo, sha):
     url = f'{base_url}/repos/{repo["full_name"]}/commits/{sha}'
     response = requests.get(url, headers=headers)
-    print(f"Requesting commit files for repo: {repo['full_name']}, Commit SHA: {
-          sha}, Status Code: {response.status_code}")
+    print(f"Requesting commit files for repo: {repo['full_name']}, Commit SHA: {sha}, Status Code: {response.status_code}")
     if response.status_code == 403:
         print("Rate limit exceeded.")
         return []
@@ -105,8 +100,7 @@ def get_commit_files(repo, sha):
     try:
         return response.json().get('files', [])
     except ValueError:
-        print(f"Error getting JSON response for commit: {
-              sha} in repo: {repo['full_name']}")
+        print(f"Error getting JSON response for commit: {sha} in repo: {repo['full_name']}")
         return []
 
 # Fetch the summary of the specified issue.
@@ -115,8 +109,7 @@ def get_commit_files(repo, sha):
 def get_issue_summary(repo, issue_number):
     url = f'{base_url}/repos/{repo["full_name"]}/issues/{issue_number}'
     response = requests.get(url, headers=headers)
-    print(f"Requesting issue summary for issue: {issue_number} in repo: {
-          repo['full_name']}, Status Code: {response.status_code}")
+    print(f"Requesting issue summary for issue: {issue_number} in repo: {repo['full_name']}, Status Code: {response.status_code}")
     if response.status_code == 403:
         print("Rate limit exceeded or insufficient permissions.")
         return ''
@@ -126,8 +119,7 @@ def get_issue_summary(repo, issue_number):
     try:
         return response.json().get('title', '')
     except ValueError:
-        print(f"Error getting JSON response for issue: {
-              issue_number} in repo: {repo['full_name']}")
+        print(f"Error getting JSON response for issue: {issue_number} in repo: {repo['full_name']}")
         return ''
 
 # Filter repositories based on the presence of Puppet files.
@@ -143,14 +135,12 @@ def filter_repositories(repos):
                 f['path'].endswith(ext) for ext in puppet_extensions)]
             other_files = [f for f in files if not any(
                 f['path'].endswith(ext) for ext in puppet_extensions)]
-            print(f"Repo: {repo['full_name']}, Puppet files: {
-                  len(puppet_files)}, Other files: {len(other_files)}")
+            print(f"Repo: {repo['full_name']}, Puppet files: {len(puppet_files)}, Other files: {len(other_files)}")
             if len(puppet_files) / len(other_files) >= 0.11:
                 commits = get_commit_messages(repo)
                 recent_commits = [c for c in commits if isinstance(c, dict) and datetime.strptime(
                     c['commit']['author']['date'], '%Y-%m-%dT%H:%M:%SZ') > datetime.now() - timedelta(days=30)]
-                print(f"Repo: {repo['full_name']}, Recent commits: {
-                      len(recent_commits)}")
+                print(f"Repo: {repo['full_name']}, Recent commits: {len(recent_commits)}")
                 filtered_repos.append(repo)
     return filtered_repos
 
