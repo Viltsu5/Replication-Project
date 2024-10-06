@@ -1,0 +1,3012 @@
+Repository,File,Commit Message
+Mirantis/puppetlabs-openstack,templates/test_nova.sh.erb,"Merge pull request #146 from bodepd/fix_test_script
+
+Edit test script template "
+Mirantis/puppetlabs-openstack,templates/test_nova.sh.erb,"Edit test script template
+
+edit a script so that a zero return code indicates
+a successfully deployed openstack environment.
+
+previously, it blocked waiting for user input for the
+connection.
+
+these changes are getting this script ready to run CI."
+Mirantis/puppetlabs-openstack,manifests/controller.pp,"Merge pull request #137 from aimonb/master
+
+add nova-volume class. "
+Mirantis/puppetlabs-openstack,manifests/controller.pp,add nova-volume class.
+Mirantis/puppetlabs-openstack,manifests/nova/controller.pp,"Merge pull request #135 from aimonb/master
+
+FIX: add missing arg. ADD: tests "
+Mirantis/puppetlabs-openstack,manifests/controller.pp,FIX: add missing arg. ADD: tests
+Mirantis/puppetlabs-openstack,manifests/controller.pp,"Merge pull request #130 from bodepd/aimon_specs
+
+add spec tests "
+Mirantis/puppetlabs-openstack,manifests/nova/controller.pp,"Merge pull request #130 from bodepd/aimon_specs
+
+add spec tests "
+Mirantis/puppetlabs-openstack,manifests/compute.pp,"Merge pull request #129 from aimonb/rabbit_virtual_host
+
+ Add rabbit_virtual_host support to openstack controller "
+Mirantis/puppetlabs-openstack,manifests/controller.pp,"Merge pull request #129 from aimonb/rabbit_virtual_host
+
+ Add rabbit_virtual_host support to openstack controller "
+Mirantis/puppetlabs-openstack,manifests/nova/controller.pp,"Merge pull request #129 from aimonb/rabbit_virtual_host
+
+ Add rabbit_virtual_host support to openstack controller "
+Mirantis/puppetlabs-openstack,spec/fixtures/manifests/site.pp,"Merge pull request #129 from aimonb/rabbit_virtual_host
+
+ Add rabbit_virtual_host support to openstack controller "
+Mirantis/puppetlabs-openstack,manifests/all.pp,"Merge pull request #128 from aimonb/optional_horizon
+
+Make Horizon installation optional "
+Mirantis/puppetlabs-openstack,manifests/controller.pp,"Merge pull request #128 from aimonb/optional_horizon
+
+Make Horizon installation optional "
+Mirantis/puppetlabs-openstack,manifests/compute.pp,Fixed bad variable name
+Mirantis/puppetlabs-openstack,spec/fixtures/manifests/site.pp,Fixed bad variable name
+Mirantis/puppetlabs-openstack,manifests/controller.pp,typo
+Mirantis/puppetlabs-openstack,manifests/controller.pp,typo
+Mirantis/puppetlabs-openstack,manifests/all.pp,Make Horiuzon installation optional
+Mirantis/puppetlabs-openstack,manifests/controller.pp,Make Horiuzon installation optional
+Mirantis/puppetlabs-openstack,manifests/controller.pp,revert optional horizon for separate pull requests
+Mirantis/puppetlabs-openstack,manifests/compute.pp,Add rabbit_virtual_host support to openstack controller module .. feature exists in puppetlabs-nova already. Also Made installation of Horizon optional.
+Mirantis/puppetlabs-openstack,manifests/compute.pp,Add rabbit_virtual_host support to openstack controller module .. feature exists in puppetlabs-nova already. Also Made installation of Horizon optional.
+Mirantis/puppetlabs-openstack,manifests/controller.pp,Add rabbit_virtual_host support to openstack controller module .. feature exists in puppetlabs-nova already. Also Made installation of Horizon optional.
+Mirantis/puppetlabs-openstack,manifests/nova/controller.pp,Add rabbit_virtual_host support to openstack controller module .. feature exists in puppetlabs-nova already. Also Made installation of Horizon optional.
+Mirantis/puppetlabs-openstack,manifests/all.pp,"Merge pull request #122 from bodepd/folsom_quantum_updates
+
+quantum updates "
+Mirantis/puppetlabs-openstack,manifests/compute.pp,"Merge pull request #122 from bodepd/folsom_quantum_updates
+
+quantum updates "
+Mirantis/puppetlabs-openstack,manifests/controller.pp,"Merge pull request #122 from bodepd/folsom_quantum_updates
+
+quantum updates "
+Mirantis/puppetlabs-openstack,manifests/nova/controller.pp,"Merge pull request #122 from bodepd/folsom_quantum_updates
+
+quantum updates "
+Mirantis/puppetlabs-openstack,manifests/all.pp,"quantum updates
+
+- do not make quantum the default config
+- update params to reflect latest quantum module"
+Mirantis/puppetlabs-openstack,manifests/compute.pp,"quantum updates
+
+- do not make quantum the default config
+- update params to reflect latest quantum module"
+Mirantis/puppetlabs-openstack,manifests/controller.pp,"quantum updates
+
+- do not make quantum the default config
+- update params to reflect latest quantum module"
+Mirantis/puppetlabs-openstack,manifests/nova/controller.pp,"quantum updates
+
+- do not make quantum the default config
+- update params to reflect latest quantum module"
+Mirantis/puppetlabs-apt,manifests/backports.pp,"Merge pull request #77 from jonhattan/master
+
+«main» repository is missing from ubuntu backports. "
+Mirantis/puppetlabs-apt,manifests/backports.pp,Add «main» to Ubuntu backports repos.
+Mirantis/puppetlabs-apt,manifests/init.pp,"Merge pull request #75 from ytjohn/patch-1
+
+Without puppetlabs/stdlib, you will get ""err: Could not retrieve catalog... "
+Mirantis/puppetlabs-apt,manifests/init.pp,"Without puppetlabs/stdlib, you will get ""err: Could not retrieve catalog from remote server: Error 400 on SERVER: Unknown function validate_bool"""
+Mirantis/puppetlabs-apt,manifests/source.pp,"Merge pull request #74 from antonlindstrom/variable-scoping
+
+fix scoping of $lsbdistcodename in source.pp "
+Mirantis/puppetlabs-apt,manifests/source.pp,"fix scoping of $lsbdistcodename in source.pp
+
+Current unscoped variable yields deprecation warning:
+warning: Dynamic lookup of $lsbdistcodename at
+[..]/apt/manifests/source.pp:7 is deprecated."
+Mirantis/puppetlabs-apt,manifests/builddep.pp,"Merge pull request #73 from nanliu/tb/logoutput
+
+Add logoutput on_failure for all exec resources. "
+Mirantis/puppetlabs-apt,manifests/force.pp,"Merge pull request #73 from nanliu/tb/logoutput
+
+Add logoutput on_failure for all exec resources. "
+Mirantis/puppetlabs-apt,manifests/key.pp,"Merge pull request #73 from nanliu/tb/logoutput
+
+Add logoutput on_failure for all exec resources. "
+Mirantis/puppetlabs-apt,manifests/ppa.pp,"Merge pull request #73 from nanliu/tb/logoutput
+
+Add logoutput on_failure for all exec resources. "
+Mirantis/puppetlabs-apt,manifests/source.pp,"Merge pull request #73 from nanliu/tb/logoutput
+
+Add logoutput on_failure for all exec resources. "
+Mirantis/puppetlabs-apt,manifests/update.pp,"Merge pull request #73 from nanliu/tb/logoutput
+
+Add logoutput on_failure for all exec resources. "
+Mirantis/puppetlabs-apt,manifests/builddep.pp,"Add logoutput on_failure for all exec resources.
+
+We need more information to debug issues on exec failure. This change
+enables logouput => on_failure."
+Mirantis/puppetlabs-apt,manifests/force.pp,"Add logoutput on_failure for all exec resources.
+
+We need more information to debug issues on exec failure. This change
+enables logouput => on_failure."
+Mirantis/puppetlabs-apt,manifests/key.pp,"Add logoutput on_failure for all exec resources.
+
+We need more information to debug issues on exec failure. This change
+enables logouput => on_failure."
+Mirantis/puppetlabs-apt,manifests/ppa.pp,"Add logoutput on_failure for all exec resources.
+
+We need more information to debug issues on exec failure. This change
+enables logouput => on_failure."
+Mirantis/puppetlabs-apt,manifests/source.pp,"Add logoutput on_failure for all exec resources.
+
+We need more information to debug issues on exec failure. This change
+enables logouput => on_failure."
+Mirantis/puppetlabs-apt,manifests/update.pp,"Add logoutput on_failure for all exec resources.
+
+We need more information to debug issues on exec failure. This change
+enables logouput => on_failure."
+Mirantis/puppetlabs-apt,manifests/pin.pp,"Merge pull request #67 from branan/older_puppet_fix
+
+Remove a trailing comma to fix older puppets "
+Mirantis/puppetlabs-apt,manifests/pin.pp,Remove a trailing comma to fix older puppets
+Mirantis/puppetlabs-apt,manifests/pin.pp,"Merge pull request #63 from rskvazh/master
+
+Pin source with originator. Useful for pinning Launchpad PPA "
+Mirantis/puppetlabs-apt,manifests/pin.pp,"Add functionality to pin source with originator ""release o=...""
+
+If you need to pin certain Launchpad PPA (ppa:rskvazh/php), you may do:
+apt::pin { 'my-launchpad-repo':
+   priority      => 700,
+   originator  =>'LP-PPA-rskvazh-php',
+}"
+Mirantis/puppetlabs-apt,manifests/backports.pp,"Merge pull request #61 from xaque208/pin_origin
+
+Pin origin "
+Mirantis/puppetlabs-apt,manifests/init.pp,"Merge pull request #61 from xaque208/pin_origin
+
+Pin origin "
+Mirantis/puppetlabs-apt,manifests/pin.pp,"Merge pull request #61 from xaque208/pin_origin
+
+Pin origin "
+Mirantis/puppetlabs-apt,manifests/source.pp,"Merge pull request #61 from xaque208/pin_origin
+
+Pin origin "
+Mirantis/puppetlabs-apt,templates/pin.pref.erb,"Merge pull request #61 from xaque208/pin_origin
+
+Pin origin "
+Mirantis/puppetlabs-apt,manifests/ppa.pp,"Merge pull request #60 from branan/ppa_filename
+
+(#14657) Fix filename when there is a period in the PPA "
+Mirantis/puppetlabs-apt,manifests/ppa.pp,(#14657) Fix filename when there is a period in the PPA 
+Mirantis/puppet-concat,manifests/fragment.pp,"Merge pull request #28 from x-way/master
+
+Remove trailing whitespace to make puppet-lint happy "
+Mirantis/puppet-concat,manifests/fragment.pp,"Remove trailing whitespace in comment
+
+puppet-lint does not like trailing whitespaces"
+Mirantis/puppet-concat,manifests/init.pp,"Merge pull request #27 from djmitche/auto-setup
+
+Include concat::setup from concat, so users don't need to "
+Mirantis/puppet-concat,manifests/init.pp,"Include concat::setup from concat, so users don't need to"
+Mirantis/puppet-concat,manifests/init.pp,"Merge pull request #26 from djmitche/patch-1
+
+Remove spurious 'e' character. "
+Mirantis/puppet-concat,manifests/init.pp,Remove spurious 'e' character.
+Mirantis/puppet-concat,manifests/init.pp,"Merge pull request #24 from pabelanger/improvements
+
+Improvements "
+Mirantis/puppet-concat,spec/fixtures/manifests/site.pp,"Merge pull request #24 from pabelanger/improvements
+
+Improvements "
+Mirantis/puppet-concat,manifests/init.pp,"Reformatting for puppet-lint
+Signed-off-by: Paul Belanger <paul.belanger@polybeacon.com>"
+Mirantis/puppet-concat,spec/fixtures/manifests/site.pp,"Lets use puppetlabs_spec_helper
+Signed-off-by: Paul Belanger <paul.belanger@polybeacon.com>"
+Mirantis/puppet-concat,manifests/init.pp,Merge branch 'master' of github.com:ripienaar/puppet-concat
+Mirantis/puppet-concat,manifests/setup.pp,Merge branch 'master' of github.com:ripienaar/puppet-concat
+Mirantis/puppet-concat,manifests/setup.pp,"Merge pull request #21 from mrwacky42/basedir_warning
+
+Fail with helpful advice if $::concat_basedir is not yet set "
+Mirantis/puppet-concat,manifests/setup.pp,"Fail with helpful advice if $::concat_basedir is not yet set
+
+Building on the new docs in https://github.com/ripienaar/puppet-concat/pull/20"
+Mirantis/puppet-concat,manifests/init.pp,"Merge pull request #20 from endemics/master
+
+add information about concat_basedir and the need for pluginsync = true at least once "
+Mirantis/puppet-concat,manifests/setup.pp,"Merge pull request #20 from endemics/master
+
+add information about concat_basedir and the need for pluginsync = true at least once "
+Mirantis/puppet-concat,manifests/init.pp,add information about concat_basedir and the need for pluginsync = true at least once
+Mirantis/puppet-concat,manifests/setup.pp,add information about concat_basedir and the need for pluginsync = true at least once
+Mirantis/puppet-concat,manifests/fragment.pp,"Merge pull request #18 from dalen/master
+
+A patch to make puppet-concat better comply with community style guidelines. "
+Mirantis/puppet-concat,manifests/init.pp,"Merge pull request #18 from dalen/master
+
+A patch to make puppet-concat better comply with community style guidelines. "
+Mirantis/puppet-concat,manifests/setup.pp,"Merge pull request #18 from dalen/master
+
+A patch to make puppet-concat better comply with community style guidelines. "
+Mirantis/puppet-concat,manifests/fragment.pp,"Style guideline fixes
+
+Comply better with puppet community style guidelines.
+
+Change-Id: Ie1782d266539b1a8f9890b2ade77280011aa22aa"
+Mirantis/puppet-concat,manifests/init.pp,"Style guideline fixes
+
+Comply better with puppet community style guidelines.
+
+Change-Id: Ie1782d266539b1a8f9890b2ade77280011aa22aa"
+Mirantis/puppet-concat,manifests/setup.pp,"Style guideline fixes
+
+Comply better with puppet community style guidelines.
+
+Change-Id: Ie1782d266539b1a8f9890b2ade77280011aa22aa"
+Mirantis/puppet-concat,manifests/init.pp,"Merge pull request #17 from pdxcat/refactor_remove_gnuflag
+
+Remove the gnu parameter from concat "
+Mirantis/puppet-concat,manifests/init.pp,"Remove the gnu parameter from concat
+
+Previously, the concatfragments.sh script was would default to using
+GNU-specific flags for find, sort, and xargs. This necessitated
+explicit passing of a ""gnu = false"" parameter to the concat define in
+order to successfully run the script without GNU-specific flags when
+working with systems that do not by default include GNU versions of the
+utilities (solaris, for example).
+
+This commit modifies the concatfragments script such that GNU versions
+of the utilities are not needed at all. It does this while preserving
+the original use case for the GNU flags, which was to allow special
+characters (like spaces) in the filenames, which it accomplished by
+using GNU flags to separate fields using null characters instead of
+newlines.
+
+In order to preserve backwards-compatibility with existing puppet
+installations that make use of the ""gnu = false"" parameter, the
+parameter list for the concat define has not been changed. Rather, the
+gnu parameter is now deprecated and ignored."
+Mirantis/puppet-concat,manifests/setup.pp,"Fix comments to match actual behavior, clean up old script.
+
+* Zap the old copy of /usr/local/bin/concatfragments.sh.
+* Fix comments to point at new location of script.
+* Delete trailing whitespace."
+Mirantis/puppet-galera,manifests/init.pp,Made this a real puppet-module and not the vagrant-kind of thing
+Mirantis/puppet-galera,manifests/nodes.pp,Made this a real puppet-module and not the vagrant-kind of thing
+Mirantis/puppet-galera,manifests/site.pp,Made this a real puppet-module and not the vagrant-kind of thing
+Mirantis/puppet-galera,templates/my.cnf.erb,Made this a real puppet-module and not the vagrant-kind of thing
+Mirantis/puppet-galera,templates/wsrep.cnf.erb,Made this a real puppet-module and not the vagrant-kind of thing
+Mirantis/puppet-galera,modules/galera/manifests/init.pp,moved modules out of manifests
+Mirantis/puppet-galera,modules/galera/templates/my.cnf.erb,moved modules out of manifests
+Mirantis/puppet-galera,modules/galera/templates/wsrep.cnf.erb,moved modules out of manifests
+Mirantis/puppet-galera,manifests/modules/galera/manifests/init.pp,"nodes.pp works with regex now, so that db01 works as cluster master and some stuff in .pp is rewritten to get a stable vagrant up :)"
+Mirantis/puppet-galera,manifests/modules/galera/templates/wsrep.cnf.erb,"nodes.pp works with regex now, so that db01 works as cluster master and some stuff in .pp is rewritten to get a stable vagrant up :)"
+Mirantis/puppet-galera,manifests/nodes.pp,"nodes.pp works with regex now, so that db01 works as cluster master and some stuff in .pp is rewritten to get a stable vagrant up :)"
+Mirantis/puppet-galera,manifests/modules/galera/manifests/init.pp,"Master and Slave need mysql-user wsrep_sst. I also ""retabbed"" the init.pp"
+Mirantis/puppet-galera,manifests/modules/galera/manifests/init.pp,"Resolved dependency cycle, but still db02 hangs up during state snapshot transfer."
+Mirantis/puppet-galera,manifests/modules/galera/templates/my.cnf.erb,"Resolved dependency cycle, but still db02 hangs up during state snapshot transfer."
+Mirantis/puppet-galera,manifests/modules/galera/templates/wsrep.cnf.erb,"Resolved dependency cycle, but still db02 hangs up during state snapshot transfer."
+Mirantis/puppet-galera,manifests/modules/galera/templates/wsrep.cnf.erb,Added port to wsrep.cnf.erb and deleted apt-conf
+Mirantis/puppet-galera,manifests/site.pp,Added port to wsrep.cnf.erb and deleted apt-conf
+Mirantis/puppet-galera,manifests/modules/galera/templates/wsrep.cnf.erb,"set wsrep_sst_receive_address to eth1, set cluster_address to gcomm:// for ""master"""
+Mirantis/puppet-galera,manifests/site.pp,remove superfluous include
+Mirantis/puppet-galera,manifests/classes/galera.pp,deleted obsolete files
+Mirantis/puppet-galera,manifests/classes/galera.pp,"initial, broken"
+Mirantis/puppet-galera,manifests/modules/galera/manifests/init.pp,"initial, broken"
+Mirantis/puppet-galera,manifests/modules/galera/templates/wsrep.cnf.erb,"initial, broken"
+Mirantis/puppet-galera,manifests/nodes.pp,"initial, broken"
+Mirantis/puppet-galera,manifests/site.pp,"initial, broken"
+Mirantis/puppetlabs-git,manifests/gitosis.pp,updated docs and tests
+Mirantis/puppetlabs-git,manifests/init.pp,updated docs and tests
+Mirantis/puppetlabs-git,tests/gitosis.pp,updated docs and tests
+Mirantis/puppetlabs-git,tests/init.pp,updated docs and tests
+Mirantis/puppetlabs-git,manifests/gitosis.pp,initial checkin for git project.
+Mirantis/puppetlabs-git,manifests/init.pp,initial checkin for git project.
+Mirantis/puppetlabs-git,tests/gitosis.pp,initial checkin for git project.
+Mirantis/puppetlabs-git,tests/init.pp,initial checkin for git project.
+Mirantis/puppetlabs-glance,templates/glance-cache.conf.erb,"Customizable auth_url, not hardwired to 127.0.0.1"
+Mirantis/puppetlabs-glance,manifests/api.pp,"Merge pull request #41 from bodepd/allow_enabled
+
+Add enabled parameter to glance services. "
+Mirantis/puppetlabs-glance,manifests/registry.pp,"Merge pull request #41 from bodepd/allow_enabled
+
+Add enabled parameter to glance services. "
+Mirantis/puppetlabs-glance,manifests/api.pp,"Add enabled parameter to glance services.
+
+This commit adds the parameter enabled to both glance::api
+as well as glance::registry.
+
+Setting enabled to false ensures that the service is not running
+and that the db schema is not create/migrated.
+
+This flag is being added to all nova services to allow the deployment
+of the openstack controller in active-passive for HA."
+Mirantis/puppetlabs-glance,manifests/registry.pp,"Add enabled parameter to glance services.
+
+This commit adds the parameter enabled to both glance::api
+as well as glance::registry.
+
+Setting enabled to false ensures that the service is not running
+and that the db schema is not create/migrated.
+
+This flag is being added to all nova services to allow the deployment
+of the openstack controller in active-passive for HA."
+Mirantis/puppetlabs-glance,manifests/db/mysql.pp,"Merge pull request #37 from jmchilton/mysql_improvements
+
+Mysql improvements "
+Mirantis/puppetlabs-glance,manifests/db/mysql.pp,Allow override of mysql charset & small whitespace fixes and spec improvements to test this change.
+Mirantis/puppetlabs-glance,manifests/db/mysql.pp,Change require => mysql::server to mysql::config so the mysql is fully configured before glance database is created.
+Mirantis/puppetlabs-glance,manifests/backend/swift.pp,"Merge pull request #36 from branan/fix_old_puppet
+
+fix old puppet "
+Mirantis/puppetlabs-glance,manifests/client.pp,"Merge pull request #36 from branan/fix_old_puppet
+
+fix old puppet "
+Mirantis/puppetlabs-glance,manifests/backend/swift.pp,fix old puppet
+Mirantis/puppetlabs-glance,manifests/client.pp,fix old puppet
+Mirantis/puppetlabs-glance,manifests/keystone/auth.pp,"Merge pull request #33 from jmchilton/endpoint_optional
+
+Make keystone endpoint definition optional "
+Mirantis/puppetlabs-glance,manifests/keystone/auth.pp,Fix default boolean value for configure_endpoint.
+Mirantis/puppetlabs-glance,manifests/keystone/auth.pp,Make endpoint configuration in glance::keystone::auth optional in case not using templated catalog file for defining endpoints. (keystone_endpoint type seems to assume always using SQL driver.)
+Mirantis/puppetlabs-glance,manifests/client.pp,"Merge pull request #32 from jmchilton/client-module
+
+Create configuration class for glance client "
+Mirantis/puppetlabs-glance,manifests/params.pp,"Merge pull request #32 from jmchilton/client-module
+
+Create configuration class for glance client "
+Mirantis/puppetlabs-glance,manifests/client.pp,Specify glance client package name in params.pp.
+Mirantis/puppetlabs-glance,manifests/params.pp,Specify glance client package name in params.pp.
+Mirantis/puppetlabs-glance,manifests/client.pp,"Create configuration class for glance client, mirroring puppetlabs nova::client to some degree."
+Mirantis/puppetlabs-glance,manifests/keystone/auth.pp,"Merge pull request #31 from bodepd/dev
+
+Refactor of glance::keystone::auth "
+Mirantis/puppet-haproxy,manifests/balancermember.pp,"Merge pull request #10 from rtyler/chicken-dinner
+
+Fixy faxy "
+Mirantis/puppet-haproxy,manifests/config.pp,"Merge pull request #10 from rtyler/chicken-dinner
+
+Fixy faxy "
+Mirantis/puppet-haproxy,manifests/init.pp,"Merge pull request #10 from rtyler/chicken-dinner
+
+Fixy faxy "
+Mirantis/puppet-haproxy,templates/haproxy_balancermember.erb,"Merge pull request #10 from rtyler/chicken-dinner
+
+Fixy faxy "
+Mirantis/puppet-haproxy,tests/init.pp,"Merge pull request #10 from rtyler/chicken-dinner
+
+Fixy faxy "
+Mirantis/puppet-haproxy,manifests/balancermember.pp,"Fix some, but by no means all, of puppet-lint's complaining"
+Mirantis/puppet-haproxy,manifests/config.pp,"Fix some, but by no means all, of puppet-lint's complaining"
+Mirantis/puppet-haproxy,manifests/init.pp,"Fix some, but by no means all, of puppet-lint's complaining"
+Mirantis/puppet-haproxy,tests/init.pp,"Fix some, but by no means all, of puppet-lint's complaining"
+Mirantis/puppet-haproxy,templates/haproxy_balancermember.erb,"Properly handle both Arrays and Strings passed as balancer member options
+
+The template cannot rely on deprecated functionality of the String class
+(`#each` which disappears in 1.9)
+
+Fixes #9 "
+Mirantis/puppet-haproxy,spec/fixtures/manifests/site.pp,"Commit spec tests for the haproxy module
+
+Previously, the haproxy module didn't provide rspec tests for the class
+or defined resource types.  This commit adds the tests, a spec_helper
+file, and a rakefile so you can do `rake spec` and automatically run the
+tests.
+
+I've also committed a symlink in the
+spec/fixtures/modules/haproxy directory so the rspec-puppet tests will
+FIND the haproxy class/defined resource types, but I HAVE NOT committed
+a symlink so that it will find the concat class (which is a dependency
+for this module).  If you choose to run the tests, you must symlink the
+concat module in the spec/fixtures/modules directory before the spec
+tests will pass."
+Mirantis/puppet-haproxy,manifests/config.pp,"Use array in config class default
+
+Previously, I was using the option parameter twice in the default
+setting for haproxy::config.  This commit changes that to passing an
+array to the option parameter (and fixes the example)."
+Mirantis/puppet-haproxy,manifests/init.pp,"Ensure hasrestart parameter with haproxy service
+
+The haproxy service should have the hasrestart parameter defaulted to
+true.  Previously, this was not the case.  This commit establishes that."
+Mirantis/puppet-haproxy,manifests/balancermember.pp,Initial Commit
+Mirantis/puppet-haproxy,manifests/config.pp,Initial Commit
+Mirantis/puppet-haproxy,manifests/data.pp,Initial Commit
+Mirantis/puppet-haproxy,manifests/init.pp,Initial Commit
+Mirantis/puppet-haproxy,templates/haproxy-base.cfg.erb,Initial Commit
+Mirantis/puppet-haproxy,templates/haproxy_balancermember.erb,Initial Commit
+Mirantis/puppet-haproxy,templates/haproxy_config_block.erb,Initial Commit
+Mirantis/puppet-haproxy,tests/init.pp,Initial Commit
+Mirantis/puppetlabs-horizon,manifests/init.pp,Properly require and enable mod_wsgi before installing dashboard
+Mirantis/puppetlabs-horizon,manifests/params.pp,Properly require and enable mod_wsgi before installing dashboard
+Mirantis/puppetlabs-horizon,manifests/init.pp,"Merge pull request #11 from fcharlier/fc/more_parameters
+
+Add more parameters "
+Mirantis/puppetlabs-horizon,templates/local_settings.py.erb,"Merge pull request #11 from fcharlier/fc/more_parameters
+
+Add more parameters "
+Mirantis/puppetlabs-horizon,manifests/init.pp,"Remove the trailing comma on last parameter
+
+It breaks puppet 2.6 and some 2.7"
+Mirantis/puppetlabs-horizon,manifests/init.pp,"Add more parameters:
+
+* secret key
+* django_debug
+* api_result_limit"
+Mirantis/puppetlabs-horizon,templates/local_settings.py.erb,"Add more parameters:
+
+* secret key
+* django_debug
+* api_result_limit"
+Mirantis/puppetlabs-horizon,manifests/init.pp,Add keystone_default_role parameter
+Mirantis/puppetlabs-horizon,templates/local_settings.py.erb,Add keystone_default_role parameter
+Mirantis/puppetlabs-horizon,manifests/init.pp,Add parameters for keystone endpoint
+Mirantis/puppetlabs-horizon,templates/local_settings.py.erb,Add parameters for keystone endpoint
+Mirantis/puppetlabs-horizon,manifests/init.pp,"Merge pull request #7 from sbadia/master
+
+Update package name for debian "
+Mirantis/puppetlabs-horizon,manifests/params.pp,"Merge pull request #7 from sbadia/master
+
+Update package name for debian "
+Mirantis/puppetlabs-horizon,manifests/params.pp,Use operatingsystem instead of lsbdistid (Refs pull request #7) 
+Mirantis/puppetlabs-horizon,manifests/init.pp,"Merge pull request #10 from branan/fix_trailing_comma
+
+Remove trailing comma to be compatible with older puppets "
+Mirantis/puppetlabs-horizon,manifests/init.pp,Remove trailing comma to be compatible with older puppets
+Mirantis/puppetlabs-horizon,spec/fixtures/manifests/site.pp,"Merge pull request #9 from branan/test
+
+Add initial spec test "
+Mirantis/puppetlabs-horizon,spec/fixtures/manifests/site.pp,Add initial spec test
+Mirantis/puppetlabs-horizon,manifests/init.pp,Debian: openstack-dashboard is an dependency of openstack-dashboard-apache
+Mirantis/puppetlabs-horizon,manifests/params.pp,Debian: openstack-dashboard is an dependency of openstack-dashboard-apache
+Mirantis/puppetlabs-horizon,templates/local_settings.py.erb,"Merge pull request #6 from jtopjian/master
+
+Invalid Trailing Comma "
+Mirantis/puppetlabs-horizon,templates/local_settings.py.erb,The trailing comma caused the links to not parse for me.
+Mirantis/puppetlabs-horizon,manifests/init.pp,"Merge pull request #5 from robertstarmer/master
+
+updated template for additional horizon supported services "
+Mirantis/puppetlabs-horizon,templates/local_settings.py.erb,"Merge pull request #5 from robertstarmer/master
+
+updated template for additional horizon supported services "
+Mirantis/puppetlabs-horizon,manifests/init.pp,Fixed comments on pull.
+Mirantis/puppetlabs-horizon,templates/local_settings.py.erb,Fixed comments on pull.
+Mirantis/puppetlabs-horizon,manifests/init.pp,"Merge pull request #4 from sbadia/master
+
+On debian apache2 is not an dependence of openstack-dashboard package "
+Mirantis/puppetlabs-horizon,manifests/init.pp,"added enhancements to the template to support swift and quantum, and added tags and templates for app, compute, and storage monitoring callouts"
+Mirantis/puppetlabs-horizon,templates/local_settings.py.erb,"added enhancements to the template to support swift and quantum, and added tags and templates for app, compute, and storage monitoring callouts"
+Mirantis/puppetlabs-horizon,manifests/init.pp,For debian apache2 is not an dependence of openstack-dashboard
+Mirantis/puppetlabs-horizon,manifests/init.pp,"Merge pull request #2 from derekhiggins/import-params
+
+Params should have been imported, it was only working in tests by accident "
+Mirantis/puppetlabs-horizon,manifests/init.pp,"Params should have been imported, it was only working in tests by accident"
+Mirantis/puppetlabs-horizon,manifests/init.pp,"Merge pull request #1 from derekhiggins/adding-params
+
+Adding name of the httpd service as a param Configure WhiteSource for GitHub.com"
+Mirantis/puppetlabs-horizon,manifests/params.pp,"Merge pull request #1 from derekhiggins/adding-params
+
+Adding name of the httpd service as a param Configure WhiteSource for GitHub.com"
+Mirantis/puppetlabs-horizon,manifests/init.pp,Adding name of the httpd service as a param
+Mirantis/puppetlabs-horizon,manifests/params.pp,Adding name of the httpd service as a param
+Mirantis/puppetlabs-horizon,manifests/init.pp,"Remove wsgi dependency
+
+It should be resolved by the openstack-dashbaord
+package"
+Mirantis/puppetlabs-horizon,manifests/init.pp,"initial checkin
+
+contains a basic class for configuring horizon
+on precise."
+Mirantis/puppetlabs-horizon,templates/local_settings.py.erb,"initial checkin
+
+contains a basic class for configuring horizon
+on precise."
+Mirantis/puppet-module-keepalived,manifests/instance.pp,Include keepalived::variables in keepalived::instance. Add require on keepalived::install.
+Mirantis/puppet-module-keepalived,manifests/config.pp,Initial commit
+Mirantis/puppet-module-keepalived,manifests/init.pp,Initial commit
+Mirantis/puppet-module-keepalived,manifests/install.pp,Initial commit
+Mirantis/puppet-module-keepalived,manifests/instance.pp,Initial commit
+Mirantis/puppet-module-keepalived,manifests/service.pp,Initial commit
+Mirantis/puppet-module-keepalived,manifests/variables.pp,Initial commit
+Mirantis/puppet-module-keepalived,templates/global_config.erb,Initial commit
+Mirantis/puppet-module-keepalived,templates/keepalived_instance.erb,Initial commit
+Mirantis/puppet-module-keepalived,tests/init.pp,Initial commit
+Mirantis/puppetlabs-keystone,manifests/init.pp,Merge branch 'configurable-backend'
+Mirantis/puppetlabs-keystone,templates/footer.erb,Merge branch 'configurable-backend'
+Mirantis/puppetlabs-keystone,manifests/init.pp,"Backend driver configurable (not hard-wired KVS).
+
+Now it is possible to use SQL driver (e.g. if we have a replicated database)."
+Mirantis/puppetlabs-keystone,templates/footer.erb,"Backend driver configurable (not hard-wired KVS).
+
+Now it is possible to use SQL driver (e.g. if we have a replicated database)."
+Mirantis/puppetlabs-keystone,manifests/config/postgresql.pp,"Merge pull request #52 from etiennep/master
+
+Postgresql support "
+Mirantis/puppetlabs-keystone,manifests/db/postgresql.pp,"Merge pull request #52 from etiennep/master
+
+Postgresql support "
+Mirantis/puppetlabs-keystone,manifests/init.pp,"Merge pull request #53 from bodepd/enabled_param
+
+Added enabled parameter to keystone class "
+Mirantis/puppetlabs-keystone,manifests/init.pp,"Added enabled parameter to keystone class
+
+This commit adds an enabled parameter to the keystone
+class. This parameter can be used to disable the keystone
+service and ensure that the database schemas are not created/migrated.
+
+This feature has been added for HA support."
+Mirantis/puppetlabs-keystone,manifests/config/postgresql.pp,Added postgresql support.
+Mirantis/puppetlabs-keystone,manifests/db/postgresql.pp,Added postgresql support.
+Mirantis/puppetlabs-keystone,manifests/client/authtoken.pp,"Merge pull request #48 from bodepd/fix_auth_defaults
+
+Correct keystone client connection defaults "
+Mirantis/puppetlabs-keystone,manifests/client/authtoken.pp,"Correct keystone client connection defaults
+
+This patch resolves a few minor issues related to defaults.
+
+It resolves tests and docs related to a misconfigured port default
+that has already been corrected.
+
+It also changes the protocol default from https to https for client
+connections. This is b/c the default protocol for keystone is http."
+Mirantis/puppetlabs-keystone,manifests/client/authtoken.pp,"Merge pull request #46 from fcharlier/client_requires_python_libs
+
+keystone::client::authtoken depends on keystone::python "
+Mirantis/puppetlabs-keystone,manifests/client/authtoken.pp,keystone::client::authtoken depends on keystone::python
+Mirantis/puppetlabs-keystone,manifests/roles/admin.pp,"Merge pull request #44 from josecastroleon/master
+
+Add an extra parameter to specify another name for the admin account "
+Mirantis/puppet-memcached,manifests/init.pp,"Merge pull request #12 from branan/remove_comma_for_2.6
+
+Remove a trailing comma for compatibility with puppet 2.6 "
+Mirantis/puppet-memcached,manifests/init.pp,Remove a trailing comma for compatibility with puppet 2.6
+Mirantis/puppet-memcached,manifests/params.pp,Show osfamily in unsupported platform error message
+Mirantis/puppet-memcached,manifests/init.pp,fix unix socket support
+Mirantis/puppet-memcached,manifests/params.pp,fix unix socket support
+Mirantis/puppet-memcached,templates/memcached.conf.erb,fix unix socket support
+Mirantis/puppet-memcached,manifests/init.pp,"Merge pull request #9 from acceso/master
+
+Support for Unix sockets and verbosity. "
+Mirantis/puppet-memcached,templates/memcached.conf.erb,"Merge pull request #9 from acceso/master
+
+Support for Unix sockets and verbosity. "
+Mirantis/puppet-memcached,spec/fixtures/manifests/site.pp,"Merge pull request #10 from fcharlier/rake_spec_exit_status
+
+Fix rake spec exit status "
+Mirantis/puppet-memcached,manifests/init.pp,Saner defaults and cosmetic template improvements.
+Mirantis/puppet-memcached,templates/memcached.conf.erb,Saner defaults and cosmetic template improvements.
+Mirantis/puppet-memcached,spec/fixtures/manifests/site.pp,"rake spec runs without modification
+
+Add an empty site.pp file in spec/fixtures/manifests
+Update spec_helper.rb to find the manifest in fixtures"
+Mirantis/puppet-memcached,manifests/init.pp,need false not to cross the condition.
+Mirantis/puppet-memcached,manifests/init.pp,Added support for Unix sockets and verbosity.
+Mirantis/puppet-memcached,templates/memcached.conf.erb,Added support for Unix sockets and verbosity.
+Mirantis/puppet-memcached,manifests/params.pp,"Merge pull request #8 from vaneldik/master
+
+Using $::osfamily to make it work on RedHat derivatives "
+Mirantis/puppet-memcached,manifests/params.pp,Use $::osfamily in stead of $::operatingsystem
+Mirantis/puppet-memcached,manifests/params.pp,"Merge pull request #6 from derekhiggins/fedora_testing
+
+Adding fedora support "
+Mirantis/puppet-memcached,manifests/params.pp,"Adding fedora support
+
+Handled the same as RHEL"
+Mirantis/puppet-memcached,manifests/init.pp,"Merge pull request #3 from bodepd/user_default_refactor
+
+Simplify looking up user defaults from params namespace "
+Mirantis/puppet-memcached,templates/memcached.conf.erb,"Merge pull request #3 from bodepd/user_default_refactor
+
+Simplify looking up user defaults from params namespace "
+Mirantis/puppet-memcached,templates/memcached_sysconfig.erb,"Merge pull request #3 from bodepd/user_default_refactor
+
+Simplify looking up user defaults from params namespace "
+Mirantis/puppet-memcached,manifests/init.pp,"Simplify looking up user defaults from params namespace
+
+This commit simplifies the process by which the default
+value of $user is determined when not provided.
+
+The memcached class inherits from the params class so
+that the params class defaults are accessible as
+parameter defaults.
+
+It is worth noting that this code will not work with versions
+2.6.0 -> 2.6.5
+
+It is also worth noting that this will probably just be a
+temporary refactor until hiera becomes more pervasive."
+Mirantis/puppet-memcached,templates/memcached.conf.erb,"Simplify looking up user defaults from params namespace
+
+This commit simplifies the process by which the default
+value of $user is determined when not provided.
+
+The memcached class inherits from the params class so
+that the params class defaults are accessible as
+parameter defaults.
+
+It is worth noting that this code will not work with versions
+2.6.0 -> 2.6.5
+
+It is also worth noting that this will probably just be a
+temporary refactor until hiera becomes more pervasive."
+Mirantis/puppet-memcached,templates/memcached_sysconfig.erb,"Simplify looking up user defaults from params namespace
+
+This commit simplifies the process by which the default
+value of $user is determined when not provided.
+
+The memcached class inherits from the params class so
+that the params class defaults are accessible as
+parameter defaults.
+
+It is worth noting that this code will not work with versions
+2.6.0 -> 2.6.5
+
+It is also worth noting that this will probably just be a
+temporary refactor until hiera becomes more pervasive."
+Mirantis/puppet-memcached,manifests/init.pp,style guide changes
+Mirantis/puppet-memcached,manifests/params.pp,style guide changes
+Mirantis/puppet-memcached,templates/memcached.conf.erb,style guide changes
+Mirantis/puppet-memcached,templates/memcached_sysconfig.erb,style guide changes
+Mirantis/puppet-memcached,manifests/init.pp,"Merge pull request #2 from bramswenson/master
+
+CentOS/Redhat support "
+Mirantis/puppet-memcached,manifests/params.pp,"Merge pull request #2 from bramswenson/master
+
+CentOS/Redhat support "
+Mirantis/puppet-memcached,templates/memcached.conf.erb,"Merge pull request #2 from bramswenson/master
+
+CentOS/Redhat support "
+Mirantis/puppet-memcached,templates/memcached_sysconfig.erb,"Merge pull request #2 from bramswenson/master
+
+CentOS/Redhat support "
+Mirantis/puppet-memcached,manifests/init.pp,CentOS support
+Mirantis/puppet-memcached,manifests/params.pp,CentOS support
+Mirantis/puppet-memcached,templates/memcached.conf.erb,CentOS support
+Mirantis/puppet-memcached,templates/memcached_sysconfig.erb,CentOS support
+Mirantis/puppet-memcached,manifests/config.pp,"Merge pull request #1 from bodepd/refactor
+
+Refactor Configure WhiteSource for GitHub.com"
+Mirantis/puppet-memcached,manifests/init.pp,"Merge pull request #1 from bodepd/refactor
+
+Refactor Configure WhiteSource for GitHub.com"
+Mirantis/puppet-memcached,manifests/install.pp,"Merge pull request #1 from bodepd/refactor
+
+Refactor Configure WhiteSource for GitHub.com"
+Mirantis/puppet-memcached,manifests/params.pp,"Merge pull request #1 from bodepd/refactor
+
+Refactor Configure WhiteSource for GitHub.com"
+Mirantis/puppet-memcached,manifests/service.pp,"Merge pull request #1 from bodepd/refactor
+
+Refactor Configure WhiteSource for GitHub.com"
+Mirantis/puppet-memcached,templates/memcached.conf.erb,"Merge pull request #1 from bodepd/refactor
+
+Refactor Configure WhiteSource for GitHub.com"
+Mirantis/puppet-mmm,manifests/agent.pp,"Complete setup of an MMM cluster.
+
+Also works when agent and monitor are on the same node"
+Mirantis/puppet-mmm,manifests/agent/config.pp,"Complete setup of an MMM cluster.
+
+Also works when agent and monitor are on the same node"
+Mirantis/puppet-mmm,manifests/cluster/config.pp,"Complete setup of an MMM cluster.
+
+Also works when agent and monitor are on the same node"
+Mirantis/puppet-mmm,manifests/common/config.pp,"Complete setup of an MMM cluster.
+
+Also works when agent and monitor are on the same node"
+Mirantis/puppet-mmm,manifests/monitor.pp,"Complete setup of an MMM cluster.
+
+Also works when agent and monitor are on the same node"
+Mirantis/puppet-mmm,manifests/agent/config.pp,"Merge branch 'master' of github.com:Tribily/puppet-mmm
+
+Conflicts:
+	manifests/agent.pp"
+Mirantis/puppet-mmm,manifests/agent.pp,Change from mariadb server to mysql server
+Mirantis/puppet-mmm,manifests/agent.pp,Switch from mariadb module dependency to puppetlabs-mysql module dependency
+Mirantis/puppet-mmm,manifests/agent/config.pp,Switch from mariadb module dependency to puppetlabs-mysql module dependency
+Mirantis/puppet-mmm,manifests/agent/config.pp,"Merge pull request #1 from joostfaassen/master
+
+Fork req for privileges Configure WhiteSource for GitHub.com"
+Mirantis/puppet-mmm,manifests/agent/config.pp,"Added CREATE, ALTER + DROP privileges to writer-user"
+Mirantis/puppet-mmm,manifests/agent/config.pp,fixed outlining and syntax fixes
+Mirantis/puppet-mmm,manifests/common/config.pp,fixed outlining and syntax fixes
+Mirantis/puppet-mmm,manifests/monitor.pp,fixed outlining and syntax fixes
+Mirantis/puppet-mmm,manifests/monitor/config.pp,fixed outlining and syntax fixes
+Mirantis/puppet-mmm,manifests/params.pp,fixed outlining and syntax fixes
+Mirantis/puppet-mmm,manifests/agent.pp,Adding mmm:params class so that it can be properly used
+Mirantis/puppet-mmm,manifests/agent/config.pp,Adding mmm:params class so that it can be properly used
+Mirantis/puppet-mmm,manifests/cluster/config.pp,Adding mmm:params class so that it can be properly used
+Mirantis/puppet-mmm,manifests/common.pp,Adding mmm:params class so that it can be properly used
+Mirantis/puppet-mmm,manifests/monitor.pp,Adding mmm:params class so that it can be properly used
+Mirantis/puppet-mmm,manifests/monitor/config.pp,Adding mmm:params class so that it can be properly used
+Mirantis/puppet-mmm,manifests/agent.pp,Make /etc/mysql-mmm more managed..
+Mirantis/puppet-mmm,manifests/agent/config.pp,reader users need to be accessed from the localsubnet same with writer users. No point access being granted from the floating virtual ip to the DB
+Mirantis/puppet-mmm,manifests/cluster/config.pp,fix assignment of user to password
+Mirantis/puppet-mmm,manifests/agent/config.pp,fix mariadb user create define to have unique name
+Mirantis/puppet-mmm,manifests/agent/config.pp,Add support for granting reader rigths on all reader virtual ips
+Mirantis/puppet-mmm,manifests/agent/config.pp,Add reader and writer IPs to agent config so we can grant rights to users properly
+Mirantis/puppet-mmm,manifests/cluster/config.pp,Add reader and writer IPs to agent config so we can grant rights to users properly
+Mirantis/puppet-mmm,manifests/agent/config.pp,Add package dependencies to service resources
+Mirantis/puppet-mmm,manifests/monitor/config.pp,Add package dependencies to service resources
+Mirantis/puppet-mmm,manifests/monitor/config.pp,Add package dependencies to service resources
+Mirantis/puppet-mmm,templates/mmm_mon.conf.erb,fix ip list generation for puppet2.6 (flattened arrays) and puppet2.7 (unflattened arrays)
+Mirantis/puppet-mmm,manifests/agent/config.pp,Merge branch 'master' of github.com:Tribily/puppet-mmm
+Mirantis/puppet-mmm,manifests/cluster/config.pp,Merge branch 'master' of github.com:Tribily/puppet-mmm
+Mirantis/puppet-mmm,manifests/cluster/config.pp,support puppet 2.6.2 by flattening arrays
+Mirantis/puppet-mmm,manifests/common/config.pp,support puppet 2.6.2 by flattening arrays
+Mirantis/puppet-mmm,manifests/monitor/config.pp,support puppet 2.6.2 by flattening arrays
+Mirantis/puppet-mmm,templates/mmm_common.conf.erb,support puppet 2.6.2 by flattening arrays
+Mirantis/puppet-mmm,templates/mmm_mon.conf.erb,support puppet 2.6.2 by flattening arrays
+Mirantis/puppet-mmm,manifests/agent/config.pp,"* remove debian-sys-maint resource from mmm::agent, it doesn't belong there.
+* Only create reader_user if it is specified"
+Mirantis/puppet-mmm,manifests/cluster/config.pp,"* remove debian-sys-maint resource from mmm::agent, it doesn't belong there.
+* Only create reader_user if it is specified"
+Mirantis/puppet-mmm,manifests/agent/config.pp,remove management of debian-sys-maint as $mariadb::params::debian_sys_maint_pass will not work
+Mirantis/puppet-mmm,manifests/cluster/config.pp,add documentation for rest of parameters
+Mirantis/puppet-mmm,manifests/common/config.pp,add params class to mmm config recipe
+Mirantis/puppet-mmm,templates/mmm_mon.conf.erb,proper if statement
+Mirantis/puppet-mmm,templates/mon-init-d.erb,proper if statement
+Mirantis/puppetlabs-mysql,manifests/server.pp,Merge branch 'custom-setup-class'
+Mirantis/puppetlabs-mysql,manifests/config.pp,Parameterized pidfile; critical for successful first restart
+Mirantis/puppetlabs-mysql,manifests/params.pp,Parameterized pidfile; critical for successful first restart
+Mirantis/puppetlabs-mysql,spec/fixtures/manifests/site.pp,Parameterized pidfile; critical for successful first restart
+Mirantis/puppetlabs-mysql,templates/my.cnf.erb,Parameterized pidfile; critical for successful first restart
+Mirantis/puppetlabs-mysql,manifests/server.pp,"Customizable setup class for package/service.
+
+E.g. to transparently use galera packages, which require
+not only a different package name, but a special setup
+procedure, but afterwards can be used as regular mysql."
+Mirantis/puppetlabs-mysql,manifests/config.pp,"Merge pull request #97 from bodepd/revert
+
+Revert ""Merge pull request #90 from emonty/master"" "
+Mirantis/puppetlabs-mysql,manifests/params.pp,"Merge pull request #97 from bodepd/revert
+
+Revert ""Merge pull request #90 from emonty/master"" "
+Mirantis/puppetlabs-mysql,manifests/server.pp,"Merge pull request #97 from bodepd/revert
+
+Revert ""Merge pull request #90 from emonty/master"" "
+Mirantis/puppetlabs-mysql,templates/apparmor.usr.sbin.mysqld.erb,"Merge pull request #97 from bodepd/revert
+
+Revert ""Merge pull request #90 from emonty/master"" "
+Mirantis/puppetlabs-mysql,templates/my.cnf.erb,"Merge pull request #97 from bodepd/revert
+
+Revert ""Merge pull request #90 from emonty/master"" "
+Mirantis/puppetlabs-mysql,manifests/config.pp,"Revert ""Merge pull request #90 from emonty/master""
+
+This reverts commit 063d72493c776db2e036c1f1fada0702ac8636f5, reversing
+changes made to 9c10b3a6c3f99dcdc44272325ba2056ed4877d51. "
+Mirantis/puppetlabs-mysql,manifests/params.pp,"Revert ""Merge pull request #90 from emonty/master""
+
+This reverts commit 063d72493c776db2e036c1f1fada0702ac8636f5, reversing
+changes made to 9c10b3a6c3f99dcdc44272325ba2056ed4877d51. "
+Mirantis/puppetlabs-mysql,manifests/server.pp,"Revert ""Merge pull request #90 from emonty/master""
+
+This reverts commit 063d72493c776db2e036c1f1fada0702ac8636f5, reversing
+changes made to 9c10b3a6c3f99dcdc44272325ba2056ed4877d51. "
+Mirantis/puppetlabs-mysql,templates/apparmor.usr.sbin.mysqld.erb,"Revert ""Merge pull request #90 from emonty/master""
+
+This reverts commit 063d72493c776db2e036c1f1fada0702ac8636f5, reversing
+changes made to 9c10b3a6c3f99dcdc44272325ba2056ed4877d51. "
+Mirantis/puppetlabs-mysql,templates/my.cnf.erb,"Revert ""Merge pull request #90 from emonty/master""
+
+This reverts commit 063d72493c776db2e036c1f1fada0702ac8636f5, reversing
+changes made to 9c10b3a6c3f99dcdc44272325ba2056ed4877d51. "
+Mirantis/puppetlabs-mysql,manifests/config.pp,"Merge pull request #90 from emonty/master
+
+Add a bunch of new parameters "
+Mirantis/puppetlabs-mysql,manifests/params.pp,"Merge pull request #90 from emonty/master
+
+Add a bunch of new parameters "
+Mirantis/puppetlabs-mysql,manifests/server.pp,"Merge pull request #90 from emonty/master
+
+Add a bunch of new parameters "
+Mirantis/puppetlabs-mysql,templates/apparmor.usr.sbin.mysqld.erb,"Merge pull request #90 from emonty/master
+
+Add a bunch of new parameters "
+Mirantis/puppetlabs-mysql,templates/my.cnf.erb,"Merge pull request #90 from emonty/master
+
+Add a bunch of new parameters "
+Mirantis/puppetlabs-mysql,manifests/params.pp,"Merge pull request #96 from branan/missing_curly_brace
+
+Put that curly brace in the right place this time "
+Mirantis/puppetlabs-mysql,manifests/params.pp,Put that curly brace in the right place this time
+Mirantis/puppetlabs-mysql,manifests/params.pp,"Merge pull request #95 from branan/missing_curly_brace
+
+Add a missing curly brace "
+Mirantis/puppetlabs-mysql,manifests/params.pp,Add a missing curly brace
+Mirantis/puppetlabs-mysql,manifests/params.pp,"Merge pull request #94 from hunner/amazon-linux
+
+Add support for Amazon Linux. "
+Mirantis/puppetlabs-mysql,manifests/params.pp,Add support for Amazon Linux.
+Mirantis/puppetlabs-mysql,manifests/params.pp,Add apparmor support.
+Mirantis/puppetlabs-mysql,manifests/server.pp,Add apparmor support.
+Mirantis/puppetlabs-mysql,templates/apparmor.usr.sbin.mysqld.erb,Add apparmor support.
+Mirantis/puppetlabs-mysql,manifests/config.pp,"Merge pull request #73 from razorsedge/mysqladmin_passwd
+
+Escape $root_password during execs. "
+Mirantis/puppetlabs-mysql,manifests/config.pp,"Escape $root_password during execs.
+
+Some characters used in a password can cause the shell in an exec to do
+unexpected things unless the password is enclosed in single quotes.
+Updated the rspec tests to deal with the password quoting."
+Mirantis/puppetlabs-mysql,manifests/config.pp,Add parameterization changes from wikipedia.
+Mirantis/puppetlabs-mysql,manifests/params.pp,Add parameterization changes from wikipedia.
+Mirantis/puppetlabs-mysql,templates/my.cnf.erb,Add parameterization changes from wikipedia.
+Mirantis/puppetlabs-mysql,manifests/server.pp,"Merge pull request #81 from bodepd/enabled_param
+
+Add enabled parameter to mysql::server "
+Mirantis/puppetlabs-mysql,manifests/server.pp,"Add enabled parameter to mysql::server
+
+This parameter can be used to specify whether the service
+should be running.
+
+It has been implemented to allow installations of mysql::server to
+be in passive mode for HA."
+Mirantis/puppetlabs-nova,manifests/network/bridge.pp,"Merge pull request #214 from puppetlabs/folsom
+
+Folsom "
+Mirantis/puppetlabs-nova,manifests/volume/san.pp,"Merge pull request #214 from puppetlabs/folsom
+
+Folsom "
+Mirantis/puppetlabs-nova,manifests/volume/san.pp,"Merge pull request #212 from Mirantis/volume-san
+
+Add nova-volume san support "
+Mirantis/puppetlabs-nova,manifests/keystone/auth.pp,"Merge pull request #213 from derekhiggins/https_endpoint
+
+Adding the ability to specify https for the public endpoint "
+Mirantis/puppetlabs-nova,manifests/keystone/auth.pp,Adding the ability to specify https for the public endpoint
+Mirantis/puppetlabs-nova,manifests/network/bridge.pp,"Merge pull request #201 from Mirantis/centos-network-bridge
+
+RedHad support in nova::network::bridge "
+Mirantis/puppetlabs-nova,manifests/network/bridge.pp,RedHad support in nova::network::bridge
+Mirantis/puppetlabs-nova,manifests/volume/san.pp,Add nova-volume san support
+Mirantis/puppetlabs-nova,manifests/api.pp,"Merge pull request #196 from aimonb/master
+
+Implement volume_api_class as an option "
+Mirantis/puppetlabs-nova,manifests/api.pp,Implement volume_api_class as an option
+Mirantis/puppetlabs-nova,manifests/api.pp,"Merge pull request #195 from puppetlabs/master
+
+merge folsom changes from master "
+Mirantis/puppetlabs-nova,manifests/compute/libvirt.pp,"Merge pull request #195 from puppetlabs/master
+
+merge folsom changes from master "
+Mirantis/puppetlabs-nova,manifests/keystone/auth.pp,"Merge pull request #195 from puppetlabs/master
+
+merge folsom changes from master "
+Mirantis/puppetlabs-nova,manifests/manage/network.pp,"Merge pull request #195 from puppetlabs/master
+
+merge folsom changes from master "
+Mirantis/puppetlabs-nova,manifests/migration/libvirt.pp,"Merge pull request #195 from puppetlabs/master
+
+merge folsom changes from master "
+Mirantis/puppetlabs-nova,manifests/network.pp,"Merge pull request #195 from puppetlabs/master
+
+merge folsom changes from master "
+Mirantis/puppetlabs-nova,manifests/utilities.pp,"Merge pull request #195 from puppetlabs/master
+
+merge folsom changes from master "
+Mirantis/puppetlabs-nova,manifests/compute/libvirt.pp,"Merge pull request #193 from aimonb/master
+
+Removed duplicate statement block "
+Mirantis/puppetlabs-nova,manifests/compute/libvirt.pp,Remove duplicate statement block
+Mirantis/puppetlabs-nova,manifests/compute/libvirt.pp,"Merge pull request #189 from jtopjian/folsom-rebase
+
+Changes "
+Mirantis/puppetlabs-nova,manifests/keystone/auth.pp,"Merge pull request #189 from jtopjian/folsom-rebase
+
+Changes "
+Mirantis/puppetlabs-nova,manifests/manage/network.pp,"Merge pull request #189 from jtopjian/folsom-rebase
+
+Changes "
+Mirantis/puppetlabs-nova,manifests/migration/libvirt.pp,"Merge pull request #189 from jtopjian/folsom-rebase
+
+Changes "
+Mirantis/puppetlabs-nova,manifests/network.pp,"Merge pull request #189 from jtopjian/folsom-rebase
+
+Changes "
+Mirantis/puppetlabs-nova,manifests/keystone/auth.pp,"Do not create nova-volume if cinder is enabled. Removed unused defined
+type."
+Mirantis/puppetlabs-nova,manifests/migration/libvirt.pp,"Do not create nova-volume if cinder is enabled. Removed unused defined
+type."
+Mirantis/puppetlabs-nova,manifests/compute/libvirt.pp,Added migration support
+Mirantis/puppetlabs-nova,manifests/manage/network.pp,vlan fixes
+Mirantis/puppetlabs-nova,manifests/network.pp,vlan fixes
+Mirantis/puppetlabs-nova,manifests/utilities.pp,"Merge pull request #188 from aimonb/master
+
+wrap utilities packages in a 'if !defined' to prevent conflict with rvm module "
+Mirantis/puppetlabs-nova,manifests/utilities.pp,wrap utilities packages in a if \!defined to prevent conflict with rvm module
+Mirantis/puppetlabs-nova,manifests/utilities.pp,wrap utilities packages in a if \!defined to prevent conflict with rvm module
+Mirantis/puppetlabs-nova,manifests/utilities.pp,wrap utilities packages in a if \!defined to prevent conflict with rvm module
+Mirantis/puppetlabs-nova,manifests/utilities.pp,wrap utilities packages in a if \!defined to prevent conflict with rvm module
+Mirantis/puppetlabs-nova,manifests/api.pp,"Merge pull request #187 from bodepd/api_deps_redhat
+
+Add a coupld of api deps "
+Mirantis/puppetlabs-nova,manifests/api.pp,"Add a coupld of api deps
+
+- nova-common should be installed first
+- keystone client libs should be installed."
+Mirantis/puppetlabs-nova,manifests/utilities.pp,"Merge pull request #186 from bodepd/redhat_no_utils
+
+do not install utilities on RHEL. "
+Mirantis/puppetlabs-nova,manifests/utilities.pp,do not install utilities on RHEL.
+Mirantis/puppetlabs-nova,manifests/compute/libvirt.pp,"Merge pull request #185 from puppetlabs/master
+
+merge up changes from master "
+Mirantis/puppetlabs-nova,manifests/compute/libvirt.pp,"Merge pull request #183 from bodepd/remove_invalid_code
+
+remove $::nova::params::libvirt_type_kvm package "
+Mirantis/puppetlabs-nova,manifests/compute/libvirt.pp,"remove $::nova::params::libvirt_type_kvm package
+
+I am not sure where this code came from.
+
+It is a bug, it refers to a params value that has never
+existed in the projects history."
+Mirantis/puppetlabs-rabbitmq,manifests/server.pp,Cluster support
+Mirantis/puppetlabs-rabbitmq,manifests/repo/rhel.pp,"Merge pull request #25 from vjanelle/master
+
+RPM/RHEL support "
+Mirantis/puppetlabs-rabbitmq,manifests/repo/rhel.pp,Adding RPM/RHEL support
+Mirantis/puppetlabs-rabbitmq,manifests/server.pp,"Merge pull request #23 from bodepd/style_update
+
+Align various arrows "
+Mirantis/puppetlabs-rabbitmq,manifests/service.pp,"Merge pull request #23 from bodepd/style_update
+
+Align various arrows "
+Mirantis/puppetlabs-rabbitmq,manifests/server.pp,"Align various arrows
+
+To be in alignment with Style Guide"
+Mirantis/puppetlabs-rabbitmq,manifests/service.pp,"Align various arrows
+
+To be in alignment with Style Guide"
+Mirantis/puppetlabs-rabbitmq,manifests/repo/apt.pp,"Merge pull request #22 from rhyselsmore/patch-1
+
+Updated the requirements "
+Mirantis/puppetlabs-rabbitmq,manifests/repo/apt.pp,Updated the requirements to also include puppetlabs-stdlib due to the validate_re function
+Mirantis/puppetlabs-rabbitmq,manifests/server.pp,"Merge pull request #18 from jmchilton/allow-specify-bind-address
+
+Allow for easy specification of ip address for rabbitmq to bind to. "
+Mirantis/puppetlabs-rabbitmq,spec/fixtures/manifests/site.pp,"Merge pull request #18 from jmchilton/allow-specify-bind-address
+
+Allow for easy specification of ip address for rabbitmq to bind to. "
+Mirantis/puppetlabs-rabbitmq,templates/rabbitmq-env.conf.erb,"Merge pull request #18 from jmchilton/allow-specify-bind-address
+
+Allow for easy specification of ip address for rabbitmq to bind to. "
+Mirantis/puppetlabs-rabbitmq,spec/fixtures/manifests/site.pp,"More updates to rspec setup to enable rspec-puppet testing: add empty site.pp fixture, add module fixtures directory to .gitignore, updates to spec_helper.rb based on same file puppetlabs-nova."
+Mirantis/puppetlabs-rabbitmq,manifests/server.pp,Allow for specification of ip address for rabbitmq to bind to.
+Mirantis/puppetlabs-rabbitmq,templates/rabbitmq-env.conf.erb,Allow for specification of ip address for rabbitmq to bind to.
+Mirantis/puppetlabs-rsync,manifests/init.pp,"Merge pull request #18 from branan/add_rsync_ordering
+
+Ensure that the rsync package is installed before rsync gets are attempted "
+Mirantis/puppetlabs-rsync,manifests/init.pp,Ensure that the rsync package is installed before rsync gets are attempted
+Mirantis/puppetlabs-rsync,manifests/server.pp,"Merge pull request #15 from fcharlier/fc/use_chroot_parameter
+
+Add a use_chroot parameter "
+Mirantis/puppetlabs-rsync,templates/header.erb,"Merge pull request #15 from fcharlier/fc/use_chroot_parameter
+
+Add a use_chroot parameter "
+Mirantis/puppetlabs-rsync,manifests/server.pp,"Add a use_chroot parameter
+
+Previously the rsync parameter 'use chroot' was hardcoded to 'yes'.
+Make it a parameter. Defaults to 'yes'."
+Mirantis/puppetlabs-rsync,templates/header.erb,"Add a use_chroot parameter
+
+Previously the rsync parameter 'use chroot' was hardcoded to 'yes'.
+Make it a parameter. Defaults to 'yes'."
+Mirantis/puppetlabs-rsync,manifests/get.pp,"Merge pull request #13 from bodepd/rsync_get_idempotency
+
+Make rsync::get idempotent "
+Mirantis/puppetlabs-rsync,manifests/server/module.pp,"Merge pull request #11 from fcharlier/auth
+
+Implement restrictions for modules "
+Mirantis/puppetlabs-rsync,templates/module.erb,"Merge pull request #11 from fcharlier/auth
+
+Implement restrictions for modules "
+Mirantis/puppetlabs-rsync,manifests/server/module.pp,"Implement restrictions for modules
+
+Add support for modules directives :
+
++ secrets file
++ auth users
++ hosts allow
++ hosts deny"
+Mirantis/puppetlabs-rsync,templates/module.erb,"Implement restrictions for modules
+
+Add support for modules directives :
+
++ secrets file
++ auth users
++ hosts allow
++ hosts deny"
+Mirantis/puppetlabs-rsync,manifests/get.pp,"Make rsync::get idempotent
+
+This commit makes the rsync::get define idenpotent. It does this by adding
+a dry-run rsync call as on onlyif params that ensures that rsync will
+only create an event if the file currently needs to be updated.
+
+This change has been added to ensure that the rsync::get define does not
+constantly spew events when its used."
+Mirantis/puppetlabs-rsync,spec/fixtures/manifests/site.pp,"Merge pull request #12 from branan/spec_testing
+
+Add initial spec testing using the puppetlabs_spec_helper gem "
+Mirantis/puppetlabs-rsync,spec/fixtures/manifests/site.pp,Add initial spec testing using the puppetlabs_spec_helper gem
+Mirantis/puppetlabs-rsync,manifests/get.pp,"Merge pull request #10 from ody/add_path_attribute
+
+A path needs to be defined from Exec resources. "
+Mirantis/puppetlabs-rsync,manifests/get.pp,"A path needs to be defined from Exec resources.
+
+  Add a path attribute to the Exec resource used in rsync::get defined
+  type.
+
+  Previously a user would get an error if they haven't defined a
+  resource default for Exec."
+Mirantis/puppetlabs-rsync,manifests/server.pp,"Merge pull request #7 from ghoneycutt/noticket/master/motd_support_actually_works
+
+enables motd to actually work "
+Mirantis/puppetlabs-rsync,manifests/server/module.pp,"Merge pull request #7 from ghoneycutt/noticket/master/motd_support_actually_works
+
+enables motd to actually work "
+Mirantis/puppetlabs-rsync,templates/header.erb,"Merge pull request #7 from ghoneycutt/noticket/master/motd_support_actually_works
+
+enables motd to actually work "
+Mirantis/puppetlabs-rsync,templates/module.erb,"Merge pull request #7 from ghoneycutt/noticket/master/motd_support_actually_works
+
+enables motd to actually work "
+Mirantis/puppetlabs-rsync,tests/repo.pp,"Merge pull request #7 from ghoneycutt/noticket/master/motd_support_actually_works
+
+enables motd to actually work "
+Mirantis/puppetlabs-rsync,tests/server_with_motd.pp,"Merge pull request #7 from ghoneycutt/noticket/master/motd_support_actually_works
+
+enables motd to actually work "
+Mirantis/puppetlabs-rsync,manifests/server.pp,enables motd to actually work
+Mirantis/puppetlabs-rsync,manifests/server/module.pp,enables motd to actually work
+Mirantis/puppetlabs-rsync,templates/header.erb,enables motd to actually work
+Mirantis/puppetlabs-rsync,templates/module.erb,enables motd to actually work
+Mirantis/puppetlabs-rsync,tests/repo.pp,enables motd to actually work
+Mirantis/puppetlabs-rsync,tests/server_with_motd.pp,enables motd to actually work
+Mirantis/puppetlabs-rsync,manifests/get.pp,"updating module to comply with style guide
+
+now passes puppet-lint"
+Mirantis/puppetlabs-rsync,manifests/init.pp,"updating module to comply with style guide
+
+now passes puppet-lint"
+Mirantis/puppetlabs-rsync,manifests/repo.pp,"updating module to comply with style guide
+
+now passes puppet-lint"
+Mirantis/puppetlabs-rsync,manifests/server.pp,"updating module to comply with style guide
+
+now passes puppet-lint"
+Mirantis/puppetlabs-rsync,manifests/server/module.pp,"updating module to comply with style guide
+
+now passes puppet-lint"
+Mirantis/puppetlabs-rsync,pkg/ghoneycutt-rsync-1.0.0/manifests/init.pp,removing binary data - pkg/
+Mirantis/puppetlabs-rsync,pkg/ghoneycutt-rsync-1.0.0/manifests/repo.pp,removing binary data - pkg/
+Mirantis/puppetlabs-rsync,pkg/ghoneycutt-rsync-1.0.0/manifests/server.pp,removing binary data - pkg/
+Mirantis/puppetlabs-rsync,pkg/ghoneycutt-rsync-1.0.0/templates/module.erb,removing binary data - pkg/
+Mirantis/puppetlabs-rsync,pkg/ghoneycutt-rsync-1.0.0/tests/init.pp,removing binary data - pkg/
+Mirantis/puppetlabs-rsync,pkg/ghoneycutt-rsync-1.0.1/manifests/init.pp,removing binary data - pkg/
+Mirantis/puppetlabs-rsync,pkg/ghoneycutt-rsync-1.0.1/manifests/repo.pp,removing binary data - pkg/
+Mirantis/puppetlabs-rsync,pkg/ghoneycutt-rsync-1.0.1/manifests/server.pp,removing binary data - pkg/
+Mirantis/puppetlabs-rsync,pkg/ghoneycutt-rsync-1.0.1/templates/module.erb,removing binary data - pkg/
+Mirantis/puppetlabs-rsync,pkg/ghoneycutt-rsync-1.0.1/tests/init.pp,removing binary data - pkg/
+Mirantis/puppetlabs-rsync,manifests/init.pp,"Merge pull request #1 from ghoneycutt/noticket/master/remove_dependency_on_ghoneycutt_generic
+
+removing dependency on ghoneycutt/generic Configure WhiteSource for GitHub.com"
+Mirantis/puppetlabs-rsync,manifests/repo.pp,"Merge pull request #1 from ghoneycutt/noticket/master/remove_dependency_on_ghoneycutt_generic
+
+removing dependency on ghoneycutt/generic Configure WhiteSource for GitHub.com"
+Mirantis/puppetlabs-rsync,manifests/init.pp,removing dependency on ghoneycutt/generic
+Mirantis/puppetlabs-rsync,manifests/repo.pp,removing dependency on ghoneycutt/generic
+Mirantis/puppetlabs-rsync,manifests/server.pp,Merge branch 'master' of github.com:puppetlabs/puppetlabs-rsync
+Mirantis/puppetlabs-rsync,manifests/server.pp,"Merge pull request #2 from fcharlier/rsync_package_before_refresh_xinetd
+
+xinetd requires the rsync binary to exist "
+Mirantis/puppetlabs-rsync,manifests/server.pp,"xinetd requires the rsync binary to exist
+
+Ensure the package is installed before the rsync service is added to
+xinetd"
+Mirantis/puppetlabs-rsync,manifests/server.pp,Merge branch 'master' of github.com:puppetlabs/puppetlabs-rsync
+Mirantis/puppetlabs-rsync,manifests/server.pp,"Merge pull request #1 from bodepd/master
+
+Set bind address when using xinetd Configure WhiteSource for GitHub.com"
+Mirantis/puppet-ssh,manifests/params.pp,"Merge pull request #6 from makefu/master
+
+Add Support for CentOS and RedHat "
+Mirantis/puppet-ssh,manifests/params.pp,"add support for CentOS and RHEL
+
+these systems are basically the same as the already provided fedora OS"
+Mirantis/puppet-ssh,manifests/server/configline.pp,"Merge pull request #5 from IvanBayan/feature
+
+Added ability to add multiple instances of same option, like 'Port' or 'ListenAddress'. "
+Mirantis/puppet-ssh,manifests/server/configline.pp,"Added ability to add multiple instances of same option,
+like 'Port' or 'Listen' in next maner:
+
+ssh::server::configline {
+	'Port' :
+		ensure => 'add',
+		value => '5190'
+}"
+Mirantis/puppet-ssh,manifests/params.pp,"Merge pull request #2 from derekhiggins/e273c0d56012467cf2968ddf90518e85fa38b9de
+
+Adding Fedora support "
+Mirantis/puppet-ssh,manifests/params.pp,Adding Fedora support
+Mirantis/puppet-ssh,manifests/server/configline.pp,make it possible to remove an entry in sshd config
+Mirantis/puppet-ssh,manifests/server/config.pp,do not replace sshd config
+Mirantis/puppet-ssh,manifests/server/install.pp,"Merge pull request #1 from bodepd/master
+
+remove metadata.json and include ssh::params from ssh::server::install Configure WhiteSource for GitHub.com"
+Mirantis/puppet-ssh,manifests/server/install.pp,"Add include ssh::params to ssh::server::install
+
+This commit adds an include ssh::params to
+the ssh::server::install class so that it can be
+included independently from the ssh::server class"
+Mirantis/puppet-ssh,manifests/client/config.pp,fixes http://projects.reductivelabs.com/issues/2014
+Mirantis/puppet-ssh,manifests/params.pp,fixes http://projects.reductivelabs.com/issues/2014
+Mirantis/puppet-ssh,tests/init.pp,add required files for forge.puppetlabs.com
+Mirantis/puppet-ssh,manifests/server/service.pp,wrong variable for service name
+Mirantis/puppet-ssh,manifests/client/config.pp,add missing comma at line ending
+Mirantis/puppet-ssh,manifests/server/service.pp,fix namespace for service.pp
+Mirantis/puppet-ssh,manifests/client.pp,"manage ssh client, too."
+Mirantis/puppet-ssh,manifests/client/config.pp,"manage ssh client, too."
+Mirantis/puppet-ssh,manifests/client/install.pp,"manage ssh client, too."
+Mirantis/puppet-ssh,manifests/config.pp,"manage ssh client, too."
+Mirantis/puppet-ssh,manifests/init.pp,"manage ssh client, too."
+Mirantis/puppet-ssh,manifests/install.pp,"manage ssh client, too."
+Mirantis/puppet-ssh,manifests/params.pp,"manage ssh client, too."
+Mirantis/puppet-ssh,manifests/server.pp,"manage ssh client, too."
+Mirantis/puppet-ssh,manifests/server/config.pp,"manage ssh client, too."
+Mirantis/puppet-ssh,manifests/server/configline.pp,"manage ssh client, too."
+Mirantis/puppet-ssh,manifests/server/install.pp,"manage ssh client, too."
+Mirantis/puppet-ssh,manifests/server/service.pp,"manage ssh client, too."
+Mirantis/puppet-ssh,manifests/ssh_configline.pp,"manage ssh client, too."
+Mirantis/puppet-ssh,manifests/ssh_configline.pp,remove useless curly bracket
+Mirantis/puppet-ssh,manifests/sshd_configline.pp,remove useless curly bracket
+Mirantis/puppet-ssh,manifests/client.pp,module name was missing
+Mirantis/puppet-ssh,manifests/client.pp,add client support to module (needs improvement)
+Mirantis/puppet-ssh,manifests/init.pp,add client support to module (needs improvement)
+Mirantis/puppet-ssh,manifests/params.pp,add client support to module (needs improvement)
+Mirantis/puppet-ssh,manifests/ssh_configline.pp,add client support to module (needs improvement)
+Mirantis/puppet-ssh,manifests/sshd_configline.pp,add client support to module (needs improvement)
+Mirantis/puppet-ssh,manifests/params.pp,Removed wrong set comma after variables
+Mirantis/puppet-ssh,manifests/config.pp,Initial version of puppet-ssh module
+Mirantis/puppet-ssh,manifests/hostkeys.pp,Initial version of puppet-ssh module
+Mirantis/puppet-ssh,manifests/init.pp,Initial version of puppet-ssh module
+Mirantis/puppet-ssh,manifests/install.pp,Initial version of puppet-ssh module
+Mirantis/puppet-ssh,manifests/knownhosts.pp,Initial version of puppet-ssh module
+Mirantis/puppet-ssh,manifests/params.pp,Initial version of puppet-ssh module
+Mirantis/puppet-ssh,manifests/service.pp,Initial version of puppet-ssh module
+Mirantis/puppetlabs-swift,examples/site.pp,"Merge pull request #47 from bodepd/node_regex
+
+Update node blocks to use regex "
+Mirantis/puppetlabs-swift,examples/site.pp,"Update node blocks to use regex
+
+This commit updates node blocks to use regex.
+
+This is so that I can actually use it for my testing."
+Mirantis/puppetlabs-swift,manifests/storage/loopback.pp,"Merge pull request #46 from bodepd/add_loopback_mnt_param
+
+Add loopback mnt param "
+Mirantis/puppetlabs-swift,manifests/storage/mount.pp,"Merge pull request #46 from bodepd/add_loopback_mnt_param
+
+Add loopback mnt param "
+Mirantis/puppetlabs-swift,manifests/storage/xfs.pp,"Merge pull request #46 from bodepd/add_loopback_mnt_param
+
+Add loopback mnt param "
+Mirantis/puppetlabs-swift,manifests/storage/loopback.pp,"Style related updates
+
+This commit contains several style related updates:
+- aligns class parameters for readibility
+- removes trailing class params for 2.6.x compat
+- deletes accidentally checked in swp file"
+Mirantis/puppetlabs-swift,manifests/storage/mount.pp,"Style related updates
+
+This commit contains several style related updates:
+- aligns class parameters for readibility
+- removes trailing class params for 2.6.x compat
+- deletes accidentally checked in swp file"
+Mirantis/puppetlabs-swift,manifests/storage/xfs.pp,"Style related updates
+
+This commit contains several style related updates:
+- aligns class parameters for readibility
+- removes trailing class params for 2.6.x compat
+- deletes accidentally checked in swp file"
+Mirantis/puppetlabs-swift,manifests/proxy/authtoken.pp,"Merge pull request #44 from branan/puppet_26_compat
+
+Remove trailing comma for puppet 2.6 compat "
+Mirantis/puppetlabs-swift,manifests/proxy/authtoken.pp,Remove trailing comma for puppet 2.6 compat
+Mirantis/puppetlabs-swift,examples/all.pp,"Merge pull request #43 from branan/single_replica_example
+
+Use a single replica in the all-in-one example "
+Mirantis/puppetlabs-swift,manifests/storage/server.pp,"Merge pull request #43 from branan/single_replica_example
+
+Use a single replica in the all-in-one example "
+Mirantis/puppetlabs-swift,examples/all.pp,"Use a single replica in the all-in-one example
+
+Using multiple replicas for all-in-one requires special swift
+configuration that is incompatible with multi-host swift setups."
+Mirantis/puppetlabs-swift,manifests/storage/server.pp,"Revert ""Allow multiple instances of swift::storage::server on one host""
+
+This reverts commit 02efd7afe06f029edee3bfcc6395857e1459b3ec."
+Mirantis/puppetlabs-swift,manifests/storage/loopback.pp,"updated loopback, xfs, and mount to support non-loopback devices"
+Mirantis/puppetlabs-swift,manifests/storage/mount.pp,"updated loopback, xfs, and mount to support non-loopback devices"
+Mirantis/puppetlabs-swift,manifests/storage/xfs.pp,"updated loopback, xfs, and mount to support non-loopback devices"
+Mirantis/puppetlabs-swift,manifests/ringserver.pp,"Merge pull request #40 from fcharlier/fc/rsync_no_chroot
+
+Disable 'use chroot' for rsync::server "
+Mirantis/puppetlabs-swift,manifests/storage.pp,"Merge pull request #40 from fcharlier/fc/rsync_no_chroot
+
+Disable 'use chroot' for rsync::server "
+Mirantis/puppetlabs-swift,manifests/ringserver.pp,"Disable 'use chroot' for rsync::server
+
+Allow to keep the right username/groupname for rsync'ed files if the
+uids and gids are not in sync on all the servers"
+Mirantis/puppetlabs-swift,manifests/storage.pp,"Disable 'use chroot' for rsync::server
+
+Allow to keep the right username/groupname for rsync'ed files if the
+uids and gids are not in sync on all the servers"
+Mirantis/puppetlabs-swift,manifests/storage/generic.pp,"Merge pull request #35 from branan/fix_all_example
+
+Fix all example "
+Mirantis/puppetlabs-swift,manifests/storage/node.pp,"Merge pull request #35 from branan/fix_all_example
+
+Fix all example "
+Mirantis/puppetlabs-swift,manifests/storage/server.pp,"Merge pull request #35 from branan/fix_all_example
+
+Fix all example "
+Mirantis/puppetlabs-swift,manifests/storage/server.pp,"Allow multiple instances of swift::storage::server on one host
+
+Adding the server instance's name to the rsync type avoids a duplicate resource
+error."
+Mirantis/puppetlabs-swift,manifests/storage/node.pp,Fix ring_*_device usage in swift::storage::node
+Mirantis/puppetlabs-swift,manifests/storage/generic.pp,Make sure the replicator services are ordered properly
+Mirantis/puppetlabs-swift,manifests/storage/server.pp,Make sure the replicator services are ordered properly
+Mirantis/puppetlabs-swift,examples/all.pp,"Merge pull request #33 from bodepd/swift_example_manifest
+
+Add example site.pp "
+Mirantis/puppetlabs-swift,examples/multi.pp,"Merge pull request #33 from bodepd/swift_example_manifest
+
+Add example site.pp "
+Mirantis/puppetlabs-swift,examples/pre.pp,"Merge pull request #33 from bodepd/swift_example_manifest
+
+Add example site.pp "
+Mirantis/puppetlabs-swift,examples/proxy_keystone.pp,"Merge pull request #33 from bodepd/swift_example_manifest
+
+Add example site.pp "
+Mirantis/puppetlabs-swift,examples/site.pp,"Merge pull request #33 from bodepd/swift_example_manifest
+
+Add example site.pp "
+Mirantis/puppetlabs-sysctl,manifests/value.pp,bring name in line with proper naming schema
+Mirantis/puppetlabs-sysctl,manifests/set_value.pp,refactoring
+Mirantis/puppetlabs-sysctl,manifests/init.pp,new try with sysctl
+Mirantis/puppetlabs-sysctl,manifests/init.pp,new try with sysctl
+Mirantis/puppetlabs-sysctl,manifests/init.pp,new try with sysctl
+Mirantis/puppetlabs-sysctl,manifests/init.pp,new try with sysctl
+Mirantis/puppetlabs-sysctl,manifests/init.pp,new try with sysctl
+Mirantis/puppetlabs-sysctl,manifests/init.pp,new try with sysctl
+Mirantis/puppetlabs-sysctl,manifests/init.pp,new try with sysctl
+Mirantis/puppetlabs-sysctl,manifests/init.pp,removed module_dirs
+Mirantis/puppetlabs-sysctl,manifests/init.pp,fixed typo
+Mirantis/puppetlabs-sysctl,manifests/init.pp,gibt was nen error...
+Mirantis/puppetlabs-sysctl,manifests/init.pp,typo
+Mirantis/puppetlabs-sysctl,manifests/init.pp,typo
+Mirantis/puppetlabs-sysctl,manifests/init.pp,typo
+Mirantis/puppetlabs-sysctl,manifests/init.pp,added first sysctl test
+Mirantis/puppetlabs-sysctl,manifests/init.pp,moved stuff to plugins
+Mirantis/puppetlabs-vcsrepo,examples/bzr/branch.pp,Merge remote-tracking branch 'upstream/master'
+Mirantis/puppetlabs-vcsrepo,examples/bzr/init_repo.pp,Merge remote-tracking branch 'upstream/master'
+Mirantis/puppetlabs-vcsrepo,examples/cvs/local.pp,Merge remote-tracking branch 'upstream/master'
+Mirantis/puppetlabs-vcsrepo,examples/cvs/remote.pp,Merge remote-tracking branch 'upstream/master'
+Mirantis/puppetlabs-vcsrepo,examples/git/bare_init.pp,Merge remote-tracking branch 'upstream/master'
+Mirantis/puppetlabs-vcsrepo,examples/git/clone.pp,Merge remote-tracking branch 'upstream/master'
+Mirantis/puppetlabs-vcsrepo,examples/git/working_copy_init.pp,Merge remote-tracking branch 'upstream/master'
+Mirantis/puppetlabs-vcsrepo,examples/hg/clone.pp,Merge remote-tracking branch 'upstream/master'
+Mirantis/puppetlabs-vcsrepo,examples/hg/init_repo.pp,Merge remote-tracking branch 'upstream/master'
+Mirantis/puppetlabs-vcsrepo,examples/svn/checkout.pp,Merge remote-tracking branch 'upstream/master'
+Mirantis/puppetlabs-vcsrepo,examples/svn/server.pp,Merge remote-tracking branch 'upstream/master'
+Mirantis/puppetlabs-vcsrepo,examples/bzr/branch.pp,"Merge pull request #19 from adamgibbins/master
+
+Improved Puppet DSL style as per the guidelines. "
+Mirantis/puppetlabs-vcsrepo,examples/bzr/init_repo.pp,"Merge pull request #19 from adamgibbins/master
+
+Improved Puppet DSL style as per the guidelines. "
+Mirantis/puppetlabs-vcsrepo,examples/cvs/local.pp,"Merge pull request #19 from adamgibbins/master
+
+Improved Puppet DSL style as per the guidelines. "
+Mirantis/puppetlabs-vcsrepo,examples/cvs/remote.pp,"Merge pull request #19 from adamgibbins/master
+
+Improved Puppet DSL style as per the guidelines. "
+Mirantis/puppetlabs-vcsrepo,examples/git/bare_init.pp,"Merge pull request #19 from adamgibbins/master
+
+Improved Puppet DSL style as per the guidelines. "
+Mirantis/puppetlabs-vcsrepo,examples/git/clone.pp,"Merge pull request #19 from adamgibbins/master
+
+Improved Puppet DSL style as per the guidelines. "
+Mirantis/puppetlabs-vcsrepo,examples/git/working_copy_init.pp,"Merge pull request #19 from adamgibbins/master
+
+Improved Puppet DSL style as per the guidelines. "
+Mirantis/puppetlabs-vcsrepo,examples/hg/clone.pp,"Merge pull request #19 from adamgibbins/master
+
+Improved Puppet DSL style as per the guidelines. "
+Mirantis/puppetlabs-vcsrepo,examples/hg/init_repo.pp,"Merge pull request #19 from adamgibbins/master
+
+Improved Puppet DSL style as per the guidelines. "
+Mirantis/puppetlabs-vcsrepo,examples/svn/checkout.pp,"Merge pull request #19 from adamgibbins/master
+
+Improved Puppet DSL style as per the guidelines. "
+Mirantis/puppetlabs-vcsrepo,examples/svn/server.pp,"Merge pull request #19 from adamgibbins/master
+
+Improved Puppet DSL style as per the guidelines. "
+Mirantis/puppetlabs-vcsrepo,examples/bzr/branch.pp,Make Puppet DSL compliant with the style guides and puppet lint.
+Mirantis/puppetlabs-vcsrepo,examples/bzr/init_repo.pp,Make Puppet DSL compliant with the style guides and puppet lint.
+Mirantis/puppetlabs-vcsrepo,examples/cvs/local.pp,Make Puppet DSL compliant with the style guides and puppet lint.
+Mirantis/puppetlabs-vcsrepo,examples/cvs/remote.pp,Make Puppet DSL compliant with the style guides and puppet lint.
+Mirantis/puppetlabs-vcsrepo,examples/git/bare_init.pp,Make Puppet DSL compliant with the style guides and puppet lint.
+Mirantis/puppetlabs-vcsrepo,examples/git/clone.pp,Make Puppet DSL compliant with the style guides and puppet lint.
+Mirantis/puppetlabs-vcsrepo,examples/git/working_copy_init.pp,Make Puppet DSL compliant with the style guides and puppet lint.
+Mirantis/puppetlabs-vcsrepo,examples/hg/clone.pp,Make Puppet DSL compliant with the style guides and puppet lint.
+Mirantis/puppetlabs-vcsrepo,examples/hg/init_repo.pp,Make Puppet DSL compliant with the style guides and puppet lint.
+Mirantis/puppetlabs-vcsrepo,examples/svn/checkout.pp,Make Puppet DSL compliant with the style guides and puppet lint.
+Mirantis/puppetlabs-vcsrepo,examples/svn/server.pp,Make Puppet DSL compliant with the style guides and puppet lint.
+Mirantis/puppetlabs-xinetd,spec/fixtures/manifests/site.pp,"Merge pull request #3 from branan/test
+
+Add site.pp file for spec tests "
+Mirantis/puppetlabs-xinetd,spec/fixtures/manifests/site.pp,Add site.pp file for spec tests
+Mirantis/puppetlabs-xinetd,manifests/init.pp,"Merge pull request #9 from ghoneycutt/rgevaert_mods
+
+Rgevaert mods "
+Mirantis/puppetlabs-xinetd,manifests/service.pp,"Merge pull request #9 from ghoneycutt/rgevaert_mods
+
+Rgevaert mods "
+Mirantis/puppetlabs-xinetd,templates/service.erb,"Merge pull request #9 from ghoneycutt/rgevaert_mods
+
+Rgevaert mods "
+Mirantis/puppetlabs-xinetd,manifests/service.pp,"service_type attribute for service blocks added.
+
+service_type sets the type attribute for a service.  See XINETD.CONF(5)."
+Mirantis/puppetlabs-xinetd,templates/service.erb,"service_type attribute for service blocks added.
+
+service_type sets the type attribute for a service.  See XINETD.CONF(5)."
+Mirantis/puppetlabs-xinetd,templates/service.erb,"Add port attribute to service definitions.
+
+When we want to add unlisted ports we need to add
+the port to the service definition."
+Mirantis/puppetlabs-xinetd,manifests/init.pp,Make puppet-lint happy
+Mirantis/puppetlabs-xinetd,manifests/service.pp,Make puppet-lint happy
+Mirantis/puppetlabs-xinetd,manifests/service.pp,Make it possible to delete a service.
+Mirantis/puppetlabs-xinetd,manifests/service.pp,"Merge pull request #8 from ghoneycutt/KrisBuytaert-add_log_on_failure_option
+
+update template to include log_on_failure "
+Mirantis/puppetlabs-xinetd,templates/service.erb,"Merge pull request #8 from ghoneycutt/KrisBuytaert-add_log_on_failure_option
+
+update template to include log_on_failure "
+Mirantis/puppetlabs-xinetd,manifests/service.pp,"update template to include log_on_failure
+
+submitted by KrisBuytaert"
+Mirantis/puppetlabs-xinetd,templates/service.erb,"update template to include log_on_failure
+
+submitted by KrisBuytaert"
+Mirantis/puppetlabs-xinetd,manifests/service.pp,"Add missing service namespace
+
+The module was totally broken before this."
+Mirantis/puppetlabs-xinetd,manifests/init.pp,"Merge pull request #4 from ghoneycutt/style_refactor
+
+refactor for style "
+Mirantis/puppetlabs-xinetd,manifests/service.pp,"Merge pull request #4 from ghoneycutt/style_refactor
+
+refactor for style "
+Mirantis/puppetlabs-xinetd,manifests/init.pp,refactor for style
+Mirantis/puppetlabs-xinetd,manifests/service.pp,refactor for style
+Mirantis/puppetlabs-xinetd,pkg/ghoneycutt-xinetd-1.0.0/manifests/init.pp,adding entries to .gitignore and removing pkg/ from git
+Mirantis/puppetlabs-xinetd,pkg/ghoneycutt-xinetd-1.0.0/templates/service.erb,adding entries to .gitignore and removing pkg/ from git
+Mirantis/puppetlabs-xinetd,pkg/ghoneycutt-xinetd-1.0.0/tests/init.pp,adding entries to .gitignore and removing pkg/ from git
+Mirantis/puppetlabs-xinetd,pkg/ghoneycutt-xinetd-1.0.1/manifests/init.pp,adding entries to .gitignore and removing pkg/ from git
+Mirantis/puppetlabs-xinetd,pkg/ghoneycutt-xinetd-1.0.1/templates/service.erb,adding entries to .gitignore and removing pkg/ from git
+Mirantis/puppetlabs-xinetd,pkg/ghoneycutt-xinetd-1.0.1/tests/init.pp,adding entries to .gitignore and removing pkg/ from git
+Mirantis/puppetlabs-xinetd,manifests/init.pp,"Merge pull request #3 from bodepd/master
+
+Add bind config to xinetd::service "
+Mirantis/puppetlabs-xinetd,templates/service.erb,"Merge pull request #3 from bodepd/master
+
+Add bind config to xinetd::service "
+Mirantis/puppetlabs-xinetd,manifests/init.pp,"Adds config item bind to xinetd::service
+
+This commit adds bind to the list of parameters
+that can be configured for an xinted hosted service.
+
+This allows you to specify the interace that the service
+will bind to."
+Mirantis/puppetlabs-xinetd,templates/service.erb,"Adds config item bind to xinetd::service
+
+This commit adds bind to the list of parameters
+that can be configured for an xinted hosted service.
+
+This allows you to specify the interace that the service
+will bind to."
+Mirantis/puppetlabs-xinetd,manifests/init.pp,1.0.1 - added documentation
+Mirantis/puppetlabs-xinetd,pkg/ghoneycutt-xinetd-1.0.1/manifests/init.pp,1.0.1 - added documentation
+Mirantis/puppetlabs-xinetd,pkg/ghoneycutt-xinetd-1.0.1/templates/service.erb,1.0.1 - added documentation
+Mirantis/puppetlabs-xinetd,pkg/ghoneycutt-xinetd-1.0.1/tests/init.pp,1.0.1 - added documentation
+Mirantis/puppetlabs-xinetd,pkg/ghoneycutt-xinetd-1.0.0/manifests/init.pp,adding pkg built with puppet-module
+Mirantis/puppetlabs-xinetd,pkg/ghoneycutt-xinetd-1.0.0/templates/service.erb,adding pkg built with puppet-module
+Mirantis/puppetlabs-xinetd,pkg/ghoneycutt-xinetd-1.0.0/tests/init.pp,adding pkg built with puppet-module
+Mirantis/puppetlabs-xinetd,manifests/init.pp,initial publication
+Mirantis/puppetlabs-xinetd,templates/service.erb,initial publication
+Mirantis/puppetlabs-xinetd,tests/init.pp,initial publication
+Mirantis/puppetlabs-cinder,manifests/volume/iscsi.pp,"Merge pull request #12 from derekhiggins/targets-conf
+
+Include /etc/cinder/volumes/ in tgt targets.conf "
+Mirantis/puppetlabs-cinder,manifests/volume/iscsi.pp,"Include /etc/cinder/volumes/ in tgt targets.conf
+
+This config isn't included in the RHEL packages"
+Mirantis/puppetlabs-cinder,manifests/api.pp,"Merge pull request #11 from bodepd/redhat_support
+
+Add Redhat support "
+Mirantis/puppetlabs-cinder,manifests/client.pp,"Merge pull request #11 from bodepd/redhat_support
+
+Add Redhat support "
+Mirantis/puppetlabs-cinder,manifests/params.pp,"Merge pull request #11 from bodepd/redhat_support
+
+Add Redhat support "
+Mirantis/puppetlabs-cinder,manifests/scheduler.pp,"Merge pull request #11 from bodepd/redhat_support
+
+Add Redhat support "
+Mirantis/puppetlabs-cinder,manifests/volume.pp,"Merge pull request #11 from bodepd/redhat_support
+
+Add Redhat support "
+Mirantis/puppetlabs-cinder,manifests/api.pp,"Add Redhat support
+
+This commit adds red hat support to cinder.
+- Adds Redhat package names
+- Make package installations optional
+- Make cinder client package name per OS"
+Mirantis/puppetlabs-cinder,manifests/client.pp,"Add Redhat support
+
+This commit adds red hat support to cinder.
+- Adds Redhat package names
+- Make package installations optional
+- Make cinder client package name per OS"
+Mirantis/puppetlabs-cinder,manifests/params.pp,"Add Redhat support
+
+This commit adds red hat support to cinder.
+- Adds Redhat package names
+- Make package installations optional
+- Make cinder client package name per OS"
+Mirantis/puppetlabs-cinder,manifests/scheduler.pp,"Add Redhat support
+
+This commit adds red hat support to cinder.
+- Adds Redhat package names
+- Make package installations optional
+- Make cinder client package name per OS"
+Mirantis/puppetlabs-cinder,manifests/volume.pp,"Add Redhat support
+
+This commit adds red hat support to cinder.
+- Adds Redhat package names
+- Make package installations optional
+- Make cinder client package name per OS"
+Mirantis/puppetlabs-cinder,manifests/client.pp,"Merge pull request #9 from bodepd/add_client
+
+add cinder client "
+Mirantis/puppetlabs-cinder,manifests/client.pp,add cinder client
+Mirantis/puppetlabs-cinder,manifests/base.pp,"Merge pull request #8 from bodepd/add_spec_tests
+
+Add spec tests "
+Mirantis/puppetlabs-cinder,manifests/params.pp,"Merge pull request #8 from bodepd/add_spec_tests
+
+Add spec tests "
+Mirantis/puppetlabs-cinder,manifests/volume.pp,"Merge pull request #8 from bodepd/add_spec_tests
+
+Add spec tests "
+Mirantis/puppetlabs-cinder,manifests/volume.pp,"set volume package dep to title
+
+Manifest reps should be titles."
+Mirantis/puppetlabs-cinder,manifests/params.pp,"catch unsupported osfamily
+
+Previously, param lookups were returning nil. This
+leads to a more obvious error message."
+Mirantis/puppetlabs-cinder,manifests/base.pp,"set default verbose to False
+
+It should default to false to be consistent with
+cinder defaults and the default of the other
+openstack modules."
+Mirantis/puppetlabs-cinder,manifests/volume/iscsi.pp,"Merge pull request #7 from bodepd/remove_tail_comma
+
+remove trailing class param comma "
+Mirantis/puppetlabs-cinder,manifests/volume/iscsi.pp,"remove trailing class param comma
+
+for 2.6.x support"
+Mirantis/puppetlabs-cinder,manifests/setup_test_volume.pp,"Merge pull request #6 from bodepd/setup_test_volume
+
+add test class "
+Mirantis/puppetlabs-cinder,manifests/setup_test_volume.pp,"add test class
+
+This commit adds a class for testing that creates
+a volume on a loopback device."
+Mirantis/puppetlabs-cinder,manifests/scheduler.pp,"Merge pull request #5 from bodepd/dev_issue
+
+ensure scheduler starts after db sync "
+Mirantis/puppetlabs-cinder,manifests/scheduler.pp,"ensure scheduler starts after db sync
+
+This was resulting in occassional failures."
+Mirantis/puppetlabs-cinder,manifests/keystone/auth.pp,"Merge pull request #4 from jtopjian/folsom
+
+Folsom "
+Mirantis/puppetlabs-cinder,manifests/volume/iscsi.pp,"Merge pull request #4 from jtopjian/folsom
+
+Folsom "
+Mirantis/puppetlabs-cinder,manifests/volume/iscsi.pp,iscsi_ip_address is required
+Mirantis/puppetlabs-cinder,manifests/volume/iscsi.pp,tgt config file is now included in cinder-volume package.
+Mirantis/puppetlabs-cinder,manifests/keystone/auth.pp,Multi-region support
+Mirantis/puppetlabs-cinder,manifests/volume/iscsi.pp,"changed vg name, added tgt configuration"
+Mirantis/puppet-savanna,examples/site.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,inifile/spec/fixtures/modules/inherit_test1/manifests/init.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,inifile/tests/ini_setting.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,inifile/tests/ini_subsetting.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,keystone/manifests/client.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,keystone/manifests/db/mysql.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,keystone/manifests/db/mysql/host_access.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,keystone/manifests/db/postgresql.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,keystone/manifests/dev/install.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,keystone/manifests/endpoint.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,keystone/manifests/init.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,keystone/manifests/ldap.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,keystone/manifests/params.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,keystone/manifests/python.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,keystone/manifests/roles/admin.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,keystone/tests/site.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,manifests/config.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,manifests/db.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,manifests/environment.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,manifests/final.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,manifests/init.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,manifests/install.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,manifests/params.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,mysql/manifests/backup.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,mysql/manifests/config.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,mysql/manifests/db.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,mysql/manifests/db_new.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,mysql/manifests/init.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,mysql/manifests/java.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,mysql/manifests/params.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,mysql/manifests/perl.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,mysql/manifests/php.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,mysql/manifests/python.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,mysql/manifests/ruby.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,mysql/manifests/server.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,mysql/manifests/server/account_security.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,mysql/manifests/server/config.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,mysql/manifests/server/monitor.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,mysql/manifests/server/mysqltuner.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,mysql/templates/my.cnf.erb,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,mysql/templates/my.cnf.pass.erb,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,mysql/templates/my.conf.cnf.erb,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,mysql/templates/mysqlbackup.sh.erb,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,mysql/tests/backup.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,mysql/tests/init.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,mysql/tests/java.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,mysql/tests/mysql_database.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,mysql/tests/mysql_grant.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,mysql/tests/mysql_user.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,mysql/tests/perl.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,mysql/tests/python.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,mysql/tests/ruby.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,mysql/tests/server.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,mysql/tests/server/account_security.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,mysql/tests/server/config.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,openstack/manifests/custom_repos.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,savanna/examples/site.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,savanna/manifests/api.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,savanna/manifests/db/mysql.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,savanna/manifests/db/mysql/host_access.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,savanna/manifests/init.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,savanna/manifests/params.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,stdlib/manifests/init.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,stdlib/manifests/stages.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,stdlib/spec/fixtures/manifests/site.pp,manifest v 0.1 based on nova manifests from puppetlabs
+Mirantis/puppet-savanna,manifests/config.pp,Use command 'echo' instead of 'sed'
+Mirantis/puppet-savanna,examples/site.pp,Edit scripts as it needs for Fuel
+Mirantis/puppet-savanna,manifests/config.pp,Edit scripts as it needs for Fuel
+Mirantis/puppet-savanna,manifests/db.pp,Edit scripts as it needs for Fuel
+Mirantis/puppet-savanna,manifests/environment.pp,Edit scripts as it needs for Fuel
+Mirantis/puppet-savanna,manifests/final.pp,Edit scripts as it needs for Fuel
+Mirantis/puppet-savanna,manifests/init.pp,Edit scripts as it needs for Fuel
+Mirantis/puppet-savanna,manifests/db.pp,Edit command 'sed' for database config
+Mirantis/puppet-savanna,examples/site.pp,"Basic structure, preparing environment, Savanna installation, database"
+Mirantis/puppet-savanna,manifests/config.pp,"Basic structure, preparing environment, Savanna installation, database"
+Mirantis/puppet-savanna,manifests/db.pp,"Basic structure, preparing environment, Savanna installation, database"
+Mirantis/puppet-savanna,manifests/environment.pp,"Basic structure, preparing environment, Savanna installation, database"
+Mirantis/puppet-savanna,manifests/final.pp,"Basic structure, preparing environment, Savanna installation, database"
+Mirantis/puppet-savanna,manifests/init.pp,"Basic structure, preparing environment, Savanna installation, database"
+Mirantis/puppet-savanna,manifests/install.pp,"Basic structure, preparing environment, Savanna installation, database"
+Mirantis/puppet-savanna,manifests/params.pp,"Basic structure, preparing environment, Savanna installation, database"
+Mirantis/puppet-sudo,manifests/allow.pp,Initial commit.
+Mirantis/puppet-sudo,manifests/conf.pp,Initial commit.
+Mirantis/puppet-sudo,manifests/configs.pp,Initial commit.
+Mirantis/puppet-sudo,manifests/init.pp,Initial commit.
+Mirantis/puppet-sudo,manifests/package.pp,Initial commit.
+Mirantis/puppet-sudo,manifests/package/aix.pp,Initial commit.
+Mirantis/puppet-sudo,manifests/package/solaris.pp,Initial commit.
+Mirantis/puppet-sudo,manifests/params.pp,Initial commit.
+Mirantis/puppet-sudo,templates/sudoers.erb,Initial commit.
+Mirantis/puppet-sudo,templates/users_groups.erb,Initial commit.
+Mirantis/puppet-sudo,tests/init.pp,Initial commit.
+Mirantis/profiles,manifests/common/sudo.pp,Set ordering
+Mirantis/profiles,manifests/puppet/agent.pp,remove version parameter
+Mirantis/profiles,manifests/common/packages.pp,Initial commit
+Mirantis/profiles,manifests/common/sudo.pp,Initial commit
+Mirantis/profiles,manifests/common/users.pp,Initial commit
+Mirantis/profiles,manifests/common/users/install.pp,Initial commit
+Mirantis/profiles,manifests/common/users/shells.pp,Initial commit
+Mirantis/profiles,manifests/deploy.pp,Initial commit
+Mirantis/profiles,manifests/firewall/default.pp,Initial commit
+Mirantis/profiles,manifests/firewall/deploy.pp,Initial commit
+Mirantis/profiles,manifests/firewall/foreman.pp,Initial commit
+Mirantis/profiles,manifests/firewall/gitlab.pp,Initial commit
+Mirantis/profiles,manifests/firewall/ldap.pp,Initial commit
+Mirantis/profiles,manifests/firewall/post.pp,Initial commit
+Mirantis/profiles,manifests/firewall/pre.pp,Initial commit
+Mirantis/profiles,manifests/firewall/puppet.pp,Initial commit
+Mirantis/profiles,manifests/firewall/purge.pp,Initial commit
+Mirantis/profiles,manifests/foreman/proxy.pp,Initial commit
+Mirantis/profiles,manifests/foreman/server.pp,Initial commit
+Mirantis/profiles,manifests/ftp/server.pp,Initial commit
+Mirantis/profiles,manifests/hiera.pp,Initial commit
+Mirantis/profiles,manifests/init.pp,Initial commit
+Mirantis/profiles,manifests/install.pp,Initial commit
+Mirantis/profiles,manifests/lldp.pp,Initial commit
+Mirantis/profiles,manifests/ntp/client.pp,Initial commit
+Mirantis/profiles,manifests/openstack/cinder.pp,Initial commit
+Mirantis/profiles,manifests/openstack/keystone.pp,Initial commit
+Mirantis/profiles,manifests/openstack/neutron/client.pp,Initial commit
+Mirantis/profiles,manifests/openstack/neutron/server.pp,Initial commit
+Mirantis/profiles,manifests/openstack/nova/compute.pp,Initial commit
+Mirantis/profiles,manifests/openstack/nova/controller.pp,Initial commit
+Mirantis/profiles,manifests/puppet/agent.pp,Initial commit
+Mirantis/profiles,manifests/puppet/bootstrap_ca.pp,Initial commit
+Mirantis/profiles,manifests/puppet/ca.pp,Initial commit
+Mirantis/profiles,manifests/puppet/db.pp,Initial commit
+Mirantis/profiles,manifests/puppet/master.pp,Initial commit
+Mirantis/profiles,manifests/redis.pp,Initial commit
+Mirantis/profiles,manifests/ssh/server.pp,Initial commit
+Mirantis/profiles,manifests/yum/default.pp,Initial commit
+Mirantis/profiles,manifests/yum/foreman.pp,Initial commit
+Mirantis/profiles,templates/gitlab/pre-receive.erb,Initial commit
+Mirantis/profiles,templates/puppet/autosign-policy.rb.erb,Initial commit
+Mirantis/profiles,templates/puppet/csr_attributes.yaml.erb,Initial commit
+Mirantis/profiles,tests/init.pp,Initial commit
+Mirantis/roles,manifests/openstack/pmlc_controller.pp,"Revert ""debug sudo""
+
+This reverts commit e015defa639aaaaeda428c47e3381cd350985a6e."
+Mirantis/roles,manifests/openstack/pmlc_controller.pp,debug sudo
+Mirantis/roles,manifests/openstack/pmlc_ceph_osd.pp,"Revert ""Remove unnecessary/unconfigured modules for pmlc""
+
+This reverts commit 18c59dabd7fe721ab70bf155f22d1b417f37ef96."
+Mirantis/roles,manifests/openstack/pmlc_compute.pp,"Revert ""Remove unnecessary/unconfigured modules for pmlc""
+
+This reverts commit 18c59dabd7fe721ab70bf155f22d1b417f37ef96."
+Mirantis/roles,manifests/openstack/pmlc_controller.pp,"Revert ""Remove unnecessary/unconfigured modules for pmlc""
+
+This reverts commit 18c59dabd7fe721ab70bf155f22d1b417f37ef96."
+Mirantis/roles,manifests/openstack/pmlc_mongo.pp,"Revert ""Remove unnecessary/unconfigured modules for pmlc""
+
+This reverts commit 18c59dabd7fe721ab70bf155f22d1b417f37ef96."
+Mirantis/roles,manifests/openstack/pmlc_ceph_osd.pp,Remove unnecessary/unconfigured modules for pmlc
+Mirantis/roles,manifests/openstack/pmlc_compute.pp,Remove unnecessary/unconfigured modules for pmlc
+Mirantis/roles,manifests/openstack/pmlc_controller.pp,Remove unnecessary/unconfigured modules for pmlc
+Mirantis/roles,manifests/openstack/pmlc_mongo.pp,Remove unnecessary/unconfigured modules for pmlc
+Mirantis/roles,manifests/openstack/pmlc_ceph_osd.pp,Add roles for pmlc versions of openstack boxen
+Mirantis/roles,manifests/openstack/pmlc_compute.pp,Add roles for pmlc versions of openstack boxen
+Mirantis/roles,manifests/openstack/pmlc_controller.pp,Add roles for pmlc versions of openstack boxen
+Mirantis/roles,manifests/openstack/pmlc_mongo.pp,Add roles for pmlc versions of openstack boxen
+Mirantis/roles,manifests/deploy.pp,Change cicd firewall profile name to deploy.
+Mirantis/roles,manifests/default.pp,Initial commit
+Mirantis/roles,manifests/deploy.pp,Initial commit
+Mirantis/roles,manifests/foreman/bootstrap_server.pp,Initial commit
+Mirantis/roles,manifests/foreman/proxy.pp,Initial commit
+Mirantis/roles,manifests/foreman/server.pp,Initial commit
+Mirantis/roles,manifests/ftp/server.pp,Initial commit
+Mirantis/roles,manifests/init.pp,Initial commit
+Mirantis/roles,manifests/openstack/ceph_osd.pp,Initial commit
+Mirantis/roles,manifests/openstack/compute.pp,Initial commit
+Mirantis/roles,manifests/openstack/controller.pp,Initial commit
+Mirantis/roles,manifests/openstack/mongo.pp,Initial commit
+Mirantis/roles,manifests/puppet/ca.pp,Initial commit
+Mirantis/roles,manifests/puppet/db.pp,Initial commit
+Mirantis/roles,manifests/puppet/master.pp,Initial commit
+Mirantis/roles,tests/init.pp,Initial commit
+Mirantis/pmlc_nova,manifests/init.pp,Move live migration and image type out of parameter and into selector based on whether ceph is used or not
+Mirantis/pmlc_nova,manifests/params.pp,Move live migration and image type out of parameter and into selector based on whether ceph is used or not
+Mirantis/pmlc_nova,manifests/init.pp,"This is a bit backwards, but default to true on use_ceph and inherit that in the params class to use with a selector for values."
+Mirantis/pmlc_nova,manifests/params.pp,"This is a bit backwards, but default to true on use_ceph and inherit that in the params class to use with a selector for values."
+Mirantis/pmlc_nova,manifests/init.pp,Fix typo in selector
+Mirantis/pmlc_nova,manifests/params.pp,Fix typo in selector
+Mirantis/pmlc_nova,manifests/init.pp,set use_ceph to true by default. fix typo
+Mirantis/pmlc_nova,manifests/compute/config.pp,Add toggle for whether to use ceph or not
+Mirantis/pmlc_nova,manifests/init.pp,Add toggle for whether to use ceph or not
+Mirantis/pmlc_nova,manifests/params.pp,Add toggle for whether to use ceph or not
+Mirantis/pmlc_nova,manifests/compute.pp,Initial commit
+Mirantis/pmlc_nova,manifests/compute/config.pp,Initial commit
+Mirantis/pmlc_nova,manifests/compute/install.pp,Initial commit
+Mirantis/pmlc_nova,manifests/compute/service.pp,Initial commit
+Mirantis/pmlc_nova,manifests/controller.pp,Initial commit
+Mirantis/pmlc_nova,manifests/controller/config.pp,Initial commit
+Mirantis/pmlc_nova,manifests/controller/install.pp,Initial commit
+Mirantis/pmlc_nova,manifests/controller/service.pp,Initial commit
+Mirantis/pmlc_nova,manifests/init.pp,Initial commit
+Mirantis/pmlc_nova,manifests/params.pp,Initial commit
+Mirantis/pmlc_nova,tests/init.pp,Initial commit
+Mirantis/pmlc_cinder,manifests/config.pp,Initial commit
+Mirantis/pmlc_cinder,manifests/init.pp,Initial commit
+Mirantis/pmlc_cinder,manifests/install.pp,Initial commit
+Mirantis/pmlc_cinder,manifests/params.pp,Initial commit
+Mirantis/pmlc_cinder,manifests/service.pp,Initial commit
+Mirantis/pmlc_cinder,tests/init.pp,Initial commit
+Mirantis/pmlc_neutron,manifests/server/config.pp,Fix typo in admin password setting
+Mirantis/pmlc_neutron,manifests/client/config.pp,Add certificate based authentication to APIC driver. Add agent poll interval of 60s rather than default 2s.
+Mirantis/pmlc_neutron,manifests/client/service.pp,Add certificate based authentication to APIC driver. Add agent poll interval of 60s rather than default 2s.
+Mirantis/pmlc_neutron,manifests/init.pp,Add certificate based authentication to APIC driver. Add agent poll interval of 60s rather than default 2s.
+Mirantis/pmlc_neutron,manifests/params.pp,Add certificate based authentication to APIC driver. Add agent poll interval of 60s rather than default 2s.
+Mirantis/pmlc_neutron,manifests/server/config.pp,Add certificate based authentication to APIC driver. Add agent poll interval of 60s rather than default 2s.
+Mirantis/pmlc_neutron,manifests/server/service.pp,Add certificate based authentication to APIC driver. Add agent poll interval of 60s rather than default 2s.
+Mirantis/pmlc_neutron,manifests/client/config.pp,Refactor module to use ini_setting rather than file_lines
+Mirantis/pmlc_neutron,manifests/client/service.pp,Refactor module to use ini_setting rather than file_lines
+Mirantis/pmlc_neutron,manifests/server/config.pp,Refactor module to use ini_setting rather than file_lines
+Mirantis/pmlc_neutron,manifests/server/service.pp,Refactor module to use ini_setting rather than file_lines
+Mirantis/pmlc_neutron,manifests/client.pp,Initial commit
+Mirantis/pmlc_neutron,manifests/client/config.pp,Initial commit
+Mirantis/pmlc_neutron,manifests/client/install.pp,Initial commit
+Mirantis/pmlc_neutron,manifests/client/service.pp,Initial commit
+Mirantis/pmlc_neutron,manifests/init.pp,Initial commit
+Mirantis/pmlc_neutron,manifests/params.pp,Initial commit
+Mirantis/pmlc_neutron,manifests/server.pp,Initial commit
+Mirantis/pmlc_neutron,manifests/server/config.pp,Initial commit
+Mirantis/pmlc_neutron,manifests/server/install.pp,Initial commit
+Mirantis/pmlc_neutron,manifests/server/service.pp,Initial commit
+Mirantis/pmlc_neutron,templates/ml2_conf_cisco.ini.erb,Initial commit
+Mirantis/pmlc_neutron,tests/init.pp,Initial commit
+Mirantis/pmlc_keystone,manifests/config.pp,Add SSL options for admin and public endpoint
+Mirantis/pmlc_keystone,manifests/init.pp,Add SSL options for admin and public endpoint
+Mirantis/pmlc_keystone,manifests/params.pp,Add SSL options for admin and public endpoint
+Mirantis/pmlc_keystone,templates/keystone.conf.erb,Add SSL options for admin and public endpoint
+Mirantis/pmlc_keystone,manifests/config.pp,Initial commit
+Mirantis/pmlc_keystone,manifests/init.pp,Initial commit
+Mirantis/pmlc_keystone,manifests/install.pp,Initial commit
+Mirantis/pmlc_keystone,manifests/params.pp,Initial commit
+Mirantis/pmlc_keystone,manifests/service.pp,Initial commit
+Mirantis/pmlc_keystone,templates/keystone.conf.erb,Initial commit
+Mirantis/pmlc_keystone,tests/init.pp,Initial commit
+Mirantis/puppet-foreman_proxy,manifests/config.pp,initial commit
+Mirantis/puppet-foreman_proxy,manifests/init.pp,initial commit
+Mirantis/puppet-foreman_proxy,manifests/install.pp,initial commit
+Mirantis/puppet-foreman_proxy,manifests/params.pp,initial commit
+Mirantis/puppet-foreman_proxy,manifests/plugin.pp,initial commit
+Mirantis/puppet-foreman_proxy,manifests/plugin/abrt.pp,initial commit
+Mirantis/puppet-foreman_proxy,manifests/plugin/abrt/params.pp,initial commit
+Mirantis/puppet-foreman_proxy,manifests/plugin/chef.pp,initial commit
+Mirantis/puppet-foreman_proxy,manifests/plugin/chef/params.pp,initial commit
+Mirantis/puppet-foreman_proxy,manifests/plugin/openscap.pp,initial commit
+Mirantis/puppet-foreman_proxy,manifests/plugin/openscap/params.pp,initial commit
+Mirantis/puppet-foreman_proxy,manifests/plugin/pulp.pp,initial commit
+Mirantis/puppet-foreman_proxy,manifests/plugin/pulp/params.pp,initial commit
+Mirantis/puppet-foreman_proxy,manifests/plugin/salt.pp,initial commit
+Mirantis/puppet-foreman_proxy,manifests/plugin/salt/params.pp,initial commit
+Mirantis/puppet-foreman_proxy,manifests/proxydhcp.pp,initial commit
+Mirantis/puppet-foreman_proxy,manifests/proxydns.pp,initial commit
+Mirantis/puppet-foreman_proxy,manifests/puppetca.pp,initial commit
+Mirantis/puppet-foreman_proxy,manifests/register.pp,initial commit
+Mirantis/puppet-foreman_proxy,manifests/service.pp,initial commit
+Mirantis/puppet-foreman_proxy,manifests/settings_file.pp,initial commit
+Mirantis/puppet-foreman_proxy,manifests/tftp.pp,initial commit
+Mirantis/puppet-foreman_proxy,manifests/tftp/copy_file.pp,initial commit
+Mirantis/puppet-foreman_proxy,manifests/tftp/sync_file.pp,initial commit
+Mirantis/puppet-foreman_proxy,templates/bmc.yml.erb,initial commit
+Mirantis/puppet-foreman_proxy,templates/dhcp.yml.erb,initial commit
+Mirantis/puppet-foreman_proxy,templates/dns.yml.erb,initial commit
+Mirantis/puppet-foreman_proxy,templates/plugin/abrt.yml.erb,initial commit
+Mirantis/puppet-foreman_proxy,templates/plugin/chef.yml.erb,initial commit
+Mirantis/puppet-foreman_proxy,templates/plugin/openscap.yml.erb,initial commit
+Mirantis/puppet-foreman_proxy,templates/plugin/pulp.yml.erb,initial commit
+Mirantis/puppet-foreman_proxy,templates/plugin/pulpnode.yml.erb,initial commit
+Mirantis/puppet-foreman_proxy,templates/plugin/salt.yml.erb,initial commit
+Mirantis/puppet-foreman_proxy,templates/puppet.yml.erb,initial commit
+Mirantis/puppet-foreman_proxy,templates/puppetca.yml.erb,initial commit
+Mirantis/puppet-foreman_proxy,templates/realm.yml.erb,initial commit
+Mirantis/puppet-foreman_proxy,templates/settings.yml.erb,initial commit
+Mirantis/puppet-foreman_proxy,templates/sudo.erb,initial commit
+Mirantis/puppet-foreman_proxy,templates/sudo_augeas.erb,initial commit
+Mirantis/puppet-foreman_proxy,templates/templates.yml.erb,initial commit
+Mirantis/puppet-foreman_proxy,templates/tftp.yml.erb,initial commit
+Mirantis/puppet-deployapp,manifests/config.pp,Initial Commit
+Mirantis/puppet-deployapp,manifests/init.pp,Initial Commit
+Mirantis/puppet-deployapp,manifests/install.pp,Initial Commit
+Mirantis/puppet-deployapp,manifests/install/apache.pp,Initial Commit
+Mirantis/puppet-deployapp,manifests/install/files.pp,Initial Commit
+Mirantis/puppet-deployapp,manifests/install/ruby.pp,Initial Commit
+Mirantis/puppet-deployapp,manifests/install/user.pp,Initial Commit
+Mirantis/puppet-deployapp,manifests/install/yum.pp,Initial Commit
+Mirantis/puppet-deployapp,manifests/params.pp,Initial Commit
+Mirantis/puppet-deployapp,templates/Gemfile.erb,Initial Commit
+Mirantis/puppet-deployapp,templates/config.ru.erb,Initial Commit
+Mirantis/puppet-deployapp,templates/config.yaml.erb,Initial Commit
+Mirantis/puppet-deployapp,templates/deploy.rb.erb,Initial Commit
+Mirantis/puppet-deployapp,tests/init.pp,Initial Commit
+Mirantis/puppet-kafka,manifests/server.pp,"Change broker id assignment from fqdn to hostname.  TODO: Make this
+configurable in the future"
+Mirantis/puppet-kafka,manifests/server.pp,Add the ability to create base directories for the log dirs
+Mirantis/puppet-kafka,manifests/server.pp,Actually use the $kafka_enabled variable
+Mirantis/puppet-kafka,manifests/server.pp,"Change all references of kafka-server to kafka, since that is what the package is named"
+Mirantis/puppet-kafka,manifests/server.pp,"Change file locations to /opt, since that is where we install kafka.  Create symlink from /etc/kafka to /opt/kafka for ease of use, though"
+Mirantis/puppet-kafka,manifests/server.pp,"We don't have a separate kafka-server package, so we don't need to ensure a new package"
+Mirantis/puppet-kafka,manifests/init.pp,"There is no specific kafka-common package, so just use the kafka package"
+Mirantis/puppet-kafka,manifests/defaults.pp,"Puppetize systemd override for Kafka LimitNOFILE
+
+/etc/default/kafka's KAFKA_NOFILES_ULIMIT is not useable
+by the systemd service file installed by the latest WMF
+Kafka package, so we need to puppetized a custom systemd
+override file to set this.
+
+Bug: T106581
+Change-Id: I10f41d0d3a19b15374ded800f0d6cd12573c9fa9"
+Mirantis/puppet-kafka,manifests/server.pp,"Puppetize systemd override for Kafka LimitNOFILE
+
+/etc/default/kafka's KAFKA_NOFILES_ULIMIT is not useable
+by the systemd service file installed by the latest WMF
+Kafka package, so we need to puppetized a custom systemd
+override file to set this.
+
+Bug: T106581
+Change-Id: I10f41d0d3a19b15374ded800f0d6cd12573c9fa9"
+Mirantis/puppet-kafka,templates/kafka.default.erb,"Puppetize systemd override for Kafka LimitNOFILE
+
+/etc/default/kafka's KAFKA_NOFILES_ULIMIT is not useable
+by the systemd service file installed by the latest WMF
+Kafka package, so we need to puppetized a custom systemd
+override file to set this.
+
+Bug: T106581
+Change-Id: I10f41d0d3a19b15374ded800f0d6cd12573c9fa9"
+Mirantis/puppet-kafka,templates/kafka.systemd.override.conf.erb,"Puppetize systemd override for Kafka LimitNOFILE
+
+/etc/default/kafka's KAFKA_NOFILES_ULIMIT is not useable
+by the systemd service file installed by the latest WMF
+Kafka package, so we need to puppetized a custom systemd
+override file to set this.
+
+Bug: T106581
+Change-Id: I10f41d0d3a19b15374ded800f0d6cd12573c9fa9"
+Mirantis/puppet-kafka,manifests/defaults.pp,"Add param for auto.leader.rebalance.enable
+
+Change-Id: I3981f51d45b2b9e6422f50f6892d46d1c0c97005"
+Mirantis/puppet-kafka,manifests/server.pp,"Add param for auto.leader.rebalance.enable
+
+Change-Id: I3981f51d45b2b9e6422f50f6892d46d1c0c97005"
+Mirantis/puppet-kafka,templates/server.properties.erb,"Add param for auto.leader.rebalance.enable
+
+Change-Id: I3981f51d45b2b9e6422f50f6892d46d1c0c97005"
+Mirantis/puppet-kafka,manifests/server/jmxtrans.pp,"List ReplicaManager JMX Kafka metrics individually
+
+Change-Id: I698441291a9ce48a61a04522fb27886a343532f8"
+Mirantis/puppet-kafka,manifests/server/jmxtrans.pp,"Update JMX metrics names for Kafka 0.8.2+
+
+JMX metrics names have changed in Kafka 0.8.2.  This updates
+them to that.  If you are using an older version of Kafka and
+need the old metric names, set legacy_jmx => true when you include
+the kafka::server::jmxtrans class.
+
+Bug: T106581
+Change-Id: I39ac37125dd67f7f68502021f9b34eadc11b4b50"
+Mirantis/puppet-kafka,manifests/server/jmxtrans.pp,"Use bucketType 'g' for all Kafka jmxtrans metrics sent to statsd
+
+None of these are the default statsd 'counter' type.
+
+Change-Id: Id947b4dd9dba64eb44dcbd8096ef7e381de83512"
+Mirantis/puppet-kafka,manifests/server/jmxtrans.pp,"Set bucketType for gauge metrics for statsd usage
+
+Change-Id: I2bdbcb4e69075a76320acd45752b23ee08b9e89b"
+Mirantis/puppet-kafka,manifests/server/jmxtrans.pp,"Send jvm stats to statsd as well
+
+Change-Id: If2bc1ab7433aa26575fb15d7e0ce82f924c038ff"
+Mirantis/puppet-kafka,manifests/server/jmxtrans.pp,"Add statsd parameters to kafka::server::jmxtrans
+
+Change-Id: I7618b0ecd195f64536153f9926edd2e2321bdc82"
+Mirantis/puppet-kafka,templates/server.properties.erb,"Make the metrics polling interval configurable
+
+If kafka.metrics.polling.interval.secs is specified in
+metrics_properties overwrites the default 5 seconds value.
+
+Change-Id: Id8d2410df91e702f4e078ec7f3191ca2c315a412"
+Mirantis/puppet-kafka,manifests/defaults.pp,"Add option for extra classpath entries
+
+Change-Id: I671527f349c8317e07b1a4ba67ee02d37d9913a4"
+Mirantis/puppet-kafka,manifests/server.pp,"Add option for extra classpath entries
+
+Change-Id: I671527f349c8317e07b1a4ba67ee02d37d9913a4"
+Mirantis/puppet-kafka,templates/kafka.default.erb,"Add option for extra classpath entries
+
+Change-Id: I671527f349c8317e07b1a4ba67ee02d37d9913a4"
+Mirantis/puppet-kafka,manifests/server/jmxtrans.pp,"server::jmxtrans: add namespacing option
+
+Specifying $group_prefix will namespace metrics emitted by jmxtrans in
+ganglia and graphite in the same manner as jmxtrans::metrics::jvm.
+
+Change-Id: I7bdcdc13a94fda85a7c2b2c807d4a5227d2e40eb"
+Mirantis/puppet-kafka,manifests/defaults.pp,"Add java_opts option
+
+Change-Id: I8dc008c791c8cda730c396069d506fcdb0d7b79b"
+Mirantis/puppet-kafka,manifests/server.pp,"Add java_opts option
+
+Change-Id: I8dc008c791c8cda730c396069d506fcdb0d7b79b"
+Mirantis/puppet-kafka,templates/kafka.default.erb,"Add java_opts option
+
+Change-Id: I8dc008c791c8cda730c396069d506fcdb0d7b79b"
+Mirantis/puppet-kafka,manifests/client.pp,"Update for kafka 0.8.1.1-2 packaging
+
+Change-Id: I31f2974e1e67a208896a6e07e8c657ea3e0517eb"
+Mirantis/puppet-kafka,manifests/init.pp,"Update for kafka 0.8.1.1-2 packaging
+
+Change-Id: I31f2974e1e67a208896a6e07e8c657ea3e0517eb"
+Mirantis/puppet-kafka,manifests/mirror.pp,"Update for kafka 0.8.1.1-2 packaging
+
+Change-Id: I31f2974e1e67a208896a6e07e8c657ea3e0517eb"
+Mirantis/puppet-kafka,manifests/server.pp,"Update for kafka 0.8.1.1-2 packaging
+
+Change-Id: I31f2974e1e67a208896a6e07e8c657ea3e0517eb"
+Mirantis/puppet-kafka,templates/producer.properties.erb,"Update for kafka 0.8.1.1-2 packaging
+
+Change-Id: I31f2974e1e67a208896a6e07e8c657ea3e0517eb"
+Mirantis/puppet-kafka,manifests/defaults.pp,"Add $java_home and $num_partitions parameters
+
+Change-Id: I33ba6c628b94dcae4afed0baff327be800821107"
+Mirantis/puppet-kafka,manifests/server.pp,"Add $java_home and $num_partitions parameters
+
+Change-Id: I33ba6c628b94dcae4afed0baff327be800821107"
+Mirantis/puppet-kafka,templates/kafka.default.erb,"Add $java_home and $num_partitions parameters
+
+Change-Id: I33ba6c628b94dcae4afed0baff327be800821107"
+Mirantis/puppet-kafka,templates/server.properties.erb,"Add $java_home and $num_partitions parameters
+
+Change-Id: I33ba6c628b94dcae4afed0baff327be800821107"
+Mirantis/puppet-kafka,manifests/server.pp,"Small fixups
+
+Fix kafka::server comment spacing
+
+Use new-style variables in template
+
+Change-Id: I75e03826adfe3b3423f575ac2cb6535232cdcd90"
+Mirantis/puppet-kafka,templates/server.properties.erb,"Small fixups
+
+Fix kafka::server comment spacing
+
+Use new-style variables in template
+
+Change-Id: I75e03826adfe3b3423f575ac2cb6535232cdcd90"
+Mirantis/puppet-kafka,manifests/defaults.pp,"Parameterize zookeeper.session.timeout.ms
+
+Also set zookeeper_connection_timeout_ms to proper configuration default
+
+Change-Id: I20ed0ee2a7c18a523498db1239521a129743fc74"
+Mirantis/puppet-kafka,manifests/mirror/consumer.pp,"Parameterize zookeeper.session.timeout.ms
+
+Also set zookeeper_connection_timeout_ms to proper configuration default
+
+Change-Id: I20ed0ee2a7c18a523498db1239521a129743fc74"
+Mirantis/puppet-kafka,manifests/server.pp,"Parameterize zookeeper.session.timeout.ms
+
+Also set zookeeper_connection_timeout_ms to proper configuration default
+
+Change-Id: I20ed0ee2a7c18a523498db1239521a129743fc74"
+Mirantis/puppet-kafka,templates/consumer.properties.erb,"Parameterize zookeeper.session.timeout.ms
+
+Also set zookeeper_connection_timeout_ms to proper configuration default
+
+Change-Id: I20ed0ee2a7c18a523498db1239521a129743fc74"
+Mirantis/puppet-kafka,templates/server.properties.erb,"Parameterize zookeeper.session.timeout.ms
+
+Also set zookeeper_connection_timeout_ms to proper configuration default
+
+Change-Id: I20ed0ee2a7c18a523498db1239521a129743fc74"
+Mirantis/puppet-kafka,manifests/defaults.pp,"Parameterize jvm_performance_opts in order to modify GC settings
+
+Change-Id: I5765b91f2e66090352faafab5ebfc3125b2be307"
+Mirantis/puppet-kafka,manifests/server.pp,"Parameterize jvm_performance_opts in order to modify GC settings
+
+Change-Id: I5765b91f2e66090352faafab5ebfc3125b2be307"
+Mirantis/puppet-kafka,templates/kafka.default.erb,"Parameterize jvm_performance_opts in order to modify GC settings
+
+Change-Id: I5765b91f2e66090352faafab5ebfc3125b2be307"
+Mirantis/puppet-kafka,manifests/server.pp,"Allow specifying default replication factor
+
+Change-Id: I2a735617be0bac356833eaa4ee6330a6b92d0eba"
+Mirantis/puppet-kafka,templates/server.properties.erb,"Allow specifying default replication factor
+
+Change-Id: I2a735617be0bac356833eaa4ee6330a6b92d0eba"
+Mirantis/puppet-kafka,manifests/defaults.pp,"Set num.io.threads to configuration default
+
+Change-Id: Ie4386cb78789f24f95380b3a65afdd388253d715"
+Mirantis/puppet-kafka,manifests/server.pp,"Set num.io.threads to configuration default
+
+Change-Id: Ie4386cb78789f24f95380b3a65afdd388253d715"
+Mirantis/puppet-kafka,manifests/defaults.pp,"Change default num.network.threads and num.io.threads
+
+These defaults have changed in later versions of Kafka.
+num.io.threads now defaults to the number of configured $log_dirs.
+
+Change-Id: I5df3c6a0c1501e5be402e4d2d7225f3c980fe11b"
+Mirantis/puppet-kafka,manifests/server.pp,"Change default num.network.threads and num.io.threads
+
+These defaults have changed in later versions of Kafka.
+num.io.threads now defaults to the number of configured $log_dirs.
+
+Change-Id: I5df3c6a0c1501e5be402e4d2d7225f3c980fe11b"
+Mirantis/puppet-kafka,manifests/defaults.pp,"Default for log.flush.interval.ms has changed to 3000
+
+Change-Id: I6a6f2003fec290e0864543855f8fd5b336604eca"
+Mirantis/puppet-zookeeper,manifests/defaults.pp,Chagne ::fqdn to ::hostname
+Mirantis/puppet-zookeeper,manifests/server.pp,For now change this to ::hostname instead of ::fqdn. Will make this value assignable in the future so that assumptions arene't made
+Mirantis/puppet-zookeeper,manifests/server.pp,Make sure that the full path to the data directory exists
+Mirantis/puppet-zookeeper,manifests/server.pp,"Change references to the zookeeper service from ""zookeeper"" to ""zookeeper-server"""
+Mirantis/puppet-zookeeper,manifests/server.pp,Change service to proper name of zookeeper-server
+Mirantis/puppet-zookeeper,manifests/server.pp,Too many equals is a syntax error
+Mirantis/puppet-zookeeper,manifests/server.pp,"Add ""enabled"" option for the server service"
+Mirantis/puppet-zookeeper,manifests/server.pp,Chagne all references of zookeeperd to zookeeper-server
+Mirantis/puppet-zookeeper,templates/zoo.cfg.erb,Fix variable scope
+Mirantis/puppet-zookeeper,manifests/server.pp,Change package name to zookeeper-server (from zookeeperd)
+Mirantis/puppet-zookeeper,templates/zookeeper.default.erb,"Qualify @jmx_port in zookeeper.default.erb
+
+Bug: T97251
+Change-Id: I8d84355d036008775b44d90a30cb470b4f96ba7c"
+Mirantis/puppet-zookeeper,manifests/server.pp,"zookeeper-cleanup: don't generate cron email for normal operation
+
+Avoids cron sending mail containing output like this every day:
+Removing file: May 11, 2015 11:33:50 AM /var/lib/zookeeper/version-2/log.c01939848
+Removing file: May 10, 2015 11:04:38 PM /var/lib/zookeeper/version-2/log.c0192b0cf
+Removing file: May 11, 2015 5:59:54 PM  /var/lib/zookeeper/version-2/log.c0194d6ee
+Removing file: May 10, 2015 11:04:38 PM /var/lib/zookeeper/version-2/snapshot.c01939846
+Removing file: May 11, 2015 11:33:50 AM /var/lib/zookeeper/version-2/snapshot.c0194d6ec
+Removing file: May 11, 2015 5:59:55 PM  /var/lib/zookeeper/version-2/snapshot.c0195b366
+
+Change-Id: I1fa0312aedf57c05dfd326b253b9f732abd4c20b"
+Mirantis/puppet-zookeeper,manifests/init.pp,"zoo.cfg is rendered by zookeeper class, need new params there
+
+Change-Id: Ib8660421e8905586f757620e2f4dd4b75627208f"
+Mirantis/puppet-zookeeper,manifests/server.pp,"zoo.cfg is rendered by zookeeper class, need new params there
+
+Change-Id: Ib8660421e8905586f757620e2f4dd4b75627208f"
+Mirantis/puppet-zookeeper,manifests/defaults.pp,"Parameterize tickTime, initLimit and syncLimit
+
+Change-Id: I46b28c82e36828ebbd31d4d57ac8c23889ca2a67"
+Mirantis/puppet-zookeeper,manifests/server.pp,"Parameterize tickTime, initLimit and syncLimit
+
+Change-Id: I46b28c82e36828ebbd31d4d57ac8c23889ca2a67"
+Mirantis/puppet-zookeeper,templates/zoo.cfg.erb,"Parameterize tickTime, initLimit and syncLimit
+
+Change-Id: I46b28c82e36828ebbd31d4d57ac8c23889ca2a67"
+Mirantis/puppet-zookeeper,manifests/jmxtrans.pp,"Fixing zookeeper::jmxtrans class name
+
+Change-Id: I5f74b0cccc11fca587619e9df91898a3b77af2b3"
+Mirantis/puppet-zookeeper,manifests/jmxtrans.pp,"Adding zookeeper::jmxtrans class
+
+Change-Id: I4ca22a1b47400579eac2fc8a6684445cd9dc9c0f"
+Mirantis/puppet-zookeeper,manifests/defaults.pp,"Adding a cron job to run zkCleanup.sh daily.
+
+Also removed unused $log_file variable from zookeeper::server
+
+Change-Id: I5f24b978f252d2c7925a71fcb6b88c6dfe45c0d8"
+Mirantis/puppet-zookeeper,manifests/server.pp,"Adding a cron job to run zkCleanup.sh daily.
+
+Also removed unused $log_file variable from zookeeper::server
+
+Change-Id: I5f24b978f252d2c7925a71fcb6b88c6dfe45c0d8"
+Mirantis/puppet-zookeeper,manifests/defaults.pp,"Initial commit of zookeeper module.
+
+Change-Id: I88f9f7c4eb9ac736c3d31be845b5d12e0fd3c6c3"
+Mirantis/puppet-zookeeper,manifests/init.pp,"Initial commit of zookeeper module.
+
+Change-Id: I88f9f7c4eb9ac736c3d31be845b5d12e0fd3c6c3"
+Mirantis/puppet-zookeeper,manifests/server.pp,"Initial commit of zookeeper module.
+
+Change-Id: I88f9f7c4eb9ac736c3d31be845b5d12e0fd3c6c3"
+Mirantis/puppet-zookeeper,templates/log4j.properties.erb,"Initial commit of zookeeper module.
+
+Change-Id: I88f9f7c4eb9ac736c3d31be845b5d12e0fd3c6c3"
+Mirantis/puppet-zookeeper,templates/zoo.cfg.erb,"Initial commit of zookeeper module.
+
+Change-Id: I88f9f7c4eb9ac736c3d31be845b5d12e0fd3c6c3"
+Mirantis/puppet-zookeeper,templates/zookeeper.default.erb,"Initial commit of zookeeper module.
+
+Change-Id: I88f9f7c4eb9ac736c3d31be845b5d12e0fd3c6c3"
+Mirantis/puppet-zookeeper,tests/server.pp,"Initial commit of zookeeper module.
+
+Change-Id: I88f9f7c4eb9ac736c3d31be845b5d12e0fd3c6c3"
+Mirantis/puppet-zookeeper,tests/zookeeper.pp,"Initial commit of zookeeper module.
+
+Change-Id: I88f9f7c4eb9ac736c3d31be845b5d12e0fd3c6c3"
+Mirantis/fuel-plugin-celebrer,deployment_scripts/puppet/manifests/server.pp,Add dashboard
+Mirantis/fuel-plugin-celebrer,deployment_scripts/puppet/modules/celebrer/manifests/dashboard.pp,Add dashboard
+Mirantis/fuel-plugin-celebrer,deployment_scripts/puppet/modules/celebrer/manifests/params.pp,Add dashboard
+Mirantis/fuel-plugin-celebrer,deployment_scripts/puppet/manifests/server.pp,Integrate python client
+Mirantis/fuel-plugin-celebrer,deployment_scripts/puppet/modules/celebrer/manifests/client.pp,Integrate python client
+Mirantis/fuel-plugin-celebrer,deployment_scripts/puppet/modules/celebrer/manifests/params.pp,Integrate python client
+Mirantis/fuel-plugin-celebrer,deployment_scripts/puppet/manifests/server.pp,Update server.pp
+Mirantis/fuel-plugin-celebrer,deployment_scripts/puppet/manifests/ha.pp,Update ha.pp
+Mirantis/fuel-plugin-celebrer,deployment_scripts/puppet/manifests/ha.pp,Update ha.pp
+Mirantis/fuel-plugin-celebrer,deployment_scripts/puppet/manifests/ha.pp,Update ha.pp
+Mirantis/fuel-plugin-celebrer,deployment_scripts/puppet/modules/celebrer/manifests/keystone/auth.pp,Update auth.pp
+Mirantis/fuel-plugin-celebrer,deployment_scripts/puppet/manifests/keystone.pp,Update keystone.pp
+Mirantis/fuel-plugin-celebrer,deployment_scripts/puppet/manifests/ha.pp,"Fix, change credentials to glance"
+Mirantis/fuel-plugin-celebrer,deployment_scripts/puppet/manifests/ha.pp,Update ha.pp
+Mirantis/fuel-plugin-celebrer,deployment_scripts/puppet/modules/celebrer/manifests/keystone/auth.pp,Merge branch 'master' of github.com:Mirantis/fuel-plugin-celebrer
+Mirantis/fuel-plugin-celebrer,deployment_scripts/puppet/manifests/ha.pp,Adding HA-proxy supports.
+Mirantis/fuel-plugin-celebrer,deployment_scripts/puppet/modules/celebrer/manifests/keystone/auth.pp,Create auth.pp
+Mirantis/fuel-plugin-celebrer,deployment_scripts/puppet/manifests/keystone.pp,Adding keystone supports.
+Mirantis/fuel-plugin-celebrer,deployment_scripts/puppet/modules/celebrer/manifests/params.pp,Update params.pp
+Mirantis/fuel-plugin-celebrer,deployment_scripts/puppet/manifests/server.pp,Update server.pp
+Mirantis/fuel-plugin-celebrer,deployment_scripts/puppet/modules/celebrer/manifests/init.pp,Update init.pp
+Mirantis/fuel-plugin-celebrer,deployment_scripts/puppet/modules/celebrer/manifests/db.pp,Update db.pp
+Mirantis/fuel-plugin-celebrer,deployment_scripts/puppet/manifests/server.pp,Update server.pp
+Mirantis/fuel-plugin-celebrer,deployment_scripts/puppet/manifests/agent.pp,Update agent.pp
+Mirantis/fuel-plugin-celebrer,deployment_scripts/puppet/manifests/server.pp,"Merge pull request #1 from degorenko/patch-1
+
+Update server.pp Update server.pp"
+Mirantis/fuel-plugin-celebrer,deployment_scripts/puppet/manifests/server.pp,Update server.pp
+Mirantis/fuel-plugin-celebrer,deployment_scripts/puppet/manifests/server.pp,Update server.pp
+Mirantis/fuel-plugin-celebrer,deployment_scripts/puppet/manifests/server.pp,Update server.pp
+Mirantis/fuel-plugin-celebrer,deployment_scripts/puppet/modules/celebrer/manifests/agent.pp,Migrate to v2.0.0 FuelPlugin package version
+Mirantis/fuel-plugin-swift,deployment_scripts/puppet/manifests/controller.pp,"Add rebalance script and cron job
+
+  - $swift_nodes are only storage nodes now
+  - Haproxy on controller nodes has standalone swift as backend so standalone swift works out of box now
+  - Add configuration options to Fuel UI
+
+Change-Id: I30f2f4889b06f92d0b5ed4101beb6b794700d3d0"
+Mirantis/fuel-plugin-swift,deployment_scripts/puppet/manifests/rebalance_cronjob.pp,"Add rebalance script and cron job
+
+  - $swift_nodes are only storage nodes now
+  - Haproxy on controller nodes has standalone swift as backend so standalone swift works out of box now
+  - Add configuration options to Fuel UI
+
+Change-Id: I30f2f4889b06f92d0b5ed4101beb6b794700d3d0"
+Mirantis/fuel-plugin-swift,deployment_scripts/puppet/modules/standalone_swift/manifests/controller.pp,"Add rebalance script and cron job
+
+  - $swift_nodes are only storage nodes now
+  - Haproxy on controller nodes has standalone swift as backend so standalone swift works out of box now
+  - Add configuration options to Fuel UI
+
+Change-Id: I30f2f4889b06f92d0b5ed4101beb6b794700d3d0"
+Mirantis/fuel-plugin-swift,deployment_scripts/puppet/modules/standalone_swift/manifests/init.pp,"Add rebalance script and cron job
+
+  - $swift_nodes are only storage nodes now
+  - Haproxy on controller nodes has standalone swift as backend so standalone swift works out of box now
+  - Add configuration options to Fuel UI
+
+Change-Id: I30f2f4889b06f92d0b5ed4101beb6b794700d3d0"
+Mirantis/fuel-plugin-swift,deployment_scripts/puppet/manifests/site.pp,"Merge branch 'experimental'
+
+Change-Id: I603e41c745e3ade5af9e206302932a1ec3d49a1e"
+Mirantis/fuel-plugin-swift,deployment_scripts/puppet/modules/standalone_swift/manifests/init.pp,"Merge branch 'experimental'
+
+Change-Id: I603e41c745e3ade5af9e206302932a1ec3d49a1e"
+Mirantis/fuel-plugin-swift,deployment_scripts/puppet/modules/standalone_swift/tests/init.pp,"Merge branch 'experimental'
+
+Change-Id: I603e41c745e3ade5af9e206302932a1ec3d49a1e"
+Mirantis/fuel-plugin-swift,deployment_scripts/puppet/manifests/site.pp,"Configure swift draft site.pp
+
+  - So far does not work, installation relies on keystone configuration.
+  - Need to add swift, keystone puppet modules to the pugin.
+
+Add standalone_swift puppet module
+Improving init.pp
+
+  - Add filter_nodes_nonstrict function
+  - Move code from site.pp to init.pp in puppet module
+  - Fix problems in init.pp
+
+Change-Id: I32592477aa6a5466fd1e2b5e11dd214ba8a58f41"
+Mirantis/fuel-plugin-swift,deployment_scripts/puppet/modules/standalone_swift/manifests/init.pp,"Configure swift draft site.pp
+
+  - So far does not work, installation relies on keystone configuration.
+  - Need to add swift, keystone puppet modules to the pugin.
+
+Add standalone_swift puppet module
+Improving init.pp
+
+  - Add filter_nodes_nonstrict function
+  - Move code from site.pp to init.pp in puppet module
+  - Fix problems in init.pp
+
+Change-Id: I32592477aa6a5466fd1e2b5e11dd214ba8a58f41"
+Mirantis/fuel-plugin-swift,deployment_scripts/puppet/modules/standalone_swift/tests/init.pp,"Configure swift draft site.pp
+
+  - So far does not work, installation relies on keystone configuration.
+  - Need to add swift, keystone puppet modules to the pugin.
+
+Add standalone_swift puppet module
+Improving init.pp
+
+  - Add filter_nodes_nonstrict function
+  - Move code from site.pp to init.pp in puppet module
+  - Fix problems in init.pp
+
+Change-Id: I32592477aa6a5466fd1e2b5e11dd214ba8a58f41"
+Mirantis/fuel-plugin-swift,deployment_scripts/puppet/manifests/site.pp,Remove duplication
+Mirantis/fuel-plugin-swift,deployment_scripts/puppet/manifests/rebalance_cronjob.pp,Add rebalance_cronjob.pp
+Mirantis/fuel-plugin-swift,deployment_scripts/puppet/manifests/site.pp,Initial site.pp
+Mirantis/fuel-plugin-swift,deployment_scripts/puppet/manifests/site.pp,Update tasks.yaml
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/backup_etc/templates/backup_etc.erb,Update backup_etc.erb
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/backup_fuel/templates/backup_fuel.erb,Update backup_fuel.erb
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/backup_ceph/manifests/backup_ceph.pp,Changed backup scripts
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/backup_etc/manifests/backup_etc.pp,Changed backup scripts
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/backup_etc/templates/backup_etc.erb,Changed backup scripts
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/backup_fuel/manifests/backup_fuel.pp,Changed backup scripts
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/backup_fuel/templates/backup_fuel.erb,Changed backup scripts
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/backup_mysql/manifests/backup_mysql.pp,Changed backup scripts
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/backup_mysql/templates/backup_mysql.erb,Changed backup scripts
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/backup_etc/templates/backup_etc.erb,-o StrictHostKeyChecking=no
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/backup_fuel/templates/backup_fuel.erb,-o StrictHostKeyChecking=no
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/backup_ceph/manifests/backup_ceph.pp,Some fixes
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/backup_etc/manifests/backup_etc.pp,Some fixes
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/backup_etc/templates/backup_etc.erb,Some fixes
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/backup_fuel/manifests/backup_fuel.pp,Some fixes
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/backup_mysql/manifests/backup_mysql.pp,Some fixes
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/backup_ceph/manifests/backup_ceph.pp,"Added backup mysql, etc, fuel modules"
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/backup_ceph/templates/backup_ceph.erb,"Added backup mysql, etc, fuel modules"
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/backup_ceph/templates/config.erb,"Added backup mysql, etc, fuel modules"
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/backup_ceph/templates/functions.erb,"Added backup mysql, etc, fuel modules"
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/backup_etc/manifests/backup_etc.pp,"Added backup mysql, etc, fuel modules"
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/backup_etc/templates/backup_etc.erb,"Added backup mysql, etc, fuel modules"
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/backup_fuel/manifests/backup_fuel.pp,"Added backup mysql, etc, fuel modules"
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/backup_fuel/templates/backup_fuel.erb,"Added backup mysql, etc, fuel modules"
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/backup_mysql/manifests/backup_mysql.pp,"Added backup mysql, etc, fuel modules"
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/backup_mysql/templates/backup_mysql.erb,"Added backup mysql, etc, fuel modules"
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/backup_ceph/manifests/backup_ceph.pp,"Backup moved to post-deployment
+
+Removed Custom role
+Made changes to run backup_ceph.sh on primary_controller node"
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/backup_ceph/templates/backup_ceph.erb,"Backup moved to post-deployment
+
+Removed Custom role
+Made changes to run backup_ceph.sh on primary_controller node"
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/backup_ceph/templates/config.erb,"Backup moved to post-deployment
+
+Removed Custom role
+Made changes to run backup_ceph.sh on primary_controller node"
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/backup_ceph/templates/functions.erb,"Backup moved to post-deployment
+
+Removed Custom role
+Made changes to run backup_ceph.sh on primary_controller node"
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/backup_mysql/manifests/backup_mysql.pp,"Backup moved to post-deployment
+
+Removed Custom role
+Made changes to run backup_ceph.sh on primary_controller node"
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/backup_mysql/templates/backup.erb,"Backup moved to post-deployment
+
+Removed Custom role
+Made changes to run backup_ceph.sh on primary_controller node"
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/ceph_backup/manifests/backup_mysql.pp,"Backup moved to post-deployment
+
+Removed Custom role
+Made changes to run backup_ceph.sh on primary_controller node"
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/ceph_backup/manifests/deploy_hiera_override.pp,"Backup moved to post-deployment
+
+Removed Custom role
+Made changes to run backup_ceph.sh on primary_controller node"
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/mysql_backup/manifests/backup_mysql.pp,"Backup moved to post-deployment
+
+Removed Custom role
+Made changes to run backup_ceph.sh on primary_controller node"
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/mysql_backup/manifests/deploy_hiera_override.pp,"Backup moved to post-deployment
+
+Removed Custom role
+Made changes to run backup_ceph.sh on primary_controller node"
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/ceph_backup/manifests/backup_mysql.pp,Added mysql-backup tasks and plugin structure
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/ceph_backup/manifests/deploy_hiera_override.pp,Added mysql-backup tasks and plugin structure
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/mysql_backup/manifests/backup_mysql.pp,Added mysql-backup tasks and plugin structure
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/mysql_backup/manifests/deploy_hiera_override.pp,Added mysql-backup tasks and plugin structure
+Mirantis/fuel-plugin-backup,deployment_scripts/backup/modules/mysql_backup/templates/backup.erb,Added mysql-backup tasks and plugin structure
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/hosts.pp,"Merge pull request #7 from noskovao/master
+
+add ssl part2 add ssl part2"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/modules/standalone-ceph/manifests/hosts.pp,"Merge pull request #7 from noskovao/master
+
+add ssl part2 add ssl part2"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/hosts.pp,add ssl part2
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/modules/standalone-ceph/manifests/hosts.pp,add ssl part2
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/modules/ceph_override/manifests/ceph/radosgw_keystone.pp,"Merge pull request #6 from achekunov/SSL
+
+add ssl part1 add ssl part1"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/modules/ceph_override/manifests/openstack_haproxy/ssl_keys_saving.pp,"Merge pull request #6 from achekunov/SSL
+
+add ssl part1 add ssl part1"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/ssl_keys_saving.pp,"Merge pull request #6 from achekunov/SSL
+
+add ssl part1 add ssl part1"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/modules/ceph_override/manifests/ceph/radosgw_keystone.pp,add ssl part1
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/modules/ceph_override/manifests/openstack_haproxy/ssl_keys_saving.pp,add ssl part1
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/ssl_keys_saving.pp,add ssl part1
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/ceph-mon-firewall.pp,"Plugin refactored to support MOS 9.0
+
+Change-Id: If4bdf9868fd7a3e9a7fc3797ca454912877be179"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/ceph-mon-hiera-override.pp,"Plugin refactored to support MOS 9.0
+
+Change-Id: If4bdf9868fd7a3e9a7fc3797ca454912877be179"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/cluster-haproxy.pp,"Plugin refactored to support MOS 9.0
+
+Change-Id: If4bdf9868fd7a3e9a7fc3797ca454912877be179"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/cluster.pp,"Plugin refactored to support MOS 9.0
+
+Change-Id: If4bdf9868fd7a3e9a7fc3797ca454912877be179"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/controller-firewall.pp,"Plugin refactored to support MOS 9.0
+
+Change-Id: If4bdf9868fd7a3e9a7fc3797ca454912877be179"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/enable_rados.pp,"Plugin refactored to support MOS 9.0
+
+Change-Id: If4bdf9868fd7a3e9a7fc3797ca454912877be179"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/hiera-override.pp,"Plugin refactored to support MOS 9.0
+
+Change-Id: If4bdf9868fd7a3e9a7fc3797ca454912877be179"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/modules/ceph_override/manifests/ceph/enable_rados.pp,"Plugin refactored to support MOS 9.0
+
+Change-Id: If4bdf9868fd7a3e9a7fc3797ca454912877be179"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/modules/ceph_override/manifests/ceph/mon.pp,"Plugin refactored to support MOS 9.0
+
+Change-Id: If4bdf9868fd7a3e9a7fc3797ca454912877be179"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/modules/ceph_override/manifests/ceph/radosgw_keystone.pp,"Plugin refactored to support MOS 9.0
+
+Change-Id: If4bdf9868fd7a3e9a7fc3797ca454912877be179"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/modules/ceph_override/manifests/conf.pp,"Plugin refactored to support MOS 9.0
+
+Change-Id: If4bdf9868fd7a3e9a7fc3797ca454912877be179"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/modules/ceph_override/manifests/init.pp,"Plugin refactored to support MOS 9.0
+
+Change-Id: If4bdf9868fd7a3e9a7fc3797ca454912877be179"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/modules/ceph_override/manifests/openstack_haproxy/openstack_haproxy_radosgw.pp,"Plugin refactored to support MOS 9.0
+
+Change-Id: If4bdf9868fd7a3e9a7fc3797ca454912877be179"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/modules/standalone-ceph/templates/standalone-ceph.yaml.erb,"Plugin refactored to support MOS 9.0
+
+Change-Id: If4bdf9868fd7a3e9a7fc3797ca454912877be179"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/mon.pp,"Plugin refactored to support MOS 9.0
+
+Change-Id: If4bdf9868fd7a3e9a7fc3797ca454912877be179"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/openstack-haproxy-radosgw.pp,"Plugin refactored to support MOS 9.0
+
+Change-Id: If4bdf9868fd7a3e9a7fc3797ca454912877be179"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/rados-pki.pp,"Plugin refactored to support MOS 9.0
+
+Change-Id: If4bdf9868fd7a3e9a7fc3797ca454912877be179"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/radosgw.pp,"Plugin refactored to support MOS 9.0
+
+Change-Id: If4bdf9868fd7a3e9a7fc3797ca454912877be179"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/radosgw_keystone.pp,"Plugin refactored to support MOS 9.0
+
+Change-Id: If4bdf9868fd7a3e9a7fc3797ca454912877be179"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/controller-firewall.pp,"Merge pull request #2 from dnikishov/8.0-fixes
+
+Fixes for radosgw and haproxy stats Fixes for radosgw and haproxy stats"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/radosgw.pp,"Merge pull request #2 from dnikishov/8.0-fixes
+
+Fixes for radosgw and haproxy stats Fixes for radosgw and haproxy stats"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/controller-firewall.pp,"Fixes for radosgw and haproxy stats
+
+- radosgw manifest should enable mod_proxy
+  before attempting to start apache
+- Open port 10000 on controllers so that
+  haproxy_backend_status resources can operate
+  from ceph-mon role
+
+Change-Id: I09c2ad1c6d00702f855dd04d0b9be82fc887b7b8"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/radosgw.pp,"Fixes for radosgw and haproxy stats
+
+- radosgw manifest should enable mod_proxy
+  before attempting to start apache
+- Open port 10000 on controllers so that
+  haproxy_backend_status resources can operate
+  from ceph-mon role
+
+Change-Id: I09c2ad1c6d00702f855dd04d0b9be82fc887b7b8"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/hiera-override.pp,"Merge pull request #1 from gleb108/master
+
+bugfixes for 8.0 bugfixes for 8.0"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/openstack-haproxy-radosgw.pp,"Merge pull request #1 from gleb108/master
+
+bugfixes for 8.0 bugfixes for 8.0"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/radosgw.pp,"Merge pull request #1 from gleb108/master
+
+bugfixes for 8.0 bugfixes for 8.0"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/openstack-haproxy-radosgw.pp,SSL path error is fixed
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/radosgw.pp,Change keystone URL in openrc
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/hiera-override.pp,"Modify deployment tasks according Fuel 8 roles
+
+Syntax of deplyment_tasks.yaml was corrected
+Primary Ceph tasks were skipped.
+Task standalone-ceph-rados-pki is temporarily disabled."
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/radosgw.pp,"Set of imprevements
+
+* PKI task should not be executed for UUID
+* Added custom region name support
+* keystone-swift task should be skipped
+
+Change-Id: Ie6355f4bfb5a4d905bc6c8daff6060009c5b9f2d"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/ceph_client.pp,"Cosmetic changes
+
+  - Fulfill coding guidelines for plugins
+
+Change-Id: Ifc57e21e25c0dd456860e430285641fcd14244b6"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/cluster-haproxy.pp,"Cosmetic changes
+
+  - Fulfill coding guidelines for plugins
+
+Change-Id: Ifc57e21e25c0dd456860e430285641fcd14244b6"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/cluster.pp,"Cosmetic changes
+
+  - Fulfill coding guidelines for plugins
+
+Change-Id: Ifc57e21e25c0dd456860e430285641fcd14244b6"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/mon.pp,"Cosmetic changes
+
+  - Fulfill coding guidelines for plugins
+
+Change-Id: Ifc57e21e25c0dd456860e430285641fcd14244b6"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/openstack-haproxy-radosgw.pp,"Cosmetic changes
+
+  - Fulfill coding guidelines for plugins
+
+Change-Id: Ifc57e21e25c0dd456860e430285641fcd14244b6"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/rados-pki.pp,"Cosmetic changes
+
+  - Fulfill coding guidelines for plugins
+
+Change-Id: Ifc57e21e25c0dd456860e430285641fcd14244b6"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/radosgw.pp,"Cosmetic changes
+
+  - Fulfill coding guidelines for plugins
+
+Change-Id: Ifc57e21e25c0dd456860e430285641fcd14244b6"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/modules/ceph/examples/site.pp,"Removed Ceph module from plugin.
+
+- Ceph init.pp and conf.pp are copied from
+  original ceph module and extended with support
+  of standalone Ceph mon
+
+Change-Id: I7d6c88a48408fe609f368e1ee4de642916916720"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/modules/ceph/manifests/conf.pp,"Removed Ceph module from plugin.
+
+- Ceph init.pp and conf.pp are copied from
+  original ceph module and extended with support
+  of standalone Ceph mon
+
+Change-Id: I7d6c88a48408fe609f368e1ee4de642916916720"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/modules/ceph/manifests/ephemeral.pp,"Removed Ceph module from plugin.
+
+- Ceph init.pp and conf.pp are copied from
+  original ceph module and extended with support
+  of standalone Ceph mon
+
+Change-Id: I7d6c88a48408fe609f368e1ee4de642916916720"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/modules/ceph/manifests/keystone.pp,"Removed Ceph module from plugin.
+
+- Ceph init.pp and conf.pp are copied from
+  original ceph module and extended with support
+  of standalone Ceph mon
+
+Change-Id: I7d6c88a48408fe609f368e1ee4de642916916720"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/modules/ceph/manifests/mon.pp,"Removed Ceph module from plugin.
+
+- Ceph init.pp and conf.pp are copied from
+  original ceph module and extended with support
+  of standalone Ceph mon
+
+Change-Id: I7d6c88a48408fe609f368e1ee4de642916916720"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/modules/ceph/manifests/nova_compute.pp,"Removed Ceph module from plugin.
+
+- Ceph init.pp and conf.pp are copied from
+  original ceph module and extended with support
+  of standalone Ceph mon
+
+Change-Id: I7d6c88a48408fe609f368e1ee4de642916916720"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/modules/ceph/manifests/osds.pp,"Removed Ceph module from plugin.
+
+- Ceph init.pp and conf.pp are copied from
+  original ceph module and extended with support
+  of standalone Ceph mon
+
+Change-Id: I7d6c88a48408fe609f368e1ee4de642916916720"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/modules/ceph/manifests/osds/osd.pp,"Removed Ceph module from plugin.
+
+- Ceph init.pp and conf.pp are copied from
+  original ceph module and extended with support
+  of standalone Ceph mon
+
+Change-Id: I7d6c88a48408fe609f368e1ee4de642916916720"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/modules/ceph/manifests/params.pp,"Removed Ceph module from plugin.
+
+- Ceph init.pp and conf.pp are copied from
+  original ceph module and extended with support
+  of standalone Ceph mon
+
+Change-Id: I7d6c88a48408fe609f368e1ee4de642916916720"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/modules/ceph/manifests/pool.pp,"Removed Ceph module from plugin.
+
+- Ceph init.pp and conf.pp are copied from
+  original ceph module and extended with support
+  of standalone Ceph mon
+
+Change-Id: I7d6c88a48408fe609f368e1ee4de642916916720"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/modules/ceph/manifests/radosgw.pp,"Removed Ceph module from plugin.
+
+- Ceph init.pp and conf.pp are copied from
+  original ceph module and extended with support
+  of standalone Ceph mon
+
+Change-Id: I7d6c88a48408fe609f368e1ee4de642916916720"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/modules/ceph/manifests/ssh.pp,"Removed Ceph module from plugin.
+
+- Ceph init.pp and conf.pp are copied from
+  original ceph module and extended with support
+  of standalone Ceph mon
+
+Change-Id: I7d6c88a48408fe609f368e1ee4de642916916720"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/modules/ceph/templates/fastcgi.conf.erb,"Removed Ceph module from plugin.
+
+- Ceph init.pp and conf.pp are copied from
+  original ceph module and extended with support
+  of standalone Ceph mon
+
+Change-Id: I7d6c88a48408fe609f368e1ee4de642916916720"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/modules/ceph/templates/rgw.conf.erb,"Removed Ceph module from plugin.
+
+- Ceph init.pp and conf.pp are copied from
+  original ceph module and extended with support
+  of standalone Ceph mon
+
+Change-Id: I7d6c88a48408fe609f368e1ee4de642916916720"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/modules/ceph/templates/s3gw.fcgi.erb,"Removed Ceph module from plugin.
+
+- Ceph init.pp and conf.pp are copied from
+  original ceph module and extended with support
+  of standalone Ceph mon
+
+Change-Id: I7d6c88a48408fe609f368e1ee4de642916916720"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/modules/ceph/templates/secret.erb,"Removed Ceph module from plugin.
+
+- Ceph init.pp and conf.pp are copied from
+  original ceph module and extended with support
+  of standalone Ceph mon
+
+Change-Id: I7d6c88a48408fe609f368e1ee4de642916916720"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/modules/ceph_override/manifests/conf.pp,"Removed Ceph module from plugin.
+
+- Ceph init.pp and conf.pp are copied from
+  original ceph module and extended with support
+  of standalone Ceph mon
+
+Change-Id: I7d6c88a48408fe609f368e1ee4de642916916720"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/modules/ceph_override/manifests/init.pp,"Removed Ceph module from plugin.
+
+- Ceph init.pp and conf.pp are copied from
+  original ceph module and extended with support
+  of standalone Ceph mon
+
+Change-Id: I7d6c88a48408fe609f368e1ee4de642916916720"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/mon.pp,"Removed Ceph module from plugin.
+
+- Ceph init.pp and conf.pp are copied from
+  original ceph module and extended with support
+  of standalone Ceph mon
+
+Change-Id: I7d6c88a48408fe609f368e1ee4de642916916720"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/ceph_client.pp,"Fix for ceph deploy package order
+
+Change-Id: I09c56cf514865ea4fcd98445b947df978e48b588"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/rados-pki.pp,"Added Ceph keys generation for keystone revocation
+
+Change-Id: If9848be5669e01ce71fcc1398baf8a84a0711c87"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/ceph_client.pp,"Fixes for deployment stability
+
+  * Do not merge ceph_monitor_nodes to avoid putting controllers into
+    list of minitors
+  * Deploy monitors after all controllers ready
+  * Added ceilometer task depemdency
+
+Change-Id: I1e8d31982b05830b033d8abd5bcb25f6007615bf"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/mon.pp,"Fixes for deployment stability
+
+  * Do not merge ceph_monitor_nodes to avoid putting controllers into
+    list of minitors
+  * Deploy monitors after all controllers ready
+  * Added ceilometer task depemdency
+
+Change-Id: I1e8d31982b05830b033d8abd5bcb25f6007615bf"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/ceph_client.pp,"Added rados gw on ceph mons
+
+Change-Id: Ie0f828a7304ff867562daf986e88ce2a23cab805"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/cluster-haproxy.pp,"Added rados gw on ceph mons
+
+Change-Id: Ie0f828a7304ff867562daf986e88ce2a23cab805"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/cluster.pp,"Added rados gw on ceph mons
+
+Change-Id: Ie0f828a7304ff867562daf986e88ce2a23cab805"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/modules/standalone-ceph/templates/standalone-ceph.yaml.erb,"Added rados gw on ceph mons
+
+Change-Id: Ie0f828a7304ff867562daf986e88ce2a23cab805"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/openstack-haproxy-radosgw.pp,"Added rados gw on ceph mons
+
+Change-Id: Ie0f828a7304ff867562daf986e88ce2a23cab805"
+Mirantis/fuel-plugin-standalone-ceph,deployment_scripts/radosgw.pp,"Added rados gw on ceph mons
+
+Change-Id: Ie0f828a7304ff867562daf986e88ce2a23cab805"
+Mirantis/fuel-plugin-etckeeper,deployment_scripts/etckeeper_commit.pp,"Add userguide and fix commit task
+
+This change adds the userguide to the plugin. Additionally this change
+fixes deployment failures due to no pendinding changes when the commit
+task is run."
+Mirantis/fuel-plugin-etckeeper,deployment_scripts/etckeeper_commit.pp,"Create etckeeper plugin
+
+This plugin can be used to add etckeeper to a Fuel deployment.  When
+enabled, etckeeper will be installed, configured and set to track
+changes in the /etc folder on a given deployed node."
+Mirantis/fuel-plugin-etckeeper,deployment_scripts/etckeeper_configure.pp,"Create etckeeper plugin
+
+This plugin can be used to add etckeeper to a Fuel deployment.  When
+enabled, etckeeper will be installed, configured and set to track
+changes in the /etc folder on a given deployed node."
+Mirantis/fuel-plugin-etckeeper,deployment_scripts/etckeeper_install.pp,"Create etckeeper plugin
+
+This plugin can be used to add etckeeper to a Fuel deployment.  When
+enabled, etckeeper will be installed, configured and set to track
+changes in the /etc folder on a given deployed node."
+Mirantis/puppet-manifests,modules/fuel_project/manifests/zuul.pp,"Use hiera lookup to get path to zuul layout
+
+Change-Id: I422c243cdaf2499ac8d712ac4f3b9553f3058267"
+Mirantis/puppet-manifests,modules/fuel_project/manifests/zuul.pp,"Fix zuul configuration update script
+
+Change-Id: I88005276de0422bdd681eb656acaf84b8977f0df"
+Mirantis/puppet-manifests,modules/fuel_project/templates/zuul/zuul_apply_layout.sh.erb,"Merge ""Fixes for script used for zuul config update"""
+Mirantis/puppet-manifests,modules/fuel_project/templates/zuul/zuul_apply_layout.sh.erb,"Fixes for script used for zuul config update
+
+This change update script used to update zuul configuration:
+- reduce number of messages generated by script
+- switch to initctl command
+
+Change-Id: I4f0e82b67eea831a030cab36fee03b2183e369d1
+Related-Bug: #1549374 "
+Mirantis/puppet-manifests,modules/racks/manifests/webapp.pp,"Enabling non-conditional migration and syncdb for racks.
+
+Change-Id: Ia3dacb17ad9cd6c8202eab769906892716213285
+Signed-off-by: Igor Shishkin <me@teran.ru>"
+Mirantis/puppet-manifests,modules/fuel_project/manifests/common.pp,"Use libvirt 1.2.12 on RHEL bases distros
+
+Since we plan to use libvirt 1.2.12 on all related distros
+(Ubuntu,RHEL), its required to use versionlocking to pin
+to specific pkg version.
+
+Also remove the FIXME tmp code as the custom rule for polkit is
+provided by the libvirt-daemon 1.2.12 package.
+
+Add jenkins user to the kvm group as kvm group is allowed in the
+polkit's rule, which comes from libvirt-daemon v1.2.12.
+
+Change-Id: I8e5d4a085c3bcf0659865c161f45bba52178876e"
+Mirantis/puppet-manifests,modules/fuel_project/manifests/jenkins/slave.pp,"Use libvirt 1.2.12 on RHEL bases distros
+
+Since we plan to use libvirt 1.2.12 on all related distros
+(Ubuntu,RHEL), its required to use versionlocking to pin
+to specific pkg version.
+
+Also remove the FIXME tmp code as the custom rule for polkit is
+provided by the libvirt-daemon 1.2.12 package.
+
+Add jenkins user to the kvm group as kvm group is allowed in the
+polkit's rule, which comes from libvirt-daemon v1.2.12.
+
+Change-Id: I8e5d4a085c3bcf0659865c161f45bba52178876e"
+Mirantis/puppet-manifests,modules/fuel_project/templates/jenkins/slave/libvirt_polkit_rules.d.erb,"Use libvirt 1.2.12 on RHEL bases distros
+
+Since we plan to use libvirt 1.2.12 on all related distros
+(Ubuntu,RHEL), its required to use versionlocking to pin
+to specific pkg version.
+
+Also remove the FIXME tmp code as the custom rule for polkit is
+provided by the libvirt-daemon 1.2.12 package.
+
+Add jenkins user to the kvm group as kvm group is allowed in the
+polkit's rule, which comes from libvirt-daemon v1.2.12.
+
+Change-Id: I8e5d4a085c3bcf0659865c161f45bba52178876e"
+Mirantis/puppet-manifests,modules/jenkins/manifests/master.pp,"Set Gerrit trigger configuration via jenkins_cli.
+
+Gerrit trigger configuration added to the Jenkins installation
+process. It allows to include or not gerrit trigger configurations
+during the jenkins installation. To include gerrit configuration
+need to set gerrit_enabled variable to true in hiera jenkins_master
+role and specify other configuration gerrit_server_name,
+gerrit_hostname, gerrit_url, gerrit_username and gerrit_key_path.
+Leave blank or comment gerrit_enabled variable to skip gerrit
+configuration during the Jenkins installation.
+
+Change-Id: Iabada257aaf45b84f94a1e24093dd98559c6a3b3"
+Mirantis/puppet-manifests,modules/fuel_project/manifests/jenkins/slave.pp,"Add missed centos7 image required by install tests
+
+Change-Id: Iee81852125462115cf22ff1a271ca79cb57a7526"
+Mirantis/puppet-manifests,modules/zuul/templates/gearman-logging.conf.erb,"Fix zuul templates
+
+This change fix problems with generation zuul confuration files.
+
+Change-Id: Ib7f0458fd6d2e84a72e663b1bafe306f1c4a3ce7"
+Mirantis/puppet-manifests,modules/zuul/templates/merger-logging.conf.erb,"Fix zuul templates
+
+This change fix problems with generation zuul confuration files.
+
+Change-Id: Ib7f0458fd6d2e84a72e663b1bafe306f1c4a3ce7"
+Mirantis/puppet-manifests,modules/zuul/templates/zuul-logging.conf.erb,"Fix zuul templates
+
+This change fix problems with generation zuul confuration files.
+
+Change-Id: Ib7f0458fd6d2e84a72e663b1bafe306f1c4a3ce7"
+Mirantis/puppet-manifests,modules/zuul/templates/zuul.conf.erb,"Fix zuul templates
+
+This change fix problems with generation zuul confuration files.
+
+Change-Id: Ib7f0458fd6d2e84a72e663b1bafe306f1c4a3ce7"
+Mirantis/puppet-manifests,modules/zuul/manifests/init.pp,"Fix known_host creating for Zuul
+
+Fix resource creating file containing Gerrit's host key in zuul module.
+
+Change-Id: Ic8d3be09d0c6c5360e75716a6c7aeb0f5acbc42d"
+Mirantis/puppet-manifests,modules/zuul/templates/ssh_config.erb,"Fix known_host creating for Zuul
+
+Fix resource creating file containing Gerrit's host key in zuul module.
+
+Change-Id: Ic8d3be09d0c6c5360e75716a6c7aeb0f5acbc42d"
+Mirantis/puppet-manifests,modules/fuel_project/manifests/nginx.pp,"Serve Zuul Merger's Git repositories by Nginx
+
+Install package fcgiwrap and configure Nginx to use it to export Merger's
+Git repositories.
+
+Change-Id: I38a8187663cac51b601c037c2ae8d6e1a97e521f"
+Mirantis/puppet-manifests,modules/zuul/manifests/init.pp,"Serve Zuul Merger's Git repositories by Nginx
+
+Install package fcgiwrap and configure Nginx to use it to export Merger's
+Git repositories.
+
+Change-Id: I38a8187663cac51b601c037c2ae8d6e1a97e521f"
+Mirantis/puppet-manifests,modules/jenkins/manifests/master.pp,"Set global jenkins configuration via jenkins_cli.
+
+The following configurations are implemented to automate
+jenkins installation process:
+- System Admin e-mail
+- SCM checkout retry count
+
+Another implemented functionallity related to jenkins global
+configuration:
+- Markup Formatter
+- number of executors
+moved to one 'jenkins_main_conf' exec resource to avoid duplication.
+
+Change-Id: Icc5ecfc7eeca93802fc6e3d0ab0d36bb975ef919"
+Mirantis/puppet-manifests,modules/fuel_project/manifests/apps/mirror.pp,"Fix bug in apps:mirror
+
+Remove not existed plugin_dir variable
+
+Change-Id: Ia5faceaa682c4d568955e3f0ad53cf7c951316c6"
+Mirantis/puppet-manifests,modules/gerrit/manifests/init.pp,"Fix problem with hiera keys for gerrit ssh server
+
+This change set correct order for gerrit internal ssh server keys
+installation. When we use txt files we need to create it before
+first gerrit installation.
+
+Change-Id: I24211d91d2ec828c46a1b1c4dabf716a5e84888a"
+Mirantis/puppet-manifests,modules/fuel_project/templates/zuul/zuul_apply_layout.sh.erb,"Fix problem with zuul config reload
+
+After switch init scripts to upstart version we need to change
+reloading method
+
+Change-Id: Ib1829cf8fe1027bff5feec5f7885178a55edf0fc"
+Mirantis/puppet-manifests,modules/fuel_project/manifests/jenkins/slave.pp,"Added kolla_build_tests parameter/block
+
+Into slave.pp manifest a new parameter with related block code has
+been added regarding kolla build tests. If enabled it will install
+specified packages - in this case 'python-dev' on Debian based
+distros.
+
+Partial-Bug: #1548270
+Change-Id: Ic289e34a05587a35fa3bb5578feb9c1bce5b34cd "
+Mirantis/puppet-manifests,modules/racks/manifests/webapp.pp,"Fix for uwsgi::application installation
+
+ * validate_string on $plugins attribute
+ * more secure parameters for Class[uwsgi]
+
+Change-Id: I37120478937fcc8db8bbcbcccfb7a478855d4792
+Signed-off-by: Igor Shishkin <me@teran.ru>"
+Mirantis/puppet-manifests,modules/uwsgi/manifests/application.pp,"Fix for uwsgi::application installation
+
+ * validate_string on $plugins attribute
+ * more secure parameters for Class[uwsgi]
+
+Change-Id: I37120478937fcc8db8bbcbcccfb7a478855d4792
+Signed-off-by: Igor Shishkin <me@teran.ru>"
+Mirantis/puppet-manifests,modules/uwsgi/manifests/init.pp,"Fix for uwsgi::application installation
+
+ * validate_string on $plugins attribute
+ * more secure parameters for Class[uwsgi]
+
+Change-Id: I37120478937fcc8db8bbcbcccfb7a478855d4792
+Signed-off-by: Igor Shishkin <me@teran.ru>"
+Mirantis/puppet-manifests,modules/racks/manifests/importer.pp,"Fix for proper file declaration
+
+Change-Id: Iaea4a4604877ca56767914d45d96cfc0727a8b82
+Signed-off-by: Igor Shishkin <me@teran.ru>"
+Mirantis/puppet-manifests,modules/racks/manifests/webapp.pp,"Missed uwsgi declaration fix
+
+Change-Id: Ie1c6753120492e1c4ff97a37d779c9ddc1e6029d
+Signed-off-by: Igor Shishkin <me@teran.ru>"
+Mirantis/puppet-manifests,modules/racks/manifests/importer.pp,"Fix for missed directory /etc/racks/importers
+
+ * +More secure permissions to configuration files
+
+Change-Id: Ib54ff67eea62b232c658ac356e2c7621eff7280f
+Signed-off-by: Igor Shishkin <me@teran.ru>"
+Mirantis/puppet-manifests,modules/racks/manifests/importer.pp,"Ability to enable/disable package installation added
+
+Change-Id: I31ee4dbfec593387e72e6addabce4582c929cdba
+Signed-off-by: Igor Shishkin <me@teran.ru>"
+Mirantis/puppet-manifests,modules/fuel_project/manifests/jenkins/slave.pp,"Merge ""Revert ""remove python-pbr module from manifests"""""
+Mirantis/puppet-manifests,modules/fuel_project/manifests/jenkins/slave.pp,"Revert ""remove python-pbr module from manifests""
+
+This reverts commit 1a297cec01f33ea53813d8620648857739072188. This would probably brake some ISO and package build processes.
+
+Change-Id: I0a79b37b4cc33df9f53d2180567497f82fd5312b"
+Mirantis/puppet-manifests,modules/fuel_project/manifests/jenkins/slave.pp,"remove python-pbr module from manifests
+
+- only required by ISO and package building
+- distribution version conflicts with fuel-main
+
+Closes-Bug: #1547035
+Change-Id: Ic53d391c57234d979f89b8affa2d9abbf5dbe89b "
+Mirantis/puppet-manifests,modules/racks/manifests/webapp.pp,"Fix for new static path
+
+Change-Id: I4429d7351d429a866e7e0f173005c71f89dc297a
+Signed-off-by: Igor Shishkin <me@teran.ru>"
+Mirantis/puppet-manifests,modules/racks/manifests/webapp.pp,"Puppet module update according to new changes in racks
+
+Change-Id: I71a2670fcaf415ffff8194c6a4a13422f501ce7f
+Signed-off-by: Igor Shishkin <me@teran.ru>"
+Mirantis/puppet-manifests,modules/fuel_project/manifests/jenkins/slave.pp,"Ensure to notify polkit on adding new rule file
+
+- changed permission on rule file to make it readable by others,
+- notify polkit service when rule file is provided.
+
+Change-Id: I8ae2146e17c08d780beb81a285de7f58f9d209cf"
+Mirantis/puppet-manifests,modules/fuel_project/manifests/jenkins/slave.pp,"Added polkit rule for libvirt/jenkins on RHEL
+
+For systests it is required to grant access via polkit
+on RHEL to the libvirt for the jenkins user.
+
+Also changed gtk-vnc pkg name since on RHEL it is gtk-vnc2.
+
+Related Jira-ticket: https://mirantis.jira.com/browse/PROD-2744
+
+Change-Id: Iceed12253ec70373c45d27df26bb421a42bd5fa9"
+Mirantis/puppet-manifests,modules/fuel_project/templates/jenkins/slave/libvirt_polkit_rules.d.erb,"Added polkit rule for libvirt/jenkins on RHEL
+
+For systests it is required to grant access via polkit
+on RHEL to the libvirt for the jenkins user.
+
+Also changed gtk-vnc pkg name since on RHEL it is gtk-vnc2.
+
+Related Jira-ticket: https://mirantis.jira.com/browse/PROD-2744
+
+Change-Id: Iceed12253ec70373c45d27df26bb421a42bd5fa9"
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/puppet/modules/external_ceph/manifests/volumes_ephemeral.pp,"Cleanup of plugin repo
+
+- Removed unused files
+- Made an adjustment for graph to not to start nova-compute
+  before enable_nova_compute_service task"
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/puppet/modules/external_ceph/manifests/conf.pp,"Removed the dedicated user for nova
+
+Libvirt allows to configure only one user
+for RBD access. This means that there should be a
+single user for block volumes and ephemeral volumes."
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/puppet/modules/external_ceph/manifests/volumes_ephemeral.pp,"Removed the dedicated user for nova
+
+Libvirt allows to configure only one user
+for RBD access. This means that there should be a
+single user for block volumes and ephemeral volumes."
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/puppet/modules/external_ceph/templates/keyring.bin.erb,"Removed the dedicated user for nova
+
+Libvirt allows to configure only one user
+for RBD access. This means that there should be a
+single user for block volumes and ephemeral volumes."
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/conf.pp,9.0 Port
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/images.pp,9.0 Port
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/puppet/modules/external_ceph/manifests/conf.pp,9.0 Port
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/puppet/modules/external_ceph/manifests/images.pp,9.0 Port
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/puppet/modules/external_ceph/manifests/radosgw_keystone.pp,9.0 Port
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/puppet/modules/external_ceph/manifests/volumes_controller.pp,9.0 Port
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/puppet/modules/external_ceph/manifests/volumes_ephemeral.pp,9.0 Port
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/puppet/modules/external_ceph/manifests/volumes_types.pp,9.0 Port
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/radosgw-keystone.pp,9.0 Port
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/volumes-and-ephemeral-compute.pp,9.0 Port
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/volumes-controller.pp,9.0 Port
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/volumes-types.pp,9.0 Port
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/volumes-and-ephemeral-compute.pp,"Added README
+
+Change-Id: I0795f14fc1d98d33252eb9be368747b3e666f8e7"
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/conf.pp,"Made cinder integration multibackend-aware
+
+Change-Id: I3636642678dc4cb388fa64aac92af3051599826a"
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/puppet/modules/external_ceph/templates/keyring.bin.erb,"Made cinder integration multibackend-aware
+
+Change-Id: I3636642678dc4cb388fa64aac92af3051599826a"
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/volumes-controller.pp,"Made cinder integration multibackend-aware
+
+Change-Id: I3636642678dc4cb388fa64aac92af3051599826a"
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/volumes-types.pp,"Made cinder integration multibackend-aware
+
+Change-Id: I3636642678dc4cb388fa64aac92af3051599826a"
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/conf.pp,"Refactored UX
+
+Change-Id: I4da0d46a48bebd8fccee123bda12fafc858cc0a0"
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/puppet/modules/external_ceph/templates/keyring.bin.erb,"Refactored UX
+
+Change-Id: I4da0d46a48bebd8fccee123bda12fafc858cc0a0"
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/radosgw-keystone.pp,"Refactored UX
+
+Change-Id: I4da0d46a48bebd8fccee123bda12fafc858cc0a0"
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/radosgw.pp,"Refactored UX
+
+Change-Id: I4da0d46a48bebd8fccee123bda12fafc858cc0a0"
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/volumes-controller.pp,"Refactored UX
+
+Change-Id: I4da0d46a48bebd8fccee123bda12fafc858cc0a0"
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/conf.pp,"Implemented radosgw deployment
+
+Change-Id: Ia1d9678479ec6b606d4a6fb0d1188541f7875da7"
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/puppet/modules/external_ceph/templates/keyring.bin.erb,"Implemented radosgw deployment
+
+Change-Id: Ia1d9678479ec6b606d4a6fb0d1188541f7875da7"
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/radosgw-keystone.pp,"Implemented radosgw deployment
+
+Change-Id: Ia1d9678479ec6b606d4a6fb0d1188541f7875da7"
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/radosgw.pp,"Implemented radosgw deployment
+
+Change-Id: Ia1d9678479ec6b606d4a6fb0d1188541f7875da7"
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/volumes.pp,"Implemented radosgw deployment
+
+Change-Id: Ia1d9678479ec6b606d4a6fb0d1188541f7875da7"
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/images.pp,"Indroduced conditions for tasks
+
+Change-Id: I058ad64ae20a0056cd61de8ea52850a0717d8e5a"
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/volumes-and-ephemeral-compute.pp,"Indroduced conditions for tasks
+
+Change-Id: I058ad64ae20a0056cd61de8ea52850a0717d8e5a"
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/volumes-controller.pp,"Indroduced conditions for tasks
+
+Change-Id: I058ad64ae20a0056cd61de8ea52850a0717d8e5a"
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/conf.pp,"Added integration with external glance
+
+Change-Id: I4fb1693f25dd01d5108eb70d2f40b9a31ac5b049"
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/images.pp,"Added integration with external glance
+
+Change-Id: I4fb1693f25dd01d5108eb70d2f40b9a31ac5b049"
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/puppet/modules/external_ceph/templates/keyring.bin.erb,"Added integration with external glance
+
+Change-Id: I4fb1693f25dd01d5108eb70d2f40b9a31ac5b049"
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/volumes-and-ephemeral-compute.pp,"Fixed Volumes and Ephemeral storage integration
+
+Change-Id: I0f63059a81fea5145d6235adfc634051056ca00e"
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/volumes-controller.pp,"Fixed Volumes and Ephemeral storage integration
+
+Change-Id: I0f63059a81fea5145d6235adfc634051056ca00e"
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/conf.pp,"Basic integration with cinder, ephemeral
+
+Change-Id: Id3c65aa62d575c7ba698b20ba729a7b3b0303ec0"
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/volumes-and-ephemeral-compute.pp,"Basic integration with cinder, ephemeral
+
+Change-Id: Id3c65aa62d575c7ba698b20ba729a7b3b0303ec0"
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/volumes-controller.pp,"Basic integration with cinder, ephemeral
+
+Change-Id: Id3c65aa62d575c7ba698b20ba729a7b3b0303ec0"
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/volumes.pp,"Basic integration with cinder, ephemeral
+
+Change-Id: Id3c65aa62d575c7ba698b20ba729a7b3b0303ec0"
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/conf.pp,"Initial version
+
+Change-Id: I894a961d5f622f50eaddb7710692f053ab081efa"
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/puppet/modules/external_ceph/templates/keyring.bin.erb,"Initial version
+
+Change-Id: I894a961d5f622f50eaddb7710692f053ab081efa"
+Mirantis/fuel-plugin-external-ceph,deployment_scripts/volumes.pp,"Initial version
+
+Change-Id: I894a961d5f622f50eaddb7710692f053ab081efa"
