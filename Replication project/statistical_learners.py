@@ -90,7 +90,7 @@ def hierarcial_clustering(metrics, metric_name):
     clusters = fcluster(linkage(pdist(values.T, 'euclidean'), method='ward'), t=1.5, criterion='distance')
     return clusters
 
-# Compare methods using Scott-Knott test
+# Compare methods using hierarcial clustering test (simplified Scott-Knott test)
 for metric_name in ["accuracy", "precision", "recall", "auc", "f1"]:
     print(f"Best methods for {metric_name}:")
     clusters = hierarcial_clustering(metrics, metric_name)
