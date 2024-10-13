@@ -1,0 +1,4051 @@
+Repository,File,Commit Message
+wikimedia/mediawiki-vagrant,puppet/modules/role/templates/growthexperiments/conf.php.erb,"growthexperiments: drop removed service from config
+
+Follow-up: Ia953060d5a43b85cd20873ebacea5c62b50e0f61
+Change-Id: I1e12a431a14465044f5ca22cba5b83d271211e89"
+wikimedia/mediawiki-vagrant,puppet/modules/mediawiki/manifests/user.pp,"Remove indirect calls to IDBAccessObject::READ_* constants
+
+Title/WikiPage::READ_NORMAL are removed with 1.42 (c04f1d64d6)
+
+Change-Id: Ie6254425a475ebf4028b8a0adc6ded9e585e2d47"
+wikimedia/mediawiki-vagrant,puppet/modules/role/templates/wikidata/client.php.erb,"Set itemAndPropertySourceName for wikidata role
+
+Bug: T289418
+Change-Id: Ib1c4b3c6889b31b548b783da059f18cce3dcb9b8"
+wikimedia/mediawiki-vagrant,puppet/modules/role/templates/wikidata/repo.php.erb,"Set itemAndPropertySourceName for wikidata role
+
+Bug: T289418
+Change-Id: Ib1c4b3c6889b31b548b783da059f18cce3dcb9b8"
+wikimedia/mediawiki-vagrant,puppet/modules/role/manifests/centralauth.pp,"centralauth: Add a role page with some links
+
+Change-Id: Ic225e14ccda9d25e5edd026947c86540b2074b14"
+wikimedia/mediawiki-vagrant,puppet/modules/role/templates/centralauth/VagrantRoleCentralAuth.wiki.erb,"centralauth: Add a role page with some links
+
+Change-Id: Ic225e14ccda9d25e5edd026947c86540b2074b14"
+wikimedia/mediawiki-vagrant,puppet/modules/apt/manifests/init.pp,"Remove mwv-apt
+
+Not used anymore, server would have to be upgraded to Bullseye,
+unlikely anyone will do that.
+
+Bug: T367542
+Change-Id: I6199d673c44a86d5bd34091725bd998856510e36"
+wikimedia/mediawiki-vagrant,puppet/modules/role/manifests/easytimeline.pp,"Fix loading of fonts in EasyTimeline
+
+Change-Id: I9f1cf80edc687ce2a47ed7cf49ea15560b531f7f"
+wikimedia/mediawiki-vagrant,puppet/modules/iegreview/manifests/init.pp,"Drop iegreview role
+
+Bug: T351889
+Change-Id: I8a338e8b0a1df2127b7e648b63a850eef441b838"
+wikimedia/mediawiki-vagrant,puppet/modules/iegreview/templates/apache.conf.erb,"Drop iegreview role
+
+Bug: T351889
+Change-Id: I8a338e8b0a1df2127b7e648b63a850eef441b838"
+wikimedia/mediawiki-vagrant,puppet/modules/iegreview/templates/create_user.sql.erb,"Drop iegreview role
+
+Bug: T351889
+Change-Id: I8a338e8b0a1df2127b7e648b63a850eef441b838"
+wikimedia/mediawiki-vagrant,puppet/modules/iegreview/templates/create_user_unless.sql.erb,"Drop iegreview role
+
+Bug: T351889
+Change-Id: I8a338e8b0a1df2127b7e648b63a850eef441b838"
+wikimedia/mediawiki-vagrant,puppet/modules/iegreview/templates/env.erb,"Drop iegreview role
+
+Bug: T351889
+Change-Id: I8a338e8b0a1df2127b7e648b63a850eef441b838"
+wikimedia/mediawiki-vagrant,puppet/modules/iegreview/templates/load_schema_unless.sql.erb,"Drop iegreview role
+
+Bug: T351889
+Change-Id: I8a338e8b0a1df2127b7e648b63a850eef441b838"
+wikimedia/mediawiki-vagrant,puppet/modules/role/manifests/iegreview.pp,"Drop iegreview role
+
+Bug: T351889
+Change-Id: I8a338e8b0a1df2127b7e648b63a850eef441b838"
+wikimedia/mediawiki-vagrant,puppet/modules/mediawiki/templates/multiwiki/CommonSettings.php.erb,"https: Fix $wgConf fix
+
+It gets overriden somewhere so move it later in the process.
+
+Change-Id: I4e892834d34190c035fb111a29db7393a37cc3ae"
+wikimedia/mediawiki-vagrant,puppet/modules/role/manifests/https.pp,"https: Fix $wgConf fix
+
+It gets overriden somewhere so move it later in the process.
+
+Change-Id: I4e892834d34190c035fb111a29db7393a37cc3ae"
+wikimedia/mediawiki-vagrant,puppet/modules/role/templates/https/fixWgServer.php.erb,"https: Fix $wgConf fix
+
+It gets overriden somewhere so move it later in the process.
+
+Change-Id: I4e892834d34190c035fb111a29db7393a37cc3ae"
+wikimedia/mediawiki-vagrant,puppet/modules/apache/manifests/mod/authnz_ldap.pp,"Drop LdapAuth role and openldap module
+
+This was used by Striker/Keystone/Horizon roles that have been removed
+already. The extension is still in use by Wikitech, although it's not
+in active development and having just this here without a copy of Bitu
+(idm.wm.o) and CAS (idp.wm.o) doesn't seem particularly useful.
+
+Change-Id: Iea6eab16f253955da0e8af94d7c65b7f15fc1513"
+wikimedia/mediawiki-vagrant,puppet/modules/openldap/manifests/init.pp,"Drop LdapAuth role and openldap module
+
+This was used by Striker/Keystone/Horizon roles that have been removed
+already. The extension is still in use by Wikitech, although it's not
+in active development and having just this here without a copy of Bitu
+(idm.wm.o) and CAS (idp.wm.o) doesn't seem particularly useful.
+
+Change-Id: Iea6eab16f253955da0e8af94d7c65b7f15fc1513"
+wikimedia/mediawiki-vagrant,puppet/modules/openldap/templates/default.erb,"Drop LdapAuth role and openldap module
+
+This was used by Striker/Keystone/Horizon roles that have been removed
+already. The extension is still in use by Wikitech, although it's not
+in active development and having just this here without a copy of Bitu
+(idm.wm.o) and CAS (idp.wm.o) doesn't seem particularly useful.
+
+Change-Id: Iea6eab16f253955da0e8af94d7c65b7f15fc1513"
+wikimedia/mediawiki-vagrant,puppet/modules/openldap/templates/ldap.conf.erb,"Drop LdapAuth role and openldap module
+
+This was used by Striker/Keystone/Horizon roles that have been removed
+already. The extension is still in use by Wikitech, although it's not
+in active development and having just this here without a copy of Bitu
+(idm.wm.o) and CAS (idp.wm.o) doesn't seem particularly useful.
+
+Change-Id: Iea6eab16f253955da0e8af94d7c65b7f15fc1513"
+wikimedia/mediawiki-vagrant,puppet/modules/openldap/templates/slapd.erb,"Drop LdapAuth role and openldap module
+
+This was used by Striker/Keystone/Horizon roles that have been removed
+already. The extension is still in use by Wikitech, although it's not
+in active development and having just this here without a copy of Bitu
+(idm.wm.o) and CAS (idp.wm.o) doesn't seem particularly useful.
+
+Change-Id: Iea6eab16f253955da0e8af94d7c65b7f15fc1513"
+wikimedia/mediawiki-vagrant,puppet/modules/role/manifests/ldapauth.pp,"Drop LdapAuth role and openldap module
+
+This was used by Striker/Keystone/Horizon roles that have been removed
+already. The extension is still in use by Wikitech, although it's not
+in active development and having just this here without a copy of Bitu
+(idm.wm.o) and CAS (idp.wm.o) doesn't seem particularly useful.
+
+Change-Id: Iea6eab16f253955da0e8af94d7c65b7f15fc1513"
+wikimedia/mediawiki-vagrant,puppet/modules/role/templates/ldapauth/LdapAuthentication.php.erb,"Drop LdapAuth role and openldap module
+
+This was used by Striker/Keystone/Horizon roles that have been removed
+already. The extension is still in use by Wikitech, although it's not
+in active development and having just this here without a copy of Bitu
+(idm.wm.o) and CAS (idp.wm.o) doesn't seem particularly useful.
+
+Change-Id: Iea6eab16f253955da0e8af94d7c65b7f15fc1513"
+wikimedia/mediawiki-vagrant,puppet/modules/role/templates/ldapauth/check_db.erb,"Drop LdapAuth role and openldap module
+
+This was used by Striker/Keystone/Horizon roles that have been removed
+already. The extension is still in use by Wikitech, although it's not
+in active development and having just this here without a copy of Bitu
+(idm.wm.o) and CAS (idp.wm.o) doesn't seem particularly useful.
+
+Change-Id: Iea6eab16f253955da0e8af94d7c65b7f15fc1513"
+wikimedia/mediawiki-vagrant,puppet/modules/role/templates/ldapauth/create_db.erb,"Drop LdapAuth role and openldap module
+
+This was used by Striker/Keystone/Horizon roles that have been removed
+already. The extension is still in use by Wikitech, although it's not
+in active development and having just this here without a copy of Bitu
+(idm.wm.o) and CAS (idp.wm.o) doesn't seem particularly useful.
+
+Change-Id: Iea6eab16f253955da0e8af94d7c65b7f15fc1513"
+wikimedia/mediawiki-vagrant,puppet/modules/apache/manifests/mod/wsgi.pp,"Drop Keystone role
+
+This was used by Horizon and Striker roles which have just been removed.
+
+Change-Id: I95e1856665e95ebf6f3fe6310ba7f257bf4bb138"
+wikimedia/mediawiki-vagrant,puppet/modules/apache/manifests/mod/wsgi_py3.pp,"Drop Keystone role
+
+This was used by Horizon and Striker roles which have just been removed.
+
+Change-Id: I95e1856665e95ebf6f3fe6310ba7f257bf4bb138"
+wikimedia/mediawiki-vagrant,puppet/modules/role/manifests/keystone.pp,"Drop Keystone role
+
+This was used by Horizon and Striker roles which have just been removed.
+
+Change-Id: I95e1856665e95ebf6f3fe6310ba7f257bf4bb138"
+wikimedia/mediawiki-vagrant,puppet/modules/role/templates/keystone/admin-openrc.erb,"Drop Keystone role
+
+This was used by Horizon and Striker roles which have just been removed.
+
+Change-Id: I95e1856665e95ebf6f3fe6310ba7f257bf4bb138"
+wikimedia/mediawiki-vagrant,puppet/modules/role/templates/keystone/bootstrap_keystone.erb,"Drop Keystone role
+
+This was used by Horizon and Striker roles which have just been removed.
+
+Change-Id: I95e1856665e95ebf6f3fe6310ba7f257bf4bb138"
+wikimedia/mediawiki-vagrant,puppet/modules/role/templates/keystone/keystone.LDAP.conf.erb,"Drop Keystone role
+
+This was used by Horizon and Striker roles which have just been removed.
+
+Change-Id: I95e1856665e95ebf6f3fe6310ba7f257bf4bb138"
+wikimedia/mediawiki-vagrant,puppet/modules/role/templates/keystone/keystone.conf.erb,"Drop Keystone role
+
+This was used by Horizon and Striker roles which have just been removed.
+
+Change-Id: I95e1856665e95ebf6f3fe6310ba7f257bf4bb138"
+wikimedia/mediawiki-vagrant,puppet/modules/apache/manifests/mod/uwsgi.pp,"uwsgi: Drop module
+
+No longer used as Striker and Horizon code has been removed.
+
+Change-Id: Id3f83f2902c06ce18633642d2ca18583acd0e8c0"
+wikimedia/mediawiki-vagrant,puppet/modules/uwsgi/manifests/app.pp,"uwsgi: Drop module
+
+No longer used as Striker and Horizon code has been removed.
+
+Change-Id: Id3f83f2902c06ce18633642d2ca18583acd0e8c0"
+wikimedia/mediawiki-vagrant,puppet/modules/uwsgi/manifests/init.pp,"uwsgi: Drop module
+
+No longer used as Striker and Horizon code has been removed.
+
+Change-Id: Id3f83f2902c06ce18633642d2ca18583acd0e8c0"
+wikimedia/mediawiki-vagrant,puppet/modules/uwsgi/templates/app.ini.erb,"uwsgi: Drop module
+
+No longer used as Striker and Horizon code has been removed.
+
+Change-Id: Id3f83f2902c06ce18633642d2ca18583acd0e8c0"
+wikimedia/mediawiki-vagrant,puppet/modules/uwsgi/templates/systemd/uwsgi.epp,"uwsgi: Drop module
+
+No longer used as Striker and Horizon code has been removed.
+
+Change-Id: Id3f83f2902c06ce18633642d2ca18583acd0e8c0"
+wikimedia/mediawiki-vagrant,puppet/modules/apache/manifests/mod/proxy_balancer.pp,"Drop Horizon role
+
+This is unused and likely outdated; Horizon now has a container-based
+deployment that also sort of functions as a local testing environment.
+
+Change-Id: I935b1d507d2657f17ee7d62555da5c6df5e0e73c"
+wikimedia/mediawiki-vagrant,puppet/modules/role/manifests/horizon.pp,"Drop Horizon role
+
+This is unused and likely outdated; Horizon now has a container-based
+deployment that also sort of functions as a local testing environment.
+
+Change-Id: I935b1d507d2657f17ee7d62555da5c6df5e0e73c"
+wikimedia/mediawiki-vagrant,puppet/modules/role/templates/horizon/apache.conf.erb,"Drop Horizon role
+
+This is unused and likely outdated; Horizon now has a container-based
+deployment that also sort of functions as a local testing environment.
+
+Change-Id: I935b1d507d2657f17ee7d62555da5c6df5e0e73c"
+wikimedia/mediawiki-vagrant,puppet/modules/role/templates/horizon/local_settings.py.erb,"Drop Horizon role
+
+This is unused and likely outdated; Horizon now has a container-based
+deployment that also sort of functions as a local testing environment.
+
+Change-Id: I935b1d507d2657f17ee7d62555da5c6df5e0e73c"
+wikimedia/mediawiki-vagrant,puppet/modules/mysql/manifests/large_prefix.pp,"Drop Striker role
+
+This is outdated (i.e. the OpenStackManager extension is no longer in
+use), and Striker has an up-to-date docker-compose dev environment
+instead.
+
+Bug: T367220
+Change-Id: I30703278d236f210eb7117e3f43c4d469dac3d5a"
+wikimedia/mediawiki-vagrant,puppet/modules/role/manifests/horizon.pp,"Drop Striker role
+
+This is outdated (i.e. the OpenStackManager extension is no longer in
+use), and Striker has an up-to-date docker-compose dev environment
+instead.
+
+Bug: T367220
+Change-Id: I30703278d236f210eb7117e3f43c4d469dac3d5a"
+wikimedia/mediawiki-vagrant,puppet/modules/role/manifests/striker.pp,"Drop Striker role
+
+This is outdated (i.e. the OpenStackManager extension is no longer in
+use), and Striker has an up-to-date docker-compose dev environment
+instead.
+
+Bug: T367220
+Change-Id: I30703278d236f210eb7117e3f43c4d469dac3d5a"
+wikimedia/mediawiki-vagrant,puppet/modules/role/templates/striker/VagrantRoleStriker.wiki.erb,"Drop Striker role
+
+This is outdated (i.e. the OpenStackManager extension is no longer in
+use), and Striker has an up-to-date docker-compose dev environment
+instead.
+
+Bug: T367220
+Change-Id: I30703278d236f210eb7117e3f43c4d469dac3d5a"
+wikimedia/mediawiki-vagrant,puppet/modules/role/templates/striker/apache.conf.erb,"Drop Striker role
+
+This is outdated (i.e. the OpenStackManager extension is no longer in
+use), and Striker has an up-to-date docker-compose dev environment
+instead.
+
+Bug: T367220
+Change-Id: I30703278d236f210eb7117e3f43c4d469dac3d5a"
+wikimedia/mediawiki-vagrant,puppet/modules/role/templates/striker/ldap_check.erb,"Drop Striker role
+
+This is outdated (i.e. the OpenStackManager extension is no longer in
+use), and Striker has an up-to-date docker-compose dev environment
+instead.
+
+Bug: T367220
+Change-Id: I30703278d236f210eb7117e3f43c4d469dac3d5a"
+wikimedia/mediawiki-vagrant,puppet/modules/role/templates/striker/ldap_data.erb,"Drop Striker role
+
+This is outdated (i.e. the OpenStackManager extension is no longer in
+use), and Striker has an up-to-date docker-compose dev environment
+instead.
+
+Bug: T367220
+Change-Id: I30703278d236f210eb7117e3f43c4d469dac3d5a"
+wikimedia/mediawiki-vagrant,puppet/modules/role/templates/striker/striker.ini.erb,"Drop Striker role
+
+This is outdated (i.e. the OpenStackManager extension is no longer in
+use), and Striker has an up-to-date docker-compose dev environment
+instead.
+
+Bug: T367220
+Change-Id: I30703278d236f210eb7117e3f43c4d469dac3d5a"
+wikimedia/mediawiki-vagrant,puppet/modules/service/manifests/uwsgi.pp,"Drop Striker role
+
+This is outdated (i.e. the OpenStackManager extension is no longer in
+use), and Striker has an up-to-date docker-compose dev environment
+instead.
+
+Bug: T367220
+Change-Id: I30703278d236f210eb7117e3f43c4d469dac3d5a"
+wikimedia/mediawiki-vagrant,puppet/modules/role/manifests/guidedtour.pp,"GuidedTour no longer depends on EventLogging
+
+Change-Id: I63b11f498f49040f6c6fe5fb2e9ca46edb3680af"
+wikimedia/mediawiki-vagrant,puppet/modules/role/templates/https/nginx.conf.erb,"https: Use the same TLS port on guest and host
+
+Avoids confusion around browsers needing the host port while
+requests made directly from the vagrant box to the vagrant box
+needing the guest port.
+
+Change-Id: I84e31c0ed76a2d515ffa94de34691e366fbbb909"
+wikimedia/mediawiki-vagrant,puppet/modules/role/manifests/oauth.pp,"oauth: Hack to support https role
+
+We update $wgServer to use HTTPS via fixWgServer.php, but there
+isn't really any way to update hiera values so non-MediaWiki code
+that uses mediawiki::server_url via puppet templates is stuck
+with HTTP. It will probably mostly work since $wgForceHTTPS = true
+will make HTTP redirect to HTTPS, but OAuth clients are broken
+badly.
+
+Use a hack where we calculate the URL for OAuth puppet templates
+manually based on whether role::https is loaded.
+
+Change-Id: I9c5fbd7cc71bb05c01b2e7d39df6ca2918c80c31"
+wikimedia/mediawiki-vagrant,puppet/modules/role/templates/oauth/hello_world.php.erb,"oauth: Hack to support https role
+
+We update $wgServer to use HTTPS via fixWgServer.php, but there
+isn't really any way to update hiera values so non-MediaWiki code
+that uses mediawiki::server_url via puppet templates is stuck
+with HTTP. It will probably mostly work since $wgForceHTTPS = true
+will make HTTP redirect to HTTPS, but OAuth clients are broken
+badly.
+
+Use a hack where we calculate the URL for OAuth puppet templates
+manually based on whether role::https is loaded.
+
+Change-Id: I9c5fbd7cc71bb05c01b2e7d39df6ca2918c80c31"
+wikimedia/mediawiki-vagrant,puppet/modules/role/templates/oauth/oauthclient-php.config.php.erb,"oauth: Hack to support https role
+
+We update $wgServer to use HTTPS via fixWgServer.php, but there
+isn't really any way to update hiera values so non-MediaWiki code
+that uses mediawiki::server_url via puppet templates is stuck
+with HTTP. It will probably mostly work since $wgForceHTTPS = true
+will make HTTP redirect to HTTPS, but OAuth clients are broken
+badly.
+
+Use a hack where we calculate the URL for OAuth puppet templates
+manually based on whether role::https is loaded.
+
+Change-Id: I9c5fbd7cc71bb05c01b2e7d39df6ca2918c80c31"
+wikimedia/mediawiki-vagrant,puppet/modules/mediawiki/templates/multiwiki/CommonSettings.php.erb,"https: Improve domain wrangling logic
+
+* use the simpler CommonSettings.php logic in fixWgServer.php
+* also update $wgCanonicalServer
+
+Change-Id: Ida3db7114a158832d5769eaf78e774f19a9a7e09"
+wikimedia/mediawiki-vagrant,puppet/modules/role/manifests/https.pp,"https: Improve domain wrangling logic
+
+* use the simpler CommonSettings.php logic in fixWgServer.php
+* also update $wgCanonicalServer
+
+Change-Id: Ida3db7114a158832d5769eaf78e774f19a9a7e09"
+wikimedia/mediawiki-vagrant,puppet/modules/role/templates/https/fixWgServer.php.erb,"https: Improve domain wrangling logic
+
+* use the simpler CommonSettings.php logic in fixWgServer.php
+* also update $wgCanonicalServer
+
+Change-Id: Ida3db7114a158832d5769eaf78e774f19a9a7e09"
+wikimedia/mediawiki-vagrant,puppet/modules/role/manifests/https.pp,"https: Improve cert
+
+* Use a wildcard certificate which covers all domains used by
+  Vagrant. Rename cert file to reflect scope. (This also takes
+  care of ensuring the new cert is installed on existing boxes
+  which already have the https role enabled.)
+* Install the certificate in the guest OS so that e.g. curl
+  does not give warnings.
+* Make the .pem file easily downloadable and show instructions
+  on how to add it to the browser's cert store. This is needed
+  for testing WebAuthn as navigator.credentials.create() refuses
+  to work if there are any TLS errors.
+* Get rid of the hack for modifying openssl.cnf; openssl has
+  supported specifying altnames via the command line for quite a
+  while. Clean up the hack, when the code is running on an old box.
+* Use heredoc to make the openssl command a little more readable.
+* Reload nginx on cert changes.
+
+Change-Id: I41d7a5cef2609d31e2e40defaa43fc40e346c4c0"
+wikimedia/mediawiki-vagrant,puppet/modules/role/templates/https/VagrantRoleHttps.wiki.erb,"https: Improve cert
+
+* Use a wildcard certificate which covers all domains used by
+  Vagrant. Rename cert file to reflect scope. (This also takes
+  care of ensuring the new cert is installed on existing boxes
+  which already have the https role enabled.)
+* Install the certificate in the guest OS so that e.g. curl
+  does not give warnings.
+* Make the .pem file easily downloadable and show instructions
+  on how to add it to the browser's cert store. This is needed
+  for testing WebAuthn as navigator.credentials.create() refuses
+  to work if there are any TLS errors.
+* Get rid of the hack for modifying openssl.cnf; openssl has
+  supported specifying altnames via the command line for quite a
+  while. Clean up the hack, when the code is running on an old box.
+* Use heredoc to make the openssl command a little more readable.
+* Reload nginx on cert changes.
+
+Change-Id: I41d7a5cef2609d31e2e40defaa43fc40e346c4c0"
+wikimedia/mediawiki-vagrant,puppet/modules/role/templates/https/nginx.conf.erb,"https: Improve cert
+
+* Use a wildcard certificate which covers all domains used by
+  Vagrant. Rename cert file to reflect scope. (This also takes
+  care of ensuring the new cert is installed on existing boxes
+  which already have the https role enabled.)
+* Install the certificate in the guest OS so that e.g. curl
+  does not give warnings.
+* Make the .pem file easily downloadable and show instructions
+  on how to add it to the browser's cert store. This is needed
+  for testing WebAuthn as navigator.credentials.create() refuses
+  to work if there are any TLS errors.
+* Get rid of the hack for modifying openssl.cnf; openssl has
+  supported specifying altnames via the command line for quite a
+  while. Clean up the hack, when the code is running on an old box.
+* Use heredoc to make the openssl command a little more readable.
+* Reload nginx on cert changes.
+
+Change-Id: I41d7a5cef2609d31e2e40defaa43fc40e346c4c0"
+wikimedia/mediawiki-vagrant,puppet/modules/eventgate/manifests/init.pp,"NodeJS: Use the version (12) that is provided by bullseye
+
+Bug: T319167
+Bug: T217113
+Change-Id: I0a9a220a61e325d6e4076cb779c3fe907c08a8a6"
+wikimedia/mediawiki-vagrant,puppet/modules/npm/manifests/init.pp,"NodeJS: Use the version (12) that is provided by bullseye
+
+Bug: T319167
+Bug: T217113
+Change-Id: I0a9a220a61e325d6e4076cb779c3fe907c08a8a6"
+wikimedia/mediawiki-vagrant,puppet/modules/role/manifests/eventbus.pp,"NodeJS: Use the version (12) that is provided by bullseye
+
+Bug: T319167
+Bug: T217113
+Change-Id: I0a9a220a61e325d6e4076cb779c3fe907c08a8a6"
+wikimedia/mediawiki-vagrant,puppet/modules/role/manifests/eventlogging.pp,"NodeJS: Use the version (12) that is provided by bullseye
+
+Bug: T319167
+Bug: T217113
+Change-Id: I0a9a220a61e325d6e4076cb779c3fe907c08a8a6"
+wikimedia/mediawiki-vagrant,puppet/modules/role/manifests/qunit.pp,"NodeJS: Use the version (12) that is provided by bullseye
+
+Bug: T319167
+Bug: T217113
+Change-Id: I0a9a220a61e325d6e4076cb779c3fe907c08a8a6"
+wikimedia/mediawiki-vagrant,puppet/modules/role/manifests/raita.pp,"NodeJS: Use the version (12) that is provided by bullseye
+
+Bug: T319167
+Bug: T217113
+Change-Id: I0a9a220a61e325d6e4076cb779c3fe907c08a8a6"
+wikimedia/mediawiki-vagrant,puppet/modules/role/manifests/addlink.pp,"Update package names for bullseye
+
+Python3.7 is now Python3.9.
+libmariadbclient-dev was an empty package wrapping libmariadb-dev.
+
+Bug: T319167
+Change-Id: I3cf26253a7edf77ecad5f22019ac77b8287a91d3"
+wikimedia/mediawiki-vagrant,puppet/modules/role/manifests/striker.pp,"Update package names for bullseye
+
+Python3.7 is now Python3.9.
+libmariadbclient-dev was an empty package wrapping libmariadb-dev.
+
+Bug: T319167
+Change-Id: I3cf26253a7edf77ecad5f22019ac77b8287a91d3"
+wikimedia/mediawiki-vagrant,puppet/modules/cassandra/manifests/init.pp,"bullseye: Switch base image to Debian Bullseye
+
+Python is now python3.
+
+Note that there are only boxes for VirtualBox and libvirt.
+Fusion and LXC still don't have suitable boxes and there is
+no box for bullseye on aarch64 either. All these are currently
+disabled.
+
+Bug: T319167
+Change-Id: I0250fb6d13d891cad75bdfaf2db59e7113e1678d"
+wikimedia/mediawiki-vagrant,puppet/modules/kafka/manifests/init.pp,"bullseye: Switch base image to Debian Bullseye
+
+Python is now python3.
+
+Note that there are only boxes for VirtualBox and libvirt.
+Fusion and LXC still don't have suitable boxes and there is
+no box for bullseye on aarch64 either. All these are currently
+disabled.
+
+Bug: T319167
+Change-Id: I0250fb6d13d891cad75bdfaf2db59e7113e1678d"
+wikimedia/mediawiki-vagrant,puppet/modules/logstash/manifests/init.pp,"bullseye: Switch base image to Debian Bullseye
+
+Python is now python3.
+
+Note that there are only boxes for VirtualBox and libvirt.
+Fusion and LXC still don't have suitable boxes and there is
+no box for bullseye on aarch64 either. All these are currently
+disabled.
+
+Bug: T319167
+Change-Id: I0250fb6d13d891cad75bdfaf2db59e7113e1678d"
+wikimedia/mediawiki-vagrant,puppet/modules/mediawiki/manifests/extension/wikidiff2.pp,"bullseye: Switch base image to Debian Bullseye
+
+Python is now python3.
+
+Note that there are only boxes for VirtualBox and libvirt.
+Fusion and LXC still don't have suitable boxes and there is
+no box for bullseye on aarch64 either. All these are currently
+disabled.
+
+Bug: T319167
+Change-Id: I0250fb6d13d891cad75bdfaf2db59e7113e1678d"
+wikimedia/mediawiki-vagrant,puppet/modules/mwv/manifests/packages.pp,"bullseye: Switch base image to Debian Bullseye
+
+Python is now python3.
+
+Note that there are only boxes for VirtualBox and libvirt.
+Fusion and LXC still don't have suitable boxes and there is
+no box for bullseye on aarch64 either. All these are currently
+disabled.
+
+Bug: T319167
+Change-Id: I0250fb6d13d891cad75bdfaf2db59e7113e1678d"
+wikimedia/mediawiki-vagrant,puppet/modules/php/manifests/repository.pp,"bullseye: Switch base image to Debian Bullseye
+
+Python is now python3.
+
+Note that there are only boxes for VirtualBox and libvirt.
+Fusion and LXC still don't have suitable boxes and there is
+no box for bullseye on aarch64 either. All these are currently
+disabled.
+
+Bug: T319167
+Change-Id: I0250fb6d13d891cad75bdfaf2db59e7113e1678d"
+wikimedia/mediawiki-vagrant,puppet/modules/role/manifests/scribunto.pp,"bullseye: Switch base image to Debian Bullseye
+
+Python is now python3.
+
+Note that there are only boxes for VirtualBox and libvirt.
+Fusion and LXC still don't have suitable boxes and there is
+no box for bullseye on aarch64 either. All these are currently
+disabled.
+
+Bug: T319167
+Change-Id: I0250fb6d13d891cad75bdfaf2db59e7113e1678d"
+wikimedia/mediawiki-vagrant,puppet/modules/role/manifests/wikidiff2.pp,"bullseye: Switch base image to Debian Bullseye
+
+Python is now python3.
+
+Note that there are only boxes for VirtualBox and libvirt.
+Fusion and LXC still don't have suitable boxes and there is
+no box for bullseye on aarch64 either. All these are currently
+disabled.
+
+Bug: T319167
+Change-Id: I0250fb6d13d891cad75bdfaf2db59e7113e1678d"
+wikimedia/mediawiki-vagrant,puppet/modules/role/manifests/doublewiki.pp,"Remove DoubleWiki
+
+Bug: T344544
+Change-Id: I4ff7f89ec80773f6966cbd7f39d2e9058d912c5a"
+wikimedia/mediawiki-vagrant,puppet/modules/mediawiki/templates/multiwiki/CommonSettings.php.erb,"multiwiki: Fix https role $wgServer hack
+
+mediawiki::import::text ended up with protocol-relative URLs that
+used the HTTP port, resulting in SSL errors.
+
+Follows up Ib6acfe9528b42d73a3b3fccab02f69ebe7fbf332.
+
+Change-Id: Ic93223c16b68e2e06d15c80b677c5a1371f5df83"
+wikimedia/mediawiki-vagrant,puppet/modules/role/manifests/centralauth.pp,"oathauth: Use the centralauth DB when available
+
+Change-Id: I455bf19254c18b30639cc92c4f2b0794cfcb6bfb"
+wikimedia/mediawiki-vagrant,puppet/modules/mediawiki/templates/multiwiki/CommonSettings.php.erb,"https: Fix $wgServer handling
+
+A relative $wgServer URL with a port number in it apparently
+causes an exception in UrlUtils so instead of making the URL
+relative, convert it from HTTP to HTTPS if needed, so that
+$wgForceHTTPS can do its thing and redirect.
+
+This piles a terrible hack on an already large heap of terrible
+$wgServer handling hacks but is all I have time for right now,
+and it's enough to make the https role work.
+
+Bug: T201965
+Change-Id: Ib6acfe9528b42d73a3b3fccab02f69ebe7fbf332"
+wikimedia/mediawiki-vagrant,puppet/modules/role/manifests/https.pp,"https: Fix $wgServer handling
+
+A relative $wgServer URL with a port number in it apparently
+causes an exception in UrlUtils so instead of making the URL
+relative, convert it from HTTP to HTTPS if needed, so that
+$wgForceHTTPS can do its thing and redirect.
+
+This piles a terrible hack on an already large heap of terrible
+$wgServer handling hacks but is all I have time for right now,
+and it's enough to make the https role work.
+
+Bug: T201965
+Change-Id: Ib6acfe9528b42d73a3b3fccab02f69ebe7fbf332"
+wikimedia/mediawiki-vagrant,puppet/modules/role/manifests/https.pp,"https: Increase RSA key size
+
+Without this, nginx dies with
+""routines:SSL_CTX_use_certificate:ee key too small"".
+
+Change-Id: I17354a334e233433ddf861e6880e25317130e647"
+wikimedia/mediawiki-vagrant,puppet/modules/mediawiki/manifests/jobrunner.pp,"mediawiki: Send jobrunner service logs to file
+
+There were logrotate config files, so this was probably omitted
+by mistake.
+
+Also change the logfile locations to be more in line with Vagrant
+conventions.
+
+Change-Id: Iccd1e0288063a093a1e149ec8b85ff3882a1c3c4"
+wikimedia/operations-puppet,modules/dumps/manifests/web/fetches/wikitech_dumps.pp,"dumps: Cleanup absented resources
+
+The script still exists on the hosts and I'll remove it by hand.
+
+Bug: T374114
+Change-Id: Ia804fa9d9ec637a3d0360f5b9a354cab9231ff37"
+wikimedia/operations-puppet,modules/profile/manifests/dumps/distribution/datasets/fetcher.pp,"dumps: Cleanup absented resources
+
+The script still exists on the hosts and I'll remove it by hand.
+
+Bug: T374114
+Change-Id: Ia804fa9d9ec637a3d0360f5b9a354cab9231ff37"
+wikimedia/operations-puppet,modules/profile/manifests/gerrit.pp,"gerrit: make it possible to not bind the service IP on a gerrit server
+
+Currently the gerrit profile always adds a service IP to the
+network interface, no matter what.
+
+This means:
+
+- There is a good chance to apply it on a new machine and then ending
+  up with 2 machines in the same network with the same IP, which would
+  be very bad.
+
+- Even if aware of that it means a new and separate service IP and name,
+  like ""gerrit-new"" or something is needed just to bring up a new
+  machine, which includes having to request special public IPs from
+  netops, which is also not great.
+
+- You can't really have more than 2 gerrit machines, main and replica
+  at the same time.
+
+This allows for just not binding the service IP while it's still used
+in firewall rules etc to avoid these things.
+
+Bug: T372804
+Change-Id: Ia9639f1ef8f758f834d52e1be33b51ec586e7508"
+wikimedia/operations-puppet,manifests/site.pp,"logstash: put logging-hd100[4-5] in service
+
+Bug: T375447
+Change-Id: I3d6be06c760a8b00a261e0b32a76f28a53d097a3"
+wikimedia/operations-puppet,modules/ceph/manifests/mds.pp,"Deploy a Ceph MDS service on each cephosd server
+
+As this is only deployed on cephosd servers, we only add the manifest to
+the `ceph::server` profile, which is only used by DPE SRE.
+
+Hosts: O:ceph::server
+Signed-off-by: Balthazar Rouberol <brouberol@wikimedia.org>
+Bug: T376404
+Change-Id: Ic676d4d46789cb69df0ca85ca2377fdd0bdb9e7e"
+wikimedia/operations-puppet,modules/profile/manifests/ceph/mds.pp,"Deploy a Ceph MDS service on each cephosd server
+
+As this is only deployed on cephosd servers, we only add the manifest to
+the `ceph::server` profile, which is only used by DPE SRE.
+
+Hosts: O:ceph::server
+Signed-off-by: Balthazar Rouberol <brouberol@wikimedia.org>
+Bug: T376404
+Change-Id: Ic676d4d46789cb69df0ca85ca2377fdd0bdb9e7e"
+wikimedia/operations-puppet,modules/role/manifests/ceph/server.pp,"Deploy a Ceph MDS service on each cephosd server
+
+As this is only deployed on cephosd servers, we only add the manifest to
+the `ceph::server` profile, which is only used by DPE SRE.
+
+Hosts: O:ceph::server
+Signed-off-by: Balthazar Rouberol <brouberol@wikimedia.org>
+Bug: T376404
+Change-Id: Ic676d4d46789cb69df0ca85ca2377fdd0bdb9e7e"
+wikimedia/operations-puppet,modules/ircstream/templates/ircstream.conf.epp,"C:ircstream move SSE hosts to internal endpoint.
+
+Bug: T376014
+Change-Id: I08ce10f4ae33ef8fc7613f8ec90dbd9294dcd406"
+wikimedia/operations-puppet,modules/ircstream/manifests/init.pp,"ircstream: No longer install python3-aiohttp-sse-client
+
+python3-aiohttp is still needed, but currently not expressed in the Depends
+generated by the deb, install it via Puppet until the sse feature branch
+is merged into ircstream/main.
+
+Bug: T376014
+Change-Id: I3dab1f9fd7f2f3d8bd92d446c81b85e8b90d7eb9"
+wikimedia/operations-puppet,modules/git/manifests/replicated_local_repo.pp,"git::replicated_local_repo: further changes to post-commit hook
+
+Change-Id: I4472803eece979698a76af3109348f66b58a6317"
+wikimedia/operations-puppet,modules/git/templates/replicated_local_postcommit.sh.erb,"git::replicated_local_repo: further changes to post-commit hook
+
+Change-Id: I4472803eece979698a76af3109348f66b58a6317"
+wikimedia/operations-puppet,modules/git/manifests/replicated_local_repo.pp,"git::replicated_local_repo fixes
+
+* Always checkout the ""main"" branch because old versions of git would default
+  to ""master""
+* We need to allow remote pushing to a non-bare repository
+* Given the repositories are not bare, we need to reset --hard to HEAD when cloning
+  from another server
+* Also fix ordering of servers in the conftool2git.pp file so that the active
+  server is always the first one in the list
+
+Change-Id: I05fb15e59da181473961c71736b577213bb1fbda"
+wikimedia/operations-puppet,modules/git/templates/replicated_local_postcommit.sh.erb,"git::replicated_local_repo fixes
+
+* Always checkout the ""main"" branch because old versions of git would default
+  to ""master""
+* We need to allow remote pushing to a non-bare repository
+* Given the repositories are not bare, we need to reset --hard to HEAD when cloning
+  from another server
+* Also fix ordering of servers in the conftool2git.pp file so that the active
+  server is always the first one in the list
+
+Change-Id: I05fb15e59da181473961c71736b577213bb1fbda"
+wikimedia/operations-puppet,modules/profile/manifests/conftool/conftool2git.pp,"git::replicated_local_repo fixes
+
+* Always checkout the ""main"" branch because old versions of git would default
+  to ""master""
+* We need to allow remote pushing to a non-bare repository
+* Given the repositories are not bare, we need to reset --hard to HEAD when cloning
+  from another server
+* Also fix ordering of servers in the conftool2git.pp file so that the active
+  server is always the first one in the list
+
+Change-Id: I05fb15e59da181473961c71736b577213bb1fbda"
+wikimedia/operations-puppet,modules/profile/manifests/ircstream.pp,"C:ircstream add blackbox monitoring.
+
+Copy over TCP probe from mw_rc_irc::ircserver.
+
+Bug: T376014
+Change-Id: Icfce8f643a08861cccacc7c39721b03144da0d0f"
+wikimedia/operations-puppet,modules/conftool/manifests/config.pp,"conftool::client: allow setting the conftool2git address
+
+Bug: T374723
+Change-Id: I17467d98a32f3910f8f811b2a52e75d430d40d26"
+wikimedia/operations-puppet,modules/profile/manifests/conftool/client.pp,"conftool::client: allow setting the conftool2git address
+
+Bug: T374723
+Change-Id: I17467d98a32f3910f8f811b2a52e75d430d40d26"
+wikimedia/operations-puppet,manifests/site.pp,"logstash: put logging-hd200[4-5] in service
+
+Bug: T375447
+Change-Id: I7343fd48fd03a1d5570aad6ad4d6ab0647d32342"
+wikimedia/operations-puppet,modules/profile/manifests/query_service/gui.pp,"wdqs: Avoid Ferm-specific syntax
+
+Remove Ferm-specific syntax from firewall definitions and switch to
+firewall::service. This will eventually allow to migrate invididual
+roles to nftables.
+
+Hosts: C:profile::query_service::gui
+Change-Id: I732eb495f605d1d511923aa909f1acf6d49a2ceb"
+wikimedia/operations-puppet,modules/profile/types/mediawiki_deployment.pp,"types: extend Profile::Mediawiki_deployment
+
+Updates Mediawiki_deployment to support the new release config mapping
+described in [0]. In effect, we're transitioning:
+
+  - namespace: mw-web
+    release: main
+    canary: canary
+    mw_flavour: ""publish""
+    web_flavour: ""webserver""
+    debug: false
+
+to the equivalent:
+
+  - namespace: mw-web
+    releases:
+      main: {}
+      canary:
+        stage: ""canaries""
+    mw_flavour: ""publish""
+    web_flavour: ""webserver""
+    debug: false
+
+where additional releases can be added and optionally override the image
+flavours.
+
+The older 'release' and 'canary' fields are still supported by scap on a
+temporary basis. Further, the two formats are exclusive, in that a given
+namespace must use one or the other (e.g., 'releases' and 'release' are
+not permitted to coexist), and the only supported stage for the moment
+is canaries.
+
+A Variant type is thus a natural way to represent structural assertions
+for the hieradata key at this time.
+
+[0] https://phabricator.wikimedia.org/T370934#10104089
+
+Bug: T370934
+Change-Id: I7af6b2fffc6b48193ae1f72ef81c76f4a9882f33 "
+wikimedia/operations-puppet,modules/openstack/manifests/wikitech/wikitech_static_sync.pp,"wikitech: Get rid of the old mw-xml dumper file and cron
+
+It won't work.
+
+Bug: T374114
+Bug: T371378
+Change-Id: I78187e40cb715c421237a9fa1a07dfbe50abdaa5"
+wikimedia/operations-puppet,modules/dumps/manifests/web/fetches/wikitech_dumps.pp,"dumps: Stop fetching custom Wikitech dumps
+
+These no longer exist since the migration to Kubernetes.
+
+Bug: T374114
+Change-Id: I0accb365f11fe2a93b9e7e3254bad7a06982f3f4"
+wikimedia/operations-puppet,modules/profile/manifests/dumps/distribution/datasets/fetcher.pp,"dumps: Stop fetching custom Wikitech dumps
+
+These no longer exist since the migration to Kubernetes.
+
+Bug: T374114
+Change-Id: I0accb365f11fe2a93b9e7e3254bad7a06982f3f4"
+wikimedia/operations-puppet,modules/profile/manifests/conftool/conftool2git.pp,"conftool2git: fix the pdb query
+
+Change-Id: I500606b35eae28291438df503adf3bc16ade4194"
+wikimedia/operations-puppet-cdh4,manifests/hadoop.pp,"Introduce linters using rake
+
+Add a Rakefile and depends on puppet-syntax/puppet-lint. That lets one
+easily check syntax of manifests and templates as well as puppet style
+recommandation (puppet-lint).
+
+Ignore puppet-lint rules:
+* 80 chars line limit
+* indentation of => is not properly aligned
+
+Fix the few reported issues:
+manifests/hadoop.pp - WARNING: variable not enclosed in {} on line 199
+manifests/hadoop/jmxtrans/datanode.pp - ERROR: two-space soft tabs not
+used on line 89
+manifests/hadoop/jmxtrans/datanode.pp - ERROR: two-space soft tabs not
+used on line 158
+manifests/hue/defaults.pp WARNING: variable not enclosed in {} on line 15
+manifests/oozie.pp - WARNING: variable not enclosed in {} on line 10
+
+Instruct puppet-lint to threat module with relative path or it fails
+under Jenkins which checkout the source code in a directory named after
+the job.
+
+Add Gem dependecy safe_yaml ~> 1.0.4 since Puppet 3.7 fails on ruby 2.2+
+(eg ruby2.4 on Mac). https://tickets.puppetlabs.com/browse/PUP-3796
+
+Git ignore Gemfile.lock, that is only needed for deployment purposes.
+
+To test locally:
+
+  bundle install
+  bundle exec rake test
+
+Bug: T154894
+Change-Id: Id8e19ee14cc1673e84278b30a5e4eddf5192ea77"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/jmxtrans/datanode.pp,"Introduce linters using rake
+
+Add a Rakefile and depends on puppet-syntax/puppet-lint. That lets one
+easily check syntax of manifests and templates as well as puppet style
+recommandation (puppet-lint).
+
+Ignore puppet-lint rules:
+* 80 chars line limit
+* indentation of => is not properly aligned
+
+Fix the few reported issues:
+manifests/hadoop.pp - WARNING: variable not enclosed in {} on line 199
+manifests/hadoop/jmxtrans/datanode.pp - ERROR: two-space soft tabs not
+used on line 89
+manifests/hadoop/jmxtrans/datanode.pp - ERROR: two-space soft tabs not
+used on line 158
+manifests/hue/defaults.pp WARNING: variable not enclosed in {} on line 15
+manifests/oozie.pp - WARNING: variable not enclosed in {} on line 10
+
+Instruct puppet-lint to threat module with relative path or it fails
+under Jenkins which checkout the source code in a directory named after
+the job.
+
+Add Gem dependecy safe_yaml ~> 1.0.4 since Puppet 3.7 fails on ruby 2.2+
+(eg ruby2.4 on Mac). https://tickets.puppetlabs.com/browse/PUP-3796
+
+Git ignore Gemfile.lock, that is only needed for deployment purposes.
+
+To test locally:
+
+  bundle install
+  bundle exec rake test
+
+Bug: T154894
+Change-Id: Id8e19ee14cc1673e84278b30a5e4eddf5192ea77"
+wikimedia/operations-puppet-cdh4,manifests/hue/defaults.pp,"Introduce linters using rake
+
+Add a Rakefile and depends on puppet-syntax/puppet-lint. That lets one
+easily check syntax of manifests and templates as well as puppet style
+recommandation (puppet-lint).
+
+Ignore puppet-lint rules:
+* 80 chars line limit
+* indentation of => is not properly aligned
+
+Fix the few reported issues:
+manifests/hadoop.pp - WARNING: variable not enclosed in {} on line 199
+manifests/hadoop/jmxtrans/datanode.pp - ERROR: two-space soft tabs not
+used on line 89
+manifests/hadoop/jmxtrans/datanode.pp - ERROR: two-space soft tabs not
+used on line 158
+manifests/hue/defaults.pp WARNING: variable not enclosed in {} on line 15
+manifests/oozie.pp - WARNING: variable not enclosed in {} on line 10
+
+Instruct puppet-lint to threat module with relative path or it fails
+under Jenkins which checkout the source code in a directory named after
+the job.
+
+Add Gem dependecy safe_yaml ~> 1.0.4 since Puppet 3.7 fails on ruby 2.2+
+(eg ruby2.4 on Mac). https://tickets.puppetlabs.com/browse/PUP-3796
+
+Git ignore Gemfile.lock, that is only needed for deployment purposes.
+
+To test locally:
+
+  bundle install
+  bundle exec rake test
+
+Bug: T154894
+Change-Id: Id8e19ee14cc1673e84278b30a5e4eddf5192ea77"
+wikimedia/operations-puppet-cdh4,manifests/oozie.pp,"Introduce linters using rake
+
+Add a Rakefile and depends on puppet-syntax/puppet-lint. That lets one
+easily check syntax of manifests and templates as well as puppet style
+recommandation (puppet-lint).
+
+Ignore puppet-lint rules:
+* 80 chars line limit
+* indentation of => is not properly aligned
+
+Fix the few reported issues:
+manifests/hadoop.pp - WARNING: variable not enclosed in {} on line 199
+manifests/hadoop/jmxtrans/datanode.pp - ERROR: two-space soft tabs not
+used on line 89
+manifests/hadoop/jmxtrans/datanode.pp - ERROR: two-space soft tabs not
+used on line 158
+manifests/hue/defaults.pp WARNING: variable not enclosed in {} on line 15
+manifests/oozie.pp - WARNING: variable not enclosed in {} on line 10
+
+Instruct puppet-lint to threat module with relative path or it fails
+under Jenkins which checkout the source code in a directory named after
+the job.
+
+Add Gem dependecy safe_yaml ~> 1.0.4 since Puppet 3.7 fails on ruby 2.2+
+(eg ruby2.4 on Mac). https://tickets.puppetlabs.com/browse/PUP-3796
+
+Git ignore Gemfile.lock, that is only needed for deployment purposes.
+
+To test locally:
+
+  bundle install
+  bundle exec rake test
+
+Bug: T154894
+Change-Id: Id8e19ee14cc1673e84278b30a5e4eddf5192ea77"
+wikimedia/operations-puppet-cdh4,manifests/alternative.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/hadoop.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/datanode.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/defaults.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/directory.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/historyserver.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/httpfs.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/jmxtrans/datanode.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/jmxtrans/master.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/jmxtrans/namenode.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/jmxtrans/nodemanager.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/jmxtrans/resourcemanager.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/jmxtrans/worker.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/jobtracker.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/journalnode.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/master.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/namenode.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/namenode/primary.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/namenode/standby.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/nodemanager.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/resourcemanager.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/tasktracker.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/worker.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/worker/paths.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/hcatalog.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/hive.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/hive/defaults.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/hive/master.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/hive/metastore.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/hive/metastore/mysql.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/hive/server.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/hue.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/hue/defaults.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/oozie.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/oozie/database/mysql.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/oozie/defaults.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/oozie/server.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/pig.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/sqoop.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,templates/hadoop/core-site.xml.erb,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,templates/hadoop/fair-scheduler.xml.erb,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,templates/hadoop/hadoop-env.sh.erb,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,templates/hadoop/hadoop-metrics2.properties.erb,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,templates/hadoop/hdfs-site.xml.erb,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,templates/hadoop/httpfs-log4j.properties.erb,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,templates/hadoop/httpfs-site.xml.erb,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,templates/hadoop/mapred-site.xml.erb,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,templates/hadoop/yarn-env.sh.erb,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,templates/hadoop/yarn-site.xml.erb,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,templates/hive/hive-exec-log4j.properties.erb,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,templates/hive/hive-log4j.properties.erb,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,templates/hive/hive-site.xml.erb,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,templates/hue/hue.ini.erb,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,templates/hue/log.conf.erb,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,templates/hue/log4j.properties.erb,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,templates/oozie/action-conf.hive.xml.erb,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,templates/oozie/oozie-env.sh.erb,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,templates/oozie/oozie-log4j.properties.erb,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,templates/oozie/oozie-site.xml.erb,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,templates/pig/log4j.properties.erb,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,tests/datanode.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,tests/defaults.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,tests/hadoop.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,tests/historyserver.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,tests/hive.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,tests/hive_master.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,tests/hive_metastore.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,tests/hive_metastore_mysql.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,tests/hive_server.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,tests/jobtracker.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,tests/master.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,tests/namenode.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,tests/namenode_primary.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,tests/namenode_standby.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,tests/nodemanager.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,tests/pig.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,tests/resourcemanager.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,tests/sqoop.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,tests/tasktracker.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,tests/worker.pp,"Add CDH5 support, drop CDH4 support
+
+- MRv1 support removed from this module for CDH5.
+- JVM heap size for various services is not parametized.
+- removed vestigial tests/.  These didn't really do much.
+- httpfs now puppetized.
+
+Change-Id: Ia65a1d15b8a4891f97b990667e64657199631c08"
+wikimedia/operations-puppet-cdh4,manifests/hadoop.pp,"Support logging via GELF, for sending to Logstash
+
+Uses a Log4j appender to deliver log events as compressed JSON objects in
+Greylog Extended Log Format via UDP, TCP, or Redis. Disabled by default.
+
+Requires in classpath (such as /usr/lib/hadoop/lib/):
+* json_simple-1.1.jar (package: libjson-simple-java)
+* logstash-gelf.jar (https://github.com/mp911de/logstash-gelf)
+
+Based on these instructions: http://www.paluch.biz/blog/95
+
+Change-Id: I39c2a41c2d776e76a43fc921603dbb5b66096ebf"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/defaults.pp,"Support logging via GELF, for sending to Logstash
+
+Uses a Log4j appender to deliver log events as compressed JSON objects in
+Greylog Extended Log Format via UDP, TCP, or Redis. Disabled by default.
+
+Requires in classpath (such as /usr/lib/hadoop/lib/):
+* json_simple-1.1.jar (package: libjson-simple-java)
+* logstash-gelf.jar (https://github.com/mp911de/logstash-gelf)
+
+Based on these instructions: http://www.paluch.biz/blog/95
+
+Change-Id: I39c2a41c2d776e76a43fc921603dbb5b66096ebf"
+wikimedia/operations-puppet-cdh4,templates/hadoop/hadoop-env.sh.erb,"Support logging via GELF, for sending to Logstash
+
+Uses a Log4j appender to deliver log events as compressed JSON objects in
+Greylog Extended Log Format via UDP, TCP, or Redis. Disabled by default.
+
+Requires in classpath (such as /usr/lib/hadoop/lib/):
+* json_simple-1.1.jar (package: libjson-simple-java)
+* logstash-gelf.jar (https://github.com/mp911de/logstash-gelf)
+
+Based on these instructions: http://www.paluch.biz/blog/95
+
+Change-Id: I39c2a41c2d776e76a43fc921603dbb5b66096ebf"
+wikimedia/operations-puppet-cdh4,templates/hadoop/log4j.properties.erb,"Support logging via GELF, for sending to Logstash
+
+Uses a Log4j appender to deliver log events as compressed JSON objects in
+Greylog Extended Log Format via UDP, TCP, or Redis. Disabled by default.
+
+Requires in classpath (such as /usr/lib/hadoop/lib/):
+* json_simple-1.1.jar (package: libjson-simple-java)
+* logstash-gelf.jar (https://github.com/mp911de/logstash-gelf)
+
+Based on these instructions: http://www.paluch.biz/blog/95
+
+Change-Id: I39c2a41c2d776e76a43fc921603dbb5b66096ebf"
+wikimedia/operations-puppet-cdh4,manifests/hive.pp,"Allow to set up hive's auxpath globally
+
+Using this setting, it becomes easy to pass a common SerDe to hive
+globally.
+
+Change-Id: I563d50c4010e97162b5ca060fd08ff9e7730a5e1"
+wikimedia/operations-puppet-cdh4,manifests/hive/defaults.pp,"Allow to set up hive's auxpath globally
+
+Using this setting, it becomes easy to pass a common SerDe to hive
+globally.
+
+Change-Id: I563d50c4010e97162b5ca060fd08ff9e7730a5e1"
+wikimedia/operations-puppet-cdh4,templates/hive/hive-site.xml.erb,"Allow to set up hive's auxpath globally
+
+Using this setting, it becomes easy to pass a common SerDe to hive
+globally.
+
+Change-Id: I563d50c4010e97162b5ca060fd08ff9e7730a5e1"
+wikimedia/operations-puppet-cdh4,templates/oozie/oozie-site.xml.erb,"Allowing root and hdfs as well as hue to submit oozie -doas commands as any user
+
+This allows for proper rerunning and killing of jobs by hdfs and root
+
+Change-Id: Ic4461a1baa016f698a929cf943f6a362352fbc35"
+wikimedia/operations-puppet-cdh4,templates/hue/hue.ini.erb,"Enable ResourceManager API in hue.ini to enable JobHistory in Hue.
+
+Change-Id: I3f7d244ec319d5d287c579a69237300a9379d835"
+wikimedia/operations-puppet-cdh4,manifests/hive.pp,"Adding parameters to set root database (mysql) user and pass
+
+This allows for metastore classes with non-default root username and passwords
+to still automatically create the metastore database and hive user
+
+Change-Id: I5015ce6c85da65a028a54581e938b645c5b39200"
+wikimedia/operations-puppet-cdh4,manifests/hive/defaults.pp,"Adding parameters to set root database (mysql) user and pass
+
+This allows for metastore classes with non-default root username and passwords
+to still automatically create the metastore database and hive user
+
+Change-Id: I5015ce6c85da65a028a54581e938b645c5b39200"
+wikimedia/operations-puppet-cdh4,manifests/hive/metastore/mysql.pp,"Adding parameters to set root database (mysql) user and pass
+
+This allows for metastore classes with non-default root username and passwords
+to still automatically create the metastore database and hive user
+
+Change-Id: I5015ce6c85da65a028a54581e938b645c5b39200"
+wikimedia/operations-puppet-cdh4,templates/hive/hive-site.xml.erb,"Adding parameters to set root database (mysql) user and pass
+
+This allows for metastore classes with non-default root username and passwords
+to still automatically create the metastore database and hive user
+
+Change-Id: I5015ce6c85da65a028a54581e938b645c5b39200"
+wikimedia/operations-puppet-cdh4,manifests/hadoop.pp,"Adding mapreduce_shuffle_port parameter
+
+Change-Id: If11c87bbd64146171f8b39c1466fa590ddc7b26c"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/defaults.pp,"Adding mapreduce_shuffle_port parameter
+
+Change-Id: If11c87bbd64146171f8b39c1466fa590ddc7b26c"
+wikimedia/operations-puppet-cdh4,templates/hadoop/mapred-site.xml.erb,"Adding mapreduce_shuffle_port parameter
+
+Change-Id: If11c87bbd64146171f8b39c1466fa590ddc7b26c"
+wikimedia/operations-puppet-cdh4,manifests/hcatalog.pp,"Adding hcatalog.pp
+
+This only installs hcatalog package at this time.
+
+Change-Id: I9f621aa83ef585caccfbfe51de2bd2f856bf3994"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/jmxtrans/master.pp,"Adding jmxtrans README and convenience worker and master classes
+
+Change-Id: I86d66e6070c2da777b208b69598ba829a9e801fd"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/jmxtrans/worker.pp,"Adding jmxtrans README and convenience worker and master classes
+
+Change-Id: I86d66e6070c2da777b208b69598ba829a9e801fd"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/defaults.pp,"Adding jmxtrans classes for datanode and nodemanager
+
+Also fixing a couple of things from other jmxtrans stuff
+
+Change-Id: I5e3f79685e29172df8dcf401d681423affa4bca3"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/jmxtrans/datanode.pp,"Adding jmxtrans classes for datanode and nodemanager
+
+Also fixing a couple of things from other jmxtrans stuff
+
+Change-Id: I5e3f79685e29172df8dcf401d681423affa4bca3"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/jmxtrans/nodemanager.pp,"Adding jmxtrans classes for datanode and nodemanager
+
+Also fixing a couple of things from other jmxtrans stuff
+
+Change-Id: I5e3f79685e29172df8dcf401d681423affa4bca3"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/jmxtrans/resourcemanager.pp,"Adding jmxtrans classes for datanode and nodemanager
+
+Also fixing a couple of things from other jmxtrans stuff
+
+Change-Id: I5e3f79685e29172df8dcf401d681423affa4bca3"
+wikimedia/operations-puppet-cdh4,templates/hadoop/yarn-env.sh.erb,"Adding jmxtrans classes for datanode and nodemanager
+
+Also fixing a couple of things from other jmxtrans stuff
+
+Change-Id: I5e3f79685e29172df8dcf401d681423affa4bca3"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/jmxtrans/namenode.pp,"Removing no longer used parameters from jmxtrans classes
+
+Change-Id: If1a2250bbf7488a260e072df4784e255f0526c4f"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/jmxtrans/resourcemanager.pp,"Removing no longer used parameters from jmxtrans classes
+
+Change-Id: If1a2250bbf7488a260e072df4784e255f0526c4f"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/jmxtrans/namenode.pp,"Removing manual inclusion of jmxtrans class
+
+Change-Id: Ia74a087aeb0eecb24da06a6c4779cad3e80f0383"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/jmxtrans/resourcemanager.pp,"Removing manual inclusion of jmxtrans class
+
+Change-Id: Ia74a087aeb0eecb24da06a6c4779cad3e80f0383"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/jmxtrans/namenode.pp,"Adding jmxtrans/resourcemanager.pp
+
+Moved namenode/jmxtrans.pp to jmxtrans/namenode..
+
+Change-Id: Ifcaa1c23ea1eb48cd03076d622842357eba4ae19"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/jmxtrans/resourcemanager.pp,"Adding jmxtrans/resourcemanager.pp
+
+Moved namenode/jmxtrans.pp to jmxtrans/namenode..
+
+Change-Id: Ifcaa1c23ea1eb48cd03076d622842357eba4ae19"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/namenode/jmxtrans.pp,"Removing bad jmxtrans objects, adding log_level and run_interval params
+
+Change-Id: Icfa2c1e42d97ab5e58dd5f73eb0136f393876e0c"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/namenode/jmxtrans.pp,"Adding namenode/jmxtrans.pp for sending NameNode jmx metrics
+
+Change-Id: I4080b5f32126307317fab0db4dbb9609ea62a6b3"
+wikimedia/operations-puppet-cdh4,manifests/hadoop.pp,"Moving jmx port variables into defaults.pp
+
+Change-Id: I3dfa846f3c3db8994baab32eba4e3a7358bb35ac"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/defaults.pp,"Moving jmx port variables into defaults.pp
+
+Change-Id: I3dfa846f3c3db8994baab32eba4e3a7358bb35ac"
+wikimedia/operations-puppet-cdh4,manifests/hadoop.pp,"Adding more parameters for compression types
+
+Change-Id: I7cc1362422a29690102dc63cf4ce3e936067cc48"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/defaults.pp,"Adding more parameters for compression types
+
+Change-Id: I7cc1362422a29690102dc63cf4ce3e936067cc48"
+wikimedia/operations-puppet-cdh4,templates/hadoop/mapred-site.xml.erb,"Adding more parameters for compression types
+
+Change-Id: I7cc1362422a29690102dc63cf4ce3e936067cc48"
+wikimedia/operations-puppet-cdh4,manifests/hadoop.pp,"Ah!  Need == 'present' for the net-toplogy.sh content check.
+
+Change-Id: I79eae683a9f75ce52f0ef7550a3ce47641c5adf5"
+wikimedia/operations-puppet-cdh4,manifests/hadoop.pp,"Conditionally setting content attribute for net-topology.sh file.
+
+Puppet doesn't like it if it is passed a bad template() path.
+$net_topology_script_template is default undef.
+
+Change-Id: I6f6d3e4afb0e11ca747eee44937b6fc532ce8969"
+wikimedia/operations-puppet-cdh4,manifests/hadoop.pp,"$net_topology_script_path needs to be set before hadoop-core is rendered
+
+Change-Id: Iab6d3a1dfe9cb00ec62765cf6cee7dc505376f47"
+wikimedia/operations-puppet-cdh4,manifests/hadoop.pp,"Adding $net_topology_script_template parameter to make Hadoop rack/row aware
+
+Change-Id: Ic3a2d19e16a76ac7888a472b30fd5a0038b830d5"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/defaults.pp,"Adding $net_topology_script_template parameter to make Hadoop rack/row aware
+
+Change-Id: Ic3a2d19e16a76ac7888a472b30fd5a0038b830d5"
+wikimedia/operations-puppet-cdh4,templates/hadoop/core-site.xml.erb,"Adding $net_topology_script_template parameter to make Hadoop rack/row aware
+
+Change-Id: Ic3a2d19e16a76ac7888a472b30fd5a0038b830d5"
+wikimedia/operations-puppet-cdh4,manifests/hue.pp,"Installing ssl-cert package to make sure ssl-cert group is created for Hue SSL.
+
+Change-Id: I145fb6ea8be8d0d592f4021a971d772d7c082e67"
+wikimedia/operations-puppet-cdh4,manifests/hadoop.pp,"Puppetizing HA NameNode via Quorum Based JournalNode.
+
+Notables:
+
+- cdh4::hadoop interface change: s/namenode_hostname/namenode_hosts/g
+
+- cdh4::hadoop::journalnode class is applied automatically
+  based on $journalnode_hosts.
+
+- cdh4::hadoop::namenode::primary is now included by cdh4::hadoop::master.
+  In HA mode, the primary class will transition the primary NameNode to active
+  after the first formatting.
+
+- cdh4::hadoop::namenode::standby overrides namenode -format
+  exec to bootstrap the standby NameNode dfs.name.dir
+
+- Base HDFS directory creation has been moved out of
+  cdh4::hadoop::namenode and into cdh4::hadoop::namenode::primary since
+  cdh4::hadoop::namenode might now be applied on more than
+  one node.
+
+Change-Id: I78b1e51a5d027a6f48b8392b2ca0a35b6199a97b"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/defaults.pp,"Puppetizing HA NameNode via Quorum Based JournalNode.
+
+Notables:
+
+- cdh4::hadoop interface change: s/namenode_hostname/namenode_hosts/g
+
+- cdh4::hadoop::journalnode class is applied automatically
+  based on $journalnode_hosts.
+
+- cdh4::hadoop::namenode::primary is now included by cdh4::hadoop::master.
+  In HA mode, the primary class will transition the primary NameNode to active
+  after the first formatting.
+
+- cdh4::hadoop::namenode::standby overrides namenode -format
+  exec to bootstrap the standby NameNode dfs.name.dir
+
+- Base HDFS directory creation has been moved out of
+  cdh4::hadoop::namenode and into cdh4::hadoop::namenode::primary since
+  cdh4::hadoop::namenode might now be applied on more than
+  one node.
+
+Change-Id: I78b1e51a5d027a6f48b8392b2ca0a35b6199a97b"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/historyserver.pp,"Puppetizing HA NameNode via Quorum Based JournalNode.
+
+Notables:
+
+- cdh4::hadoop interface change: s/namenode_hostname/namenode_hosts/g
+
+- cdh4::hadoop::journalnode class is applied automatically
+  based on $journalnode_hosts.
+
+- cdh4::hadoop::namenode::primary is now included by cdh4::hadoop::master.
+  In HA mode, the primary class will transition the primary NameNode to active
+  after the first formatting.
+
+- cdh4::hadoop::namenode::standby overrides namenode -format
+  exec to bootstrap the standby NameNode dfs.name.dir
+
+- Base HDFS directory creation has been moved out of
+  cdh4::hadoop::namenode and into cdh4::hadoop::namenode::primary since
+  cdh4::hadoop::namenode might now be applied on more than
+  one node.
+
+Change-Id: I78b1e51a5d027a6f48b8392b2ca0a35b6199a97b"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/jobtracker.pp,"Puppetizing HA NameNode via Quorum Based JournalNode.
+
+Notables:
+
+- cdh4::hadoop interface change: s/namenode_hostname/namenode_hosts/g
+
+- cdh4::hadoop::journalnode class is applied automatically
+  based on $journalnode_hosts.
+
+- cdh4::hadoop::namenode::primary is now included by cdh4::hadoop::master.
+  In HA mode, the primary class will transition the primary NameNode to active
+  after the first formatting.
+
+- cdh4::hadoop::namenode::standby overrides namenode -format
+  exec to bootstrap the standby NameNode dfs.name.dir
+
+- Base HDFS directory creation has been moved out of
+  cdh4::hadoop::namenode and into cdh4::hadoop::namenode::primary since
+  cdh4::hadoop::namenode might now be applied on more than
+  one node.
+
+Change-Id: I78b1e51a5d027a6f48b8392b2ca0a35b6199a97b"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/journalnode.pp,"Puppetizing HA NameNode via Quorum Based JournalNode.
+
+Notables:
+
+- cdh4::hadoop interface change: s/namenode_hostname/namenode_hosts/g
+
+- cdh4::hadoop::journalnode class is applied automatically
+  based on $journalnode_hosts.
+
+- cdh4::hadoop::namenode::primary is now included by cdh4::hadoop::master.
+  In HA mode, the primary class will transition the primary NameNode to active
+  after the first formatting.
+
+- cdh4::hadoop::namenode::standby overrides namenode -format
+  exec to bootstrap the standby NameNode dfs.name.dir
+
+- Base HDFS directory creation has been moved out of
+  cdh4::hadoop::namenode and into cdh4::hadoop::namenode::primary since
+  cdh4::hadoop::namenode might now be applied on more than
+  one node.
+
+Change-Id: I78b1e51a5d027a6f48b8392b2ca0a35b6199a97b"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/master.pp,"Puppetizing HA NameNode via Quorum Based JournalNode.
+
+Notables:
+
+- cdh4::hadoop interface change: s/namenode_hostname/namenode_hosts/g
+
+- cdh4::hadoop::journalnode class is applied automatically
+  based on $journalnode_hosts.
+
+- cdh4::hadoop::namenode::primary is now included by cdh4::hadoop::master.
+  In HA mode, the primary class will transition the primary NameNode to active
+  after the first formatting.
+
+- cdh4::hadoop::namenode::standby overrides namenode -format
+  exec to bootstrap the standby NameNode dfs.name.dir
+
+- Base HDFS directory creation has been moved out of
+  cdh4::hadoop::namenode and into cdh4::hadoop::namenode::primary since
+  cdh4::hadoop::namenode might now be applied on more than
+  one node.
+
+Change-Id: I78b1e51a5d027a6f48b8392b2ca0a35b6199a97b"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/namenode.pp,"Puppetizing HA NameNode via Quorum Based JournalNode.
+
+Notables:
+
+- cdh4::hadoop interface change: s/namenode_hostname/namenode_hosts/g
+
+- cdh4::hadoop::journalnode class is applied automatically
+  based on $journalnode_hosts.
+
+- cdh4::hadoop::namenode::primary is now included by cdh4::hadoop::master.
+  In HA mode, the primary class will transition the primary NameNode to active
+  after the first formatting.
+
+- cdh4::hadoop::namenode::standby overrides namenode -format
+  exec to bootstrap the standby NameNode dfs.name.dir
+
+- Base HDFS directory creation has been moved out of
+  cdh4::hadoop::namenode and into cdh4::hadoop::namenode::primary since
+  cdh4::hadoop::namenode might now be applied on more than
+  one node.
+
+Change-Id: I78b1e51a5d027a6f48b8392b2ca0a35b6199a97b"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/namenode/primary.pp,"Puppetizing HA NameNode via Quorum Based JournalNode.
+
+Notables:
+
+- cdh4::hadoop interface change: s/namenode_hostname/namenode_hosts/g
+
+- cdh4::hadoop::journalnode class is applied automatically
+  based on $journalnode_hosts.
+
+- cdh4::hadoop::namenode::primary is now included by cdh4::hadoop::master.
+  In HA mode, the primary class will transition the primary NameNode to active
+  after the first formatting.
+
+- cdh4::hadoop::namenode::standby overrides namenode -format
+  exec to bootstrap the standby NameNode dfs.name.dir
+
+- Base HDFS directory creation has been moved out of
+  cdh4::hadoop::namenode and into cdh4::hadoop::namenode::primary since
+  cdh4::hadoop::namenode might now be applied on more than
+  one node.
+
+Change-Id: I78b1e51a5d027a6f48b8392b2ca0a35b6199a97b"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/namenode/standby.pp,"Puppetizing HA NameNode via Quorum Based JournalNode.
+
+Notables:
+
+- cdh4::hadoop interface change: s/namenode_hostname/namenode_hosts/g
+
+- cdh4::hadoop::journalnode class is applied automatically
+  based on $journalnode_hosts.
+
+- cdh4::hadoop::namenode::primary is now included by cdh4::hadoop::master.
+  In HA mode, the primary class will transition the primary NameNode to active
+  after the first formatting.
+
+- cdh4::hadoop::namenode::standby overrides namenode -format
+  exec to bootstrap the standby NameNode dfs.name.dir
+
+- Base HDFS directory creation has been moved out of
+  cdh4::hadoop::namenode and into cdh4::hadoop::namenode::primary since
+  cdh4::hadoop::namenode might now be applied on more than
+  one node.
+
+Change-Id: I78b1e51a5d027a6f48b8392b2ca0a35b6199a97b"
+wikimedia/operations-puppet-cdh4,manifests/hue.pp,"Puppetizing HA NameNode via Quorum Based JournalNode.
+
+Notables:
+
+- cdh4::hadoop interface change: s/namenode_hostname/namenode_hosts/g
+
+- cdh4::hadoop::journalnode class is applied automatically
+  based on $journalnode_hosts.
+
+- cdh4::hadoop::namenode::primary is now included by cdh4::hadoop::master.
+  In HA mode, the primary class will transition the primary NameNode to active
+  after the first formatting.
+
+- cdh4::hadoop::namenode::standby overrides namenode -format
+  exec to bootstrap the standby NameNode dfs.name.dir
+
+- Base HDFS directory creation has been moved out of
+  cdh4::hadoop::namenode and into cdh4::hadoop::namenode::primary since
+  cdh4::hadoop::namenode might now be applied on more than
+  one node.
+
+Change-Id: I78b1e51a5d027a6f48b8392b2ca0a35b6199a97b"
+wikimedia/operations-puppet-cdh4,templates/hadoop/core-site.xml.erb,"Puppetizing HA NameNode via Quorum Based JournalNode.
+
+Notables:
+
+- cdh4::hadoop interface change: s/namenode_hostname/namenode_hosts/g
+
+- cdh4::hadoop::journalnode class is applied automatically
+  based on $journalnode_hosts.
+
+- cdh4::hadoop::namenode::primary is now included by cdh4::hadoop::master.
+  In HA mode, the primary class will transition the primary NameNode to active
+  after the first formatting.
+
+- cdh4::hadoop::namenode::standby overrides namenode -format
+  exec to bootstrap the standby NameNode dfs.name.dir
+
+- Base HDFS directory creation has been moved out of
+  cdh4::hadoop::namenode and into cdh4::hadoop::namenode::primary since
+  cdh4::hadoop::namenode might now be applied on more than
+  one node.
+
+Change-Id: I78b1e51a5d027a6f48b8392b2ca0a35b6199a97b"
+wikimedia/operations-puppet-cdh4,templates/hadoop/hdfs-site.xml.erb,"Puppetizing HA NameNode via Quorum Based JournalNode.
+
+Notables:
+
+- cdh4::hadoop interface change: s/namenode_hostname/namenode_hosts/g
+
+- cdh4::hadoop::journalnode class is applied automatically
+  based on $journalnode_hosts.
+
+- cdh4::hadoop::namenode::primary is now included by cdh4::hadoop::master.
+  In HA mode, the primary class will transition the primary NameNode to active
+  after the first formatting.
+
+- cdh4::hadoop::namenode::standby overrides namenode -format
+  exec to bootstrap the standby NameNode dfs.name.dir
+
+- Base HDFS directory creation has been moved out of
+  cdh4::hadoop::namenode and into cdh4::hadoop::namenode::primary since
+  cdh4::hadoop::namenode might now be applied on more than
+  one node.
+
+Change-Id: I78b1e51a5d027a6f48b8392b2ca0a35b6199a97b"
+wikimedia/operations-puppet-cdh4,templates/hadoop/mapred-site.xml.erb,"Puppetizing HA NameNode via Quorum Based JournalNode.
+
+Notables:
+
+- cdh4::hadoop interface change: s/namenode_hostname/namenode_hosts/g
+
+- cdh4::hadoop::journalnode class is applied automatically
+  based on $journalnode_hosts.
+
+- cdh4::hadoop::namenode::primary is now included by cdh4::hadoop::master.
+  In HA mode, the primary class will transition the primary NameNode to active
+  after the first formatting.
+
+- cdh4::hadoop::namenode::standby overrides namenode -format
+  exec to bootstrap the standby NameNode dfs.name.dir
+
+- Base HDFS directory creation has been moved out of
+  cdh4::hadoop::namenode and into cdh4::hadoop::namenode::primary since
+  cdh4::hadoop::namenode might now be applied on more than
+  one node.
+
+Change-Id: I78b1e51a5d027a6f48b8392b2ca0a35b6199a97b"
+wikimedia/operations-puppet-cdh4,templates/hadoop/yarn-site.xml.erb,"Puppetizing HA NameNode via Quorum Based JournalNode.
+
+Notables:
+
+- cdh4::hadoop interface change: s/namenode_hostname/namenode_hosts/g
+
+- cdh4::hadoop::journalnode class is applied automatically
+  based on $journalnode_hosts.
+
+- cdh4::hadoop::namenode::primary is now included by cdh4::hadoop::master.
+  In HA mode, the primary class will transition the primary NameNode to active
+  after the first formatting.
+
+- cdh4::hadoop::namenode::standby overrides namenode -format
+  exec to bootstrap the standby NameNode dfs.name.dir
+
+- Base HDFS directory creation has been moved out of
+  cdh4::hadoop::namenode and into cdh4::hadoop::namenode::primary since
+  cdh4::hadoop::namenode might now be applied on more than
+  one node.
+
+Change-Id: I78b1e51a5d027a6f48b8392b2ca0a35b6199a97b"
+wikimedia/operations-puppet-cdh4,templates/hue/hue.ini.erb,"Puppetizing HA NameNode via Quorum Based JournalNode.
+
+Notables:
+
+- cdh4::hadoop interface change: s/namenode_hostname/namenode_hosts/g
+
+- cdh4::hadoop::journalnode class is applied automatically
+  based on $journalnode_hosts.
+
+- cdh4::hadoop::namenode::primary is now included by cdh4::hadoop::master.
+  In HA mode, the primary class will transition the primary NameNode to active
+  after the first formatting.
+
+- cdh4::hadoop::namenode::standby overrides namenode -format
+  exec to bootstrap the standby NameNode dfs.name.dir
+
+- Base HDFS directory creation has been moved out of
+  cdh4::hadoop::namenode and into cdh4::hadoop::namenode::primary since
+  cdh4::hadoop::namenode might now be applied on more than
+  one node.
+
+Change-Id: I78b1e51a5d027a6f48b8392b2ca0a35b6199a97b"
+wikimedia/operations-puppet-cdh4,templates/oozie/oozie-site.xml.erb,"Puppetizing HA NameNode via Quorum Based JournalNode.
+
+Notables:
+
+- cdh4::hadoop interface change: s/namenode_hostname/namenode_hosts/g
+
+- cdh4::hadoop::journalnode class is applied automatically
+  based on $journalnode_hosts.
+
+- cdh4::hadoop::namenode::primary is now included by cdh4::hadoop::master.
+  In HA mode, the primary class will transition the primary NameNode to active
+  after the first formatting.
+
+- cdh4::hadoop::namenode::standby overrides namenode -format
+  exec to bootstrap the standby NameNode dfs.name.dir
+
+- Base HDFS directory creation has been moved out of
+  cdh4::hadoop::namenode and into cdh4::hadoop::namenode::primary since
+  cdh4::hadoop::namenode might now be applied on more than
+  one node.
+
+Change-Id: I78b1e51a5d027a6f48b8392b2ca0a35b6199a97b"
+wikimedia/operations-puppet-cdh4,tests/datanode.pp,"Puppetizing HA NameNode via Quorum Based JournalNode.
+
+Notables:
+
+- cdh4::hadoop interface change: s/namenode_hostname/namenode_hosts/g
+
+- cdh4::hadoop::journalnode class is applied automatically
+  based on $journalnode_hosts.
+
+- cdh4::hadoop::namenode::primary is now included by cdh4::hadoop::master.
+  In HA mode, the primary class will transition the primary NameNode to active
+  after the first formatting.
+
+- cdh4::hadoop::namenode::standby overrides namenode -format
+  exec to bootstrap the standby NameNode dfs.name.dir
+
+- Base HDFS directory creation has been moved out of
+  cdh4::hadoop::namenode and into cdh4::hadoop::namenode::primary since
+  cdh4::hadoop::namenode might now be applied on more than
+  one node.
+
+Change-Id: I78b1e51a5d027a6f48b8392b2ca0a35b6199a97b"
+wikimedia/operations-puppet-cdh4,tests/hadoop.pp,"Puppetizing HA NameNode via Quorum Based JournalNode.
+
+Notables:
+
+- cdh4::hadoop interface change: s/namenode_hostname/namenode_hosts/g
+
+- cdh4::hadoop::journalnode class is applied automatically
+  based on $journalnode_hosts.
+
+- cdh4::hadoop::namenode::primary is now included by cdh4::hadoop::master.
+  In HA mode, the primary class will transition the primary NameNode to active
+  after the first formatting.
+
+- cdh4::hadoop::namenode::standby overrides namenode -format
+  exec to bootstrap the standby NameNode dfs.name.dir
+
+- Base HDFS directory creation has been moved out of
+  cdh4::hadoop::namenode and into cdh4::hadoop::namenode::primary since
+  cdh4::hadoop::namenode might now be applied on more than
+  one node.
+
+Change-Id: I78b1e51a5d027a6f48b8392b2ca0a35b6199a97b"
+wikimedia/operations-puppet-cdh4,tests/historyserver.pp,"Puppetizing HA NameNode via Quorum Based JournalNode.
+
+Notables:
+
+- cdh4::hadoop interface change: s/namenode_hostname/namenode_hosts/g
+
+- cdh4::hadoop::journalnode class is applied automatically
+  based on $journalnode_hosts.
+
+- cdh4::hadoop::namenode::primary is now included by cdh4::hadoop::master.
+  In HA mode, the primary class will transition the primary NameNode to active
+  after the first formatting.
+
+- cdh4::hadoop::namenode::standby overrides namenode -format
+  exec to bootstrap the standby NameNode dfs.name.dir
+
+- Base HDFS directory creation has been moved out of
+  cdh4::hadoop::namenode and into cdh4::hadoop::namenode::primary since
+  cdh4::hadoop::namenode might now be applied on more than
+  one node.
+
+Change-Id: I78b1e51a5d027a6f48b8392b2ca0a35b6199a97b"
+wikimedia/operations-puppet-cdh4,tests/hive.pp,"Puppetizing HA NameNode via Quorum Based JournalNode.
+
+Notables:
+
+- cdh4::hadoop interface change: s/namenode_hostname/namenode_hosts/g
+
+- cdh4::hadoop::journalnode class is applied automatically
+  based on $journalnode_hosts.
+
+- cdh4::hadoop::namenode::primary is now included by cdh4::hadoop::master.
+  In HA mode, the primary class will transition the primary NameNode to active
+  after the first formatting.
+
+- cdh4::hadoop::namenode::standby overrides namenode -format
+  exec to bootstrap the standby NameNode dfs.name.dir
+
+- Base HDFS directory creation has been moved out of
+  cdh4::hadoop::namenode and into cdh4::hadoop::namenode::primary since
+  cdh4::hadoop::namenode might now be applied on more than
+  one node.
+
+Change-Id: I78b1e51a5d027a6f48b8392b2ca0a35b6199a97b"
+wikimedia/operations-puppet-cdh4,tests/hive_master.pp,"Puppetizing HA NameNode via Quorum Based JournalNode.
+
+Notables:
+
+- cdh4::hadoop interface change: s/namenode_hostname/namenode_hosts/g
+
+- cdh4::hadoop::journalnode class is applied automatically
+  based on $journalnode_hosts.
+
+- cdh4::hadoop::namenode::primary is now included by cdh4::hadoop::master.
+  In HA mode, the primary class will transition the primary NameNode to active
+  after the first formatting.
+
+- cdh4::hadoop::namenode::standby overrides namenode -format
+  exec to bootstrap the standby NameNode dfs.name.dir
+
+- Base HDFS directory creation has been moved out of
+  cdh4::hadoop::namenode and into cdh4::hadoop::namenode::primary since
+  cdh4::hadoop::namenode might now be applied on more than
+  one node.
+
+Change-Id: I78b1e51a5d027a6f48b8392b2ca0a35b6199a97b"
+wikimedia/operations-puppet-cdh4,tests/hive_metastore.pp,"Puppetizing HA NameNode via Quorum Based JournalNode.
+
+Notables:
+
+- cdh4::hadoop interface change: s/namenode_hostname/namenode_hosts/g
+
+- cdh4::hadoop::journalnode class is applied automatically
+  based on $journalnode_hosts.
+
+- cdh4::hadoop::namenode::primary is now included by cdh4::hadoop::master.
+  In HA mode, the primary class will transition the primary NameNode to active
+  after the first formatting.
+
+- cdh4::hadoop::namenode::standby overrides namenode -format
+  exec to bootstrap the standby NameNode dfs.name.dir
+
+- Base HDFS directory creation has been moved out of
+  cdh4::hadoop::namenode and into cdh4::hadoop::namenode::primary since
+  cdh4::hadoop::namenode might now be applied on more than
+  one node.
+
+Change-Id: I78b1e51a5d027a6f48b8392b2ca0a35b6199a97b"
+wikimedia/operations-puppet-cdh4,tests/hive_metastore_mysql.pp,"Puppetizing HA NameNode via Quorum Based JournalNode.
+
+Notables:
+
+- cdh4::hadoop interface change: s/namenode_hostname/namenode_hosts/g
+
+- cdh4::hadoop::journalnode class is applied automatically
+  based on $journalnode_hosts.
+
+- cdh4::hadoop::namenode::primary is now included by cdh4::hadoop::master.
+  In HA mode, the primary class will transition the primary NameNode to active
+  after the first formatting.
+
+- cdh4::hadoop::namenode::standby overrides namenode -format
+  exec to bootstrap the standby NameNode dfs.name.dir
+
+- Base HDFS directory creation has been moved out of
+  cdh4::hadoop::namenode and into cdh4::hadoop::namenode::primary since
+  cdh4::hadoop::namenode might now be applied on more than
+  one node.
+
+Change-Id: I78b1e51a5d027a6f48b8392b2ca0a35b6199a97b"
+wikimedia/operations-puppet-cdh4,tests/hive_server.pp,"Puppetizing HA NameNode via Quorum Based JournalNode.
+
+Notables:
+
+- cdh4::hadoop interface change: s/namenode_hostname/namenode_hosts/g
+
+- cdh4::hadoop::journalnode class is applied automatically
+  based on $journalnode_hosts.
+
+- cdh4::hadoop::namenode::primary is now included by cdh4::hadoop::master.
+  In HA mode, the primary class will transition the primary NameNode to active
+  after the first formatting.
+
+- cdh4::hadoop::namenode::standby overrides namenode -format
+  exec to bootstrap the standby NameNode dfs.name.dir
+
+- Base HDFS directory creation has been moved out of
+  cdh4::hadoop::namenode and into cdh4::hadoop::namenode::primary since
+  cdh4::hadoop::namenode might now be applied on more than
+  one node.
+
+Change-Id: I78b1e51a5d027a6f48b8392b2ca0a35b6199a97b"
+wikimedia/operations-puppet-cdh4,tests/jobtracker.pp,"Puppetizing HA NameNode via Quorum Based JournalNode.
+
+Notables:
+
+- cdh4::hadoop interface change: s/namenode_hostname/namenode_hosts/g
+
+- cdh4::hadoop::journalnode class is applied automatically
+  based on $journalnode_hosts.
+
+- cdh4::hadoop::namenode::primary is now included by cdh4::hadoop::master.
+  In HA mode, the primary class will transition the primary NameNode to active
+  after the first formatting.
+
+- cdh4::hadoop::namenode::standby overrides namenode -format
+  exec to bootstrap the standby NameNode dfs.name.dir
+
+- Base HDFS directory creation has been moved out of
+  cdh4::hadoop::namenode and into cdh4::hadoop::namenode::primary since
+  cdh4::hadoop::namenode might now be applied on more than
+  one node.
+
+Change-Id: I78b1e51a5d027a6f48b8392b2ca0a35b6199a97b"
+wikimedia/operations-puppet-cdh4,tests/master.pp,"Puppetizing HA NameNode via Quorum Based JournalNode.
+
+Notables:
+
+- cdh4::hadoop interface change: s/namenode_hostname/namenode_hosts/g
+
+- cdh4::hadoop::journalnode class is applied automatically
+  based on $journalnode_hosts.
+
+- cdh4::hadoop::namenode::primary is now included by cdh4::hadoop::master.
+  In HA mode, the primary class will transition the primary NameNode to active
+  after the first formatting.
+
+- cdh4::hadoop::namenode::standby overrides namenode -format
+  exec to bootstrap the standby NameNode dfs.name.dir
+
+- Base HDFS directory creation has been moved out of
+  cdh4::hadoop::namenode and into cdh4::hadoop::namenode::primary since
+  cdh4::hadoop::namenode might now be applied on more than
+  one node.
+
+Change-Id: I78b1e51a5d027a6f48b8392b2ca0a35b6199a97b"
+wikimedia/operations-puppet-cdh4,tests/namenode.pp,"Puppetizing HA NameNode via Quorum Based JournalNode.
+
+Notables:
+
+- cdh4::hadoop interface change: s/namenode_hostname/namenode_hosts/g
+
+- cdh4::hadoop::journalnode class is applied automatically
+  based on $journalnode_hosts.
+
+- cdh4::hadoop::namenode::primary is now included by cdh4::hadoop::master.
+  In HA mode, the primary class will transition the primary NameNode to active
+  after the first formatting.
+
+- cdh4::hadoop::namenode::standby overrides namenode -format
+  exec to bootstrap the standby NameNode dfs.name.dir
+
+- Base HDFS directory creation has been moved out of
+  cdh4::hadoop::namenode and into cdh4::hadoop::namenode::primary since
+  cdh4::hadoop::namenode might now be applied on more than
+  one node.
+
+Change-Id: I78b1e51a5d027a6f48b8392b2ca0a35b6199a97b"
+wikimedia/operations-puppet-cdh4,tests/namenode_primary.pp,"Puppetizing HA NameNode via Quorum Based JournalNode.
+
+Notables:
+
+- cdh4::hadoop interface change: s/namenode_hostname/namenode_hosts/g
+
+- cdh4::hadoop::journalnode class is applied automatically
+  based on $journalnode_hosts.
+
+- cdh4::hadoop::namenode::primary is now included by cdh4::hadoop::master.
+  In HA mode, the primary class will transition the primary NameNode to active
+  after the first formatting.
+
+- cdh4::hadoop::namenode::standby overrides namenode -format
+  exec to bootstrap the standby NameNode dfs.name.dir
+
+- Base HDFS directory creation has been moved out of
+  cdh4::hadoop::namenode and into cdh4::hadoop::namenode::primary since
+  cdh4::hadoop::namenode might now be applied on more than
+  one node.
+
+Change-Id: I78b1e51a5d027a6f48b8392b2ca0a35b6199a97b"
+wikimedia/operations-puppet-cdh4,tests/namenode_standby.pp,"Puppetizing HA NameNode via Quorum Based JournalNode.
+
+Notables:
+
+- cdh4::hadoop interface change: s/namenode_hostname/namenode_hosts/g
+
+- cdh4::hadoop::journalnode class is applied automatically
+  based on $journalnode_hosts.
+
+- cdh4::hadoop::namenode::primary is now included by cdh4::hadoop::master.
+  In HA mode, the primary class will transition the primary NameNode to active
+  after the first formatting.
+
+- cdh4::hadoop::namenode::standby overrides namenode -format
+  exec to bootstrap the standby NameNode dfs.name.dir
+
+- Base HDFS directory creation has been moved out of
+  cdh4::hadoop::namenode and into cdh4::hadoop::namenode::primary since
+  cdh4::hadoop::namenode might now be applied on more than
+  one node.
+
+Change-Id: I78b1e51a5d027a6f48b8392b2ca0a35b6199a97b"
+wikimedia/operations-puppet-cdh4,tests/nodemanager.pp,"Puppetizing HA NameNode via Quorum Based JournalNode.
+
+Notables:
+
+- cdh4::hadoop interface change: s/namenode_hostname/namenode_hosts/g
+
+- cdh4::hadoop::journalnode class is applied automatically
+  based on $journalnode_hosts.
+
+- cdh4::hadoop::namenode::primary is now included by cdh4::hadoop::master.
+  In HA mode, the primary class will transition the primary NameNode to active
+  after the first formatting.
+
+- cdh4::hadoop::namenode::standby overrides namenode -format
+  exec to bootstrap the standby NameNode dfs.name.dir
+
+- Base HDFS directory creation has been moved out of
+  cdh4::hadoop::namenode and into cdh4::hadoop::namenode::primary since
+  cdh4::hadoop::namenode might now be applied on more than
+  one node.
+
+Change-Id: I78b1e51a5d027a6f48b8392b2ca0a35b6199a97b"
+wikimedia/operations-puppet-cdh4,tests/resourcemanager.pp,"Puppetizing HA NameNode via Quorum Based JournalNode.
+
+Notables:
+
+- cdh4::hadoop interface change: s/namenode_hostname/namenode_hosts/g
+
+- cdh4::hadoop::journalnode class is applied automatically
+  based on $journalnode_hosts.
+
+- cdh4::hadoop::namenode::primary is now included by cdh4::hadoop::master.
+  In HA mode, the primary class will transition the primary NameNode to active
+  after the first formatting.
+
+- cdh4::hadoop::namenode::standby overrides namenode -format
+  exec to bootstrap the standby NameNode dfs.name.dir
+
+- Base HDFS directory creation has been moved out of
+  cdh4::hadoop::namenode and into cdh4::hadoop::namenode::primary since
+  cdh4::hadoop::namenode might now be applied on more than
+  one node.
+
+Change-Id: I78b1e51a5d027a6f48b8392b2ca0a35b6199a97b"
+wikimedia/operations-puppet-cdh4,tests/tasktracker.pp,"Puppetizing HA NameNode via Quorum Based JournalNode.
+
+Notables:
+
+- cdh4::hadoop interface change: s/namenode_hostname/namenode_hosts/g
+
+- cdh4::hadoop::journalnode class is applied automatically
+  based on $journalnode_hosts.
+
+- cdh4::hadoop::namenode::primary is now included by cdh4::hadoop::master.
+  In HA mode, the primary class will transition the primary NameNode to active
+  after the first formatting.
+
+- cdh4::hadoop::namenode::standby overrides namenode -format
+  exec to bootstrap the standby NameNode dfs.name.dir
+
+- Base HDFS directory creation has been moved out of
+  cdh4::hadoop::namenode and into cdh4::hadoop::namenode::primary since
+  cdh4::hadoop::namenode might now be applied on more than
+  one node.
+
+Change-Id: I78b1e51a5d027a6f48b8392b2ca0a35b6199a97b"
+wikimedia/operations-puppet-cdh4,tests/worker.pp,"Puppetizing HA NameNode via Quorum Based JournalNode.
+
+Notables:
+
+- cdh4::hadoop interface change: s/namenode_hostname/namenode_hosts/g
+
+- cdh4::hadoop::journalnode class is applied automatically
+  based on $journalnode_hosts.
+
+- cdh4::hadoop::namenode::primary is now included by cdh4::hadoop::master.
+  In HA mode, the primary class will transition the primary NameNode to active
+  after the first formatting.
+
+- cdh4::hadoop::namenode::standby overrides namenode -format
+  exec to bootstrap the standby NameNode dfs.name.dir
+
+- Base HDFS directory creation has been moved out of
+  cdh4::hadoop::namenode and into cdh4::hadoop::namenode::primary since
+  cdh4::hadoop::namenode might now be applied on more than
+  one node.
+
+Change-Id: I78b1e51a5d027a6f48b8392b2ca0a35b6199a97b"
+wikimedia/operations-puppet-cdh4,templates/hadoop/core-site.xml.erb,"Rendering fs.default.name if not using yarn
+
+Change-Id: Ie018877e8dc62137476e9639e02857c522375f8f"
+wikimedia/operations-puppet-cdh4,manifests/hue.pp,"Fixing automated hue SSL generation and permissions
+
+Change-Id: I0e50bf47a53ac760b66c6d5689c59d1b21f07673"
+wikimedia/operations-puppet-cdh4,manifests/hue/defaults.pp,"Fixing automated hue SSL generation and permissions
+
+Change-Id: I0e50bf47a53ac760b66c6d5689c59d1b21f07673"
+wikimedia/operations-puppet-cdh4,templates/hue/hue.ini.erb,"Fixing automated hue SSL generation and permissions
+
+Change-Id: I0e50bf47a53ac760b66c6d5689c59d1b21f07673"
+wikimedia/operations-puppet-cdh4,manifests/hue.pp,"Fixing sqoop path based on sqoop or sqoop2
+
+Change-Id: I397cc4dbf7b0e9c32244871f9390ed452c31b21a"
+wikimedia/operations-puppet-cdh4,templates/hue/hue.ini.erb,"Fixing sqoop path based on sqoop or sqoop2
+
+Change-Id: I397cc4dbf7b0e9c32244871f9390ed452c31b21a"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/datanode.pp,"Adding hasrestart and hasstatus to hadoop services
+
+Change-Id: I6b8d9a31d9bce76c8e5226246496daa127df8244"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/historyserver.pp,"Adding hasrestart and hasstatus to hadoop services
+
+Change-Id: I6b8d9a31d9bce76c8e5226246496daa127df8244"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/jobtracker.pp,"Adding hasrestart and hasstatus to hadoop services
+
+Change-Id: I6b8d9a31d9bce76c8e5226246496daa127df8244"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/namenode.pp,"Adding hasrestart and hasstatus to hadoop services
+
+Change-Id: I6b8d9a31d9bce76c8e5226246496daa127df8244"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/nodemanager.pp,"Adding hasrestart and hasstatus to hadoop services
+
+Change-Id: I6b8d9a31d9bce76c8e5226246496daa127df8244"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/resourcemanager.pp,"Adding hasrestart and hasstatus to hadoop services
+
+Change-Id: I6b8d9a31d9bce76c8e5226246496daa127df8244"
+wikimedia/operations-puppet-cdh4,manifests/hadoop/tasktracker.pp,"Adding hasrestart and hasstatus to hadoop services
+
+Change-Id: I6b8d9a31d9bce76c8e5226246496daa127df8244"
+wikimedia/operations-puppet-cdh4,manifests/hue.pp,"Puppetizing hue
+
+Change-Id: Ic523aa456df115e3944126f2ed4b411f16ad21d1"
+wikimedia/operations-puppet-cdh4,manifests/hue/defaults.pp,"Puppetizing hue
+
+Change-Id: Ic523aa456df115e3944126f2ed4b411f16ad21d1"
+wikimedia/operations-puppet-cdh4,templates/hue/hue.ini.erb,"Puppetizing hue
+
+Change-Id: Ic523aa456df115e3944126f2ed4b411f16ad21d1"
+wikimedia/operations-puppet-cdh4,manifests/hive/defaults.pp,"Fixing default driver for hive
+
+Change-Id: I381ef3d6d2287629b976f641244747a4b550ce5e"
+wikimedia/analytics-vagrant-kraken,puppet/manifests/site.pp,Removing commented stuff
+wikimedia/analytics-vagrant-kraken,puppet/manifests/base.pp,Removing unused stuff from base.pp
+wikimedia/analytics-vagrant-kraken,puppet/manifests/base.pp,Updates for hadoop and zookeeper
+wikimedia/analytics-vagrant-kraken,puppet/manifests/kraken.pp,Updates for hadoop and zookeeper
+wikimedia/analytics-vagrant-kraken,puppet/manifests/site.pp,Updates for hadoop and zookeeper
+wikimedia/analytics-vagrant-kraken,puppet/manifests/kraken.pp,Commenting out kraken::config usage.  Not using this. (Yet?)
+wikimedia/analytics-vagrant-kraken,puppet/manifests/base.pp,Only including Hadoop in vagrant VM by default right now.
+wikimedia/analytics-vagrant-kraken,puppet/manifests/kraken.pp,Only including Hadoop in vagrant VM by default right now.
+wikimedia/analytics-vagrant-kraken,puppet/manifests/site.pp,Only including Hadoop in vagrant VM by default right now.
+wikimedia/analytics-vagrant-kraken,puppet/manifests/base.pp,Adding kraken configs.
+wikimedia/analytics-vagrant-kraken,puppet/manifests/kraken.pp,Adding kraken configs.
+wikimedia/analytics-vagrant-kraken,puppet/manifests/site.pp,Adding kraken configs.
+wikimedia/analytics-vagrant-kraken,puppet/manifests/base.pp,"Adding java module.
+Including java in base.pp.
+
+Adding kafka module.
+Including kafka in base.pp"
+wikimedia/analytics-vagrant-kraken,puppet/manifests/site.pp,"Adding java module.
+Including java in base.pp.
+
+Adding kafka module.
+Including kafka in base.pp"
+wikimedia/analytics-vagrant-kraken,puppet/modules/java/manifests/init.pp,"Adding java module.
+Including java in base.pp.
+
+Adding kafka module.
+Including kafka in base.pp"
+wikimedia/analytics-vagrant-kraken,puppet/manifests/base.pp,Using apt module to install wikimedia apt repo settings
+wikimedia/analytics-vagrant-kraken,puppet/manifests/site.pp,Using apt module to install wikimedia apt repo settings
+wikimedia/analytics-vagrant-kraken,puppet/modules/apt/manifests/conf.pp,Adding apt module
+wikimedia/analytics-vagrant-kraken,puppet/modules/apt/manifests/init.pp,Adding apt module
+wikimedia/analytics-vagrant-kraken,puppet/modules/apt/manifests/pin.pp,Adding apt module
+wikimedia/analytics-vagrant-kraken,puppet/modules/apt/manifests/repository.pp,Adding apt module
+wikimedia/analytics-vagrant-kraken,puppet/modules/apt/manifests/update.pp,Adding apt module
+wikimedia/analytics-vagrant-kraken,puppet/manifests/site.pp,First commit of Kraken Vagrant VM.
+wikimedia/operations-puppet-kafka,manifests/mirror/monitoring.pp,"Introduce linters using rake
+
+Add a Rakefile and depends on puppet-syntax/puppet-lint. That lets one
+easily check syntax of manifests and templates as well as puppet style
+recommandation (puppet-lint).
+
+Ignore puppet-lint 80 chars line limit.
+Instruct puppet-lint to threat module with relative path or it fails
+under Jenkins which checkout the source code in a directory named after
+the job.
+
+Fix:
+    Unrecognised escape sequence '\.' in file
+    kafka/manifests/mirror/monitoring.pp at line 21
+
+Add Gem dependecy safe_yaml ~> 1.0.4 since Puppet 3.7 fails on ruby 2.2+
+(eg ruby2.4 on Mac). https://tickets.puppetlabs.com/browse/PUP-3796
+
+Git ignore Gemfile.lock, that is only needed for deployment purposes.
+
+To test locally:
+
+  bundle install
+  bundle exec rake test
+
+Bug: T154894
+Change-Id: Id8e19ee14cc1673e84278b30a5e4eddf5192ea77"
+wikimedia/operations-puppet-kafka,manifests/server/monitoring.pp,"kafka::server::monitoring: include standard
+
+Otherwise the lookup one line below can not really happen if the
+kafka::server::monitoring class is included before standard
+
+Change-Id: I811eedb33636e660c5871b4cb441be401dd00117"
+wikimedia/operations-puppet-kafka,tests/server.pp,"lint-ignore arrows in tests/server
+
+Change-Id: I2e1fd0490f105c15adbd37b022ea3cf057e732ff"
+wikimedia/operations-puppet-kafka,manifests/server/jmxtrans.pp,"kafka: fix lint warnings
+
+Change-Id: I7acf023af335f99acd8bddd9c7ed528439909e1d"
+wikimedia/operations-puppet-kafka,manifests/server/monitoring.pp,"kafka: fix lint warnings
+
+Change-Id: I7acf023af335f99acd8bddd9c7ed528439909e1d"
+wikimedia/operations-puppet-kafka,manifests/mirror/jmxtrans.pp,"fixed puppet-lint alignment
+
+Change-Id: If1fa34a6b4c67c9250261f74914177c8a0a94d70"
+wikimedia/operations-puppet-kafka,manifests/mirror/monitoring.pp,"fix puppet-lint alignment
+
+Change-Id: I120afce78db20ec45d22c27fcb71ee5e7c30a725"
+wikimedia/operations-puppet-kafka,manifests/server/monitoring.pp,"Disable MaxLag icinga check in kafka::server::monitoring
+
+It is too noisy because of a bug!
+
+Bug: T121407
+Change-Id: Iae2565422c7a5f0fafe238800dec5f041a26c5f4"
+wikimedia/operations-puppet-kafka,manifests/server.pp,"Respect $enabled param on kafka::server
+
+Change-Id: Ic4280678de77175493e47bfcfe92001f7d9500d2"
+wikimedia/operations-puppet-kafka,manifests/mirror/monitoring.pp,"Remove incorrect nagios_servicegroup param for kafka::mirror::monitoring
+
+Change-Id: Iadbc3caeadddf146614cec974dbcc99d3b80a4b6"
+wikimedia/operations-puppet-kafka,manifests/mirror/monitoring.pp,"Fix dependency for nrpe::monitor_service { ""kafka-mirror-${title}""
+
+Change-Id: Idddf60ea0782e0259e0bc0a07e8b8e7f1d8262de"
+wikimedia/operations-puppet-kafka,manifests/mirror/monitoring.pp,"Add nagios_servicegroup parameter to kafka::mirror::monitoring
+
+Change-Id: I7fcc5b334b24300e701198a85c222858b6fd63cb"
+wikimedia/operations-puppet-kafka,manifests/server/jmxtrans.pp,"Add nagios_servicegroup parameter to kafka::mirror::monitoring
+
+Change-Id: I7fcc5b334b24300e701198a85c222858b6fd63cb"
+wikimedia/operations-puppet-kafka,templates/mirror/kafka-mirror.default.erb,"Rotate kafka-mirror GC logs too
+
+Change-Id: I2e80f5334be17e8c8140247c1708acc709418e7a"
+wikimedia/operations-puppet-kafka,manifests/defaults.pp,"Refactor MirrorMaker puppetization
+
+This change makes MirrorMaker work with the latest 0.8.2.1-4 jessie-wikimedia
+.deb release at http://apt.wikimedia.org/wikimedia/pool/main/k/kafka/
+
+Adds a kafka::mirror::jmxtrans and kafka::mirror::monitoring defines.
+
+Bug: T124077
+Change-Id: I836e20a8f009ed89452630f95e570f02c522c837"
+wikimedia/operations-puppet-kafka,manifests/mirror.pp,"Refactor MirrorMaker puppetization
+
+This change makes MirrorMaker work with the latest 0.8.2.1-4 jessie-wikimedia
+.deb release at http://apt.wikimedia.org/wikimedia/pool/main/k/kafka/
+
+Adds a kafka::mirror::jmxtrans and kafka::mirror::monitoring defines.
+
+Bug: T124077
+Change-Id: I836e20a8f009ed89452630f95e570f02c522c837"
+wikimedia/operations-puppet-kafka,manifests/mirror/consumer.pp,"Refactor MirrorMaker puppetization
+
+This change makes MirrorMaker work with the latest 0.8.2.1-4 jessie-wikimedia
+.deb release at http://apt.wikimedia.org/wikimedia/pool/main/k/kafka/
+
+Adds a kafka::mirror::jmxtrans and kafka::mirror::monitoring defines.
+
+Bug: T124077
+Change-Id: I836e20a8f009ed89452630f95e570f02c522c837"
+wikimedia/operations-puppet-kafka,manifests/mirror/init.pp,"Refactor MirrorMaker puppetization
+
+This change makes MirrorMaker work with the latest 0.8.2.1-4 jessie-wikimedia
+.deb release at http://apt.wikimedia.org/wikimedia/pool/main/k/kafka/
+
+Adds a kafka::mirror::jmxtrans and kafka::mirror::monitoring defines.
+
+Bug: T124077
+Change-Id: I836e20a8f009ed89452630f95e570f02c522c837"
+wikimedia/operations-puppet-kafka,manifests/mirror/jmxtrans.pp,"Refactor MirrorMaker puppetization
+
+This change makes MirrorMaker work with the latest 0.8.2.1-4 jessie-wikimedia
+.deb release at http://apt.wikimedia.org/wikimedia/pool/main/k/kafka/
+
+Adds a kafka::mirror::jmxtrans and kafka::mirror::monitoring defines.
+
+Bug: T124077
+Change-Id: I836e20a8f009ed89452630f95e570f02c522c837"
+wikimedia/operations-puppet-kafka,manifests/mirror/monitoring.pp,"Refactor MirrorMaker puppetization
+
+This change makes MirrorMaker work with the latest 0.8.2.1-4 jessie-wikimedia
+.deb release at http://apt.wikimedia.org/wikimedia/pool/main/k/kafka/
+
+Adds a kafka::mirror::jmxtrans and kafka::mirror::monitoring defines.
+
+Bug: T124077
+Change-Id: I836e20a8f009ed89452630f95e570f02c522c837"
+wikimedia/operations-puppet-kafka,manifests/server/jmxtrans.pp,"Refactor MirrorMaker puppetization
+
+This change makes MirrorMaker work with the latest 0.8.2.1-4 jessie-wikimedia
+.deb release at http://apt.wikimedia.org/wikimedia/pool/main/k/kafka/
+
+Adds a kafka::mirror::jmxtrans and kafka::mirror::monitoring defines.
+
+Bug: T124077
+Change-Id: I836e20a8f009ed89452630f95e570f02c522c837"
+wikimedia/operations-puppet-kafka,manifests/server/monitoring.pp,"Refactor MirrorMaker puppetization
+
+This change makes MirrorMaker work with the latest 0.8.2.1-4 jessie-wikimedia
+.deb release at http://apt.wikimedia.org/wikimedia/pool/main/k/kafka/
+
+Adds a kafka::mirror::jmxtrans and kafka::mirror::monitoring defines.
+
+Bug: T124077
+Change-Id: I836e20a8f009ed89452630f95e570f02c522c837"
+wikimedia/operations-puppet-kafka,templates/consumer.properties.erb,"Refactor MirrorMaker puppetization
+
+This change makes MirrorMaker work with the latest 0.8.2.1-4 jessie-wikimedia
+.deb release at http://apt.wikimedia.org/wikimedia/pool/main/k/kafka/
+
+Adds a kafka::mirror::jmxtrans and kafka::mirror::monitoring defines.
+
+Bug: T124077
+Change-Id: I836e20a8f009ed89452630f95e570f02c522c837"
+wikimedia/operations-puppet-kafka,templates/log4j.properties.erb,"Refactor MirrorMaker puppetization
+
+This change makes MirrorMaker work with the latest 0.8.2.1-4 jessie-wikimedia
+.deb release at http://apt.wikimedia.org/wikimedia/pool/main/k/kafka/
+
+Adds a kafka::mirror::jmxtrans and kafka::mirror::monitoring defines.
+
+Bug: T124077
+Change-Id: I836e20a8f009ed89452630f95e570f02c522c837"
+wikimedia/operations-puppet-kafka,templates/mirror/consumer.properties.erb,"Refactor MirrorMaker puppetization
+
+This change makes MirrorMaker work with the latest 0.8.2.1-4 jessie-wikimedia
+.deb release at http://apt.wikimedia.org/wikimedia/pool/main/k/kafka/
+
+Adds a kafka::mirror::jmxtrans and kafka::mirror::monitoring defines.
+
+Bug: T124077
+Change-Id: I836e20a8f009ed89452630f95e570f02c522c837"
+wikimedia/operations-puppet-kafka,templates/mirror/kafka-mirror.default.erb,"Refactor MirrorMaker puppetization
+
+This change makes MirrorMaker work with the latest 0.8.2.1-4 jessie-wikimedia
+.deb release at http://apt.wikimedia.org/wikimedia/pool/main/k/kafka/
+
+Adds a kafka::mirror::jmxtrans and kafka::mirror::monitoring defines.
+
+Bug: T124077
+Change-Id: I836e20a8f009ed89452630f95e570f02c522c837"
+wikimedia/operations-puppet-kafka,templates/mirror/kafka-mirror.systemd.erb,"Refactor MirrorMaker puppetization
+
+This change makes MirrorMaker work with the latest 0.8.2.1-4 jessie-wikimedia
+.deb release at http://apt.wikimedia.org/wikimedia/pool/main/k/kafka/
+
+Adds a kafka::mirror::jmxtrans and kafka::mirror::monitoring defines.
+
+Bug: T124077
+Change-Id: I836e20a8f009ed89452630f95e570f02c522c837"
+wikimedia/operations-puppet-kafka,templates/mirror/producer.properties.erb,"Refactor MirrorMaker puppetization
+
+This change makes MirrorMaker work with the latest 0.8.2.1-4 jessie-wikimedia
+.deb release at http://apt.wikimedia.org/wikimedia/pool/main/k/kafka/
+
+Adds a kafka::mirror::jmxtrans and kafka::mirror::monitoring defines.
+
+Bug: T124077
+Change-Id: I836e20a8f009ed89452630f95e570f02c522c837"
+wikimedia/operations-puppet-kafka,templates/producer.properties.erb,"Refactor MirrorMaker puppetization
+
+This change makes MirrorMaker work with the latest 0.8.2.1-4 jessie-wikimedia
+.deb release at http://apt.wikimedia.org/wikimedia/pool/main/k/kafka/
+
+Adds a kafka::mirror::jmxtrans and kafka::mirror::monitoring defines.
+
+Bug: T124077
+Change-Id: I836e20a8f009ed89452630f95e570f02c522c837"
+wikimedia/operations-puppet-kafka,manifests/defaults.pp,"Puppetize offset.retention.minutes
+
+Change-Id: I79ab113d6499b44024399d2a538cda37e9b2676d"
+wikimedia/operations-puppet-kafka,manifests/server.pp,"Puppetize offset.retention.minutes
+
+Change-Id: I79ab113d6499b44024399d2a538cda37e9b2676d"
+wikimedia/operations-puppet-kafka,templates/server.properties.erb,"Puppetize offset.retention.minutes
+
+Change-Id: I79ab113d6499b44024399d2a538cda37e9b2676d"
+wikimedia/operations-puppet-kafka,templates/kafka.default.erb,"Limit GCLog file size
+
+We need to limit the file size of /var/log/kafka/kafkaServer-gc.log
+to avoid running out of disk space.
+
+Change-Id: I2b554072649d59dcb5d07761560cb6f4d18a6875"
+wikimedia/operations-puppet-kafka,manifests/server/monitoring.pp,"Add $group_prefix parameter to kafka::server::monitoring
+
+Bug: T122330
+Change-Id: If2ac444b280c3eae483f5e585e4750635e8089e6"
+wikimedia/operations-puppet-kafka,manifests/server/monitoring.pp,"Fix icinga check from arg in kafka::server::monitoring
+
+Change-Id: Idaec46ec8f4fae2749b3d58accfddb8f34b1829f"
+wikimedia/operations-puppet-kafka,manifests/defaults.pp,"Parameterize $log_max_backup_index in kafka log4j.properties
+
+This allows us to easily specify to keep more logs.  This is
+especially important until Kafka cleans up some of their noisy INFO
+log messages.  See: https://issues.apache.org/jira/browse/KAFKA-1591
+
+Change-Id: I65fcb04d72b2508ac3c27a37564d47f5756eddc9"
+wikimedia/operations-puppet-kafka,manifests/server.pp,"Parameterize $log_max_backup_index in kafka log4j.properties
+
+This allows us to easily specify to keep more logs.  This is
+especially important until Kafka cleans up some of their noisy INFO
+log messages.  See: https://issues.apache.org/jira/browse/KAFKA-1591
+
+Change-Id: I65fcb04d72b2508ac3c27a37564d47f5756eddc9"
+wikimedia/operations-puppet-kafka,templates/log4j.properties.erb,"Parameterize $log_max_backup_index in kafka log4j.properties
+
+This allows us to easily specify to keep more logs.  This is
+especially important until Kafka cleans up some of their noisy INFO
+log messages.  See: https://issues.apache.org/jira/browse/KAFKA-1591
+
+Change-Id: I65fcb04d72b2508ac3c27a37564d47f5756eddc9"
+wikimedia/operations-puppet-kafka,manifests/server/monitoring.pp,"Modifying kafka replica alerting to be more lenient
+
+Bug: T121407
+Change-Id: I9a6f02f98302e888014cb4366a486bec2c38241d"
+wikimedia/operations-puppet-kafka,manifests/server/monitoring.pp,"Remove pasted error reassigning nagios_servicegroup
+
+Change-Id: I0538789bfc3756ef0a88b2168f1d058ca76fdd32"
+wikimedia/operations-puppet-kafka,manifests/client.pp,"Add kafka::server::monitoring for WMF specific monitoring, remove deprecated kafka::client class
+
+class kafka now does everything it used to, and what kafka::client did.
+class kafka::server::monitoring can be used to monitor a kafka broker
+in Wikimedia context.  You can only use this class if you are using
+this Kafka puppet module with Wikmedia's puppet repository.
+
+Also fixup some README stuff.
+
+Bug: T120957
+Change-Id: If223c250ef12e073f3e55b7c87d320dd3d782c5b"
+wikimedia/operations-puppet-kafka,manifests/init.pp,"Add kafka::server::monitoring for WMF specific monitoring, remove deprecated kafka::client class
+
+class kafka now does everything it used to, and what kafka::client did.
+class kafka::server::monitoring can be used to monitor a kafka broker
+in Wikimedia context.  You can only use this class if you are using
+this Kafka puppet module with Wikmedia's puppet repository.
+
+Also fixup some README stuff.
+
+Bug: T120957
+Change-Id: If223c250ef12e073f3e55b7c87d320dd3d782c5b"
+wikimedia/operations-puppet-kafka,manifests/server/monitoring.pp,"Add kafka::server::monitoring for WMF specific monitoring, remove deprecated kafka::client class
+
+class kafka now does everything it used to, and what kafka::client did.
+class kafka::server::monitoring can be used to monitor a kafka broker
+in Wikimedia context.  You can only use this class if you are using
+this Kafka puppet module with Wikmedia's puppet repository.
+
+Also fixup some README stuff.
+
+Bug: T120957
+Change-Id: If223c250ef12e073f3e55b7c87d320dd3d782c5b"
+wikimedia/operations-puppet-kafka,manifests/defaults.pp,"Puppetize systemd override for Kafka LimitNOFILE
+
+/etc/default/kafka's KAFKA_NOFILES_ULIMIT is not useable
+by the systemd service file installed by the latest WMF
+Kafka package, so we need to puppetized a custom systemd
+override file to set this.
+
+Bug: T106581
+Change-Id: I10f41d0d3a19b15374ded800f0d6cd12573c9fa9"
+wikimedia/operations-puppet-kafka,manifests/server.pp,"Puppetize systemd override for Kafka LimitNOFILE
+
+/etc/default/kafka's KAFKA_NOFILES_ULIMIT is not useable
+by the systemd service file installed by the latest WMF
+Kafka package, so we need to puppetized a custom systemd
+override file to set this.
+
+Bug: T106581
+Change-Id: I10f41d0d3a19b15374ded800f0d6cd12573c9fa9"
+wikimedia/operations-puppet-kafka,templates/kafka.default.erb,"Puppetize systemd override for Kafka LimitNOFILE
+
+/etc/default/kafka's KAFKA_NOFILES_ULIMIT is not useable
+by the systemd service file installed by the latest WMF
+Kafka package, so we need to puppetized a custom systemd
+override file to set this.
+
+Bug: T106581
+Change-Id: I10f41d0d3a19b15374ded800f0d6cd12573c9fa9"
+wikimedia/operations-puppet-kafka,templates/kafka.systemd.override.conf.erb,"Puppetize systemd override for Kafka LimitNOFILE
+
+/etc/default/kafka's KAFKA_NOFILES_ULIMIT is not useable
+by the systemd service file installed by the latest WMF
+Kafka package, so we need to puppetized a custom systemd
+override file to set this.
+
+Bug: T106581
+Change-Id: I10f41d0d3a19b15374ded800f0d6cd12573c9fa9"
+wikimedia/operations-puppet-kafka,manifests/defaults.pp,"Add param for auto.leader.rebalance.enable
+
+Change-Id: I3981f51d45b2b9e6422f50f6892d46d1c0c97005"
+wikimedia/operations-puppet-kafka,manifests/server.pp,"Add param for auto.leader.rebalance.enable
+
+Change-Id: I3981f51d45b2b9e6422f50f6892d46d1c0c97005"
+wikimedia/operations-puppet-kafka,templates/server.properties.erb,"Add param for auto.leader.rebalance.enable
+
+Change-Id: I3981f51d45b2b9e6422f50f6892d46d1c0c97005"
+wikimedia/operations-puppet-kafka,manifests/server/jmxtrans.pp,"List ReplicaManager JMX Kafka metrics individually
+
+Change-Id: I698441291a9ce48a61a04522fb27886a343532f8"
+wikimedia/operations-puppet-kafka,manifests/server/jmxtrans.pp,"Update JMX metrics names for Kafka 0.8.2+
+
+JMX metrics names have changed in Kafka 0.8.2.  This updates
+them to that.  If you are using an older version of Kafka and
+need the old metric names, set legacy_jmx => true when you include
+the kafka::server::jmxtrans class.
+
+Bug: T106581
+Change-Id: I39ac37125dd67f7f68502021f9b34eadc11b4b50"
+wikimedia/operations-puppet-kafka,manifests/server/jmxtrans.pp,"Use bucketType 'g' for all Kafka jmxtrans metrics sent to statsd
+
+None of these are the default statsd 'counter' type.
+
+Change-Id: Id947b4dd9dba64eb44dcbd8096ef7e381de83512"
+wikimedia/operations-puppet-kafka,manifests/server/jmxtrans.pp,"Set bucketType for gauge metrics for statsd usage
+
+Change-Id: I2bdbcb4e69075a76320acd45752b23ee08b9e89b"
+wikimedia/operations-puppet-kafka,manifests/server/jmxtrans.pp,"Send jvm stats to statsd as well
+
+Change-Id: If2bc1ab7433aa26575fb15d7e0ce82f924c038ff"
+wikimedia/operations-puppet-kafka,manifests/server/jmxtrans.pp,"Add statsd parameters to kafka::server::jmxtrans
+
+Change-Id: I7618b0ecd195f64536153f9926edd2e2321bdc82"
+wikimedia/operations-puppet-wikimetrics,manifests/init.pp,"Replace libmysqlclient-dev with default-libmysqlclient-dev
+
+libmysqlclient-dev is only provided on jessie. default-libmysqlclient-dev
+is provided on both jessie and stretch (and resolves to libmysqlclient-dev
+or libmariadbclient-dev-compat).
+
+Bug: T51652
+Change-Id: Ie0349d681a5a70ba024e253b1c7bc14685773de8"
+wikimedia/operations-puppet-wikimetrics,manifests/backup.pp,"lint fixes
+
+This fixes most of the remaining lint warnings with our current config.
+Mostly arrow alignments, and some curly braces around variables.
+
+Change-Id: I501a790cd39a66cd74311f143562d1f0ea5e993e"
+wikimedia/operations-puppet-wikimetrics,manifests/init.pp,"lint fixes
+
+This fixes most of the remaining lint warnings with our current config.
+Mostly arrow alignments, and some curly braces around variables.
+
+Change-Id: I501a790cd39a66cd74311f143562d1f0ea5e993e"
+wikimedia/operations-puppet-wikimetrics,manifests/queue.pp,"lint fixes
+
+This fixes most of the remaining lint warnings with our current config.
+Mostly arrow alignments, and some curly braces around variables.
+
+Change-Id: I501a790cd39a66cd74311f143562d1f0ea5e993e"
+wikimedia/operations-puppet-wikimetrics,manifests/web/apache.pp,"lint fixes
+
+This fixes most of the remaining lint warnings with our current config.
+Mostly arrow alignments, and some curly braces around variables.
+
+Change-Id: I501a790cd39a66cd74311f143562d1f0ea5e993e"
+wikimedia/operations-puppet-wikimetrics,manifests/database.pp,"wikimetrics - lint fixes
+
+Change-Id: I752db14673f139e1294635640175919ebfcf0c48"
+wikimedia/operations-puppet-wikimetrics,manifests/init.pp,"wikimetrics - lint fixes
+
+Change-Id: I752db14673f139e1294635640175919ebfcf0c48"
+wikimedia/operations-puppet-wikimetrics,manifests/scheduler.pp,"wikimetrics - lint fixes
+
+Change-Id: I752db14673f139e1294635640175919ebfcf0c48"
+wikimedia/operations-puppet-wikimetrics,manifests/web/daemon.pp,"wikimetrics - lint fixes
+
+Change-Id: I752db14673f139e1294635640175919ebfcf0c48"
+wikimedia/operations-puppet-wikimetrics,manifests/database.pp,"Add centralauth to puppet db_config.yaml
+
+Add the CENTRALAUTH_ENGINE_URL field to /etc/wikimetrics/db_config.yaml
+template. For this centralauth parameters are added to the class,
+and used in the template.
+
+Also, add centralauth_testing database to be created.
+
+Also add centralauth_testing database to be created under wikimetrics role.
+
+Change-Id: Id7d38482636a05295d8d44b90fe91d19a3f0897a"
+wikimedia/operations-puppet-wikimetrics,manifests/init.pp,"Add centralauth to puppet db_config.yaml
+
+Add the CENTRALAUTH_ENGINE_URL field to /etc/wikimetrics/db_config.yaml
+template. For this centralauth parameters are added to the class,
+and used in the template.
+
+Also, add centralauth_testing database to be created.
+
+Also add centralauth_testing database to be created under wikimetrics role.
+
+Change-Id: Id7d38482636a05295d8d44b90fe91d19a3f0897a"
+wikimedia/operations-puppet-wikimetrics,templates/db_config.yaml.erb,"Add centralauth to puppet db_config.yaml
+
+Add the CENTRALAUTH_ENGINE_URL field to /etc/wikimetrics/db_config.yaml
+template. For this centralauth parameters are added to the class,
+and used in the template.
+
+Also, add centralauth_testing database to be created.
+
+Also add centralauth_testing database to be created under wikimetrics role.
+
+Change-Id: Id7d38482636a05295d8d44b90fe91d19a3f0897a"
+wikimedia/operations-puppet-wikimetrics,templates/wikimetrics.vhost.erb,"Allow local server-status requests on http
+
+There is no point in forcing them to https, which turns them to
+expernal requests, which we consequently have to deny.
+By keeping those requests on http, those requests stay local requests,
+and we can properly serve monitoring scripts.
+
+Bug: 71606
+Change-Id: If232474c5eeb49a0b27abe7c82ce9cf71d7cd23f"
+wikimedia/operations-puppet-wikimetrics,manifests/init.pp,"Make archive table name configurable
+
+Change-Id: I7ab0379d4f3377a36c24cecbf697bb2017208c63"
+wikimedia/operations-puppet-wikimetrics,templates/db_config.yaml.erb,"Make archive table name configurable
+
+Change-Id: I7ab0379d4f3377a36c24cecbf697bb2017208c63"
+wikimedia/operations-puppet-wikimetrics,templates/wikimetrics.vhost.erb,"Adding gzip compression for several file types
+
+Compression is happening for these files
+types by default in all directories.
+
+Change-Id: I2f6224a01ae90540bf68851d2a1a6d8b83adf975"
+wikimedia/operations-puppet-wikimetrics,manifests/web/apache.pp,"Adding caching headers for wikimetrics public directory
+
+Bug: 68445
+
+Change-Id: Ie18def0d3c1469a3bb29c83bb0d2dec13d89a781"
+wikimedia/operations-puppet-wikimetrics,templates/wikimetrics.vhost.erb,"Adding caching headers for wikimetrics public directory
+
+Bug: 68445
+
+Change-Id: Ie18def0d3c1469a3bb29c83bb0d2dec13d89a781"
+wikimedia/operations-puppet-wikimetrics,manifests/init.pp,"Add replication lag settings
+
+Change-Id: Id22b385e645588c89305cb1257a3a5abcf40927e"
+wikimedia/operations-puppet-wikimetrics,templates/db_config.yaml.erb,"Add replication lag settings
+
+Change-Id: Id22b385e645588c89305cb1257a3a5abcf40927e"
+wikimedia/operations-puppet-wikimetrics,manifests/backup.pp,"Reschedule backups to not interfer with queue runs so easily
+
+Hourly backup started each full hour. As the Wikimetrics queue ran
+daily on 0:00, the two processes raced each day on 0:00, and we're
+seeing tar warnings about files getting changed while they are getting
+read (E.g.: on 2014-08-07, 2014-08-08).
+
+To avoid such races, we reschedule hourly backup to 40 minutes after
+the full hour. That gives the queue a 40 minutes window to operate
+without any chance of impacting hourly backup.
+
+Accordingly, we move the daily backup further back in the hour, so the
+daily backup picks up a really recent hourly backup.
+
+Both hourly and daily backup typically finish <1 minute, so the
+allowed 10 minutes should account for some extra safety.
+
+Bug: 68731
+Change-Id: I90f2e76a2c4c4597093cb2f6b76820fbfade610b"
+wikimedia/operations-puppet-wikimetrics,manifests/init.pp,"Lowering celery concurrency and removing MAX_PARALLEL_RUN
+
+Change-Id: I446a818ef852363c9bedbec7e8b7d415457fb8a1"
+wikimedia/operations-puppet-wikimetrics,templates/queue_config.yaml.erb,"Lowering celery concurrency and removing MAX_PARALLEL_RUN
+
+Change-Id: I446a818ef852363c9bedbec7e8b7d415457fb8a1"
+wikimedia/operations-puppet-wikimetrics,manifests/backup.pp,"Re-align block of attributes
+
+Change-Id: I98c719e208294b247f4d326a694d526266ad9d60"
+wikimedia/operations-puppet-wikimetrics,manifests/web/apache.pp,"Enable Apache's headers module
+
+Since adding CORS headers in
+
+  aacac335bfca241e484a27bee6bcb8ae199e3dc5
+
+apache depends on the headers module being present. But it seems this
+module's presence was not enforced by puppet. So we enforce it now.
+
+Change-Id: I60045e5df64a9d1278099fbc8beb4a7f364f0635"
+wikimedia/operations-puppet-wikimetrics,manifests/init.pp,"Document database pool size parameters
+
+Change-Id: I4c41f65543fa98038c945634f729431e61e5e7e6"
+wikimedia/operations-puppet-wikimetrics,manifests/init.pp,"Make pool size configurable
+
+Bug: 68534
+Change-Id: Ia6e79a90a5de391bd37b041f3e3198b5267d3bcf"
+wikimedia/operations-puppet-wikimetrics,templates/db_config.yaml.erb,"Make pool size configurable
+
+Bug: 68534
+Change-Id: Ia6e79a90a5de391bd37b041f3e3198b5267d3bcf"
+wikimedia/operations-puppet-wikimetrics,manifests/init.pp,"Fix celery_concurrency type in queue_config.yaml.erb, change default to 16
+
+Change-Id: I800c463ef39110f0084bd116482723cb93261c23"
+wikimedia/operations-puppet-wikimetrics,templates/queue_config.yaml.erb,"Fix celery_concurrency type in queue_config.yaml.erb, change default to 16
+
+Change-Id: I800c463ef39110f0084bd116482723cb93261c23"
+wikimedia/operations-puppet-wikimetrics,manifests/init.pp,"Fix documentation of default path for wikimetrics base
+
+Change-Id: Iac988b0d1d5d4d9838a059bce7a273eae0529c90"
+wikimedia/operations-puppet-wikimetrics,templates/wikimetrics.vhost.erb,"Add CORS support to public files
+
+Change-Id: I14a1e966404760ef3208292c06497c3164e397b0"
+wikimedia/operations-puppet-wikimetrics,templates/queue_config.yaml.erb,"Add settings to throttle scheduled runs
+
+Change https://gerrit.wikimedia.org/r/#/c/142007/ is implementing this
+in the wikimetrics codebase.
+
+Change-Id: Ia3277788a074e8476927583af4db5004a7a70a5e"
+wikimedia/operations-puppet-wikimetrics,manifests/backup.pp,"Lint: Scope global
+
+Change-Id: Iea3ac2d181dc90a01291ea272ba1638fdea19741"
+wikimedia/operations-puppet-wikimetrics,manifests/backup.pp,"Make backup handle ensuring 'absent'
+
+Setting ensure to 'absent' will only clean up scripts, configs, and
+cron jobs, but will leave made backups in place. Hence, we can
+""ensure => 'absent'"" instances we want turn off without also loosing
+their corresponding backups.
+
+Change-Id: I66ba572de401c0e462114a7acd819bfea0828fe4"
+wikimedia/operations-puppet-wikimetrics,manifests/backup.pp,"Add backup role and scripts to wikimetrics
+
+We set up a daily and hourly backups of wikimetrics database, redis
+database and wikimetrics public reports directory. If the dump of the
+wikimetrics database fails backup script also fails.
+
+Backup cronjobs are setup on root's crontab
+
+Bug: 66119
+Change-Id: I5de1bd600fe20ad557372de6c514cf83a59155fb"
+wikimedia/operations-puppet-wikimetrics,manifests/init.pp,"Add backup role and scripts to wikimetrics
+
+We set up a daily and hourly backups of wikimetrics database, redis
+database and wikimetrics public reports directory. If the dump of the
+wikimetrics database fails backup script also fails.
+
+Backup cronjobs are setup on root's crontab
+
+Bug: 66119
+Change-Id: I5de1bd600fe20ad557372de6c514cf83a59155fb"
+wikimedia/operations-puppet-wikimetrics,manifests/init.pp,"Unqualify local variables
+
+Change-Id: I8d2408830075b561290e592deb8043d249b09bd8"
+wikimedia/operations-puppet-wikimetrics,templates/queue_config.yaml.erb,"Reports in prod should be stored on redis 30 days
+
+When using redis as a backend for celery TTLs are
+set per key stored. This change configures redis TTLs for celery
+items to be 30 days in redis prod and 1 hour in development.
+
+Bug: 63664
+Change-Id: I08b4ca98e5e109678fff0dab3a178c6ee9f559b1"
+wikimedia/operations-puppet-wikimetrics,manifests/queue.pp,"Fix for redis include and apache module changes
+
+Change-Id: I3d83c8de03585caeb5cad3b12450e24c5decac2a"
+wikimedia/operations-puppet-wikimetrics,manifests/web/apache.pp,"Fix for redis include and apache module changes
+
+Change-Id: I3d83c8de03585caeb5cad3b12450e24c5decac2a"
+wikimedia/operations-puppet-wikimetrics,manifests/queue.pp,"Stop relying on limited redis module
+
+We can't easily set configuration details through the redis module so
+we'll just do it manually to fix a critical bug.
+
+Bug: 63664
+Change-Id: I26cba6739f3384e4e62bae68f70ad1a04cbbf694"
+wikimedia/operations-puppet-wikimetrics,manifests/scheduler.pp,"Stop relying on limited redis module
+
+We can't easily set configuration details through the redis module so
+we'll just do it manually to fix a critical bug.
+
+Bug: 63664
+Change-Id: I26cba6739f3384e4e62bae68f70ad1a04cbbf694"
+wikimedia/operations-puppet-mariadb,manifests/config.pp,"Fix permissions for /var/run/mysqld dir so that the server can write
+
+It needs to have write permissions to create the socket. However,
+I worry if those could make some kind of race condition attack
+like the ones shown on recent security vulnerabilities.
+
+In any case, it can write to /tmp anyway, and all configs disallow
+exporting data localy by setting the export dir to /dev/null.
+
+Change-Id: I5d66ece3398baac81574a66915a7278282aa9112"
+wikimedia/operations-puppet-mariadb,manifests/config.pp,"Add more config options, so they can be tuned without new templates
+
+Add configurable options:
+* port
+* max_allowed_packet
+* ssl options
+
+Change some of the options so they do something useful by default.
+
+Copy the default template from the role, so it doesn't depend on
+it.
+
+Change-Id: Id3ab98e28a361b4de3eece1c991ae5e3fb00ac46"
+wikimedia/operations-puppet-mariadb,templates/default.my.cnf.erb,"Add more config options, so they can be tuned without new templates
+
+Add configurable options:
+* port
+* max_allowed_packet
+* ssl options
+
+Change some of the options so they do something useful by default.
+
+Copy the default template from the role, so it doesn't depend on
+it.
+
+Change-Id: Id3ab98e28a361b4de3eece1c991ae5e3fb00ac46"
+wikimedia/operations-puppet-mariadb,manifests/config.pp,"Remove old CA (ssl='on') and add a new option ""socket""
+
+There are no longer servers using the temporary, 1-year old
+CA- remove it but maintain the option ssl='on' by redefining it
+as an alias to 'puppet-cert'.
+
+Add a new config option socket- this has to be supported by
+the config template, so on deploy this will be mostly a noop.
+
+Bug: T157702
+Bug: T143896
+Bug: T148507
+Change-Id: I2c2b01dca929351911b1b4780a132e487cf2a7b5"
+wikimedia/operations-puppet-mariadb,manifests/packages_client.pp,"Add python3-tabulate package and labsdb password for clients-only
+
+'tabulate' can be used with python to present tabular data, such as
+those from a database resultset. This is only temporal until a
+package is created.
+
+Labsdb option allows to store the separate labsdb db credentials
+until a better option is setup (proper vault).
+
+Bug: T146149
+Bug: T104900
+Change-Id: I3993cb0aff5ba24070141c53886bddb846b6c992"
+wikimedia/operations-puppet-mariadb,templates/root.my.cnf.erb,"Add python3-tabulate package and labsdb password for clients-only
+
+'tabulate' can be used with python to present tabular data, such as
+those from a database resultset. This is only temporal until a
+package is created.
+
+Labsdb option allows to store the separate labsdb db credentials
+until a better option is setup (proper vault).
+
+Bug: T146149
+Bug: T104900
+Change-Id: I3993cb0aff5ba24070141c53886bddb846b6c992"
+wikimedia/operations-puppet-mariadb,manifests/packages_client.pp,"Add python3-pymysql for the mariadb client servers
+
+This will allow running one-off python client scripts on neodymium
+and sarin, until they are packaged with python3-pymysql as a
+dependency.
+
+Change-Id: I9505e6943951cb83cde1d5e16f9b7cf4a8b074a9"
+wikimedia/operations-puppet-mariadb,manifests/config.pp,"Resolve hanging mysql group with uid 1000 for new reimages
+
+We may followup with a better, concrete number with a later patch, like
+https://wikitech.wikimedia.org/wiki/UID
+
+Bug: T100501
+Change-Id: Ie290eebed654225bf7ee505a9f7d6f6be7f6941b"
+wikimedia/operations-puppet-mariadb,manifests/config.pp,"Upgrade mariadb module to new template hierarchy (unused)
+
+Templates are being moved under the role module.
+
+Change-Id: I4bf16d7bc3ec6ff305e45fa444cd3096aa5d19bf"
+wikimedia/operations-puppet-mariadb,manifests/init.pp,"Merge ""Introduce linters using rake"""
+wikimedia/operations-puppet-mariadb,manifests/monitor_replication.pp,"Merge ""Introduce linters using rake"""
+wikimedia/operations-puppet-mariadb,manifests/service.pp,"Merge ""Introduce linters using rake"""
+wikimedia/operations-puppet-mariadb,manifests/packages_client.pp,"Install wmf-mariadb-client for client-only installs
+
+The generic mariadb-client or mysql-client does not support
+openssl-based TLS properly, and errors-out when tried to use
+with a wmf-compiled mariadb server package. Instead of using
+the upstream package, use a customly-compiled binary.
+
+It will generate more load for maintaining-but it takes very
+little extra time compared when compiling the server, and
+it normally is not a source of security issues, because it
+only contains a few small client binaries and light libraries
+imeplementing the mysql client protocol.
+
+We use the Mariadb 10.1 everywhere because it will be compatible
+with almost all mysql and mariadb versions out there, while
+providing the best support and complete features.
+
+Bug: T157702
+Change-Id: I49e7b9e5b65942fbfe2101943ad23fed7c755334"
+wikimedia/operations-puppet-mariadb,manifests/init.pp,"Introduce linters using rake
+
+Add a Rakefile and depends on puppet-syntax/puppet-lint. That lets one
+easily check syntax of manifests and templates as well as puppet style
+recommandation (puppet-lint).
+
+Ignore puppet-lint 80 chars line limit.
+Instruct puppet-lint to threat module with relative path or it fails
+under Jenkins which checkout the source code in a directory named after
+the job.
+
+Fix a few puppet-lint issues:
+
+manifests/init.pp - class not documented on line 1
+manifests/monitor_replication.pp
+variable not enclosed in {} on line 49
+manifests/service.pp - string containing only a variable on line 30
+
+Add Gem dependecy safe_yaml ~> 1.0.4 since Puppet 3.7 fails on ruby 2.2+
+(eg ruby2.4 on Mac). https://tickets.puppetlabs.com/browse/PUP-3796
+
+Git ignore Gemfile.lock, that is only needed for deployment purposes.
+
+Bug: T154894
+Change-Id: Id8e19ee14cc1673e84278b30a5e4eddf5192ea77"
+wikimedia/operations-puppet-mariadb,manifests/monitor_replication.pp,"Introduce linters using rake
+
+Add a Rakefile and depends on puppet-syntax/puppet-lint. That lets one
+easily check syntax of manifests and templates as well as puppet style
+recommandation (puppet-lint).
+
+Ignore puppet-lint 80 chars line limit.
+Instruct puppet-lint to threat module with relative path or it fails
+under Jenkins which checkout the source code in a directory named after
+the job.
+
+Fix a few puppet-lint issues:
+
+manifests/init.pp - class not documented on line 1
+manifests/monitor_replication.pp
+variable not enclosed in {} on line 49
+manifests/service.pp - string containing only a variable on line 30
+
+Add Gem dependecy safe_yaml ~> 1.0.4 since Puppet 3.7 fails on ruby 2.2+
+(eg ruby2.4 on Mac). https://tickets.puppetlabs.com/browse/PUP-3796
+
+Git ignore Gemfile.lock, that is only needed for deployment purposes.
+
+Bug: T154894
+Change-Id: Id8e19ee14cc1673e84278b30a5e4eddf5192ea77"
+wikimedia/operations-puppet-mariadb,manifests/service.pp,"Introduce linters using rake
+
+Add a Rakefile and depends on puppet-syntax/puppet-lint. That lets one
+easily check syntax of manifests and templates as well as puppet style
+recommandation (puppet-lint).
+
+Ignore puppet-lint 80 chars line limit.
+Instruct puppet-lint to threat module with relative path or it fails
+under Jenkins which checkout the source code in a directory named after
+the job.
+
+Fix a few puppet-lint issues:
+
+manifests/init.pp - class not documented on line 1
+manifests/monitor_replication.pp
+variable not enclosed in {} on line 49
+manifests/service.pp - string containing only a variable on line 30
+
+Add Gem dependecy safe_yaml ~> 1.0.4 since Puppet 3.7 fails on ruby 2.2+
+(eg ruby2.4 on Mac). https://tickets.puppetlabs.com/browse/PUP-3796
+
+Git ignore Gemfile.lock, that is only needed for deployment purposes.
+
+Bug: T154894
+Change-Id: Id8e19ee14cc1673e84278b30a5e4eddf5192ea77"
+wikimedia/operations-puppet-mariadb,manifests/packages_client.pp,"mariadb: New mariadb::packages_client: Colors & a smarter prompt
+
+* client-only package install is centralized on a new class
+* prompt is now configurable; if it is not set, \h is used.
+* colors are enabled by default; packages_client.pp is required
+  for client-only installations
+
+Change-Id: I7732ccf284c1724ee88bcbfb7286cac0b9647198"
+wikimedia/operations-puppet-mariadb,templates/root.my.cnf.erb,"mariadb: New mariadb::packages_client: Colors & a smarter prompt
+
+* client-only package install is centralized on a new class
+* prompt is now configurable; if it is not set, \h is used.
+* colors are enabled by default; packages_client.pp is required
+  for client-only installations
+
+Change-Id: I7732ccf284c1724ee88bcbfb7286cac0b9647198"
+wikimedia/operations-puppet-mariadb,manifests/config.pp,"mariadb: Added calculation for gtid_domain_id
+
+The gtid_domain_id variable needs to be unique and for now it should
+be calculated the same way $server_id is, to make them independent
+from each other
+
+At the moment we are going to calculate the gtid_domain_id the same
+way we calculate server_id. But having them independent from each other
+will allow us to change one of them without affecting each other in the
+future if for any reason we need to change the way they are calculated.
+They both need to be unique across all the servers.
+
+Bug: T149418
+Change-Id: If60eba4597ccb7ce2fbd4bdafa4ad647bc3ab8e7"
+wikimedia/operations-puppet-mariadb,manifests/config.pp,"mariadb: allow colorized mysql output
+
+This is more than pure aestetics- DBAs are looking at this output
+for long hours, a bit of color (disabled by default) will make
+their life easier.
+
+Enable with:
+mysql --pager='grcat /etc/mysql/grcat.config | less -RSFXin'
+
+Change-Id: I2a3567cbb7553933067df1ce9332dc6f2ac1f33f"
+wikimedia/operations-puppet-mariadb,manifests/packages_wmf.pp,"mariadb: allow colorized mysql output
+
+This is more than pure aestetics- DBAs are looking at this output
+for long hours, a bit of color (disabled by default) will make
+their life easier.
+
+Enable with:
+mysql --pager='grcat /etc/mysql/grcat.config | less -RSFXin'
+
+Change-Id: I2a3567cbb7553933067df1ce9332dc6f2ac1f33f"
+wikimedia/operations-puppet-mariadb,manifests/service.pp,"Add $managed flag to mariadb::service
+
+This allows to manage the service automatically for
+non-production services.
+
+Change-Id: Ifed506176001c9cd9eb7f7b55bfea9f836aac6ec"
+wikimedia/operations-puppet-mariadb,manifests/mysqld_safe.pp,"mariadb: Add the posibility of selecting other package versions
+
+The previous puppetization only allowed mariadb10 => true/false,
+which was not really too future-proof.
+
+This deprecates that paramenter (but continues to use it) and
+introduces a new one called package. In the future we could also
+add a version to hold packages to a particular existing/old
+version for programmed upgrades.
+
+As of now, versions allowed are wmf-mariadb10, wmf-mariadb101,
+and wmf-mysql57 (maybe in the future the class can be renamed
+to something else).
+
+Bug: T149422
+Change-Id: Ieb392eb1733dfa9df57107978a0170bb3f3b35a5"
+wikimedia/operations-puppet-mariadb,manifests/packages_wmf.pp,"mariadb: Add the posibility of selecting other package versions
+
+The previous puppetization only allowed mariadb10 => true/false,
+which was not really too future-proof.
+
+This deprecates that paramenter (but continues to use it) and
+introduces a new one called package. In the future we could also
+add a version to hold packages to a particular existing/old
+version for programmed upgrades.
+
+As of now, versions allowed are wmf-mariadb10, wmf-mariadb101,
+and wmf-mysql57 (maybe in the future the class can be renamed
+to something else).
+
+Bug: T149422
+Change-Id: Ieb392eb1733dfa9df57107978a0170bb3f3b35a5"
+wikimedia/operations-puppet-mariadb,manifests/packages_wmf.pp,"Remove managing the service from the package installation
+
+Certain hosts manage its own init.d in a special way- add it to
+each role independently, when it corresponds.
+
+Change-Id: Ia7f4dd3d245fa3f45f314fd525bb223a6581acff"
+wikimedia/operations-puppet-mariadb,manifests/packages_wmf.pp,"Overwrite (or create) init.d with custom one
+
+Old package require manual installation. Now it is done
+automatically.
+New packages do not include it by default (or they are wrong).
+This class overwrites the init.d script with the one that is
+current installed from the old packages, to maintain 100%
+compatibility.
+
+In the future, mariadb::service will include a custom systemd
+unit, but that is not yet possible with mariadb10.
+
+This has to be parametrized to allow different packages other
+than 10.0.
+
+Change-Id: I3543a095bd240c190155aeb2753ba9605edc1b1f"
+wikimedia/operations-puppet-mariadb,manifests/service.pp,"Fix typo of missing File[] on require maniphest
+
+Change-Id: I0af3206359f28ad4174853f059b2491358a9f81d"
+wikimedia/operations-puppet-mariadb,manifests/service.pp,"Correct template reference, including the module
+
+Change-Id: Ie3d7b21accf53502a291750ac18df7b4395b2e70"
+wikimedia/operations-puppet-mariadb,manifests/service.pp,"mariadb:Create a systemd unit & init.d script for new package
+
+The systemd unit has been on purpose not included on the package
+so it can be handled by puppet. The config changes should also help
+securize running mysqld.
+
+The only configurable variables are for now @basedir and
+@open_files_limit (that last one only on systemd).
+
+Until we upgrade to 10.1 or 5.7 and get rid of trustys, we will
+continue using init.d due to the lack of support on the older
+(for us, current) versions for systemd.
+
+Bug: T147305
+Change-Id: I23cee27c8e86c94dc830cde799a50955f9513c9b"
+wikimedia/operations-puppet-mariadb,templates/mariadb.server.erb,"mariadb:Create a systemd unit & init.d script for new package
+
+The systemd unit has been on purpose not included on the package
+so it can be handled by puppet. The config changes should also help
+securize running mysqld.
+
+The only configurable variables are for now @basedir and
+@open_files_limit (that last one only on systemd).
+
+Until we upgrade to 10.1 or 5.7 and get rid of trustys, we will
+continue using init.d due to the lack of support on the older
+(for us, current) versions for systemd.
+
+Bug: T147305
+Change-Id: I23cee27c8e86c94dc830cde799a50955f9513c9b"
+wikimedia/operations-puppet-mariadb,templates/mariadb.service.erb,"mariadb:Create a systemd unit & init.d script for new package
+
+The systemd unit has been on purpose not included on the package
+so it can be handled by puppet. The config changes should also help
+securize running mysqld.
+
+The only configurable variables are for now @basedir and
+@open_files_limit (that last one only on systemd).
+
+Until we upgrade to 10.1 or 5.7 and get rid of trustys, we will
+continue using init.d due to the lack of support on the older
+(for us, current) versions for systemd.
+
+Bug: T147305
+Change-Id: I23cee27c8e86c94dc830cde799a50955f9513c9b"
+wikimedia/operations-puppet-mariadb,manifests/config.pp,"mariadb: remove /root/.my.cnf from module permanently
+
+Bug: T146146
+Change-Id: Ie0d33f0f223e7f6bacb3d32aaea3a7bb1a5652f0"
+wikimedia/operations-puppet-mariadb,manifests/config.pp,"mariadb: Disable /root/.my.cnf distribution
+
+Bug: T146146
+Change-Id: I6f0ace20a5ce5febc4bfe9095c151ce3f69a1ff4"
+wikimedia/operations-puppet-mariadb,manifests/packages_wmf.pp,"packages_wmf: force custom handling of mysqld_safe
+
+Bug: T145378
+Change-Id: I454cbb8ecca7c02c6971fad053501973c98efab4"
+wikimedia/operations-puppet-mariadb,manifests/mysqld_safe.pp,"mysqld_safe: Fix typo when referencing a modules file
+
+Change-Id: Id1fa6bee57cf870ccebf4fda1b5d8494834ef190"
+wikimedia/operations-puppet-mariadb,manifests/mylvmbackup.pp,"Copy over mysql_wmf::mylvmbackup to mariadb
+
+Change-Id: I2183b8dbaad1365b99e0f76419a464c7f7406a47"
+wikimedia/operations-puppet-mariadb,templates/mylvmbackup-prebackup.erb,"Copy over mysql_wmf::mylvmbackup to mariadb
+
+Change-Id: I2183b8dbaad1365b99e0f76419a464c7f7406a47"
+wikimedia/operations-puppet-mariadb,manifests/mysqld_safe.pp,"Change mysqld_safe to be a module, not a role
+
+Bug: T145378
+Change-Id: I145b240bd41db4181d0d8aa8917a217ba78b5561"
+wikimedia/operations-puppet-cassandra,manifests/init.pp,"cassandra: install openjdk-7-jdk
+
+Bug: T102996
+Change-Id: Id3e9c25de60d94683320fab72b7b0c0d3efc52e4"
+wikimedia/operations-puppet-cassandra,manifests/init.pp,"cassandra: ship logback.xml with longer retention periods
+
+rotate at 50MB instead of 20MB and keep 40 files instead of 20
+
+Bug: T100970
+Change-Id: I0b0f694947a4099f129b9b1833f0e00fadd18f9f"
+wikimedia/operations-puppet-cassandra,templates/logback.xml.erb,"cassandra: ship logback.xml with longer retention periods
+
+rotate at 50MB instead of 20MB and keep 40 files instead of 20
+
+Bug: T100970
+Change-Id: I0b0f694947a4099f129b9b1833f0e00fadd18f9f"
+wikimedia/operations-puppet-cassandra,templates/cassandra-env.sh.erb,"Increase CMSInitiatingOccupancyFraction from 70 to 78%
+
+- Cassandra default is 75%
+- many JVM tuning guides recommend 80%
+
+Change-Id: Ic0f718b3b51e934ea4d3ce2cf54d33e2902aded3"
+wikimedia/operations-puppet-cassandra,templates/metrics.yaml.erb,"trim list of Cassandra metrics
+
+There is insufficient storage for all of the recently added Cassandra
+metrics.  This filters out all of those matching
+org.apache.cassandra.metrics.ColumnFamily.system.+ to provide more
+headroom.
+
+Bug: T78514
+Change-Id: If7527fdcf7465a6561ba799c57bd1d837580531c"
+wikimedia/operations-puppet-cassandra,templates/metrics.yaml.erb,"send additional metrics to graphite
+
+There are a number of additional metrics available, beyond what is contained
+in the sample configuration.  Some of these (column family-specific metrics
+for example), will be particularly valuable.
+
+Bug: T78514
+Change-Id: I71c7b3c0c9a9d2b64a9386ec087b32d9bf6bca91"
+wikimedia/operations-puppet-cassandra,manifests/init.pp,"Don't include a node in its own seeds
+
+In multi-node clusters we want to make sure that a new node bootstraps (loads
+data from other nodes) fully before accepting requests. While not directly
+leading to incorrect query results when using LOCALQUORUM reads, an empty node
+joining the cluster before a repair will lead to incorrect query results for
+queries with consistency level of ONE.
+
+Bootstrapping is disabled if the node is listed among its own seeds. Hence,
+this patch ensures that we don't list a node among its seeds in multi-node
+clusters.
+
+This also means that multi-node clusters will require manual intervention
+during initialization, as none of the nodes will be able to successfully
+bootstrap. To initialize a new multi-node cluster, we need to temporarily add
+a node among its own seeds in order to break the symmetry and allow it to
+fully start up. All other nodes will then normally bootstrap from this node.
+
+Bug: T91617
+Change-Id: Iaa3bbf07b6053e139dc9483f849f6d4acba1418b"
+wikimedia/operations-puppet-cassandra,templates/cassandra.yaml.erb,"Don't include a node in its own seeds
+
+In multi-node clusters we want to make sure that a new node bootstraps (loads
+data from other nodes) fully before accepting requests. While not directly
+leading to incorrect query results when using LOCALQUORUM reads, an empty node
+joining the cluster before a repair will lead to incorrect query results for
+queries with consistency level of ONE.
+
+Bootstrapping is disabled if the node is listed among its own seeds. Hence,
+this patch ensures that we don't list a node among its seeds in multi-node
+clusters.
+
+This also means that multi-node clusters will require manual intervention
+during initialization, as none of the nodes will be able to successfully
+bootstrap. To initialize a new multi-node cluster, we need to temporarily add
+a node among its own seeds in order to break the symmetry and allow it to
+fully start up. All other nodes will then normally bootstrap from this node.
+
+Bug: T91617
+Change-Id: Iaa3bbf07b6053e139dc9483f849f6d4acba1418b"
+wikimedia/operations-puppet-cassandra,templates/cassandra.yaml.erb,"Enable trickle_fsync by default
+
+We generally use SSDs for production Cassandra storage, so should enable
+trickle_fsync by default to avoid high iowait from write bursts.
+
+Change-Id: I99e2bc31a9b27c320810191344b8315136f553fb"
+wikimedia/operations-puppet-cassandra,manifests/init.pp,"disable nightly repairs
+
+These full repairs kick-off on all nodes of the cluster at the same each
+morning, and generate significant load before ultimately failing.  Last
+night they had to be manually killed to remedy the impact they were
+having.
+
+T92355 will ultimately provide staggered, sequential, incremental repairs,
+but until that is in place, the existing repairs jobs should be removed.
+
+Bug: T92355
+Change-Id: Id73d53bcf63b62dcf3695e1c4520fad1c38b0ff4"
+wikimedia/operations-puppet-cassandra,manifests/init.pp,"overrid-able concurrent_compactors setting
+
+Bug: T93140
+Change-Id: I150e2c35fbdaef9f88cf2653e25d791848a03e88"
+wikimedia/operations-puppet-cassandra,templates/cassandra.yaml.erb,"overrid-able concurrent_compactors setting
+
+Bug: T93140
+Change-Id: I150e2c35fbdaef9f88cf2653e25d791848a03e88"
+wikimedia/operations-puppet-cassandra,templates/cassandra-env.sh.erb,"Next step on the road to understanding JVM GC dynamics
+
+The changes in https://gerrit.wikimedia.org/r/#/c/192760/ turned out to be
+less helpful than hoped. The new cassandra heap dashboard at
+http://grafana.wikimedia.org/#/dashboard/db/cassandra-heap actually provides
+evidence that the new settings causeda slightly more, and not less, time to be
+spent in GC. This is true for both CMS and ParNew.
+
+The initial trigger for this change was warnings like these in the logs:
+
+GCInspector.java:142 - ConcurrentMarkSweep GC in 7993ms.
+  CMS Old Gen: 3312323744 -> 1640237320;
+  CMS Perm Gen: 32140352 -> 32137768;
+  Code Cache: 14301120 -> 14369664;
+  Par Eden Space: 9454776 -> 115950544;
+  Par Survivor Space: 79890744 -> 56639504
+
+Reinforced by some notwork disconnects I had observed earlier I took this to
+mean that this had actually been a long stop-the-world collection. It looks
+like these CMS collections are mostly incremental and concurrent though, with
+execution only stopped for a very small fraction of those 8 seconds. The
+typical GC behavior to shoot for in the JVM seems to be purely
+CMSInitiatingOccupancyFraction-driven, with a collection magnitude of ideally
+> 50% old space size. The original settings of 75% are actually pretty close
+to this while keeping some headroom to avoid CMS failure or OOM.
+
+This patch changes the settings back to a moderate mainstream setting, very
+close to the defaults:
+
+- 70% CMSInitiatingOccupancyFraction (default 75): Provides slightly more
+  headroom against CMS failures on high memory pressure.
+- MaxTenuringThreshold=5 (default 1): Reduces the pressure on the old space
+  without increasing the time spent in ParNew unduly.
+
+Change-Id: I8db561810290ad18dab9549ce2aec92b39b1c1de"
+wikimedia/operations-puppet-cassandra,templates/cassandra-env.sh.erb,"Reduce the pressure on CMS GC to avoid stop-the-world
+
+Increase the JVM tenuring threshold & lower CMSInitiatingOccupancyFraction.
+
+During heavy read load the promotion rate from the young generation is too
+high for incremental CMS, which causes CMS to switch to slow stop-the world
+collections that take multiple seconds. This is slow enough for other nodes to
+consider the node dead.
+
+This patch increases the number of young space collections an object needs to
+survive before being promoted. This increases the cost
+in young space collections slightly in exchange for a lower promotion rate
+
+Additionally, the lower CMSInitiatingOccupancyFraction setting causes CMS to
+start collections earlier. This gives incremental collection a better shot at
+collecting sufficient garbage to avoid having to resort to a stop-the-world
+collection.
+
+Change-Id: I26c946e05e651ccd68c767ffba51d2ff9598d87b"
+wikimedia/operations-puppet-cassandra,manifests/init.pp,"Add a daily incremental repair job
+
+Cassandra 2.1 adds a new incremental repair mode, which should make daily
+repairs fairly fast. Lets see if the impact with -par is okay. If I understand
+the docs right it sounds like it would be a win over repairing each node
+sequentially, especially in combination with incremental repairs.
+
+See the docs for background:
+http://www.datastax.com/documentation/cassandra/2.1/cassandra/operations/ops_repair_nodes_c.html
+
+Change-Id: Ifc5d3826229ca6aa7cfd9bd3a680e97c9abc05e4"
+wikimedia/operations-puppet-cassandra,manifests/metrics.pp,"cassandra: fix metrics-graphite.jar path
+
+Change-Id: I8a0caa0ccad089305cf44902030249f345e89e01"
+wikimedia/operations-puppet-cassandra,manifests/init.pp,"report cassandra metrics with metrics-graphite
+
+introduce a new class, cassandra::metrics used to report metrics initially via
+metrics-graphite. Note this pulls in dropwizard/metrics with trebuchet which in
+turn pulls in the require jars via git-fat via archiva.
+
+Bug: T78514
+Change-Id: I6b15e81ae80800dce92f7034f96e93a4368c9372"
+wikimedia/operations-puppet-cassandra,manifests/metrics.pp,"report cassandra metrics with metrics-graphite
+
+introduce a new class, cassandra::metrics used to report metrics initially via
+metrics-graphite. Note this pulls in dropwizard/metrics with trebuchet which in
+turn pulls in the require jars via git-fat via archiva.
+
+Bug: T78514
+Change-Id: I6b15e81ae80800dce92f7034f96e93a4368c9372"
+wikimedia/operations-puppet-cassandra,templates/cassandra-env.sh.erb,"report cassandra metrics with metrics-graphite
+
+introduce a new class, cassandra::metrics used to report metrics initially via
+metrics-graphite. Note this pulls in dropwizard/metrics with trebuchet which in
+turn pulls in the require jars via git-fat via archiva.
+
+Bug: T78514
+Change-Id: I6b15e81ae80800dce92f7034f96e93a4368c9372"
+wikimedia/operations-puppet-cassandra,templates/metrics.yaml.erb,"report cassandra metrics with metrics-graphite
+
+introduce a new class, cassandra::metrics used to report metrics initially via
+metrics-graphite. Note this pulls in dropwizard/metrics with trebuchet which in
+turn pulls in the require jars via git-fat via archiva.
+
+Bug: T78514
+Change-Id: I6b15e81ae80800dce92f7034f96e93a4368c9372"
+wikimedia/operations-puppet-cassandra,manifests/init.pp,"set permissions on cassandra files
+
+Change-Id: I5f49985ac62510ddd657b7b681e4d117cd21056c"
+wikimedia/operations-puppet-cassandra,templates/cassandra-env.sh.erb,"Update jamm dependency path for cassandra 2.1.3
+
+The latest version of cassandra in our repo is 2.1.3, so lets support that.
+
+Change-Id: I866a3f528b4dd451eb9e1a087c1ba23421ee975b"
+wikimedia/operations-puppet-cassandra,manifests/init.pp,"add extra_classpath argument
+
+pass in an array to be appended to cassandra's classpath
+
+Bug: T78514
+Change-Id: I68410f3fbb3cbedbe5fb8c2cb7ad42ab6502d2f1"
+wikimedia/operations-puppet-cassandra,templates/cassandra.default.erb,"add extra_classpath argument
+
+pass in an array to be appended to cassandra's classpath
+
+Bug: T78514
+Change-Id: I68410f3fbb3cbedbe5fb8c2cb7ad42ab6502d2f1"
+wikimedia/operations-puppet-cassandra,manifests/init.pp,"update class defaults
+
+change If85c01c1d897c only updated cassandra::defaults but not the class
+arguments, thus when going through the class arguments I missed those that
+lived only in cassandra::defaults
+
+Change-Id: Id678724321ea8fe0b3ae25899795715291b27a39"
+wikimedia/operations-puppet-cassandra,manifests/init.pp,"fix additional_jvm_opts default
+
+Change-Id: If0a0f0ec10345ab5a9c0aea9d5ff5998cad29157"
+wikimedia/operations-puppet-cassandra,manifests/defaults.pp,"cassandra: deprecate cassandra::defaults class
+
+to correctly use hiera (and thus proceed with T89657) we should get rid of
+cassandra::defaults class altogether.
+
+Bug: T76149
+Change-Id: I2459fa4378e63d9f9fcbd93785a5db5a627c548a"
+wikimedia/operations-puppet-cassandra,manifests/init.pp,"cassandra: deprecate cassandra::defaults class
+
+to correctly use hiera (and thus proceed with T89657) we should get rid of
+cassandra::defaults class altogether.
+
+Bug: T76149
+Change-Id: I2459fa4378e63d9f9fcbd93785a5db5a627c548a"
+wikimedia/operations-puppet-cassandra,templates/cassandra.yaml.erb,"Remove preheat_kernel_page_cache option
+
+Somehow this old option slipped through in the update for 2.1.2. Cassandra
+will refuse to start if set. It does helpfully point out the offending option
+in its log instead of merely complaining but starting up. Looks like the
+school of 'be strict in what you accept'.
+
+Change-Id: Ifc3934f3420a7664d86ae73ddb4e54e49fc11fa4"
+wikimedia/operations-puppet-cassandra,manifests/defaults.pp,"Update for Cassandra 2.1.2
+
+Updated based on the new Debian default configs. This puppet patch is not
+tested yet, but the corresponding configs in production are.
+
+Bug: T88956
+Change-Id: If85c01c1d897ce9158dbbe0fb1c1dad7d4282bb6"
+wikimedia/operations-puppet-cassandra,manifests/init.pp,"Update for Cassandra 2.1.2
+
+Updated based on the new Debian default configs. This puppet patch is not
+tested yet, but the corresponding configs in production are.
+
+Bug: T88956
+Change-Id: If85c01c1d897ce9158dbbe0fb1c1dad7d4282bb6"
+wikimedia/operations-puppet-cassandra,templates/cassandra-env.sh.erb,"Update for Cassandra 2.1.2
+
+Updated based on the new Debian default configs. This puppet patch is not
+tested yet, but the corresponding configs in production are.
+
+Bug: T88956
+Change-Id: If85c01c1d897ce9158dbbe0fb1c1dad7d4282bb6"
+wikimedia/operations-puppet-cassandra,templates/cassandra.yaml.erb,"Update for Cassandra 2.1.2
+
+Updated based on the new Debian default configs. This puppet patch is not
+tested yet, but the corresponding configs in production are.
+
+Bug: T88956
+Change-Id: If85c01c1d897ce9158dbbe0fb1c1dad7d4282bb6"
+wikimedia/operations-puppet-cassandra,templates/cassandra.yaml.erb,"Increase thrift_framed_transport_size_in_mb from 15 to 256m
+
+This is needed for Titan. We don't use thrift elsewhere, so this won't affect
+anything else. We *could* introduce another variable here, but since it is not
+going to differ between installations I think it's fine to just change the
+default in the template.
+
+Change-Id: I7bf356479ed0e58f4ceb610fade51331cd860eaf"
+wikimedia/operations-puppet-cassandra,manifests/defaults.pp,"Use Cassandra's datacenter1 default
+
+This is what Cassandra uses when rackproperties are not set. It is also what
+RESTBase defaults to.
+
+Change-Id: I1736c92856de7f0540870e8dd40b62eb66100b9d"
+wikimedia/operations-puppet-cassandra,manifests/defaults.pp,"Fix two bugs in cassandra module defaults
+
+- Use $::ipaddress for the default seeds
+- Don't try to pass an empty array to pick, as that will explode without
+  proving any helpful error messages
+
+Change-Id: I65b45dc319f15308f7eff6c8148f3466d5f3173b"
+wikimedia/operations-puppet-cassandra,manifests/defaults.pp,"Initial commit of Cassandra puppet module
+
+Change-Id: I34dea79a3c7c25f44fd76430d7e4bc21db78aa66"
+wikimedia/operations-puppet-cassandra,manifests/init.pp,"Initial commit of Cassandra puppet module
+
+Change-Id: I34dea79a3c7c25f44fd76430d7e4bc21db78aa66"
+wikimedia/operations-puppet-cassandra,templates/cassandra-env.sh.erb,"Initial commit of Cassandra puppet module
+
+Change-Id: I34dea79a3c7c25f44fd76430d7e4bc21db78aa66"
+wikimedia/operations-puppet-cassandra,templates/cassandra-rackdc.properties.erb,"Initial commit of Cassandra puppet module
+
+Change-Id: I34dea79a3c7c25f44fd76430d7e4bc21db78aa66"
+wikimedia/operations-puppet-cassandra,templates/cassandra.yaml.erb,"Initial commit of Cassandra puppet module
+
+Change-Id: I34dea79a3c7c25f44fd76430d7e4bc21db78aa66"
+wikimedia/labs-icinga2,templates/hosts.conf.erb,"gerrit-test6 -> gerrit-test7
+
+Change-Id: I880ea3bfda830427ae4a2b9a24bffe24d3df0ad7"
+wikimedia/labs-icinga2,templates/services.conf.erb,"gerrit-test6 -> gerrit-test7
+
+Change-Id: I880ea3bfda830427ae4a2b9a24bffe24d3df0ad7"
+wikimedia/labs-icinga2,templates/hosts.conf.erb,"gerrit-test5 -> gerrit-test6
+
+Change-Id: I1b1bfb09e05b47747cc352850b4180f4e264195b"
+wikimedia/labs-icinga2,templates/services.conf.erb,"gerrit-test5 -> gerrit-test6
+
+Change-Id: I1b1bfb09e05b47747cc352850b4180f4e264195b"
+wikimedia/labs-icinga2,templates/hosts.conf.erb,"Disable check load on ORES Celery Workers
+
+Bug:T233114
+Change-Id: I187725d0499f4fd1691bc625156691ce0b65435e"
+wikimedia/labs-icinga2,templates/hosts.conf.erb,"Add ores-web-[04,05,06].wmflabs to monitoring
+
+Bug:T232921
+Change-Id: Ibda42f31d0c16aadff521b18372a083d6ea7e629"
+wikimedia/labs-icinga2,templates/hosts.conf.erb,"Remove ORES-web[01,02].experimental from Icinga2
+
+Bug:T232921
+Change-Id: Ib6302a6d48ce3c76145eb04ffffe66acd25effa2"
+wikimedia/labs-icinga2,templates/services.conf.erb,"labs-ns0.wikimedia.org -> cloud-ns0.wikimedia.org
+
+Change-Id: I91ecd23465bf48e9c9ffd9c38a81235f022e1633"
+wikimedia/labs-icinga2,templates/hosts.conf.erb,"jenkins-slave-01 -> jenkins-slave-02
+
+Change-Id: I93df05f91cadd9b6e3a407fa5b3ecaffe263f518"
+wikimedia/labs-icinga2,templates/services.conf.erb,"Increase time between check for puppet
+
+Bug:T222289
+Change-Id: Icffbc210fe6b73de935dce4e459fe91df9227d31"
+wikimedia/labs-icinga2,templates/templates.conf.erb,"Increase interval to 140m
+
+Change-Id: I9b4d82b6bd5368c25ca3cde3ac9be86b04efc3eb"
+wikimedia/labs-icinga2,templates/services.conf.erb,"gerrit-test3 -> gerrit-test5
+
+Change-Id: I464194226d1b87efded63d562927a6239e044074"
+wikimedia/labs-icinga2,templates/services.conf.erb,"Fix gerrit-test3 to be gerrit-test5 in services.conf
+
+Change-Id: Ie1f41a2f12dbeb708768190f378d0371b8f48e39"
+wikimedia/labs-icinga2,templates/hosts.conf.erb,"gerrit-test3 -> gerrit-test5
+
+Change-Id: Ifcaf4e38137880593cd2cb63bfe07d8b37021541"
+wikimedia/labs-icinga2,templates/hosts.conf.erb,"remove extra slash
+
+Change-Id: I482c0f973d2a3662926139bda009aa147b6d87f8"
+wikimedia/labs-icinga2,templates/hosts.conf.erb,"The real fix (you have to be smarter than machine)
+
+Change-Id: I08f782e89971df2bd3e1ed0d732cfb3344d7410d"
+wikimedia/labs-icinga2,templates/hosts.conf.erb,"Fix (maybe for real)
+
+Change-Id: I4b3ac72ab66b7d4ad6f5019fe9f65051d47346ac"
+wikimedia/labs-icinga2,templates/hosts.conf.erb,"Continue trying to fix new check_http
+
+Change-Id: I923f3a82af95b74964b77e6eea5d52d4542232a9"
+wikimedia/labs-icinga2,templates/hosts.conf.erb,"Fix new host config
+
+Change-Id: I6eae9f3c84f018493704f2e7c7f270218964e9c1"
+wikimedia/labs-icinga2,templates/hosts.conf.erb,"Add new host to checks
+
+Change-Id: I5875a8256b6578bc167e4e2bd05e81d045e438d2"
+wikimedia/labs-icinga2,templates/initscripts/icinga2.systemd.erb,"Add ICINGA2_ERROR_LOG ENV to systemd
+
+Change-Id: Ia3a3de5d0e28e075c6a3c01d0e78da59b36baf28"
+wikimedia/labs-icinga2,templates/initscripts/icinga2.systemd.erb,"Update systemd unit for 2.10
+
+Change-Id: I0b64b50a5d6082b089c49602e3fc3fbd2dee9140"
+wikimedia/labs-icinga2,templates/templates.conf.erb,"Up icinga2 time to reporting to every 1hr and 30mins
+
+Change-Id: I3e5251a4087b2cc641fcd309d24039f4cabc54d2"
+wikimedia/labs-icinga2,templates/hosts.conf.erb,"Update ip for gerrit-mysql
+
+Change-Id: I517e9b65ccb9c0fd20e11064dda5d5c08744b907"
+wikimedia/labs-icinga2,templates/hosts.conf.erb,"Remove ores-lb-02.ores.eqiad.wmflabs
+
+Change-Id: I6271f70795a46a90e3b2146bdb102094e2b605ff"
+wikimedia/labs-icinga2,templates/hosts.conf.erb,"remove ORES-worker03.experimental  and ORES-worker04.experimental
+
+Change-Id: I2d381a4538d15a4be5e3ca3be0535c4ed3fa7ba1"
+wikimedia/labs-icinga2,templates/hosts.conf.erb,"Remove ORES-worker06 and ORES-worker05
+
+hosts were deleted from the cloud.
+
+Change-Id: I259512f58ce3ac1e07517119c6e2b640a9773ef5"
+wikimedia/labs-icinga2,templates/services.conf.erb,"phab-01.wmflabs.org -> phab.wmflabs.org
+
+Change-Id: I190005da9ccc9a175ceb0cf8f58626a5f121675c"
+wikimedia/labs-icinga2,templates/templates.conf.erb,"Increase delay for reporting a second time about failures
+
+Change-Id: I7e3c0ce04c6eafe701fba78fe58c258c2ed6c515"
+wikimedia/labs-icinga2,templates/mail-host-notification.sh.erb,"Fix scripts
+
+Change-Id: I5a28f9758a1d6761537759dad0bdb0e4de85f41e"
+wikimedia/labs-icinga2,templates/mail-service-notification.sh.erb,"Fix scripts
+
+Change-Id: I5a28f9758a1d6761537759dad0bdb0e4de85f41e"
+wikimedia/labs-icinga2,templates/ores-mail-host-notification.sh.erb,"Fix scripts
+
+Change-Id: I5a28f9758a1d6761537759dad0bdb0e4de85f41e"
+wikimedia/labs-icinga2,templates/ores-mail-service-notification.sh.erb,"Fix scripts
+
+Change-Id: I5a28f9758a1d6761537759dad0bdb0e4de85f41e"
+wikimedia/labs-icinga2,templates/mail-host-notification.sh.erb,"Remove unused vars from shell script
+
+Change-Id: I70f8a8484c752e1e221e00c5a7c4debbeeee2e66"
+wikimedia/labs-icinga2,templates/mail-service-notification.sh.erb,"Remove unused vars from shell script
+
+Change-Id: I70f8a8484c752e1e221e00c5a7c4debbeeee2e66"
+wikimedia/labs-icinga2,templates/ores-mail-host-notification.sh.erb,"Remove unused vars from shell script
+
+Change-Id: I70f8a8484c752e1e221e00c5a7c4debbeeee2e66"
+wikimedia/labs-icinga2,templates/ores-mail-service-notification.sh.erb,"Remove unused vars from shell script
+
+Change-Id: I70f8a8484c752e1e221e00c5a7c4debbeeee2e66"
+wikimedia/labs-icinga2,manifests/web.pp,"Remove puppitsement of roles.ini
+
+Icinga directly writes to it thus puppet will rewrite it loosing data.
+
+Change-Id: I893d6fd413e9e605c275ee11637828266a3b3537"
+wikimedia/labs-icinga2,templates/roles.ini.erb,"Remove puppitsement of roles.ini
+
+Icinga directly writes to it thus puppet will rewrite it loosing data.
+
+Change-Id: I893d6fd413e9e605c275ee11637828266a3b3537"
