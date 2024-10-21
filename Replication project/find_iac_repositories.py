@@ -4,12 +4,12 @@ import re
 from datetime import datetime, timedelta
 
 # Read GitHub token
-with open('C:/Users/vilja/Documents/Github/tokens/token.txt', 'r') as file:
+with open('/Users/andrenguimbous/Poly/session4/LOG6307E-Release-Engineering/REPLICATION-PAPER/token.txt', 'r') as file:
     GITHUB_TOKEN = file.read().strip()
 
 headers = {'Authorization': f'token {GITHUB_TOKEN}'}
 base_url = 'https://api.github.com'
-target = 'Mirantis'
+target = 'openstack'
 
 # Puppet file extensions
 puppet_extensions = ['.pp', '.erb', '.epp']
@@ -155,7 +155,7 @@ def main():
     print(f"Total repositories fetched: {len(repos)}")
     filtered_repos = filter_repositories(repos)
     print(f"Total filtered repositories: {len(filtered_repos)}")
-    with open('C:/Users/vilja/Documents/PolyMtl/Mining Repositories/Replication project/commit_data.csv', 'w', newline='', encoding='utf-8') as csvfile:
+    with open('/Users/andrenguimbous/Poly/session4/LOG6307E-Release-Engineering/REPLICATION-PAPER/Replication-Project/Replication project/commit_data.csv', 'w', newline='', encoding='utf-8') as csvfile:
         fieldnames = ['Repository', 'File', 'Commit Message']
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames, quoting=csv.QUOTE_MINIMAL)
         writer.writeheader()
