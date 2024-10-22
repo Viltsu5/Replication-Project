@@ -140,9 +140,11 @@ def filter_repositories(repos):
                 commits = get_commit_messages(repo)
                 recent_commits = [c for c in commits if isinstance(c, dict) and datetime.strptime(
                     c['commit']['author']['date'], '%Y-%m-%dT%H:%M:%SZ') > datetime.now() - timedelta(days=30)]
-                print(f"Repo: {repo['full_name']}, Recent commits: {len(recent_commits)}")
-                filtered_repos.append(repo)
+                if len(recent_commits) >= 2:
+                    print(f"Repo: {repo['full_name']}, Recent commits: {len(recent_commits)}")
+                    filtered_repos.append(repo)
     return filtered_repos
+
 
 # Extract commit messages and append issue summaries if present.
 
@@ -174,7 +176,7 @@ def main():
     print(f"Total repositories fetched: {len(repos)}")
     filtered_repos = filter_repositories(repos)
     print(f"Total filtered repositories: {len(filtered_repos)}")
-    with open('wikimedia_commit_data.csv', 'w', newline='', encoding='utf-8') as csvfile:
+    with open('commit_data.csv', 'w', newline='', encoding='utf-8') as csvfile:
         fieldnames = ['Repository', 'File', 'Commit Message']
         writer = csv.DictWriter(
             csvfile, fieldnames=fieldnames, quoting=csv.QUOTE_MINIMAL)
