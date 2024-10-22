@@ -1,4 +1,15 @@
 Repository,File,Commit Message
+openstack/puppet-cinder,manifests/keystone/auth.pp,"Merge ""Deploy block-storage service type"""
+openstack/puppet-cinder,manifests/keystone/auth.pp,"Deploy block-storage service type
+
+The official service type name defined in service type authority is
+not volume or volumevN but ""block-storage"". In the recent discussion[1]
+it was recommended that a keystone service with that official name is
+created along with optional service types with legacy names.
+
+[1] https://lists.openstack.org/archives/list/openstack-discuss@lists.openstack.org/thread/QQ7L44VE4MOWOQVOFCZQPTIVI35A6SCK/
+
+Change-Id: Iafcb614532639391b6c2612f4ca5546f5940a912"
 openstack/puppet-cinder,manifests/backend/dellemc_powerflex.pp,"Use Hash values for properties
 
 Use Hash values instead of Array values to avoid unnecessary conversion
@@ -280,51 +291,17 @@ implemented in this module.
 
 Depends-on: https://review.opendev.org/930126
 Change-Id: I357130db1e230013203f58e5397b94fd823e1566"
-openstack/puppet-cinder,manifests/keystone/auth.pp,"Expose configure_service
+openstack/puppet-glance,manifests/limit.pp,"Merge ""Support new oslo.limit options to query endpoint"""
+openstack/puppet-glance,manifests/keystone/auth.pp,"Expose configure_service
 
 This parameter has been implemented in the underlying defined resource
 type but was not configurable.
 
-Change-Id: I411e0741a923d65aaca91d5167762f46a4f39e02"
-openstack/puppet-cinder,manifests/keystone/auth.pp,"Deprecate management of cinder v3 user
+Change-Id: Ib8a6fe73a7ba9cf1f499e1238a693724f5859436"
+openstack/puppet-glance,manifests/limit.pp,"Support new oslo.limit options to query endpoint
 
-Cinder does not require the dedicated keystone user for volume v3 API.
-Deprecate the functionality to create the additional keystone user for
-volume v3 API to get rid of the unnecessary complexity.
-
-Change-Id: I8567a79be1407630b3dcc20418c3f5489272a058"
-openstack/puppet-cinder,manifests/keystone/auth.pp,"Add validations for keystone resource parameters
-
-The underlying implementation already have type validations. Inherit
-these and make a few adjustment so that validation failures are raised
-from the external interface layer instead of the internal interface.
-
-Change-Id: Ibc35d0f9669fe575d57a4225ef331596aef37921"
-openstack/puppet-cinder,manifests/init.pp,"Expose rabbit_qos_prefetch_count
-
-The option was supported by puppet-oslo but was not configurable via
-this module.
-
-Change-Id: I607cfa83aa9d521461bb0758215015bb9e52c68e"
-openstack/puppet-cinder,manifests/healthcheck.pp,"Add support for [healthcheck] enable_by_file_paths
-
-Depends-on: https://review.opendev.org/923648
-Change-Id: I197732a6a9c53467012bb6e439af5ecdd7934397"
-openstack/puppet-cinder,manifests/backend/rbd.pp,"Add manage_package to RBD backend
-
-Ability to not manage the ceph-common package by setting
-this to false (Default: true)
-
-Change-Id: I1f51d9ed3f4862f2c0e357cb86e7469333c2c208"
-openstack/puppet-cinder,manifests/init.pp,"Merge ""Remove support for amqp1 messaging driver"""
-openstack/puppet-cinder,manifests/init.pp,"Remove support for amqp1 messaging driver
-
-The base implementation in puppet-oslo was deprecated during the 2023.2
-cycle[1], so can be removed now.
-
-[1] e174113210699b433dbae4c2c5a68bc3d269b5c3
-
-Change-Id: I6355316567b9b2963af1241f33c259e2aec82296"
+Depends-on: https://review.opendev.org/932062
+Change-Id: I0ccaf756c85367ba8f039ab76f34c6043d05af43"
 openstack/puppet-glance,manifests/backend/multistore/vsphere.pp,"Remove support for VMWare Datastore store driver
 
 We removed vmwareapi virt driver support of puppet-nova during 2023.2
@@ -438,14 +415,6 @@ openstack/puppet-glance,manifests/healthcheck.pp,"Add support for [healthcheck] 
 
 Depends-on: https://review.opendev.org/923648
 Change-Id: Ia3c7ac7025f0a0f908fed11feb229d159d72f890"
-openstack/puppet-glance,manifests/policy.pp,"Remove unnecessary openstacklib::policy resource tag
-
-This tag is no longer needed since dependency refactoring[1]. Remove
-the tag to make the implementation consistent across modules.
-
-[1] 8b3054a13f6af070d627a019c9e1fd996fd1fd6a
-
-Change-Id: I5fed59ee57e289d7b979163725ee6c676858be5c"
 openstack/puppet-horizon,manifests/dashboards/heat.pp,"Validate policy definitions using the new data type
 
 ... and also validate input for file mode using the existing type
@@ -588,6 +557,17 @@ openstack/puppet-horizon,manifests/init.pp,"Use explicit boolean rather than str
 ... so that we can enforce Boolean input in the future.
 
 Change-Id: I83422b3545a80cd6c76e1317771e3aad44dd978c"
+openstack/puppet-nova,manifests/limit.pp,"Merge ""Support new oslo.limit options to query endpoint"""
+openstack/puppet-nova,manifests/keystone/auth.pp,"Expose configure_service
+
+This parameter has been implemented in the underlying defined resource
+type but was not configurable.
+
+Change-Id: I6de5384c7d5085aeca212d7aee444b6ac4266a58"
+openstack/puppet-nova,manifests/limit.pp,"Support new oslo.limit options to query endpoint
+
+Depends-on: https://review.opendev.org/932062
+Change-Id: Iec828782a2c81dcd47323d851f1b6e32c02a3ea3"
 openstack/puppet-nova,manifests/migration/libvirt.pp,"Use more specific name for daemon-reload command
 
 ... to avoid conflict with the other modules. Also fix the typo of
@@ -661,102 +641,6 @@ openstack/puppet-nova,manifests/params.pp,"Merge ""CentOS/RHEL: Use modular libv
 openstack/puppet-nova,manifests/compute/libvirt.pp,"Merge ""Validate virt_type and cpu_mode"""
 openstack/puppet-nova,types/cpumode.pp,"Merge ""Validate virt_type and cpu_mode"""
 openstack/puppet-nova,types/virttype.pp,"Merge ""Validate virt_type and cpu_mode"""
-openstack/puppet-nova,manifests/compute/libvirt.pp,"Merge ""Reject customized cpu_mode for unsupported virt_type"""
-openstack/puppet-nova,manifests/compute/libvirt.pp,"Merge ""More strictly validate cpu_mode and cpu_models"""
-openstack/puppet-nova,manifests/patch/config.pp,"Merge ""Deprecate support for monkey_patch options"""
-openstack/puppet-nova,manifests/compute/libvirt.pp,"Validate virt_type and cpu_mode
-
-Nova accepts only specific values for these two options. Enforce
-the same supported choices at the input.
-
-Change-Id: I7c147896f1c04962117ebd1a9b483536826617ac"
-openstack/puppet-nova,types/cpumode.pp,"Validate virt_type and cpu_mode
-
-Nova accepts only specific values for these two options. Enforce
-the same supported choices at the input.
-
-Change-Id: I7c147896f1c04962117ebd1a9b483536826617ac"
-openstack/puppet-nova,types/virttype.pp,"Validate virt_type and cpu_mode
-
-Nova accepts only specific values for these two options. Enforce
-the same supported choices at the input.
-
-Change-Id: I7c147896f1c04962117ebd1a9b483536826617ac"
-openstack/puppet-nova,manifests/compute/libvirt.pp,"Reject customized cpu_mode for unsupported virt_type
-
-Using cpu_mode other than 'none' is supported only when virt_type is
-qemu or kvm and nova-compute fails to start in case an unsupported
-combination is used. Enforce this requirement during deployment to
-make the invalid configuration more visible.
-
-Change-Id: If9fc59797c4a24a3b7536cd3fe8770316fdf4f4d"
-openstack/puppet-nova,manifests/compute/libvirt.pp,"More strictly validate cpu_mode and cpu_models
-
-The nova-compute service fails to start in case
- cpu_mode is 'custom' but cpu_models is default or empty
-or
- cpu_models is configured but cpu_mode is not 'custom'
-
-Make the deployment hard-fail in case the given values are not accepted
-by nova, to make users aware of their misconfiguration.
-
-Change-Id: Iea4fb9990981ec0dc14a0dabd9674aa3b27a7137"
-openstack/puppet-nova,manifests/patch/config.pp,"Deprecate support for monkey_patch options
-
-... because these were deprecated in Queens release, and were already
-removed from nova[1].
-
-[1] 9f48aee9b0ea68f7c8eba6a1f3d076e4194d804d
-
-Change-Id: I843b6d79fdf4fb0218a06327c9f6346aa9abd554"
-openstack/puppet-nova,manifests/compute.pp,"Use undef for non boolean values
-
-'undef' is the preferred value for non boolean parameters. Switching
-to undef allows us to more easily implement parameter types later.
-
-Change-Id: I994a33ecf3f5020617e1acfb50c0a81ae1c1aa45"
-openstack/puppet-nova,manifests/compute/spice.pp,"Use undef for non boolean values
-
-'undef' is the preferred value for non boolean parameters. Switching
-to undef allows us to more easily implement parameter types later.
-
-Change-Id: I994a33ecf3f5020617e1acfb50c0a81ae1c1aa45"
-openstack/puppet-nova,manifests/init.pp,"Use undef for non boolean values
-
-'undef' is the preferred value for non boolean parameters. Switching
-to undef allows us to more easily implement parameter types later.
-
-Change-Id: I994a33ecf3f5020617e1acfb50c0a81ae1c1aa45"
-openstack/puppet-nova,manifests/init.pp,"Fix described wrong default of nova::enabled_ssl_apis
-
-Change-Id: Id8148559685119661ff2afaab02c53cc0f65a6b8"
-openstack/puppet-nova,manifests/compute/libvirt/version.pp,"Drop redundant class name from failure log
-
-Usually the class name is automatically displayed by puppet when
-the fail function is called, so we don't have to include it explicitly
-in the log.
-
-Change-Id: Id12525911e287587c385e78252fa4ed7f0a47e72"
-openstack/puppet-nova,manifests/migration/libvirt.pp,"CentOS/RHEL: Use modular libvirt daemons by default
-
-As of RHEL9 (and thus CentOS 9), modular libvirt is the recommended
-mechanism for libvirtd. Adjust the default deployment architecture
-accordingly.
-
-Reference
-https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/considerations_in_adopting_rhel_9/assembly_virtualization_considerations-in-adopting-rhel-9#ref_changes-to-libvirt_assembly_virtualization
-
-Change-Id: I9317d86cd83b686757ff3a0a7335f99503488d1d"
-openstack/puppet-nova,manifests/params.pp,"CentOS/RHEL: Use modular libvirt daemons by default
-
-As of RHEL9 (and thus CentOS 9), modular libvirt is the recommended
-mechanism for libvirtd. Adjust the default deployment architecture
-accordingly.
-
-Reference
-https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/considerations_in_adopting_rhel_9/assembly_virtualization_considerations-in-adopting-rhel-9#ref_changes-to-libvirt_assembly_virtualization
-
-Change-Id: I9317d86cd83b686757ff3a0a7335f99503488d1d"
 openstack/puppet-swift,manifests/keystone/auth.pp,"Merge ""Add validations for keystone resource parameters"""
 openstack/puppet-swift,manifests/keystone/auth.pp,"Add validations for keystone resource parameters
 
@@ -1176,16 +1060,12 @@ These frontneds have been removed in quincy release[1].
 [1] https://github.com/ceph/ceph/commit/1627d6c76a906da1ea99c721443135ff9c07db43
 
 Change-Id: Ib6d2055beee21e3dbc56a8f577437ebc7ca986bd"
-openstack/puppet-ceph,manifests/repo.pp,"Remove support for CentOS 8 (non-stream)
+openstack/puppet-designate,manifests/keystone/auth.pp,"Expose configure_service
 
-CentOS 8 reached its EOL a while ago. Because we already removed
-support for CentOS 7, we no longer support any non-stream CentOS
-versions.
+This parameter has been implemented in the underlying defined resource
+type but was not configurable.
 
-This deprecates the stream parameter and makes the stream repository
-used always.
-
-Change-Id: Iba3c8aea2f6dd8b9cca17ed1468a43d6c7d39b53"
+Change-Id: Ic2bfcbf22af942f2f6bbce8126f2aa6932ff8b93"
 openstack/puppet-designate,manifests/init.pp,"Expose parameter to customize [oslo_messaging_notifications] retry
 
 The parameter has been managed by puppet-oslo, but its value could not
@@ -1300,7 +1180,53 @@ Change-Id: Ic3093b91eddeeadbf9fb751df905e259a6f5c6c5"
 openstack/puppet-designate,templates/pdns4-pools.yaml.erb,"Support customizing pool attributes
 
 Change-Id: Ic3093b91eddeeadbf9fb751df905e259a6f5c6c5"
-openstack/puppet-designate,manifests/init.pp,"Merge ""Expose rabbit_transient_quorum_queue"""
+openstack/puppet-ironic,manifests/pxe.pp,"Merge ""Create dnsmasq-tftp-server.conf at the correct timing"""
+openstack/puppet-ironic,manifests/pxe.pp,"Merge ""pxe: Fix wrong anchors"""
+openstack/puppet-ironic,manifests/inspector.pp,"Merge ""Deprecate support for ironic-inspector"""
+openstack/puppet-ironic,manifests/pxe.pp,"Merge ""Drop redundant conversion to string"""
+openstack/puppet-ironic,manifests/pxe.pp,"Create dnsmasq-tftp-server.conf at the correct timing
+
+It should be created during the config phase, especially after
+the packages are installed.
+
+Change-Id: I3868a0d2ffa5c71077df091918d9d46d83543992"
+openstack/puppet-ironic,manifests/pxe.pp,"pxe: Fix wrong anchors
+
+We should use the ironic anchor instead of the ironic-inspector
+anchor to ensure that the ironic user/group is already created.
+
+Change-Id: Ie744cd8afd534a2703b6e3fe15cb25ffb07c3708"
+openstack/puppet-ironic,manifests/pxe.pp,"Drop redundant conversion to string
+
+The actual variables are already strings.
+
+Change-Id: I2e59fbfe0c15b4a5066a05e7b1fcb773541dd194"
+openstack/puppet-ironic,manifests/inspector.pp,"Deprecate support for ironic-inspector
+
+ironic-inspector was deprecated in favor of the built-in in-band
+inspection in ironic[1].
+
+[1] e96ee4b5ffc44c70ad601a7029c9cad20e93dc4b
+
+Change-Id: I8e881f047cc58596df6692f12201b2c33911b63f"
+openstack/puppet-ironic,manifests/keystone/auth.pp,"Expose configure_service
+
+This parameter has been implemented in the underlying defined resource
+type but was not configurable.
+
+Change-Id: I9439d4b37cda8be922a4a1b8a6cc3acc7078ec6d"
+openstack/puppet-ironic,manifests/keystone/auth_inspector.pp,"Expose configure_service
+
+This parameter has been implemented in the underlying defined resource
+type but was not configurable.
+
+Change-Id: I9439d4b37cda8be922a4a1b8a6cc3acc7078ec6d"
+openstack/puppet-ironic,manifests/inspector.pp,"Ensure inspector.conf is read by WSGI app
+
+The ironic-inspector-api WSGI application attempts to load
+ironic-inspector.conf instead of inspector.conf .
+
+Change-Id: Ic27c96b872cf92762f045018003bc9dad8f5bae2"
 openstack/puppet-ironic,manifests/drivers/drac.pp,"Merge ""drac: Improve parameter coverage"""
 openstack/puppet-ironic,manifests/drivers/drac.pp,"Merge ""drac: Stop installing dracclient"""
 openstack/puppet-ironic,manifests/params.pp,"Merge ""drac: Stop installing dracclient"""
@@ -1423,127 +1349,13 @@ Change-Id: I5c47d82c252aae998915d6f4b7cb34f6e013cb0b"
 openstack/puppet-ironic,manifests/init.pp,"Merge ""Support [DEFAULT] host option"""
 openstack/puppet-ironic,manifests/init.pp,"Merge ""Expose rabbit_qos_prefetch_count"""
 openstack/puppet-ironic,manifests/inspector.pp,"Merge ""Expose rabbit_qos_prefetch_count"""
-openstack/puppet-ironic,manifests/init.pp,"Support [DEFAULT] host option
+openstack/puppet-trove,manifests/keystone/auth.pp,"Merge ""Expose configure_service"""
+openstack/puppet-trove,manifests/keystone/auth.pp,"Expose configure_service
 
-... which is internally used as an opaque identifier.
+This parameter has been implemented in the underlying defined resource
+type but was not configurable.
 
-Change-Id: I3591fbe25c4edc772825492be034361cdc492641"
-openstack/puppet-ironic,manifests/init.pp,"Expose rabbit_qos_prefetch_count
-
-The option was supported by puppet-oslo but was not configurable via
-this module.
-
-Change-Id: I468350ccc56984c28469ab9853ac4cc7519fdaae"
-openstack/puppet-ironic,manifests/inspector.pp,"Expose rabbit_qos_prefetch_count
-
-The option was supported by puppet-oslo but was not configurable via
-this module.
-
-Change-Id: I468350ccc56984c28469ab9853ac4cc7519fdaae"
-openstack/puppet-ironic,manifests/conductor.pp,"Merge ""Support conductor options to determine max concurrency"""
-openstack/puppet-ironic,manifests/conductor.pp,"Support conductor options to determine max concurrency
-
-Change-Id: Ie3c0e789daa675ddf6eff1c8a831c65c4163dacc"
-openstack/puppet-ironic,manifests/conductor.pp,"Support customizing [conductor] periodic_max_workers
-
-Change-Id: I8f7be78393425ca67acca2752824c936326d76e5"
-openstack/puppet-ironic,manifests/drivers/ipmi.pp,"Merge ""Support customization of [ipmi] store_cred_in_env"""
-openstack/puppet-ironic,manifests/healthcheck.pp,"Merge ""Add support for [healthcheck] enable_by_file_paths"""
-openstack/puppet-ironic,manifests/inspector/healthcheck.pp,"Merge ""Add support for [healthcheck] enable_by_file_paths"""
-openstack/puppet-ironic,manifests/inspector/healthcheck.pp,"Merge ""inspector: Fix missing healthcheck options"""
-openstack/puppet-ironic,manifests/healthcheck.pp,"Add support for [healthcheck] enable_by_file_paths
-
-Depends-on: https://review.opendev.org/923648
-Change-Id: I6d7fb809c76ab07139cb1f5253c682894fc0c4da"
-openstack/puppet-ironic,manifests/inspector/healthcheck.pp,"Add support for [healthcheck] enable_by_file_paths
-
-Depends-on: https://review.opendev.org/923648
-Change-Id: I6d7fb809c76ab07139cb1f5253c682894fc0c4da"
-openstack/puppet-ironic,manifests/drivers/ipmi.pp,"Support customization of [ipmi] store_cred_in_env
-
-Depends-on: https://review.opendev.org/917229
-Change-Id: Ica6ef75948a3f1d60b3a564afed8f26447b13e8e"
-openstack/devstack-vagrant,puppet/modules/devstack/templates/local.erb,"Merge ""Add IP_VERSION in template, set default as ipv4 only"""
-openstack/devstack-vagrant,puppet/modules/devstack/templates/local.erb,"Add IP_VERSION in template, set default as ipv4 only
-
-For some environments (include mine), ipv6 instructions in stack.sh does not work.
-
-Change-Id: I4b5c69f57191628664450330a08248aae05c2813"
-openstack/devstack-vagrant,puppet/modules/devstack/manifests/init.pp,"Update git repo url to opendev
-
-Change-Id: I2bd3fc3d86333cc6cba78f0f7003e310e8005a88"
-openstack/devstack-vagrant,puppet/modules/grenade/manifests/init.pp,"Update git repo url to opendev
-
-Change-Id: I2bd3fc3d86333cc6cba78f0f7003e310e8005a88"
-openstack/devstack-vagrant,puppet/manifests/default.pp,"Update vagrant box version
-
-Devstack master(Victoria) has dropped xenial distro, switch base box
-version to bionic.
-
-Bionic has puppet5 as default puppet version, which has faster puppet
-class running in parallel, so devstack and grenade repos were being
-checked out while /home/stack dir were still being created, impose puppet
-class ordering.
-
-Change-Id: I89af65ca8c53aa41407ed7e4ca0edef88daae3b9"
-openstack/devstack-vagrant,puppet/modules/devstack/templates/local.erb,"make internal interface names configurable from config.yaml
-
-Change-Id: Ia018f3a71073a7cfdb093096ba313292909f2675"
-openstack/devstack-vagrant,puppet/manifests/default.pp,"make vagrant user configurable from config.yaml
-
-RELATED_BUG: 1569237
-RELATED_BUG: 1589721
-
-Change-Id: I57b5c9ea124b071c6d31b8c825c9cb1d2e89a8ce"
-openstack/devstack-vagrant,puppet/modules/user/manifests/vagrant.pp,"make vagrant user configurable from config.yaml
-
-RELATED_BUG: 1569237
-RELATED_BUG: 1589721
-
-Change-Id: I57b5c9ea124b071c6d31b8c825c9cb1d2e89a8ce"
-openstack/devstack-vagrant,puppet/modules/devstack/templates/local.erb,"Merge ""Add manager_extra_services to config.yaml and local.erb"""
-openstack/devstack-vagrant,puppet/modules/devstack/manifests/init.pp,"Use git.openstack.org everywhere
-
-Our official git master is at git.openstack.org, update places
-that use github instead.
-
-Change-Id: I21deb1246c4d83c6c8baaeb4dc45d78f2157460a"
-openstack/devstack-vagrant,puppet/modules/grenade/manifests/init.pp,"Use git.openstack.org everywhere
-
-Our official git master is at git.openstack.org, update places
-that use github instead.
-
-Change-Id: I21deb1246c4d83c6c8baaeb4dc45d78f2157460a"
-openstack/devstack-vagrant,puppet/modules/devstack/templates/local.erb,"Remove Cirros URL from IMAGE_URLS
-
-Devstack introduced DOWNLOAD_DEFAULT_IMAGES setting which
-by default is True and extends IMAGE_URLS variable with
-some default images, including Cirros. devstack-vagrant
-also extends IMAGE_URLS with Cirros URL. This results in
-error about duplicate entries in this variable.
-
-Change-Id: I86f1ca5b9bef73e41657ce6fec17dd378d9e33ef
-Closes-Bug: #1497533 "
-openstack/devstack-vagrant,puppet/modules/devstack/templates/local.erb,"Add manager_extra_services to config.yaml and local.erb
-
-Specify the additional services to enable on the manager node
-
-Change-Id: I3154f0ca7ab4489a2510fe4f302f8a9fbfb87bd1"
-openstack/devstack-vagrant,puppet/modules/devstack/templates/local.erb,"update cirros version
-
-- update cirros to recent 0.3.4 as same version as devstack
-- README: explain extra_images puppet config
-
-Change-Id: Idc275d19a6e54212500b860bf4a0e476b60d4c69
-Signed-off-by: Hiroshi Miura <miurahr@nttdata.co.jp>"
-openstack/devstack-vagrant,puppet/modules/devstack/templates/local.erb,"Merge ""Add extra-images puppet variable"""
-openstack/devstack-vagrant,puppet/modules/devstack/templates/local.erb,"Add extra-images puppet variable
-
-If the user wants to use his own mirror to get extra images for glance
-or wants to add more images not just the default cirros it can be done
-using this custom variable on config.yaml
-
-Change-Id: I121ba07f15427b926ddade36adfc60a89647a9d4"
+Change-Id: I0165b801e2b749587f4942757348cdfb9f9f8425"
 openstack/puppet-trove,manifests/api.pp,"Use common defined resource type to manage ssl options
 
 Change-Id: I1c8e2ad1d65a6ce5388695ee2a2ad66cbd3b6c29"
@@ -1678,10 +1490,100 @@ functionality has been broken for some time.
 
 Related-Bug: #2058861
 Change-Id: I1c2e6d7f2e6e40def584ef72cbf118970d36c83a "
-openstack/puppet-trove,manifests/init.pp,"Merge ""Add support for [network] network_isolation"""
-openstack/puppet-trove,manifests/init.pp,"Add support for [network] network_isolation
+openstack/puppet-manila,manifests/network/neutron_network.pp,"Merge ""Support NeutronNetworkPlugin options"""
+openstack/puppet-manila,manifests/network/neutron_single_network.pp,"Merge ""Support NeutronNetworkPlugin options"""
+openstack/puppet-manila,manifests/image/glance.pp,"Merge ""Fix wrong default value in parameter description"""
+openstack/puppet-manila,manifests/backend/generic.pp,"Merge ""Deprecate support for backend options in [DEFAULT] section"""
+openstack/puppet-manila,manifests/share/generic.pp,"Merge ""Deprecate support for backend options in [DEFAULT] section"""
+openstack/puppet-manila,manifests/share/hitachi_hnas.pp,"Merge ""Deprecate support for backend options in [DEFAULT] section"""
+openstack/puppet-manila,manifests/share/netapp.pp,"Merge ""Deprecate support for backend options in [DEFAULT] section"""
+openstack/puppet-manila,manifests/network/neutron_network.pp,"Support NeutronNetworkPlugin options
 
-Change-Id: Ifdd4aad61df32ab4baba55eebaa9cf42567968c4"
+Change-Id: I39f3758379a724b07a11e827be3af520ef2cd3f2"
+openstack/puppet-manila,manifests/network/neutron_single_network.pp,"Support NeutronNetworkPlugin options
+
+Change-Id: I39f3758379a724b07a11e827be3af520ef2cd3f2"
+openstack/puppet-manila,manifests/image/glance.pp,"Fix wrong default value in parameter description
+
+Apparently we use glance user instead of cinder user for [glance]
+section by default.
+
+Trivial-Fix
+
+Change-Id: I063a8c2f1b5fbd06847051409134b7c82eca638c"
+openstack/puppet-manila,manifests/backend/generic.pp,"generic: Drop redundant hard-coded defaults
+
+These default values exactly match service defaults.
+
+Change-Id: Ic9ff40a5739b5c4c1083f60f119cb6d9fd328ce3"
+openstack/puppet-manila,manifests/share/generic.pp,"generic: Drop redundant hard-coded defaults
+
+These default values exactly match service defaults.
+
+Change-Id: Ic9ff40a5739b5c4c1083f60f119cb6d9fd328ce3"
+openstack/puppet-manila,manifests/backend/generic.pp,"Deprecate support for backend options in [DEFAULT] section
+
+Recent manila requires these options configured in each backend section
+to support multiple backends. The current implementation does not allow
+users to use multiple types of backends (eg generic + netapp) and is
+not aligned with the multi backend capability of Manila.
+
+What is worse, the ::generic class now can't be used with the core
+share class because of some core share options are defined in both.
+
+Deprecate these classes to manage [DEFAULT] section to avoid further
+confusion.
+
+Change-Id: Iaef31b91b0f4d5724726ded177e2e107f40adf30"
+openstack/puppet-manila,manifests/share/generic.pp,"Deprecate support for backend options in [DEFAULT] section
+
+Recent manila requires these options configured in each backend section
+to support multiple backends. The current implementation does not allow
+users to use multiple types of backends (eg generic + netapp) and is
+not aligned with the multi backend capability of Manila.
+
+What is worse, the ::generic class now can't be used with the core
+share class because of some core share options are defined in both.
+
+Deprecate these classes to manage [DEFAULT] section to avoid further
+confusion.
+
+Change-Id: Iaef31b91b0f4d5724726ded177e2e107f40adf30"
+openstack/puppet-manila,manifests/share/hitachi_hnas.pp,"Deprecate support for backend options in [DEFAULT] section
+
+Recent manila requires these options configured in each backend section
+to support multiple backends. The current implementation does not allow
+users to use multiple types of backends (eg generic + netapp) and is
+not aligned with the multi backend capability of Manila.
+
+What is worse, the ::generic class now can't be used with the core
+share class because of some core share options are defined in both.
+
+Deprecate these classes to manage [DEFAULT] section to avoid further
+confusion.
+
+Change-Id: Iaef31b91b0f4d5724726ded177e2e107f40adf30"
+openstack/puppet-manila,manifests/share/netapp.pp,"Deprecate support for backend options in [DEFAULT] section
+
+Recent manila requires these options configured in each backend section
+to support multiple backends. The current implementation does not allow
+users to use multiple types of backends (eg generic + netapp) and is
+not aligned with the multi backend capability of Manila.
+
+What is worse, the ::generic class now can't be used with the core
+share class because of some core share options are defined in both.
+
+Deprecate these classes to manage [DEFAULT] section to avoid further
+confusion.
+
+Change-Id: Iaef31b91b0f4d5724726ded177e2e107f40adf30"
+openstack/puppet-manila,manifests/keystone/auth.pp,"Merge ""Expose configure_service"""
+openstack/puppet-manila,manifests/keystone/auth.pp,"Expose configure_service
+
+This parameter has been implemented in the underlying defined resource
+type but was not configurable.
+
+Change-Id: I9a488f3e42d67e46654e15b7c47588c65a4eb239"
 openstack/puppet-manila,manifests/init.pp,"Merge ""Drop redundant hard-coded default of storage_availability_zone"""
 openstack/puppet-manila,manifests/init.pp,"Drop redundant hard-coded default of storage_availability_zone
 
@@ -1761,49 +1663,16 @@ this module.
 
 Change-Id: I820ee7850fcd5561483a1b570e6c1ad3a2cc758a"
 openstack/puppet-manila,manifests/init.pp,"Merge ""Fix inconsistent default notification driver"""
-openstack/puppet-manila,manifests/init.pp,"Fix inconsistent default notification driver
+openstack/puppet-gnocchi,manifests/keystone/auth.pp,"Merge ""Expose configure_service"""
+openstack/puppet-gnocchi,manifests/wsgi/apache.pp,"add access_log_env_var parameter to gnocchi::wsgi::apache
 
-Use the os_service_default fact, which effectively means noop
-notification driver, because it is a more commonly used default.
+Change-Id: I981d71c1be4fb5e747ffd76806ca7d8dd7c433ec"
+openstack/puppet-gnocchi,manifests/keystone/auth.pp,"Expose configure_service
 
-Closes-Bug: #2079986
-Change-Id: Ia0d3fcf2b4a951144a4c03732f5a637e40c68aeb "
-openstack/puppet-manila,manifests/init.pp,"Merge ""Add parameter to customize [DEFAULT] service_down_time"""
-openstack/puppet-manila,manifests/init.pp,"Add parameter to customize [DEFAULT] service_down_time
+This parameter has been implemented in the underlying defined resource
+type but was not configurable.
 
-The service_down_time option may need to be tuned in some deployments
-(eg. large deployment with high load in rabbitmq).
-
-Add a native parameter to customize the option.
-
-Change-Id: I18a5370228fa90017d3e81707c7dcdbba8c52eb5"
-openstack/puppet-manila,manifests/backend/cephfs.pp," Add support for the cephfs_nfs_cluster_id parameter
-
-Change-Id: Id2b3e800a9ca5f50d050f15f8c0d136626cc8e51"
-openstack/puppet-manila,manifests/healthcheck.pp,"Add support for [healthcheck] enable_by_file_paths
-
-Depends-on: https://review.opendev.org/923648
-Change-Id: Id0645628a0a8b7649412c63555d3f8b539d9348c"
-openstack/puppet-manila,manifests/init.pp,"Merge ""Remove support for amqp1 messaging driver"""
-openstack/puppet-manila,manifests/init.pp,"Remove support for amqp1 messaging driver
-
-The base implementation in puppet-oslo was deprecated during the 2023.2
-cycle[1], so can be removed now.
-
-[1] e174113210699b433dbae4c2c5a68bc3d269b5c3
-
-Change-Id: I212d2186d30ab4be5171138cf57150f00ea19a59"
-openstack/puppet-manila,manifests/client.pp,"Merge ""client: Install openstackclient"""
-openstack/puppet-manila,manifests/api.pp,"Merge ""Replace deprecated keystone::client"""
-openstack/puppet-manila,manifests/client.pp,"client: Install openstackclient
-
-The manila CLI was already deprecated in favor of the openstack CLI
-plugin[1]. Install openstackclient when client is requested so that
-the openstack CLI can be used.
-
-[1] ba9a3887869ecd4cbed4aeb43c11a3d9493fafa2
-
-Change-Id: I4589f6d74b3f4b6b88333306eb013b91fc0a9d44"
+Change-Id: I94b21ffda5a546453c85af3680082f531e4b0ce2"
 openstack/puppet-gnocchi,manifests/logging.pp,"Merge ""logging: Deprecate unused watch_log_file option"""
 openstack/puppet-gnocchi,manifests/logging.pp,"logging: Deprecate unused watch_log_file option
 
@@ -1923,155 +1792,9 @@ openstack/puppet-gnocchi,manifests/healthcheck.pp,"healthcheck: Expose allowed_s
 
 Depends-on: https://review.opendev.org/905557
 Change-Id: I671ab529cee053f59e611e119af93d7123756e2a"
-openstack/puppet-openstack-cookiecutter,puppet-{{cookiecutter.project_name}}/manifests/logging.pp,"Drop hard-coded log_file
+openstack/puppet-zaqar,manifests/keystone/auth.pp,"Fix ignored configure_service
 
-Because the service config file is shared among multiple services,
-we should not set the option without any specific reason. In case
-the option is not set (and no --log-file argument is passed) then
-log file name is determined according to the process name, and each
-service creates its own file.
-
-Change-Id: Iadaf4eceb0a052bef437603d6cbe6422f4ee9b13"
-openstack/puppet-openstack-cookiecutter,puppet-{{cookiecutter.project_name}}/manifests/logging.pp,"logging: Drop watch_log_file
-
-This option was deprecated in oslo.log 6.0.0 [1].
-
-[1] https://review.opendev.org/914788
-
-Change-Id: I18d26f6bc59fe6007f40c5b410e2571c01b2b2f4"
-openstack/puppet-openstack-cookiecutter,puppet-{{cookiecutter.project_name}}/manifests/db.pp,"Refactor resource dependencies
-
-This refactors resource dependencies to avoid unnecessary dependencies
-across services.
-
-Change-Id: I0f0c12f77eb39cb1d1c68fe2b02050ada257aabb"
-openstack/puppet-openstack-cookiecutter,puppet-{{cookiecutter.project_name}}/manifests/deps.pp,"Refactor resource dependencies
-
-This refactors resource dependencies to avoid unnecessary dependencies
-across services.
-
-Change-Id: I0f0c12f77eb39cb1d1c68fe2b02050ada257aabb"
-openstack/puppet-openstack-cookiecutter,puppet-{{cookiecutter.project_name}}/manifests/keystone/authtoken.pp,"Refactor resource dependencies
-
-This refactors resource dependencies to avoid unnecessary dependencies
-across services.
-
-Change-Id: I0f0c12f77eb39cb1d1c68fe2b02050ada257aabb"
-openstack/puppet-openstack-cookiecutter,puppet-{{cookiecutter.project_name}}/manifests/policy.pp,"Refactor resource dependencies
-
-This refactors resource dependencies to avoid unnecessary dependencies
-across services.
-
-Change-Id: I0f0c12f77eb39cb1d1c68fe2b02050ada257aabb"
-openstack/puppet-openstack-cookiecutter,puppet-{{cookiecutter.project_name}}/manifests/config.pp,"replace validate_legacy with proper data types
-
-the validate_legacy function is marked for deprecation in
-v9.0.0 from puppetlabs-stdlib.
-
-This also adds the type enforcement about purge_config which accepts
-only boolean values.
-
-Change-Id: I243572f19564a18003c3de66c1248f0f215bae65"
-openstack/puppet-openstack-cookiecutter,puppet-{{cookiecutter.project_name}}/manifests/db/mysql.pp,"replace validate_legacy with proper data types
-
-the validate_legacy function is marked for deprecation in
-v9.0.0 from puppetlabs-stdlib.
-
-This also adds the type enforcement about purge_config which accepts
-only boolean values.
-
-Change-Id: I243572f19564a18003c3de66c1248f0f215bae65"
-openstack/puppet-openstack-cookiecutter,puppet-{{cookiecutter.project_name}}/manifests/policy.pp,"replace validate_legacy with proper data types
-
-the validate_legacy function is marked for deprecation in
-v9.0.0 from puppetlabs-stdlib.
-
-This also adds the type enforcement about purge_config which accepts
-only boolean values.
-
-Change-Id: I243572f19564a18003c3de66c1248f0f215bae65"
-openstack/puppet-openstack-cookiecutter,puppet-{{cookiecutter.project_name}}/manifests/deps.pp,"Add per module policy service refresh
-
-Updating the policies for this project should only
-refresh the services that reads it.
-
-Change-Id: I18418bb01da896f0e12aead11c28b24c0e103c62"
-openstack/puppet-openstack-cookiecutter,puppet-{{cookiecutter.project_name}}/manifests/policy.pp,"Add per module policy service refresh
-
-Updating the policies for this project should only
-refresh the services that reads it.
-
-Change-Id: I18418bb01da896f0e12aead11c28b24c0e103c62"
-openstack/puppet-openstack-cookiecutter,puppet-{{cookiecutter.project_name}}/manifests/db/sync.pp,"Merge ""Avoid hard-coding OS user in each manifests"""
-openstack/puppet-openstack-cookiecutter,puppet-{{cookiecutter.project_name}}/manifests/params.pp,"Merge ""Avoid hard-coding OS user in each manifests"""
-openstack/puppet-openstack-cookiecutter,puppet-{{cookiecutter.project_name}}/manifests/db/sync.pp,"Avoid hard-coding OS user in each manifests
-
-... but define it ::params as is done for group.
-
-Change-Id: If343a8d89c7675a969e0a16ad9903cd4051ce750"
-openstack/puppet-openstack-cookiecutter,puppet-{{cookiecutter.project_name}}/manifests/params.pp,"Avoid hard-coding OS user in each manifests
-
-... but define it ::params as is done for group.
-
-Change-Id: If343a8d89c7675a969e0a16ad9903cd4051ce750"
-openstack/puppet-openstack-cookiecutter,puppet-{{cookiecutter.project_name}}/manifests/db.pp,"Replace legacy facts and use fact hash
-
-... because the latest lint no longer allows usage of legacy facts and
-top scope fact.
-
-Change-Id: I54ecd455a380fcba65132bfc9723b6a1b6c7591e"
-openstack/puppet-openstack-cookiecutter,puppet-{{cookiecutter.project_name}}/manifests/keystone/authtoken.pp,"Replace legacy facts and use fact hash
-
-... because the latest lint no longer allows usage of legacy facts and
-top scope fact.
-
-Change-Id: I54ecd455a380fcba65132bfc9723b6a1b6c7591e"
-openstack/puppet-openstack-cookiecutter,puppet-{{cookiecutter.project_name}}/manifests/logging.pp,"Replace legacy facts and use fact hash
-
-... because the latest lint no longer allows usage of legacy facts and
-top scope fact.
-
-Change-Id: I54ecd455a380fcba65132bfc9723b6a1b6c7591e"
-openstack/puppet-openstack-cookiecutter,puppet-{{cookiecutter.project_name}}/manifests/params.pp,"Replace legacy facts and use fact hash
-
-... because the latest lint no longer allows usage of legacy facts and
-top scope fact.
-
-Change-Id: I54ecd455a380fcba65132bfc9723b6a1b6c7591e"
-openstack/puppet-openstack-cookiecutter,puppet-{{cookiecutter.project_name}}/manifests/policy.pp,"Replace legacy facts and use fact hash
-
-... because the latest lint no longer allows usage of legacy facts and
-top scope fact.
-
-Change-Id: I54ecd455a380fcba65132bfc9723b6a1b6c7591e"
-openstack/puppet-openstack-cookiecutter,puppet-{{cookiecutter.project_name}}/manifests/policy.pp,"Expose policy_default_rule
-
-The option has been managed by the underlying puppet-oslo module but
-has not been configurable. This introduces the parameter to customize
-the option.
-
-Change-Id: Idcd4b7afac385757702577f7eb5e73e7a460fe86"
-openstack/puppet-openstack-cookiecutter,puppet-{{cookiecutter.project_name}}/manifests/deps.pp,"Merge ""Fix dependencies related to openstacklib::policy"""
-openstack/puppet-openstack-cookiecutter,puppet-{{cookiecutter.project_name}}/manifests/deps.pp,"Fix dependencies related to openstacklib::policy
-
-Since [1] was merged, not only openstacklib::poliy::base but also
-openstacklib::policy::default is included to manage the policy file.
-This change ensure openstacklib::policy::default is executed after
-the packages are installed.
-
-[1] 740d1bb822e8543535a2fccb4f2eab4b5809422c
-
-Change-Id: Ia100cbf628590218dfa4afa051b0fa8acd024a5a"
-openstack/puppet-openstack-cookiecutter,puppet-{{cookiecutter.project_name}}/manifests/keystone/auth.pp,"Simplify definition to ensure keystone resource creation
-
-Use the whole resource type instead of its individual resources, to
-rely on interface instead of implementation of the dependent module.
-
-Change-Id: I00b501ff5a9e0411445c253febb7f60f31f8babf"
-openstack/puppet-openstack-cookiecutter,puppet-{{cookiecutter.project_name}}/manifests/keystone/auth.pp,"Allow customizing project/system roles
-
-Change-Id: Id3b65ff4dcc973b74298ea91f9da7cbafa0f5da7"
-openstack/puppet-openstack-cookiecutter,puppet-{{cookiecutter.project_name}}/manifests/keystone/auth.pp,"Merge ""Use consistent service description"""
+Change-Id: Ifea999bf184416320b8e97cbab8f95b26d4f2964"
 openstack/puppet-zaqar,manifests/logging.pp,"logging: Deprecate watch_log_file
 
 This option was deprecated in oslo.log 6.0.0 [1]. Because the warning
@@ -2203,6 +1926,72 @@ openstack/puppet-zaqar,manifests/init.pp,"Do not hard-code default stores
 ... as is described in the parameter descriptions.
 
 Change-Id: Iabdf90bf6cf4cede7fe705032d5a65dabc69b8e2"
+openstack/puppet-openstack-integration,manifests/nova.pp,"Merge ""nova: Stop overriding modular_libvirt"""
+openstack/puppet-openstack-integration,manifests/manila.pp,"Merge ""manila: Fix incomplete keystoneauth options"""
+openstack/puppet-openstack-integration,manifests/nova.pp,"nova: Stop overriding modular_libvirt
+
+We intended to enable modular libvirt in CentOS but actually it was
+disabled because of the remaining override.
+
+Change-Id: Ia102278df53268965b8bd4edbf6906f1373cafe9"
+openstack/puppet-openstack-integration,manifests/manila.pp,"manila: Fix incomplete keystoneauth options
+
+Although we are not using these really, we can check if the required
+options can be configured.
+
+Change-Id: I31d4a2fa9a1bd7bfb422dea51aaab12af8d0a2af"
+openstack/puppet-openstack-integration,manifests/neutron.pp,"Merge ""Neutron/Octavia: Ensure ovs/ovn is started"""
+openstack/puppet-openstack-integration,manifests/octavia.pp,"Merge ""Neutron/Octavia: Ensure ovs/ovn is started"""
+openstack/puppet-openstack-integration,manifests/ovn.pp,"Merge ""Neutron/Octavia: Ensure ovs/ovn is started"""
+openstack/puppet-openstack-integration,manifests/barbican.pp,"Merge ""barbican: Use messaging/queue options from the base class"""
+openstack/puppet-openstack-integration,manifests/cinder.pp,"Merge ""Avoid using internal exec resources for dependencies"""
+openstack/puppet-openstack-integration,manifests/glance.pp,"Merge ""Avoid using internal exec resources for dependencies"""
+openstack/puppet-openstack-integration,manifests/gnocchi.pp,"Merge ""Avoid using internal exec resources for dependencies"""
+openstack/puppet-openstack-integration,manifests/nova.pp,"Merge ""Avoid using internal exec resources for dependencies"""
+openstack/puppet-openstack-integration,manifests/zaqar.pp,"Merge ""zaqar: Drop [DEFAULT] unreliable"""
+openstack/puppet-openstack-integration,manifests/cinder.pp,"Avoid using internal exec resources for dependencies
+
+... so that we can refactor resources in ceph::pool.
+
+Change-Id: I98c66422b92a5a1b64ab90f646713f60b175645e"
+openstack/puppet-openstack-integration,manifests/glance.pp,"Avoid using internal exec resources for dependencies
+
+... so that we can refactor resources in ceph::pool.
+
+Change-Id: I98c66422b92a5a1b64ab90f646713f60b175645e"
+openstack/puppet-openstack-integration,manifests/gnocchi.pp,"Avoid using internal exec resources for dependencies
+
+... so that we can refactor resources in ceph::pool.
+
+Change-Id: I98c66422b92a5a1b64ab90f646713f60b175645e"
+openstack/puppet-openstack-integration,manifests/nova.pp,"Avoid using internal exec resources for dependencies
+
+... so that we can refactor resources in ceph::pool.
+
+Change-Id: I98c66422b92a5a1b64ab90f646713f60b175645e"
+openstack/puppet-openstack-integration,manifests/barbican.pp,"barbican: Use messaging/queue options from the base class
+
+The ones in the api class were deprecated to support multi-node
+deployments.
+
+Also remove a few redundant parameters.
+
+Depends-on: https://review.opendev.org/932283
+Change-Id: I24be6060a1ba2ce505ccf77a60a1673be1c01045"
+openstack/puppet-openstack-integration,manifests/zaqar.pp,"zaqar: Drop [DEFAULT] unreliable
+
+This option is used by only mongodb driver which is not used now.
+
+Change-Id: I9487180336be308e1bf85d17f188736319ae0683"
+openstack/puppet-openstack-integration,manifests/tempest.pp,"Revert ""Hard-code service type for cinder""
+
+This reverts commit e6345da838c1168b6e7018ade67c7108c05c1472.
+
+Reason for revert:
+The block-storage service type is now additionally deployed.
+
+Depends-on: https://review.opendev.org/931915
+Change-Id: Ia9e2f61412d841e1b3a772c804ebe73dc2a2ca51"
 openstack/puppet-openstack-integration,manifests/tempest.pp,"Hard-code service type for cinder
 
 Tempest recently changed the default [volume] catalog_type to use
@@ -2212,6 +2001,15 @@ the solution to adopt to the change.
 [1] https://review.opendev.org/c/openstack/tempest/+/930296
 
 Change-Id: I0ee92d93e065b829faa5871e5a4d92794c9b3f8e"
+openstack/puppet-openstack-integration,manifests/neutron.pp,"Neutron/Octavia: Ensure ovs/ovn is started
+
+Change-Id: I64b07a9741023eca6d25890d9e594f3268542643"
+openstack/puppet-openstack-integration,manifests/octavia.pp,"Neutron/Octavia: Ensure ovs/ovn is started
+
+Change-Id: I64b07a9741023eca6d25890d9e594f3268542643"
+openstack/puppet-openstack-integration,manifests/ovn.pp,"Neutron/Octavia: Ensure ovs/ovn is started
+
+Change-Id: I64b07a9741023eca6d25890d9e594f3268542643"
 openstack/puppet-openstack-integration,manifests/tempest.pp,"tempest: Drop deprecated auth_version
 
 Change-Id: Idd4bcb9a5d8365449ffc4f794195122acf64a4bb"
@@ -2245,73 +2043,9 @@ Only scenario 004 used 'Ubuntu or not' while the other scenarios use
 'Debian family or not'.
 
 Change-Id: I6f9d1181c9e51ea97129f12ee36bbfa9f0cde189"
-openstack/puppet-openstack-integration,fixtures/scenario001.pp,"Merge ""Revert ""Disable Vitrage in Scenario001"""""
-openstack/puppet-openstack-integration,fixtures/scenario001.pp,"Revert ""Disable Vitrage in Scenario001""
+openstack/puppet-mistral,manifests/keystone/auth.pp,"Fix ignored configure_service
 
-This reverts commit 96d855444e13ede06e9f1535c371f089d44a1cc4.
-
-Reason for revert:
-The issue caused by oslo.db bump was fixed by [1].
-
-[1] d6b5247dbb1acedd43b3dc8e7b1cac06519467c4
-
-Change-Id: I32a2fd6ae9c4498fdfeb53d2b40f7dbcdf839158"
-openstack/puppet-openstack-integration,manifests/gnocchi.pp,"gnocchi: Use sentinel for redis incoming driver in CentOS
-
-Gnocchi 4.6.3 now fully supports usage of redis sentinel as incoming
-backend.
-
-Change-Id: I385701c4a219d1f86307f7d13af327a21a19d601"
-openstack/puppet-openstack-integration,manifests/params.pp,"Drop usage of 'update-ca-trust force-enable'
-
-... because the subcommand does not exist actually. The command fails
-with the following error in recent CentOS Stream 9.
-
-```
-Error: Unknown command: force-enable
-
-Usage: /usr/bin/update-ca-trust [extract] [-o DIR|--output=DIR]
-
-Update the system trust store in /etc/pki/ca-trust/extracted.
-
-COMMANDS
-(absent/empty command): Same as the extract command described below.
-
-extract: Instruct update-ca-trust to scan the source configuration in
-/usr/share/pki/ca-trust-source and /etc/pki/ca-trust/source and produce
-updated versions of the consolidated configuration files stored below
-the /etc/pki/ca-trust/extracted directory hierarchy.
-
-EXTRACT OPTIONS
--o DIR, --output=DIR: Write the extracted trust store into the given
-directory instead of updating /etc/pki/ca-trust/extracted.
-```
-
-Change-Id: I38bbfc08a73823d2fd6e00974e277130cbff7e12"
-openstack/puppet-openstack-integration,fixtures/scenario003.pp,"Merge ""Enable designate dashboard"""
-openstack/puppet-openstack-integration,manifests/horizon.pp,"Merge ""Enable designate dashboard"""
-openstack/puppet-openstack-integration,fixtures/scenario003.pp,"Enable designate dashboard
-
-Enable designate dashboard in scenario 003 which has the designate
-service deployed.
-
-Change-Id: I420e732749488ba62df5869e9ab95003f2a79b42"
-openstack/puppet-openstack-integration,manifests/horizon.pp,"Enable designate dashboard
-
-Enable designate dashboard in scenario 003 which has the designate
-service deployed.
-
-Change-Id: I420e732749488ba62df5869e9ab95003f2a79b42"
-openstack/puppet-openstack-integration,manifests/rabbitmq.pp,"rabbitmq: Create ssl certificate directory after package installation
-
-... and remove the redundant dual resource dependencies.
-
-Change-Id: I83b650955d422a940b0dcb5d193bdceb6aeac6d3"
-openstack/puppet-openstack-integration,fixtures/scenario001.pp,"Merge ""Fix incomplete setting to enable in-storage image data copy"""
-openstack/puppet-openstack-integration,fixtures/scenario004.pp,"Merge ""Fix incomplete setting to enable in-storage image data copy"""
-openstack/puppet-openstack-integration,fixtures/scenario005.pp,"Merge ""Fix incomplete setting to enable in-storage image data copy"""
-openstack/puppet-openstack-integration,manifests/cinder.pp,"Merge ""Fix incomplete setting to enable in-storage image data copy"""
-openstack/puppet-openstack-integration,manifests/glance.pp,"Merge ""Fix incomplete setting to enable in-storage image data copy"""
+Change-Id: Ie62c370b1148cde8baa7003b5e9e0fda1978f48f"
 openstack/puppet-mistral,manifests/init.pp,"Add support for [oslo_messaging_rabbit] enable_cancel_on_failover
 
 Depends-on: https://review.opendev.org/928440
@@ -2431,11 +2165,6 @@ The password parameter is not really optional. This makes it
 a required parameter to give more sensible validation error.
 
 Change-Id: I4b770f07a249fadd44d8bafc15219f4503d10778"
-openstack/puppet-mistral,manifests/healthcheck.pp,"Add support for healthcheck middleware options
-
-Depends-on: https://review.opendev.org/772202
-Depends-on: https://review.opendev.org/800405
-Change-Id: I7b20aa48cb16927211a862e264bb51ae4bb50f42"
 openstack/puppet-aodh,manifests/init.pp,"Merge ""Rename parameters for queue manager options"""
 openstack/puppet-aodh,manifests/init.pp,"Expose parameter to customize [oslo_messaging_notifications] retry
 
@@ -2535,6 +2264,40 @@ openstack/puppet-aodh,manifests/healthcheck.pp,"healthcheck: Expose ignore_proxi
 
 Depends-on: https://review.opendev.org/909807
 Change-Id: Ifb42750a7767579bb31f79a68f4042c8f6e8caa1"
+openstack/puppet-barbican,manifests/api.pp,"Merge ""Prepare migration of queue options"""
+openstack/puppet-barbican,manifests/init.pp,"Merge ""Prepare migration of queue options"""
+openstack/puppet-barbican,manifests/config.pp,"Fix wrong config file name
+
+The file used by barbican processes is not barbican-api.conf but
+barbican.conf .
+
+Trivial-Fix
+
+Change-Id: I4cf54fe14d1b4e3d09c1c669b68d24c45bcdf727"
+openstack/puppet-barbican,manifests/api.pp,"Prepare migration of queue options
+
+These options need to be configured in both api and worker. Migrate
+these options to the base class to support deploying these servers in
+different notes.
+
+Note that we avoid deprecating all individual options to simplify
+the logic, and use the core default_transport_url parameter to detect
+usage of the deprecated parameters.
+
+Closes-Bug: #1883034
+Change-Id: Iba61faa600db27423011e4564d03f4f5310c2901 "
+openstack/puppet-barbican,manifests/init.pp,"Prepare migration of queue options
+
+These options need to be configured in both api and worker. Migrate
+these options to the base class to support deploying these servers in
+different notes.
+
+Note that we avoid deprecating all individual options to simplify
+the logic, and use the core default_transport_url parameter to detect
+usage of the deprecated parameters.
+
+Closes-Bug: #1883034
+Change-Id: Iba61faa600db27423011e4564d03f4f5310c2901 "
 openstack/puppet-barbican,manifests/api.pp,"Merge ""Expose parameter to customize [oslo_messaging_notifications] retry"""
 openstack/puppet-barbican,manifests/api.pp,"Expose parameter to customize [oslo_messaging_notifications] retry
 
@@ -2642,30 +2405,12 @@ openstack/puppet-barbican,manifests/api.pp,"Expose rabbit_transient_quorum_queue
 
 Depends-on: https://review.opendev.org/911021
 Change-Id: Icdc456fb132d74037dff7ce5c502994103061258"
-openstack/puppet-barbican,manifests/api.pp,"Deprecate parameters for certificate plugins
+openstack/puppet-magnum,manifests/keystone/auth.pp,"Expose configure_service
 
-... because certificate plugins were deprecated some time ago in
-Barbican and are being removed in this cycle.
+This parameter has been implemented in the underlying defined resource
+type but was not configurable.
 
-Depends-on: https://review.opendev.org/c/openstack/barbican/+/909640
-Change-Id: Ie2dacb037a3d5ba8f1732ddb8f4b8ea8ded1e5ed"
-openstack/puppet-barbican,manifests/plugins/dogtag.pp,"Deprecate parameters for certificate plugins
-
-... because certificate plugins were deprecated some time ago in
-Barbican and are being removed in this cycle.
-
-Depends-on: https://review.opendev.org/c/openstack/barbican/+/909640
-Change-Id: Ie2dacb037a3d5ba8f1732ddb8f4b8ea8ded1e5ed"
-openstack/puppet-barbican,manifests/api.pp,"Merge ""Refactor resource dependencies"""
-openstack/puppet-barbican,manifests/db.pp,"Merge ""Refactor resource dependencies"""
-openstack/puppet-barbican,manifests/deps.pp,"Merge ""Refactor resource dependencies"""
-openstack/puppet-barbican,manifests/keystone/authtoken.pp,"Merge ""Refactor resource dependencies"""
-openstack/puppet-barbican,manifests/policy.pp,"Merge ""Refactor resource dependencies"""
-openstack/puppet-barbican,manifests/worker.pp,"Support [queue] asynchronous_workers option
-
-... which determines number of processes launched in barbican-worker.
-
-Change-Id: Ia31a7d440ba3102afa7b5972fe893cfb4f1817a1"
+Change-Id: I8a9149ec7c43437f2392bcce39967e73c118dd34"
 openstack/puppet-magnum,manifests/capi_helm.pp,"Use Stdlib::Filemode to validate file mode
 
 Change-Id: Ifb6f2b94df7e3ae8b4633c3a4655dc2b5f60fde8"
@@ -2810,11 +2555,12 @@ Remove the redundant hard-coded defaults of some of the client options.
 The values currently used match the defaults in magnum itself.
 
 Change-Id: I93e9f2bee16020f7dd9176828600567520235237"
-openstack/puppet-magnum,manifests/keystone/domain.pp,"Require password for domain admin
+openstack/puppet-vitrage,manifests/keystone/auth.pp,"Expose configure_service
 
-... so that users may not use the unsafe default unintentionally.
+This parameter has been implemented in the underlying defined resource
+type but was not configurable.
 
-Change-Id: Ia6f97251a775e7f594918aa65228ffa95b862f24"
+Change-Id: I4095ff32c471168dce68843dba96c0f73247d0e5"
 openstack/puppet-vitrage,manifests/init.pp,"Add support for [oslo_messaging_rabbit] enable_cancel_on_failover
 
 Depends-on: https://review.opendev.org/928440
@@ -2868,6 +2614,13 @@ The oslo.policy library has implementations to detect change in policy
 rules and reload the new rules without service restart.
 
 Change-Id: I56382b360b4f4f9950d2e636a8f765b732cf7446"
+openstack/puppet-oslo,manifests/limit.pp,"Merge ""limit: Support new options to query endpoint"""
+openstack/puppet-oslo,manifests/limit.pp,"limit: Support new options to query endpoint
+
+... and also adds a few more useful default values.
+
+Depends-on: https://review.opendev.org/914783
+Change-Id: I22bf39917fbfa9b67e36a3bf46f96faae9b0011c"
 openstack/puppet-oslo,manifests/service/ssl.pp,"Accept list value for ciphers
 
 The [ssl] ciphers option accepts cipher list. Accept a list value and
@@ -3034,16 +2787,12 @@ This introduces support for oslo.cache options to use memcached with
 SASL enabled.
 
 Change-Id: I2b93a4871de5320fdfcfab8f507c4c47b351d6c2"
-openstack/puppet-oslo,manifests/healthcheck.pp,"Merge ""healthcheck: Add support for ignore_proxied_requests"""
-openstack/puppet-oslo,manifests/healthcheck.pp,"healthcheck: Add support for ignore_proxied_requests
+openstack/puppet-octavia,manifests/keystone/auth.pp,"Expose configure_service
 
-The new ignore_proxied_requests option was added to the healthcheck
-middleware which allows operators to prohibit access to healthcheck
-information via load balancers. This introduces a new parameter which
-corresponds to this option.
+This parameter has been implemented in the underlying defined resource
+type but was not configurable.
 
-Depends-on: https://review.opendev.org/901215
-Change-Id: Iaf9b40db938f998c20d6cea4b19cf09651c46bbf"
+Change-Id: I8e9caebde4d7d664f17d54b57370e46e0447d04b"
 openstack/puppet-octavia,manifests/init.pp,"Expose parameter to customize [oslo_messaging_notifications] retry
 
 The parameter has been managed by puppet-oslo, but its value could not
@@ -3157,7 +2906,12 @@ openstack/puppet-octavia,manifests/neutron.pp,"Remove deprecated neutron paramet
 replaced by the new parameters.
 
 Change-Id: I332f209da86f11b721cb674c8281006642012cf7"
-openstack/puppet-octavia,manifests/api.pp,"Merge ""Add max_request_body_size option support"""
+openstack/puppet-watcher,manifests/keystone/auth.pp,"Expose configure_service
+
+This parameter has been implemented in the underlying defined resource
+type but was not configurable.
+
+Change-Id: I10cd07571763281eda7c5dafcd75ad63b12ea469"
 openstack/puppet-watcher,manifests/init.pp,"Add support for [oslo_messaging_rabbit] enable_cancel_on_failover
 
 Depends-on: https://review.opendev.org/928440
@@ -3259,10 +3013,12 @@ additional paths such as watcher.conf.d in the future.
 
 Change-Id: Ide53b1659e336f461bb5108621c31299cb211c3f"
 openstack/puppet-watcher,manifests/reports.pp,"Merge ""Add support for oslo.reports options"""
-openstack/puppet-watcher,manifests/reports.pp,"Add support for oslo.reports options
+openstack/puppet-cloudkitty,manifests/keystone/auth.pp,"Expose configure_service
 
-Depends-on: https://review.opendev.org/804804
-Change-Id: I438e50759f176f0a85772ceb2701493b3abf3550"
+This parameter has been implemented in the underlying defined resource
+type but was not configurable.
+
+Change-Id: I4e7ad2ea95f622be4353186752da46e90656ddd8"
 openstack/puppet-cloudkitty,manifests/init.pp,"Expose parameter to customize [oslo_messaging_notifications] retry
 
 The parameter has been managed by puppet-oslo, but its value could not
@@ -3327,6 +3083,37 @@ openstack/puppet-cloudkitty,manifests/healthcheck.pp,"healthcheck: Expose allowe
 
 Depends-on: https://review.opendev.org/905557
 Change-Id: Ia9b0534f4e4a6b0d2325ccef318f35ef3789eb08"
+openstack/puppet-placement,manifests/db/sync.pp,"Merge ""Centralize user/group definition"""
+openstack/puppet-placement,manifests/params.pp,"Merge ""Centralize user/group definition"""
+openstack/puppet-placement,manifests/wsgi/apache.pp,"Merge ""Centralize user/group definition"""
+openstack/puppet-placement,manifests/params.pp,"Merge ""Remove unused endpoint url definitions"""
+openstack/puppet-placement,manifests/db/sync.pp,"Centralize user/group definition
+
+Define user and group in params and user the common definitions in
+all places, following the other modules.
+
+Change-Id: If4cf27dbf6e3809b1341ee7325ae0118225f2cb2"
+openstack/puppet-placement,manifests/params.pp,"Centralize user/group definition
+
+Define user and group in params and user the common definitions in
+all places, following the other modules.
+
+Change-Id: If4cf27dbf6e3809b1341ee7325ae0118225f2cb2"
+openstack/puppet-placement,manifests/wsgi/apache.pp,"Centralize user/group definition
+
+Define user and group in params and user the common definitions in
+all places, following the other modules.
+
+Change-Id: If4cf27dbf6e3809b1341ee7325ae0118225f2cb2"
+openstack/puppet-placement,manifests/params.pp,"Remove unused endpoint url definitions
+
+Change-Id: I84c8b956b9d281057109c30d065248fc97866e8f"
+openstack/puppet-placement,manifests/keystone/auth.pp,"Expose configure_service
+
+This parameter has been implemented in the underlying defined resource
+type but was not configurable.
+
+Change-Id: I26fdedb6ec221295aa5d78e300997bb8f7055220"
 openstack/puppet-placement,manifests/logging.pp,"logging: Deprecate watch_log_file
 
 This option was deprecated in oslo.log 6.0.0 [1]. Because the warning
@@ -3442,27 +3229,3 @@ The oslo.policy library has implementations to detect change in policy
 rules and reload the new rules without service restart.
 
 Change-Id: I4787f344f7ee44e2c0f93bbf7da6de3c3ba83415"
-openstack/puppet-placement,manifests/policy.pp,"Ensure purge_config takes a boolean value
-
-The purge_config parameters only accept boolean values. This enforces
-that using the typed parameters.
-
-Change-Id: I637f94a04511256c0d69284522d7ba73a0332c5d"
-openstack/puppet-placement,manifests/keystone/authtoken.pp,"authtoken: Make password required
-
-The password parameter is not really optional. This makes it
-a required parameter to give more sensible validation error.
-
-Change-Id: Ib95a8e4ec5d5f3b2b3ad9a32cb2e93873b529b62"
-openstack/puppet-placement,manifests/deps.pp,"Add per module policy service refresh
-
-Updating the policies for this project should only
-refresh the services that reads it.
-
-Change-Id: Iaf0bae66224d568a2a05f4ac5281c36bde2705e0"
-openstack/puppet-placement,manifests/policy.pp,"Add per module policy service refresh
-
-Updating the policies for this project should only
-refresh the services that reads it.
-
-Change-Id: Iaf0bae66224d568a2a05f4ac5281c36bde2705e0"

@@ -125,8 +125,10 @@ def filter_repositories(repos):
             if len(puppet_files) / len(other_files) >= 0.11:
                 commits = get_commit_messages(repo)
                 recent_commits = [c for c in commits if isinstance(c, dict) and datetime.strptime(c['commit']['author']['date'], '%Y-%m-%dT%H:%M:%SZ') > datetime.now() - timedelta(days=30)]
-                print(f"Repo: {repo['full_name']}, Recent commits: {len(recent_commits)}")
-                filtered_repos.append(repo)
+                if len(recent_commits) >=2:
+                    
+                    print(f"Repo: {repo['full_name']}, Recent commits: {len(recent_commits)}")
+                    filtered_repos.append(repo)
     return filtered_repos
 
 #Extract commit messages and append issue summaries if present.

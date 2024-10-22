@@ -4,7 +4,7 @@ import cliffs_delta
 import csv
 
 # Load the data from the CSV file
-data = pd.read_csv('C:/Users/vilja/Documents/PolyMtl/Mining Repositories/Replication project/IST_MIR.csv')
+data = pd.read_csv('/Users/andrenguimbous/Poly/session4/LOG6307E-Release-Engineering/REPLICATION-PAPER/Replication-Project/Replication project/IST_OST.csv')
 
 properties = ['URL','File','Lines_of_code','Require','Ensure','Include','Attribute','Hard_coded_string','Comment','Command','File_mode','SSH_KEY']
 
@@ -13,7 +13,7 @@ properties = ['URL','File','Lines_of_code','Require','Ensure','Include','Attribu
 defective = data[data['defect_status'] == 1]
 neutral = data[data['defect_status'] == 0]
 
-with open('C:/Users/vilja/Documents/PolyMtl/Mining Repositories/Replication project/p_value_and_delta.csv', 'w', newline='', encoding='utf-8') as csvfile:    
+with open('/Users/andrenguimbous/Poly/session4/LOG6307E-Release-Engineering/REPLICATION-PAPER/Replication-Project/Replication project/p_value_and_delta.csv', 'w', newline='', encoding='utf-8') as csvfile:    
     fieldnames = ['Property', 'P-value', 'Delta', 'Effect size interpretation']
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames, quoting=csv.QUOTE_MINIMAL)
     writer.writeheader()
