@@ -1,0 +1,179 @@
+Repository,File,Commit Message
+mozilla/developer-challenge-platform,app/views/admin/base/_nav.html.erb,merged challenges in admin
+mozilla/developer-challenge-platform,app/views/admin/challenges/_challenges_table.html.erb,merged challenges in admin
+mozilla/developer-challenge-platform,app/views/messages/index.html.erb,"added link to send a message, fixed sending message"
+mozilla/developer-challenge-platform,app/views/admin/challenges/_state_reviewing.html.erb,"fixed list of reviewers in admin view, sending reviwer comment to user"
+mozilla/developer-challenge-platform,app/views/attempts/show.html.erb,"fixed list of reviewers in admin view, sending reviwer comment to user"
+mozilla/developer-challenge-platform,app/views/messages/index.html.erb,"fixed list of reviewers in admin view, sending reviwer comment to user"
+mozilla/developer-challenge-platform,app/views/layouts/application.html.erb,added more info to user profiles and message count
+mozilla/developer-challenge-platform,app/views/users/show.html.erb,added more info to user profiles and message count
+mozilla/developer-challenge-platform,app/views/admin/challenges/_state_judging.html.erb,added public vote to admin
+mozilla/developer-challenge-platform,app/views/admin/challenges/_state_reviewing.html.erb,added public vote to admin
+mozilla/developer-challenge-platform,app/views/challenges/_disqus.html.erb,moved disqus comments to the attempt from the challenge
+mozilla/developer-challenge-platform,app/views/attempts/_disqus.html.erb,implemented public voting
+mozilla/developer-challenge-platform,app/views/attempts/show.html.erb,implemented public voting
+mozilla/developer-challenge-platform,app/views/challenges/show.html.erb,implemented public voting
+mozilla/developer-challenge-platform,app/views/home/index.html.erb,implemented public voting
+mozilla/developer-challenge-platform,app/views/challenges/_challenge_form.html.erb,using starts_at ends_at instead of suggested duration
+mozilla/developer-challenge-platform,app/views/layouts/application.html.erb,"removed community, renamed as submit a challenge, setting mozilla.com users as admin submissions"
+mozilla/developer-challenge-platform,app/views/attempts/show.html.erb,sending judges comment to user as a message
+mozilla/developer-challenge-platform,app/views/admin/challenges/_state_reviewing.html.erb,"changed review admin score label to yes count, added 3 other lenses to judging scoring and updated the average score"
+mozilla/developer-challenge-platform,app/views/attempts/show.html.erb,"changed review admin score label to yes count, added 3 other lenses to judging scoring and updated the average score"
+mozilla/developer-challenge-platform,app/views/admin/challenges/_state_judging.html.erb,fixed the admin section for viewing who is judging which entries
+mozilla/developer-challenge-platform,app/views/admin/challenges/_state_reviewing.html.erb,fixed shortlisting
+mozilla/developer-challenge-platform,app/views/application/_messages.html.erb,"fixed messaging for reviewers and judges, fixed reviewing flow"
+mozilla/developer-challenge-platform,app/views/attempts/show.html.erb,"fixed messaging for reviewers and judges, fixed reviewing flow"
+mozilla/developer-challenge-platform,app/views/application/_messages.html.erb,messaging to tell reviewer/judge they have things to review/judge with a count in the header
+mozilla/developer-challenge-platform,app/views/layouts/application.html.erb,messaging to tell reviewer/judge they have things to review/judge with a count in the header
+mozilla/developer-challenge-platform,app/views/users/show.html.erb,fixed typo
+mozilla/developer-challenge-platform,app/views/users/show.html.erb,fixed profile
+mozilla/developer-challenge-platform,app/views/admin/challenges/show.html.erb,fixed admin view page for challenge
+mozilla/developer-challenge-platform,app/views/attempts/new.html.erb,"implemented challenge view page, added markdown support, added sample data"
+mozilla/developer-challenge-platform,app/views/challenges/_disqus.html.erb,"implemented challenge view page, added markdown support, added sample data"
+mozilla/developer-challenge-platform,app/views/challenges/show.html.erb,"implemented challenge view page, added markdown support, added sample data"
+mozilla/developer-challenge-platform,app/views/home/index.html.erb,"implemented challenge view page, added markdown support, added sample data"
+mozilla/developer-challenge-platform,app/views/users/show.html.erb,"implemented challenge view page, added markdown support, added sample data"
+mozilla/developer-challenge-platform,app/views/users/_connections.html.erb,added github and twitter connections to user profiles
+mozilla/developer-challenge-platform,app/views/users/show.html.erb,added github and twitter connections to user profiles
+mozilla/developer-challenge-platform,app/views/layouts/application.html.erb,fixed the signup/login pages so less confusing
+mozilla/developer-challenge-platform,app/views/sessions/new.html.erb,fixed the signup/login pages so less confusing
+mozilla/developer-challenge-platform,app/views/users/new.html.erb,fixed the signup/login pages so less confusing
+mozilla/developer-challenge-platform,app/views/admin/challenges/_attempts_table.html.erb,re-instated attempts table in admin
+mozilla/developer-challenge-platform,app/views/admin/users/index.html.erb,fix for admin users with no platform
+mozilla/developer-challenge-platform,app/views/admin/users/show.html.erb,fix for admin users with no platform
+mozilla/developer-challenge-platform,app/views/admin/challenges/_attempts_table.html.erb,removed unused partials
+mozilla/developer-challenge-platform,app/views/admin/challenges/_reviewing.html.erb,removed unused partials
+mozilla/developer-challenge-platform,app/views/admin/challenges/_state_active.html.erb,implemented judging
+mozilla/developer-challenge-platform,app/views/admin/challenges/_state_finished.html.erb,implemented judging
+mozilla/developer-challenge-platform,app/views/admin/challenges/_state_judging.html.erb,implemented judging
+mozilla/developer-challenge-platform,app/views/admin/challenges/_state_reviewing.html.erb,implemented judging
+mozilla/developer-challenge-platform,app/views/admin/challenges/show.html.erb,implemented judging
+mozilla/developer-challenge-platform,app/views/attempts/show.html.erb,implemented judging
+mozilla/developer-challenge-platform,app/views/users/show.html.erb,implemented judging
+mozilla/stun-vm,puppet/modules/stun-server/manifests/init.pp,"Merge pull request #1 from whd/master
+
+Add build identifier to Mozilla builds and update RPM Add build identifier to Mozilla builds and update RPM"
+mozilla/stun-vm,puppet/modules/stun-server/manifests/init.pp,Add build identifier to Mozilla builds and update RPM
+mozilla/stun-vm,puppet/bootstrap.pp,"Merge remote-tracking branch 'whd/master'
+
+This is from Wesley Dawson's separate repo setting up rpm and
+puppet scripts for his patched version of the vovida stun server."
+mozilla/stun-vm,puppet/modules/daemontools/manifests/base.pp,"Merge remote-tracking branch 'whd/master'
+
+This is from Wesley Dawson's separate repo setting up rpm and
+puppet scripts for his patched version of the vovida stun server."
+mozilla/stun-vm,puppet/modules/daemontools/manifests/init.pp,"Merge remote-tracking branch 'whd/master'
+
+This is from Wesley Dawson's separate repo setting up rpm and
+puppet scripts for his patched version of the vovida stun server."
+mozilla/stun-vm,puppet/modules/daemontools/manifests/setup.pp,"Merge remote-tracking branch 'whd/master'
+
+This is from Wesley Dawson's separate repo setting up rpm and
+puppet scripts for his patched version of the vovida stun server."
+mozilla/stun-vm,puppet/modules/stun-server/manifests/init.pp,"Merge remote-tracking branch 'whd/master'
+
+This is from Wesley Dawson's separate repo setting up rpm and
+puppet scripts for his patched version of the vovida stun server."
+mozilla/stun-vm,puppet/bootstrap.pp,Initial commit
+mozilla/stun-vm,puppet/modules/daemontools/manifests/base.pp,Initial commit
+mozilla/stun-vm,puppet/modules/daemontools/manifests/init.pp,Initial commit
+mozilla/stun-vm,puppet/modules/daemontools/manifests/setup.pp,Initial commit
+mozilla/stun-vm,puppet/modules/stun-server/manifests/init.pp,Initial commit
+mozilla/cheesecake,puppet/modules/cheesecake/databases/manifests/webpay.pp,databases: provision zamboni and webpay databases.
+mozilla/cheesecake,puppet/modules/cheesecake/databases/manifests/zamboni.pp,databases: provision zamboni and webpay databases.
+mozilla/cheesecake,puppet/modules/cheesecake/databases/manifests/init.pp,commit all the things.
+mozilla/cheesecake,puppet/modules/cheesecake/databases/manifests/solitude.pp,commit all the things.
+mozilla/cheesecake,puppet/modules/cheesecake/mysqlrepo/manifests/init.pp,"Merge pull request #3 from muffinresearch/fix-mysql-community-install
+
+Fix mysql-community-server install (fixes #2) Fix mysql-community-server install (fixes #2)"
+mozilla/cheesecake,puppet/modules/cheesecake/mysqlrepo/manifests/init.pp,Fix mysql-community-server install (fixes #2) mysql-community-server packages not available
+mozilla/cheesecake,puppet/manifests/site.pp,Initial commit.
+mozilla/oldpto,nubis/puppet/00_sso.pp,upgrade to SSO pseudo-module
+mozilla/oldpto,nubis/puppet/oidc.pp,upgrade to SSO pseudo-module
+mozilla/oldpto,nubis/puppet/web.pp,upgrade to SSO pseudo-module
+mozilla/oldpto,nubis/puppet/web.pp,drop the 5 from php packages
+mozilla/oldpto,nubis/puppet/oidc.pp,add missed dependency
+mozilla/oldpto,nubis/puppet/oidc.pp,Upgrade for Xenial
+mozilla/opsec-puppet,manifests/site.pp,"Merge pull request #78 from ameihm0912/rem-workers
+
+Remove puppet config related to worker deployment Remove puppet config related to worker deployment"
+mozilla/opsec-puppet,modules/mig/manifests/server/agent_intel_worker.pp,"Merge pull request #78 from ameihm0912/rem-workers
+
+Remove puppet config related to worker deployment Remove puppet config related to worker deployment"
+mozilla/opsec-puppet,modules/mig/manifests/server/baseworker.pp,"Merge pull request #78 from ameihm0912/rem-workers
+
+Remove puppet config related to worker deployment Remove puppet config related to worker deployment"
+mozilla/opsec-puppet,modules/mig/manifests/server/compliance_item_worker.pp,"Merge pull request #78 from ameihm0912/rem-workers
+
+Remove puppet config related to worker deployment Remove puppet config related to worker deployment"
+mozilla/opsec-puppet,modules/mig/manifests/server/relay.pp,"Merge pull request #78 from ameihm0912/rem-workers
+
+Remove puppet config related to worker deployment Remove puppet config related to worker deployment"
+mozilla/opsec-puppet,modules/mig/templates/agent-intel-worker.cfg.erb,"Merge pull request #78 from ameihm0912/rem-workers
+
+Remove puppet config related to worker deployment Remove puppet config related to worker deployment"
+mozilla/opsec-puppet,modules/mig/templates/compliance-item-worker.cfg.erb,"Merge pull request #78 from ameihm0912/rem-workers
+
+Remove puppet config related to worker deployment Remove puppet config related to worker deployment"
+mozilla/opsec-puppet,modules/mig/manifests/server/relay.pp,remove worker relay configuration items
+mozilla/opsec-puppet,manifests/site.pp,remove worker specific puppet configuration
+mozilla/opsec-puppet,modules/mig/manifests/server/agent_intel_worker.pp,remove worker specific puppet configuration
+mozilla/opsec-puppet,modules/mig/manifests/server/baseworker.pp,remove worker specific puppet configuration
+mozilla/opsec-puppet,modules/mig/manifests/server/compliance_item_worker.pp,remove worker specific puppet configuration
+mozilla/opsec-puppet,modules/mig/templates/agent-intel-worker.cfg.erb,remove worker specific puppet configuration
+mozilla/opsec-puppet,modules/mig/templates/compliance-item-worker.cfg.erb,remove worker specific puppet configuration
+mozilla/opsec-puppet,modules/mig/manifests/server/api.pp,"Merge pull request #74 from mozilla/dev
+
+missing variables in api manifest missing variables in api manifest"
+mozilla/opsec-puppet,modules/mig/manifests/server/api.pp,missing variables in api manifest
+mozilla/opsec-puppet,modules/mig/templates/api.cfg.erb,"Merge pull request #73 from mozilla/dev
+
+server update to 20160714-0.a06734a.prod server update to 20160714-0.a06734a.prod"
+mozilla/opsec-puppet,modules/mig/templates/api.cfg.erb,server update to 20160714-0.a06734a.prod
+mozilla/opsec-puppet,manifests/site.pp,"Merge pull request #65 from mozilla/dev
+
+site cleanup site cleanup"
+mozilla/opsec-puppet,manifests/site.pp,site cleanup
+mozilla/socorro-infra,puppet/modules/socorro/manifests/packer/base.pp,"Merge pull request #318 from mozilla/update-psql-urls
+
+update repo urls for postgres update repo urls for postgres"
+mozilla/socorro-infra,puppet/modules/socorro/manifests/packer/base.pp,update repo urls for postgres
+mozilla/socorro-infra,puppet/modules/socorro/manifests/packer/base.pp,"Merge pull request #316 from mozilla/fix-puppet-lint
+
+address a couple puppet lint nits address a couple puppet lint nits"
+mozilla/socorro-infra,puppet/modules/socorro/manifests/role/webapp.pp,"Merge pull request #316 from mozilla/fix-puppet-lint
+
+address a couple puppet lint nits address a couple puppet lint nits"
+mozilla/socorro-infra,puppet/modules/socorro/manifests/packer/base.pp,address a couple puppet lint nits
+mozilla/socorro-infra,puppet/modules/socorro/manifests/role/webapp.pp,address a couple puppet lint nits
+mozilla/socorro-infra,puppet/modules/socorro/manifests/role/webapp.pp,Fix broken puppet syntax: remove trailing comma from webapp.pp
+mozilla/socorro-infra,puppet/modules/socorro/manifests/role/webapp.pp,"Merge pull request #315 from mozilla/remove-middleware
+
+remove socorro middleware configuration remove socorro middleware configuration"
+mozilla/socorro-infra,puppet/modules/socorro/manifests/role/webapp.pp,remove socorro middleware configuration
+mozilla/socorro-infra,puppet/modules/socorro/manifests/packer/base.pp,"Merge pull request #314 from mozilla/node-8.x
+
+socorro-infra: use 8.x cloudops nodesource socorro-infra: use 8.x cloudops nodesource"
+mozilla/socorro-infra,puppet/modules/socorro/manifests/packer/base.pp,socorro-infra: use 8.x cloudops nodesource
+mozilla/socorro-infra,puppet/modules/socorro/templates/etc_nginx/conf_d/socorro-webapp.conf.erb,"Merge pull request #313 from mozilla/revert-312-baseline-scan-sec-headers
+
+Revert ""Baseline scan sec headers"" Revert ""Baseline scan sec headers"""
+mozilla/socorro-infra,puppet/modules/socorro/templates/etc_nginx/conf_d/socorro-webapp.conf.erb,"Revert ""Baseline scan sec headers"""
+mozilla/socorro-infra,puppet/modules/socorro/templates/etc_nginx/conf_d/socorro-webapp.conf.erb,"Merge pull request #312 from g-k/baseline-scan-sec-headers
+
+Baseline scan sec headers Baseline scan sec headers"
+mozilla/socorro-infra,puppet/modules/socorro/templates/etc_nginx/conf_d/socorro-webapp.conf.erb,webapp: Add overrideable default security headers
+mozilla/socorro-infra,puppet/modules/socorro/templates/etc_nginx/conf_d/socorro-webapp.conf.erb,webapp: Return HSTS header for all statuses and static files
+mozilla/socorro-infra,puppet/modules/socorro/templates/etc_nginx/conf_d/socorro-webapp.conf.erb,"Merge pull request #311 from mozilla/revert-309-make_redirect_user_fqdn
+
+Revert ""Make HTTP redirect use servername"" Revert ""Make HTTP redirect use servername"""
+mozilla/socorro-infra,puppet/modules/socorro/templates/etc_nginx/conf_d/socorro-webapp.conf.erb,"Revert ""Make HTTP redirect use servername"""
+mozilla/socorro-infra,puppet/modules/socorro/manifests/packer/base.pp,"Merge pull request #310 from mozilla/cloudops-nodesource
+
+socorro-infra: use cloudops nodesource mirror to override EPEL node socorro-infra: use cloudops nodesource mirror to override EPEL node"
+mozilla/socorro-infra,puppet/modules/socorro/manifests/packer/base.pp,socorro-infra: use cloudops nodesource mirror to override EPEL node
+mozilla/socorro-infra,puppet/modules/socorro/templates/etc_nginx/conf_d/socorro-webapp.conf.erb,"Merge pull request #309 from claudijd/make_redirect_user_fqdn
+
+Make HTTP redirect use servername Make HTTP redirect use servername"
+mozilla/socorro-infra,puppet/modules/socorro/templates/etc_nginx/conf_d/socorro-webapp.conf.erb,Fix typo in server_name assignment
+mozilla/socorro-infra,puppet/modules/socorro/templates/etc_nginx/conf_d/socorro-webapp.conf.erb,Make HTTP redirect use servername
